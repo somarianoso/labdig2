@@ -1,8 +1,8 @@
 /* -------------------------------------------------------------
- * Arquivo   : tx_serial_7N2_fd.v
+ * Arquivo   : tx_serial_7E1_fd.v
  *--------------------------------------------------------------
  * Descricao : fluxo de dados do circuito base de transmissao 
- *             serial assincrona (7N2) 
+ *             serial assincrona (7E1) 
  *             ==> contem deslocador com 11 bits e contador
  *                 modulo 12
  * 
@@ -13,7 +13,7 @@
  *--------------------------------------------------------------
  */
  
- module tx_serial_7N2_fd (
+ module tx_serial_7E1_fd (
     input        clock        ,
     input        reset        ,
     input        zera         ,
@@ -27,13 +27,17 @@
 
     wire [10:0] s_dados;
     wire [10:0] s_saida;
+    wire        paridade;
 
-    // composicao dos dados seriais
+    // paridade par para 7 bits de dados: total de '1' deve ser par
+    assign paridade = ^dados_ascii[6:0];
+
+    // composicao dos dados seriais: repouso + start + dados + paridade + stop
     assign s_dados[0]   = 1'b1;             // repouso
     assign s_dados[1]   = 1'b0;             // start bit
     assign s_dados[8:2] = dados_ascii[6:0]; // dado
-    assign s_dados[9]   = 1'b1;             // paridade bit
-    assign s_dados[10]  = 1'b1;             // stop bit 2
+    assign s_dados[9]   = paridade;         // paridade par
+    assign s_dados[10]  = 1'b1;             // stop bit
   
     // Instanciação do deslocador_n
     deslocador_n #(

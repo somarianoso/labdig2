@@ -1,0 +1,198 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Quartus
+vcontador_m
+Z0 !s110 1788894474
+!i10b 1
+!s100 VJJg7lYlSfI_lZo<hzC9d1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IWclPk_gFa25EB8agFEd]H1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/Documents/LabDig2/labdig2/experiencia2/atividade2/modelsim
+Z4 w1788888389
+8D:/Documents/LabDig2/labdig2/experiencia2/atividade2/contador_m.v
+FD:/Documents/LabDig2/labdig2/experiencia2/atividade2/contador_m.v
+!i122 0
+L0 17 38
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1788894474.000000
+!s107 D:/Documents/LabDig2/labdig2/experiencia2/atividade2/contador_m.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Documents/LabDig2/labdig2/experiencia2/atividade2/contador_m.v|
+!i113 1
+Z7 o-work work
+Z8 tCvgOpt 0
+vdeslocador_n
+R0
+!i10b 1
+!s100 ekUiQZ6Ef_XO5Z3[98`6X2
+R1
+IjUQ_3zBlFHDNLn0b`:K1?0
+R2
+R3
+R4
+8D:/Documents/LabDig2/labdig2/experiencia2/atividade2/deslocador_n.v
+FD:/Documents/LabDig2/labdig2/experiencia2/atividade2/deslocador_n.v
+!i122 1
+L0 15 31
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Documents/LabDig2/labdig2/experiencia2/atividade2/deslocador_n.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Documents/LabDig2/labdig2/experiencia2/atividade2/deslocador_n.v|
+!i113 1
+R7
+R8
+vedge_detector
+Z9 !s110 1788894475
+!i10b 1
+!s100 AEDYJD37[Ybb^@2QMVV>20
+R1
+ICilHNQOD<l;?a79=`]f130
+R2
+R3
+R4
+8D:/Documents/LabDig2/labdig2/experiencia2/atividade2/edge_detector.v
+FD:/Documents/LabDig2/labdig2/experiencia2/atividade2/edge_detector.v
+!i122 2
+L0 19 23
+R5
+r1
+!s85 0
+31
+R6
+!s107 D:/Documents/LabDig2/labdig2/experiencia2/atividade2/edge_detector.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Documents/LabDig2/labdig2/experiencia2/atividade2/edge_detector.v|
+!i113 1
+R7
+R8
+vhexa7seg
+R9
+!i10b 1
+!s100 :20kA`7`L0gDF2=JFj`=l2
+R1
+I<]9iJz2CbA=M<aZJ7@R112
+R2
+R3
+R4
+8D:/Documents/LabDig2/labdig2/experiencia2/atividade2/hexa7seg.v
+FD:/Documents/LabDig2/labdig2/experiencia2/atividade2/hexa7seg.v
+!i122 3
+L0 22 38
+R5
+r1
+!s85 0
+31
+Z10 !s108 1788894475.000000
+!s107 D:/Documents/LabDig2/labdig2/experiencia2/atividade2/hexa7seg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Documents/LabDig2/labdig2/experiencia2/atividade2/hexa7seg.v|
+!i113 1
+R7
+R8
+vtx_serial_7E1
+R9
+!i10b 1
+!s100 W<e5`?`a;LleI_L=fKY?42
+R1
+Im7RZIVe=gmc2f1;ibc8I?0
+R2
+R3
+w1788894356
+8D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1.v
+FD:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1.v
+!i122 4
+L0 1 102
+R5
+r1
+!s85 0
+31
+R10
+!s107 D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1.v|
+!i113 1
+R7
+R8
+ntx_serial_7@e1
+vtx_serial_7E1_fd
+R9
+!i10b 1
+!s100 M2`egSK@B[Y[1hTWR=am;2
+R1
+I;CX4HO^F1ZB=OoI4K7dN`0
+R2
+R3
+w1788893927
+8D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1_fd.v
+FD:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1_fd.v
+!i122 5
+L0 16 57
+R5
+r1
+!s85 0
+31
+R10
+!s107 D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1_fd.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1_fd.v|
+!i113 1
+R7
+R8
+ntx_serial_7@e1_fd
+vtx_serial_7E1_tb
+R9
+!i10b 1
+!s100 jl:HdP<d[el<23^CO3FQI0
+R1
+I^4kIF[^N^9XZCIdkieedl2
+R2
+R3
+w1788888380
+8D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1_tb.v
+FD:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1_tb.v
+!i122 6
+L0 17 90
+R5
+r1
+!s85 0
+31
+R10
+!s107 D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1_tb.v|
+!i113 1
+R7
+R8
+ntx_serial_7@e1_tb
+vtx_serial_uc
+!s110 1788894476
+!i10b 1
+!s100 cQPFd=hIOZm6zCKDVFA?=3
+R1
+IQ2JZiQ2]I=R8ICfd`:OSA3
+R2
+R3
+R4
+8D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_uc.v
+FD:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_uc.v
+!i122 7
+L0 17 64
+R5
+r1
+!s85 0
+31
+R10
+!s107 D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_uc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_uc.v|
+!i113 1
+R7
+R8
