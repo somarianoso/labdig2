@@ -1,0 +1,101 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "saida_serial",
+					"strict" : false
+				},
+				{
+					"name" : "pronto",
+					"strict" : false
+				},
+				{
+					"name" : "db_clock",
+					"strict" : false
+				},
+				{
+					"name" : "db_tick",
+					"strict" : false
+				},
+				{
+					"name" : "db_partida",
+					"strict" : false
+				},
+				{
+					"name" : "db_saida_serial",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[0]",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[1]",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[2]",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[3]",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[4]",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[5]",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[6]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "partida",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "dados_ascii[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dados_ascii[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dados_ascii[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dados_ascii[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dados_ascii[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dados_ascii[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dados_ascii[6]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

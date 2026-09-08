@@ -1,0 +1,22 @@
+Quartus Prime Archive log --	D:/Documents/LabDig2/labdig2/experiencia2/atividade2/quartus/exp2_txserial_t6ba6.qarlog
+
+Archive:	D:/Documents/LabDig2/labdig2/experiencia2/atividade2/quartus/exp2_txserial_t6ba6.qar
+Date:		Tue Sep 08 16:44:58 2026
+Quartus Prime		20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/Documents/LabDig2/labdig2/experiencia2/atividade2/contador_m.v
+D:/Documents/LabDig2/labdig2/experiencia2/atividade2/deslocador_n.v
+D:/Documents/LabDig2/labdig2/experiencia2/atividade2/edge_detector.v
+D:/Documents/LabDig2/labdig2/experiencia2/atividade2/hexa7seg.v
+D:/Documents/LabDig2/labdig2/experiencia2/atividade2/quartus/tx_serial_7E1.qpf
+D:/Documents/LabDig2/labdig2/experiencia2/atividade2/quartus/tx_serial_7E1.qsf
+D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1.v
+D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1_fd.v
+D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1_tb.v
+D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_uc.v
+d:/quartus/quartus/bin64/assignment_defaults.qdf
+	======= Total: 11 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
