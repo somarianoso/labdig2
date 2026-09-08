@@ -10,6 +10,7 @@
  * Revisoes  :
  *     Data        Versao  Autor             Descricao
  *     30/08/2025  1.0     Edson Midorikawa  criacao
+ *     08/09/2026  2.0     Gabriel, Sophia, Luis    Modificacao de 7N2 para 7E1
  *--------------------------------------------------------------
  */
  
@@ -29,8 +30,8 @@
     wire [10:0] s_saida;
     wire        paridade;
 
-    // paridade par para 7 bits de dados: total de '1' deve ser par
-    assign paridade = ^dados_ascii[6:0];
+    // paridade par para 7 bits de dados: total de '1' deve ser par nos dados ascii
+    assign paridade = ^dados_ascii[6:0]; // 0 ^ 1 ^ 1 ^ 0 ^ 1 ^ 1 = 0
 
     // composicao dos dados seriais: repouso + start + dados + paridade + stop
     assign s_dados[0]   = 1'b1;             // repouso

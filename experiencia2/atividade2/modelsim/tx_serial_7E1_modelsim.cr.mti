@@ -1,0 +1,43 @@
+D:/Documents/LabDig2/labdig2/experiencia2/atividade2/hexa7seg.v {1 {vlog -work work -stats=none D:/Documents/LabDig2/labdig2/experiencia2/atividade2/hexa7seg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module hexa7seg
+
+Top level modules:
+	hexa7seg
+
+} {} {}} D:/Documents/LabDig2/labdig2/experiencia2/atividade2/deslocador_n.v {1 {vlog -work work -stats=none D:/Documents/LabDig2/labdig2/experiencia2/atividade2/deslocador_n.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module deslocador_n
+
+Top level modules:
+	deslocador_n
+
+} {} {}} D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_uc.v {1 {vlog -work work -stats=none D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_uc.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tx_serial_uc
+
+Top level modules:
+	tx_serial_uc
+
+} {} {}} D:/Documents/LabDig2/labdig2/experiencia2/atividade2/edge_detector.v {1 {vlog -work work -stats=none D:/Documents/LabDig2/labdig2/experiencia2/atividade2/edge_detector.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module edge_detector
+
+Top level modules:
+	edge_detector
+
+} {} {}} D:/Documents/LabDig2/labdig2/experiencia2/atividade2/contador_m.v {1 {vlog -work work -stats=none D:/Documents/LabDig2/labdig2/experiencia2/atividade2/contador_m.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module contador_m
+
+Top level modules:
+	contador_m
+
+} {} {}} D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1.v {1 {vlog -work work -stats=none D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tx_serial_7E1
+
+Top level modules:
+	tx_serial_7E1
+
+} {} {}}
