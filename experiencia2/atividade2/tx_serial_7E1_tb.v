@@ -2,7 +2,7 @@
  * Arquivo   : tx_serial_7E1_tb.v
  *--------------------------------------------------------------
  * Descricao : testbench do circuito base de transmissao serial 
- *             assincrona 7E1 e 9600 bauds
+ *             assincrona 7E1 e 115200 bauds
  *             ==> contem 4 casos de teste (35h,55h,7Eh,7Fh)
  *
  *--------------------------------------------------------------
@@ -46,7 +46,7 @@ module tx_serial_7E1_tb;
     always #(clockPeriod / 2) clock_in = ~clock_in;
 
     // Vetor de teste
-    reg [6:0] vetor_teste [0:3];
+    reg [6:0] vetor_teste [0:5];
     integer caso;
 
     // Geração dos sinais de entrada (estímulos)
@@ -58,7 +58,8 @@ module tx_serial_7E1_tb;
         vetor_teste[1] = 7'b1010101;  // 55h (U)
         vetor_teste[2] = 7'b1111110;  // 7Eh (~)
         vetor_teste[3] = 7'b1111111;  // 7Fh (DEL)
-        // ... acrescente novos casos de teste aqui
+        vetor_teste[4] = 7'b0000000;  // 00h (caso limite: todos zeros)
+        vetor_teste[5] = 7'b0000001;  // 01h (caso limite: apenas um bit em 1)
 
         // Valores iniciais
         clock_in   = 1'b0;
@@ -76,7 +77,7 @@ module tx_serial_7E1_tb;
         #(50*clockPeriod);
 
         // Casos de teste
-        for (caso = 0; caso < 4; caso = caso + 1) begin
+        for (caso = 0; caso < 6; caso = caso + 1) begin
             $display("caso: %0d", caso);
 
             // Dado de entrada do vetor de teste
