@@ -1,4 +1,4 @@
-Fitter Status : Successful - Tue Sep 08 16:41:33 2026
+Fitter Status : Successful - Wed Sep 09 10:28:20 2026
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : tx_serial_7E1
 Top-level Entity Name : tx_serial_7E1
@@ -6,7 +6,7 @@ Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
 Logic utilization (in ALMs) : 22 / 18,480 ( < 1 % )
-Total registers : 33
+Total registers : 34
 Total pins : 23 / 224 ( 10 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 3,153,920 ( 0 % )

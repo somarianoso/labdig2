@@ -1,5 +1,5 @@
 Analysis & Synthesis report for tx_serial_7E1
-Tue Sep 08 16:41:10 2026
+Wed Sep 09 10:27:57 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -54,7 +54,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Sep 08 16:41:10 2026       ;
+; Analysis & Synthesis Status     ; Successful - Wed Sep 09 10:27:57 2026       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; tx_serial_7E1                               ;
 ; Top-level Entity Name           ; tx_serial_7E1                               ;
@@ -178,19 +178,19 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                          ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                            ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
-; ../tx_serial_uc.v                ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_uc.v     ;         ;
-; ../tx_serial_7E1_fd.v            ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1_fd.v ;         ;
-; ../tx_serial_7E1.v               ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1.v    ;         ;
-; ../hexa7seg.v                    ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia2/atividade2/hexa7seg.v         ;         ;
-; ../edge_detector.v               ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia2/atividade2/edge_detector.v    ;         ;
-; ../deslocador_n.v                ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia2/atividade2/deslocador_n.v     ;         ;
-; ../contador_m.v                  ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia2/atividade2/contador_m.v       ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
+; ../tx_serial_uc.v                ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/tx_serial_uc.v     ;         ;
+; ../tx_serial_7E1_fd.v            ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/tx_serial_7E1_fd.v ;         ;
+; ../tx_serial_7E1.v               ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/tx_serial_7E1.v    ;         ;
+; ../hexa7seg.v                    ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/hexa7seg.v         ;         ;
+; ../edge_detector.v               ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/edge_detector.v    ;         ;
+; ../deslocador_n.v                ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/deslocador_n.v     ;         ;
+; ../contador_m.v                  ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/contador_m.v       ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -433,34 +433,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Sep 08 16:40:57 2026
+    Info: Processing started: Wed Sep 09 10:27:46 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off tx_serial_7E1 -c tx_serial_7E1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia2/atividade2/tx_serial_uc.v
-    Info (12023): Found entity 1: tx_serial_uc File: D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_uc.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia2/atividade2/tx_serial_7e1_tb.v
-    Info (12023): Found entity 1: tx_serial_7E1_tb File: D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1_tb.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia2/atividade2/tx_serial_7e1_fd.v
-    Info (12023): Found entity 1: tx_serial_7E1_fd File: D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1_fd.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia2/atividade2/tx_serial_7e1.v
-    Info (12023): Found entity 1: tx_serial_7E1 File: D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia2/atividade2/hexa7seg.v
-    Info (12023): Found entity 1: hexa7seg File: D:/Documents/LabDig2/labdig2/experiencia2/atividade2/hexa7seg.v Line: 22
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia2/atividade2/edge_detector.v
-    Info (12023): Found entity 1: edge_detector File: D:/Documents/LabDig2/labdig2/experiencia2/atividade2/edge_detector.v Line: 19
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia2/atividade2/deslocador_n.v
-    Info (12023): Found entity 1: deslocador_n File: D:/Documents/LabDig2/labdig2/experiencia2/atividade2/deslocador_n.v Line: 15
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia2/atividade2/contador_m.v
-    Info (12023): Found entity 1: contador_m File: D:/Documents/LabDig2/labdig2/experiencia2/atividade2/contador_m.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia2/atividade2/tx_serial_uc.v
+    Info (12023): Found entity 1: tx_serial_uc File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/tx_serial_uc.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia2/atividade2/tx_serial_7e1_tb.v
+    Info (12023): Found entity 1: tx_serial_7E1_tb File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/tx_serial_7E1_tb.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia2/atividade2/tx_serial_7e1_fd.v
+    Info (12023): Found entity 1: tx_serial_7E1_fd File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/tx_serial_7E1_fd.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia2/atividade2/tx_serial_7e1.v
+    Info (12023): Found entity 1: tx_serial_7E1 File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/tx_serial_7E1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia2/atividade2/hexa7seg.v
+    Info (12023): Found entity 1: hexa7seg File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/hexa7seg.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia2/atividade2/edge_detector.v
+    Info (12023): Found entity 1: edge_detector File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/edge_detector.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia2/atividade2/deslocador_n.v
+    Info (12023): Found entity 1: deslocador_n File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/deslocador_n.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia2/atividade2/contador_m.v
+    Info (12023): Found entity 1: contador_m File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/contador_m.v Line: 17
 Info (12127): Elaborating entity "tx_serial_7E1" for the top level hierarchy
-Info (12128): Elaborating entity "tx_serial_7E1_fd" for hierarchy "tx_serial_7E1_fd:U1_FD" File: D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1.v Line: 42
-Info (12128): Elaborating entity "deslocador_n" for hierarchy "tx_serial_7E1_fd:U1_FD|deslocador_n:U1" File: D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1_fd.v Line: 54
-Info (12128): Elaborating entity "contador_m" for hierarchy "tx_serial_7E1_fd:U1_FD|contador_m:U2" File: D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1_fd.v Line: 68
-Info (12128): Elaborating entity "tx_serial_uc" for hierarchy "tx_serial_uc:U2_UC" File: D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1.v Line: 58
-Info (12128): Elaborating entity "contador_m" for hierarchy "contador_m:U3_TICK" File: D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1.v Line: 74
-Info (12128): Elaborating entity "edge_detector" for hierarchy "edge_detector:U4_ED" File: D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1.v Line: 83
-Info (12128): Elaborating entity "hexa7seg" for hierarchy "hexa7seg:HEX0" File: D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1.v Line: 99
+Info (12128): Elaborating entity "tx_serial_7E1_fd" for hierarchy "tx_serial_7E1_fd:U1_FD" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/tx_serial_7E1.v Line: 42
+Info (12128): Elaborating entity "deslocador_n" for hierarchy "tx_serial_7E1_fd:U1_FD|deslocador_n:U1" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/tx_serial_7E1_fd.v Line: 54
+Info (12128): Elaborating entity "contador_m" for hierarchy "tx_serial_7E1_fd:U1_FD|contador_m:U2" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/tx_serial_7E1_fd.v Line: 68
+Info (12128): Elaborating entity "tx_serial_uc" for hierarchy "tx_serial_uc:U2_UC" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/tx_serial_7E1.v Line: 58
+Info (12128): Elaborating entity "contador_m" for hierarchy "contador_m:U3_TICK" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/tx_serial_7E1.v Line: 74
+Info (12128): Elaborating entity "edge_detector" for hierarchy "edge_detector:U4_ED" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/tx_serial_7E1.v Line: 83
+Info (12128): Elaborating entity "hexa7seg" for hierarchy "hexa7seg:HEX0" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/tx_serial_7E1.v Line: 99
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -470,9 +470,9 @@ Info (21057): Implemented 65 device resources after synthesis - the final resour
     Info (21059): Implemented 13 output pins
     Info (21061): Implemented 42 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4825 megabytes
-    Info: Processing ended: Tue Sep 08 16:41:10 2026
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Peak virtual memory: 4820 megabytes
+    Info: Processing ended: Wed Sep 09 10:27:57 2026
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:28
 
 

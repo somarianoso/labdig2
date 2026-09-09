@@ -1,5 +1,5 @@
 Assembler report for tx_serial_7E1
-Tue Sep 08 16:41:38 2026
+Wed Sep 09 10:28:26 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: D:/Documents/LabDig2/labdig2/experiencia2/atividade2/quartus/output_files/tx_serial_7E1.sof
+  5. Assembler Device Options: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/quartus/output_files/tx_serial_7E1.sof
   6. Assembler Messages
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Sep 08 16:41:38 2026 ;
+; Assembler Status      ; Successful - Wed Sep 09 10:28:26 2026 ;
 ; Revision Name         ; tx_serial_7E1                         ;
 ; Top-level Entity Name ; tx_serial_7E1                         ;
 ; Family                ; Cyclone V                             ;
@@ -53,23 +53,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+---------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                   ;
-+---------------------------------------------------------------------------------------------+
-; File Name                                                                                   ;
-+---------------------------------------------------------------------------------------------+
-; D:/Documents/LabDig2/labdig2/experiencia2/atividade2/quartus/output_files/tx_serial_7E1.sof ;
-+---------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                       ;
++-------------------------------------------------------------------------------------------------+
+; File Name                                                                                       ;
++-------------------------------------------------------------------------------------------------+
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/quartus/output_files/tx_serial_7E1.sof ;
++-------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: D:/Documents/LabDig2/labdig2/experiencia2/atividade2/quartus/output_files/tx_serial_7E1.sof ;
-+----------------+------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                              ;
-+----------------+------------------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x004E81BF                                                                                           ;
-; Checksum       ; 0x004E81BF                                                                                           ;
-+----------------+------------------------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia2/atividade2/quartus/output_files/tx_serial_7E1.sof ;
++----------------+----------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                  ;
++----------------+----------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x004E7CB6                                                                                               ;
+; Checksum       ; 0x004E7CB6                                                                                               ;
++----------------+----------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Sep 08 16:41:34 2026
+    Info: Processing started: Wed Sep 09 10:28:22 2026
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off tx_serial_7E1 -c tx_serial_7E1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4823 megabytes
-    Info: Processing ended: Tue Sep 08 16:41:38 2026
+    Info: Peak virtual memory: 4822 megabytes
+    Info: Processing ended: Wed Sep 09 10:28:26 2026
     Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Total CPU time (on all processors): 00:00:05
 
 
