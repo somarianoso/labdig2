@@ -12,12 +12,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	deslocador_n
 
-} {} {}} D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_uc.v {1 {vlog -work work -stats=none D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_uc.v
+} {} {}} D:/Documents/LabDig2/labdig2/experiencia2/atividade2/contador_m.v {1 {vlog -work work -stats=none D:/Documents/LabDig2/labdig2/experiencia2/atividade2/contador_m.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module tx_serial_uc
+-- Compiling module contador_m
 
 Top level modules:
-	tx_serial_uc
+	contador_m
 
 } {} {}} D:/Documents/LabDig2/labdig2/experiencia2/atividade2/edge_detector.v {1 {vlog -work work -stats=none D:/Documents/LabDig2/labdig2/experiencia2/atividade2/edge_detector.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
@@ -26,12 +26,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 
 Top level modules:
 	edge_detector
 
-} {} {}} D:/Documents/LabDig2/labdig2/experiencia2/atividade2/contador_m.v {1 {vlog -work work -stats=none D:/Documents/LabDig2/labdig2/experiencia2/atividade2/contador_m.v
+} {} {}} D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_uc.v {1 {vlog -work work -stats=none D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_uc.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module contador_m
+-- Compiling module tx_serial_uc
 
 Top level modules:
-	contador_m
+	tx_serial_uc
 
 } {} {}} D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1.v {1 {vlog -work work -stats=none D:/Documents/LabDig2/labdig2/experiencia2/atividade2/tx_serial_7E1.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020

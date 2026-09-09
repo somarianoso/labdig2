@@ -1,0 +1,181 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/modelsim
+vcontador_m
+Z0 !s110 1788918671
+!i10b 1
+!s100 Kk05NW4i;1];mDQO24BHS0
+I7S0UV5SfT_hHY=a3z@5o73
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Sophia/Documents/labdig2/experiencia2/atividade2
+Z3 w1788917490
+8C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/contador_m.v
+FC:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/contador_m.v
+Z4 L0 17
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1788918671.000000
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/contador_m.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/contador_m.v|
+!i113 1
+Z7 o-work work
+Z8 tCvgOpt 0
+vdeslocador_n
+R0
+!i10b 1
+!s100 PSkkfN2z:nM><DOG_8?3F1
+IzKIKV2dCU`nJ1D?>o8olb0
+R1
+R2
+R3
+8C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/deslocador_n.v
+FC:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/deslocador_n.v
+L0 15
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/deslocador_n.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/deslocador_n.v|
+!i113 1
+R7
+R8
+vedge_detector
+R0
+!i10b 1
+!s100 WV5WCg2SZ=LWUESOkXGc32
+I6Zo0OzbPh?jTaD;n?n_4Z3
+R1
+R2
+R3
+8C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/edge_detector.v
+FC:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/edge_detector.v
+L0 19
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/edge_detector.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/edge_detector.v|
+!i113 1
+R7
+R8
+vhexa7seg
+R0
+!i10b 1
+!s100 X`<lfba[ET4D2MI2IU;EQ0
+Iz40NGkY]b=HRK76DnKL;c2
+R1
+R2
+R3
+8C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/hexa7seg.v
+FC:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/hexa7seg.v
+L0 22
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/hexa7seg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/hexa7seg.v|
+!i113 1
+R7
+R8
+vtx_serial_7E1
+R0
+!i10b 1
+!s100 h7aHCzkVz>KNHgh@U>mze1
+I7Kh8VgIf3>l39f>b=C@ia3
+R1
+R2
+Z9 w1788917492
+8C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/tx_serial_7E1.v
+FC:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/tx_serial_7E1.v
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/tx_serial_7E1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/tx_serial_7E1.v|
+!i113 1
+R7
+R8
+ntx_serial_7@e1
+vtx_serial_7E1_fd
+R0
+!i10b 1
+!s100 AOYDIFGl^a4R_[FnQXWik2
+I<o4TaI@Am42Rl6Bn5682]1
+R1
+R2
+R9
+8C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/tx_serial_7E1_fd.v
+FC:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/tx_serial_7E1_fd.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/tx_serial_7E1_fd.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/tx_serial_7E1_fd.v|
+!i113 1
+R7
+R8
+ntx_serial_7@e1_fd
+vtx_serial_7E1_tb
+R0
+!i10b 1
+!s100 Hd]MXmGfdglT[Ak92[4On1
+IQ?J?Q1W<flUo4[J0b@oEQ2
+R1
+R2
+w1788918075
+8C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/tx_serial_7E1_tb.v
+FC:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/tx_serial_7E1_tb.v
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/tx_serial_7E1_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/tx_serial_7E1_tb.v|
+!i113 1
+R7
+R8
+ntx_serial_7@e1_tb
+vtx_serial_uc
+R0
+!i10b 1
+!s100 82L>5WV=BRd>Vc8O6dCUb0
+I54:gBMS1NXDHXPF48`12?3
+R1
+R2
+R9
+8C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/tx_serial_uc.v
+FC:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/tx_serial_uc.v
+R4
+R5
+r1
+!s85 0
+31
+!s108 1788918670.000000
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/tx_serial_uc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia2/atividade2/tx_serial_uc.v|
+!i113 1
+R7
+R8
