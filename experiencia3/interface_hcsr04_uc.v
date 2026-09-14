@@ -46,41 +46,61 @@ module interface_hcsr04_uc (
 
     // Lógica de próximo estado
     always @(*) begin
-        case (Eatual)
-            inicial: 
-                /* completar */
+        Eprox = inicial;
 
-            preparacao: 
-                /* completar */
+        case (Eatual)
+            inicial: begin
+                if (medir)
+                    Eprox = preparacao;
+                else
+                    Eprox = inicial;
+            end
+
+            preparacao:
+                Eprox = envia_trigger;
 
             envia_trigger:
-                /* completar */
+                Eprox = espera_echo;
 
-            espera_echo: 
-                /* completar */
+            espera_echo: begin
+                if (echo)
+                    Eprox = medida;
+                else
+                    Eprox = espera_echo;
+            end
 
-            medida: 
-                /* completar */
+            medida: begin
+                if (fim_medida)
+                    Eprox = armazenamento;
+                else
+                    Eprox = medida;
+            end
 
             armazenamento:
-                /* completar */
+                Eprox = final_medida;
 
-            final_medida: 
+            final_medida:
                 Eprox = inicial;
 
-            default: 
+            default:
                 Eprox = inicial;
         endcase
     end
 
     // Saídas de controle
     always @(*) begin
-        case (Eatual)
-            preparacao: zera = 1'b1;
-            default:    zera = 1'b0;
-        endcase
+        zera = 1'b0;
+        gera = 1'b0;
+        registra = 1'b0;
+        pronto = 1'b0;
 
-        /* completar para outras saidas */
+        case (Eatual)
+            preparacao:    zera = 1'b1;
+            envia_trigger: gera = 1'b1;
+            armazenamento: registra = 1'b1;
+            final_medida:  pronto = 1'b1;
+            default:      ;
+        endcase
 
         case (Eatual)
             inicial:       db_estado = 4'b0000;
