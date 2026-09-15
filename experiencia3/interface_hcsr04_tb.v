@@ -45,25 +45,52 @@ module interface_hcsr04_tb;
     always #(clockPeriod/2) clock_in = ~clock_in;
 
     // Array de casos de teste (estrutura equivalente em Verilog)
-    reg [31:0] casos_teste [0:3]; // Usando 32 bits para acomodar o tempo
+    reg [31:0] casos_teste [0:4]; // Usando 32 bits para acomodar tempos maiores
+    reg [11:0] medidas_esperadas [0:4];
     integer caso;
+    integer erros;
 
     // Largura do pulso
     reg [31:0] larguraPulso; // Usando 32 bits para acomodar tempos maiores
+    time inicio_trigger;
+
+    task automatic verifica_trigger;
+        begin
+            @(posedge trigger_out);
+            inicio_trigger = $time;
+            @(negedge trigger_out);
+            if (($time - inicio_trigger) != 10_000) begin
+                $display("ERRO caso %0d: trigger com %0t ns; esperado 10000 ns",
+                         caso, $time - inicio_trigger);
+                erros = erros + 1;
+            end else begin
+                $display("OK caso %0d: trigger com 10 us", caso);
+            end
+        end
+    endtask
 
     // Geração dos sinais de entrada (estímulos)
     initial begin
+        $dumpfile("interface_hcsr04_tb.vcd");
+        $dumpvars(0, interface_hcsr04_tb);
         $display("Inicio das simulacoes");
 
         // Inicialização do array de casos de teste
-        casos_teste[0] = 5882;   // 5882us (100cm)
-        casos_teste[1] = 5899;   // 5899us (100,29cm) truncar para 100cm
-        casos_teste[2] = 4353;   // 4353us (74cm)
-        casos_teste[3] = 4399;   // 4399us (74,79cm) arredondar para 75cm
+        casos_teste[0] = 117;    // 117us (2cm, arredondar)
+        casos_teste[1] = 5882;   // 5882us (100cm)
+        casos_teste[2] = 5899;   // 5899us (100,29cm) truncar para 100cm
+        casos_teste[3] = 4353;   // 4353us (74cm)
+        casos_teste[4] = 4399;   // 4399us (74,79cm) arredondar para 75cm
+        medidas_esperadas[0] = 12'h002;
+        medidas_esperadas[1] = 12'h100;
+        medidas_esperadas[2] = 12'h100;
+        medidas_esperadas[3] = 12'h074;
+        medidas_esperadas[4] = 12'h075;
 
         // Valores iniciais
         medir_in = 0;
         echo_in  = 0;
+        erros = 0;
 
         // Reset
         caso = 0; 
@@ -77,10 +104,14 @@ module interface_hcsr04_tb;
         #(100_000); // 100 us
 
         // Loop pelos casos de teste
-        for (caso = 1; caso < 5; caso = caso + 1) begin
+        for (caso = 1; caso < 6; caso = caso + 1) begin
             // 1) Determina a largura do pulso echo
             $display("Caso de teste %0d: %0dus", caso, casos_teste[caso-1]);
             larguraPulso = casos_teste[caso-1]*1000; // 1us=1000
+
+            fork
+                verifica_trigger();
+            join_none
 
             // 2) Envia pulso medir
             @(negedge clock_in);
@@ -97,17 +128,28 @@ module interface_hcsr04_tb;
             echo_in = 0;
 
             // 5) Espera final da medida
-            wait (pronto_out == 1'b1);
-            $display("Fim do caso %0d", caso);
+            wait (pronto_out === 1'b1);
+            if (medida_out !== medidas_esperadas[caso-1]) begin
+                $display("ERRO caso %0d: medida=%03h; esperado=%03h",
+                         caso, medida_out, medidas_esperadas[caso-1]);
+                erros = erros + 1;
+            end else begin
+                $display("OK caso %0d: medida BCD=%03h", caso, medida_out);
+            end
+
+            @(posedge clock_in);
+            if (pronto_out !== 1'b0) begin
+                $display("ERRO caso %0d: pronto nao durou um ciclo", caso);
+                erros = erros + 1;
+            end
 
             // 6) Espera entre casos de teste
             #(100_000); // 100 us
         end
 
         // Fim da simulação
-        $display("Fim das simulacoes");
-        caso = 99; 
-        $stop;
+        $display("Fim das simulacoes: %0d erro(s)", erros);
+        $finish(erros != 0);
     end
 
 endmodule
