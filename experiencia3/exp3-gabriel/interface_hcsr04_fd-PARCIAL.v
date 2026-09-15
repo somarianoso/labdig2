@@ -61,10 +61,10 @@ module interface_hcsr04_fd (
         .N(12)
     ) U3 (
         .clock  (clock    ),
-        .clear  (/* completar */),
-        .enable (/* completar */),
+        .clear  (zera),
+        .enable (registra),
         .D      (s_medida ),
-        .Q      (/* completar */)
+        .Q      (distancia)
     );
 
 endmodule
