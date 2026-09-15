@@ -30,11 +30,11 @@ module contador_cm_uc (
 
     // Parâmetros para os estados
 	/* completar */
-    parameter X = 3'b000;
-    parameter Y = 3'b001;
-    parameter Z = 3'b010;
-    parameter W = 3'b011;
-    parameter F = 3'b100;
+    parameter inicial = 3'b000;
+    parameter preparacao = 3'b001;
+    parameter contaCm = 3'b010;
+    parameter esperaTick = 3'b011;
+    parameter final = 3'b100;
 
     // Memória de estado
     always @(posedge clock, posedge reset) begin
@@ -47,7 +47,7 @@ module contador_cm_uc (
     // Lógica de próximo estado
     always @(*) begin
         case (Eatual)
-            /* completar */
+            inicial
         endcase
     end
 
