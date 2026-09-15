@@ -39,8 +39,8 @@ module contador_cm_fd #(
         .zera_s  (zera_tick ),
         .conta   (conta_tick),
         .Q       (          ),
-        .fim     (tick      ),
-        .meio    (          )
+        .fim     (tick      ),//tick foi pra cá
+        .meio    (          ) // tick removido daqui
     );
 
     // Contador de distância em cm
