@@ -34,7 +34,7 @@ module contador_cm_uc (
     parameter preparacao = 3'b001;
     parameter contaCm = 3'b010;
     parameter esperaTick = 3'b011;
-    parameter final = 3'b100;
+    parameter estadoFinal = 3'b100;
 
     // Memória de estado
     always @(posedge clock, posedge reset) begin
@@ -47,15 +47,23 @@ module contador_cm_uc (
     // Lógica de próximo estado
     always @(*) begin
         case (Eatual)
-            inicial
+            inicial: Eprox = (pulso == 1) ? preparacao : inicial;
+            preparacao: Eprox = esperaTick;
+            esperaTick: Eprox = (pulso == 0) ? estadoFinal : ((tick == 1) ? contaCm : esperaTick);
+            contaCm: Eprox = esperaTick;
+            estadoFinal: Eprox = inicial;
+            default: Eprox = inicial; 
         endcase
     end
 
     // Lógica de saída (Moore)
     always @(*) begin
-	
-        /* completar */
-		
+        zera_tick = (Eatual == contaCm || Eatual == preparacao) ? 1'b1 : 1'b0;
+        conta_tick = (Eatual == esperaTick) ? 1'b1 : 1'b0;
+        zera_bcd = (Eatual == preparacao) ? 1'b1 : 1'b0;
+        conta_bcd = (Eatual == contaCm) ? 1'b1 : 1'b0;
+        pronto = (Eatual == estadoFinal) ? 1'b1 : 1'b0; 
+
     end
 
 endmodule
