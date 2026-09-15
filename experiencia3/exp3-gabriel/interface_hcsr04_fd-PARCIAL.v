@@ -8,7 +8,7 @@
  *  Revisoes  :
  *      Data        Versao  Autor             Descricao
  *      07/09/2024  1.0     Edson Midorikawa  versao em Verilog
- *      14/09/2026  2.0     Gabriel, Luis, Sophia  Versao completa
+*      14/09/2026  2.0     Gabriel, Luis, Sophia  Versao completa
  * --------------------------------------------------------------------------
  */
  
@@ -31,14 +31,14 @@ module interface_hcsr04_fd (
     // 50Mhz -> T = 0.00000002s
     // (10*10^-6)/(2*10^-8) = 500 clocks
     gerador_pulso #(
-        .largura(/* completar */) 
+        .largura(500) 
     ) U1 (
         .clock (clock  ),
         .reset (zera),
-        .gera  (/* completar */),
-        .para  (/* completar */), 
-        .pulso (/* completar */),
-        .pronto(/* completar */)
+        .gera  (gera),
+        .para  (1'b0), //fixado em 0
+        .pulso (trigger),
+        .pronto() //desconectado
     );
 
     // (U2) medida em cm (R=2941 clocks)
@@ -47,13 +47,13 @@ module interface_hcsr04_fd (
         .N(12)
     ) U2 (
         .clock  (clock         ),
-        .reset  (/* completar */),
-        .pulso  (/* completar */),
+        .reset  (zera),
+        .pulso  (pulso),
         .digito2(s_medida[11:8]),
         .digito1(s_medida[7:4] ),
         .digito0(s_medida[3:0] ),
-        .fim    (/* completar */),
-        .pronto (/* completar */)
+        .fim    (fim),
+        .pronto (fim_medida)
     );
 
     // (U3) registrador
