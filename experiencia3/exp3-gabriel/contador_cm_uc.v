@@ -29,41 +29,85 @@ module contador_cm_uc (
     reg [2:0] Eatual, Eprox; // 3 bits são suficientes para os estados
 
     // Parâmetros para os estados
-	/* completar */
-    parameter inicial = 3'b000;
-    parameter preparacao = 3'b001;
-    parameter contaCm = 3'b010;
-    parameter esperaTick = 3'b011;
-    parameter estadoFinal = 3'b100;
+    parameter inicial      = 3'b000;
+    parameter espera       = 3'b001;
+    parameter contagem     = 3'b010;
+    parameter estado_final = 3'b011;
 
     // Memória de estado
     always @(posedge clock, posedge reset) begin
         if (reset)
             Eatual <= inicial;
         else
-            Eatual <= Eprox; 
+            Eatual <= Eprox;
     end
 
     // Lógica de próximo estado
     always @(*) begin
         case (Eatual)
-            inicial: Eprox = (pulso == 1) ? preparacao : inicial;
-            preparacao: Eprox = esperaTick;
-            esperaTick: Eprox = (pulso == 0) ? estadoFinal : ((tick == 1) ? contaCm : esperaTick);
-            contaCm: Eprox = esperaTick;
-            estadoFinal: Eprox = inicial;
-            default: Eprox = inicial; 
+            inicial: begin
+                if (pulso)
+                    Eprox = contagem;
+                else
+                    Eprox = inicial;
+            end
+
+            espera: begin
+                if (pulso)
+                    Eprox = contagem;
+                else
+                    Eprox = inicial;
+            end
+
+            contagem: begin
+                if (pulso)
+                    Eprox = contagem;
+                else
+                    Eprox = estado_final;
+            end
+
+            estado_final: begin
+                Eprox = inicial;
+            end
+
+            default: begin
+                Eprox = inicial;
+            end
         endcase
     end
 
     // Lógica de saída (Moore)
     always @(*) begin
-        zera_tick = (Eatual == contaCm || Eatual == preparacao) ? 1'b1 : 1'b0;
-        conta_tick = (Eatual == esperaTick) ? 1'b1 : 1'b0;
-        zera_bcd = (Eatual == preparacao) ? 1'b1 : 1'b0;
-        conta_bcd = (Eatual == contaCm) ? 1'b1 : 1'b0;
-        pronto = (Eatual == estadoFinal) ? 1'b1 : 1'b0; 
+        zera_tick = 1'b0;
+        conta_tick = 1'b0;
+        zera_bcd = 1'b0;
+        conta_bcd = 1'b0;
+        pronto = 1'b0;
 
+        case (Eatual)
+            inicial: begin
+                zera_tick = 1'b1;
+                zera_bcd = 1'b1;
+            end
+
+            contagem: begin
+                conta_tick = 1'b1;
+                if (tick)
+                    conta_bcd = 1'b1;
+            end
+
+            estado_final: begin
+                pronto = 1'b1;
+            end
+
+            default: begin
+                zera_tick = 1'b0;
+                conta_tick = 1'b0;
+                zera_bcd = 1'b0;
+                conta_bcd = 1'b0;
+                pronto = 1'b0;
+            end
+        endcase
     end
 
 endmodule
