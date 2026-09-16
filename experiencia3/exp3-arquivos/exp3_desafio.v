@@ -73,11 +73,11 @@ module exp3_desafio (
 
     controle_servo servo (
         .clock(clock),
-        .reset(reset)
+        .reset(reset),
         .posicao(posicao),
         .controle(controle_servo),
         .db_controle(db_controle)
-    )
+    );
 
 
 endmodule

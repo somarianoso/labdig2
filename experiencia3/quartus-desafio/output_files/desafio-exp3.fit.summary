@@ -1,12 +1,12 @@
-Fitter Status : Successful - Wed Sep 16 10:44:12 2026
+Fitter Status : Successful - Wed Sep 16 10:56:36 2026
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : desafio-exp3
 Top-level Entity Name : exp3_desafio
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 1 / 18,480 ( < 1 % )
-Total registers : 0
+Logic utilization (in ALMs) : 110 / 18,480 ( < 1 % )
+Total registers : 154
 Total pins : 43 / 224 ( 19 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 3,153,920 ( 0 % )

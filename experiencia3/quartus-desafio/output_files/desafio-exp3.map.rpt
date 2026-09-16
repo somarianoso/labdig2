@@ -1,5 +1,5 @@
 Analysis & Synthesis report for desafio-exp3
-Wed Sep 16 10:43:51 2026
+Wed Sep 16 10:56:10 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,10 +13,26 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. State Machine - |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual
+  9. State Machine - |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado
+ 10. State Machine - |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_uc:U1|Eatual
+ 11. Registers Removed During Synthesis
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: interface_hcsr04:INT|interface_hcsr04_uc:U1
+ 15. Parameter Settings for User Entity Instance: interface_hcsr04:INT|interface_hcsr04_fd:U2|gerador_pulso:U1
+ 16. Parameter Settings for User Entity Instance: interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2
+ 17. Parameter Settings for User Entity Instance: interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD
+ 18. Parameter Settings for User Entity Instance: interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1
+ 19. Parameter Settings for User Entity Instance: interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC
+ 20. Parameter Settings for User Entity Instance: interface_hcsr04:INT|interface_hcsr04_fd:U2|registrador_n:U3
+ 21. Parameter Settings for User Entity Instance: controle_servo:servo|circuito_pwm:gera_pwm
+ 22. Port Connectivity Checks: "interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1"
+ 23. Port Connectivity Checks: "interface_hcsr04:INT|interface_hcsr04_fd:U2|gerador_pulso:U1"
+ 24. Port Connectivity Checks: "interface_hcsr04:INT|interface_hcsr04_fd:U2"
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
 
 
 
@@ -43,13 +59,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Sep 16 10:43:51 2026       ;
+; Analysis & Synthesis Status     ; Successful - Wed Sep 16 10:56:10 2026       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; desafio-exp3                                ;
 ; Top-level Entity Name           ; exp3_desafio                                ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
+; Total registers                 ; 121                                         ;
 ; Total pins                      ; 43                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -159,57 +175,152 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                             ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                               ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
-; ../exp3-arquivos/exp3_desafio.v  ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                              ;
++------------------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path         ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                        ; Library ;
++------------------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------+---------+
+; ../exp3-arquivos/controle_servo.v        ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/controle_servo.v        ;         ;
+; ../exp3-arquivos/circuito_pwm.v          ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/circuito_pwm.v          ;         ;
+; ../exp3-arquivos/registrador_n.v         ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/registrador_n.v         ;         ;
+; ../exp3-arquivos/interface_hcsr04_uc.v   ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/interface_hcsr04_uc.v   ;         ;
+; ../exp3-arquivos/interface_hcsr04_fd.v   ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/interface_hcsr04_fd.v   ;         ;
+; ../exp3-arquivos/interface_hcsr04.v      ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/interface_hcsr04.v      ;         ;
+; ../exp3-arquivos/hexa7seg.v              ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/hexa7seg.v              ;         ;
+; ../exp3-arquivos/gerador_pulso.v         ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/gerador_pulso.v         ;         ;
+; ../exp3-arquivos/exp3_desafio.v          ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v          ;         ;
+; ../exp3-arquivos/edge_detector.v         ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/edge_detector.v         ;         ;
+; ../exp3-arquivos/contador_m.v            ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_m.v            ;         ;
+; ../exp3-arquivos/contador_cm_uc.v        ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_cm_uc.v        ;         ;
+; ../exp3-arquivos/contador_cm_fd.v        ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_cm_fd.v        ;         ;
+; ../exp3-arquivos/contador_cm.v           ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_cm.v           ;         ;
+; ../exp3-arquivos/contador_bcd_3digitos.v ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_bcd_3digitos.v ;         ;
++------------------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimate of Logic utilization (ALMs needed) ; 0     ;
-;                                             ;       ;
-; Combinational ALUT usage for logic          ; 0     ;
-;     -- 7 input functions                    ; 0     ;
-;     -- 6 input functions                    ; 0     ;
-;     -- 5 input functions                    ; 0     ;
-;     -- 4 input functions                    ; 0     ;
-;     -- <=3 input functions                  ; 0     ;
-;                                             ;       ;
-; Dedicated logic registers                   ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 43    ;
-;                                             ;       ;
-; Total DSP Blocks                            ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 43    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 110         ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 199         ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 19          ;
+;     -- 5 input functions                    ; 13          ;
+;     -- 4 input functions                    ; 69          ;
+;     -- <=3 input functions                  ; 98          ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 121         ;
+;                                             ;             ;
+; I/O pins                                    ; 43          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 121         ;
+; Total fan-out                               ; 1157        ;
+; Average fan-out                             ; 2.85        ;
++---------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name  ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
-; |exp3_desafio              ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 43   ; 0            ; |exp3_desafio       ; exp3_desafio ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+--------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                             ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                 ; Entity Name           ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; |exp3_desafio                             ; 199 (0)             ; 121 (0)                   ; 0                 ; 0          ; 43   ; 0            ; |exp3_desafio                                                                                                       ; exp3_desafio          ; work         ;
+;    |controle_servo:servo|                 ; 53 (0)              ; 38 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |exp3_desafio|controle_servo:servo                                                                                  ; controle_servo        ; work         ;
+;       |circuito_pwm:gera_pwm|             ; 53 (53)             ; 38 (38)                   ; 0                 ; 0          ; 0    ; 0            ; |exp3_desafio|controle_servo:servo|circuito_pwm:gera_pwm                                                            ; circuito_pwm          ; work         ;
+;    |edge_detector:DB|                     ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |exp3_desafio|edge_detector:DB                                                                                      ; edge_detector         ; work         ;
+;    |hexa7seg:H0|                          ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |exp3_desafio|hexa7seg:H0                                                                                           ; hexa7seg              ; work         ;
+;    |hexa7seg:H1|                          ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |exp3_desafio|hexa7seg:H1                                                                                           ; hexa7seg              ; work         ;
+;    |hexa7seg:H2|                          ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |exp3_desafio|hexa7seg:H2                                                                                           ; hexa7seg              ; work         ;
+;    |hexa7seg:H5|                          ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |exp3_desafio|hexa7seg:H5                                                                                           ; hexa7seg              ; work         ;
+;    |interface_hcsr04:INT|                 ; 118 (0)             ; 81 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |exp3_desafio|interface_hcsr04:INT                                                                                  ; interface_hcsr04      ; work         ;
+;       |interface_hcsr04_fd:U2|            ; 110 (0)             ; 74 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_fd:U2                                                           ; interface_hcsr04_fd   ; work         ;
+;          |contador_cm:U2|                 ; 36 (0)              ; 27 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2                                            ; contador_cm           ; work         ;
+;             |contador_cm_fd:FD|           ; 33 (0)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD                          ; contador_cm_fd        ; work         ;
+;                |contador_bcd_3digitos:U2| ; 17 (17)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2 ; contador_bcd_3digitos ; work         ;
+;                |contador_m:U1|            ; 16 (16)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1            ; contador_m            ; work         ;
+;             |contador_cm_uc:UC|           ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC                          ; contador_cm_uc        ; work         ;
+;          |gerador_pulso:U1|               ; 74 (74)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_fd:U2|gerador_pulso:U1                                          ; gerador_pulso         ; work         ;
+;          |registrador_n:U3|               ; 0 (0)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_fd:U2|registrador_n:U3                                          ; registrador_n         ; work         ;
+;       |interface_hcsr04_uc:U1|            ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_uc:U1                                                           ; interface_hcsr04_uc   ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------+
+; State Machine - |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual ;
++---------------------+---------------------+-----------------+---------------+-------------------------------------+
+; Name                ; Eatual.estado_final ; Eatual.contagem ; Eatual.espera ; Eatual.inicial                      ;
++---------------------+---------------------+-----------------+---------------+-------------------------------------+
+; Eatual.inicial      ; 0                   ; 0               ; 0             ; 0                                   ;
+; Eatual.espera       ; 0                   ; 0               ; 1             ; 1                                   ;
+; Eatual.contagem     ; 0                   ; 1               ; 0             ; 1                                   ;
+; Eatual.estado_final ; 1                   ; 0               ; 0             ; 1                                   ;
++---------------------+---------------------+-----------------+---------------+-------------------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------+
+; State Machine - |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado ;
++------------------------+-------------------+------------------------+---------------------------------+
+; Name                   ; reg_estado.parado ; reg_estado.final_pulso ; reg_estado.contagem             ;
++------------------------+-------------------+------------------------+---------------------------------+
+; reg_estado.parado      ; 0                 ; 0                      ; 0                               ;
+; reg_estado.contagem    ; 1                 ; 0                      ; 1                               ;
+; reg_estado.final_pulso ; 1                 ; 1                      ; 0                               ;
++------------------------+-------------------+------------------------+---------------------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_uc:U1|Eatual                                                                                   ;
++----------------------+---------------------+----------------------+---------------+--------------------+----------------------+-------------------+----------------+
+; Name                 ; Eatual.final_medida ; Eatual.armazenamento ; Eatual.medida ; Eatual.espera_echo ; Eatual.envia_trigger ; Eatual.preparacao ; Eatual.inicial ;
++----------------------+---------------------+----------------------+---------------+--------------------+----------------------+-------------------+----------------+
+; Eatual.inicial       ; 0                   ; 0                    ; 0             ; 0                  ; 0                    ; 0                 ; 0              ;
+; Eatual.preparacao    ; 0                   ; 0                    ; 0             ; 0                  ; 0                    ; 1                 ; 1              ;
+; Eatual.envia_trigger ; 0                   ; 0                    ; 0             ; 0                  ; 1                    ; 0                 ; 1              ;
+; Eatual.espera_echo   ; 0                   ; 0                    ; 0             ; 1                  ; 0                    ; 0                 ; 1              ;
+; Eatual.medida        ; 0                   ; 0                    ; 1             ; 0                  ; 0                    ; 0                 ; 1              ;
+; Eatual.armazenamento ; 0                   ; 1                    ; 0             ; 0                  ; 0                    ; 0                 ; 1              ;
+; Eatual.final_medida  ; 1                   ; 0                    ; 0             ; 0                  ; 0                    ; 0                 ; 1              ;
++----------------------+---------------------+----------------------+---------------+--------------------+----------------------+-------------------+----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                  ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
+; Register name                                                                              ; Reason for Removal                                                     ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
+; controle_servo:servo|circuito_pwm:gera_pwm|largura_pwm[0..2,11,12,17..31]                  ; Stuck at GND due to stuck port data_in                                 ;
+; controle_servo:servo|circuito_pwm:gera_pwm|largura_pwm[5,7,16]                             ; Merged with controle_servo:servo|circuito_pwm:gera_pwm|largura_pwm[10] ;
+; controle_servo:servo|circuito_pwm:gera_pwm|largura_pwm[9]                                  ; Merged with controle_servo:servo|circuito_pwm:gera_pwm|largura_pwm[15] ;
+; controle_servo:servo|circuito_pwm:gera_pwm|largura_pwm[8]                                  ; Merged with controle_servo:servo|circuito_pwm:gera_pwm|largura_pwm[14] ;
+; controle_servo:servo|circuito_pwm:gera_pwm|largura_pwm[3]                                  ; Merged with controle_servo:servo|circuito_pwm:gera_pwm|largura_pwm[13] ;
+; controle_servo:servo|circuito_pwm:gera_pwm|largura_pwm[6]                                  ; Merged with controle_servo:servo|circuito_pwm:gera_pwm|largura_pwm[4]  ;
+; interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual.espera ; Lost fanout                                                            ;
+; interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual~4      ; Lost fanout                                                            ;
+; interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual~5      ; Lost fanout                                                            ;
+; interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual~6      ; Lost fanout                                                            ;
+; interface_hcsr04:INT|interface_hcsr04_uc:U1|Eatual~4                                       ; Lost fanout                                                            ;
+; interface_hcsr04:INT|interface_hcsr04_uc:U1|Eatual~5                                       ; Lost fanout                                                            ;
+; interface_hcsr04:INT|interface_hcsr04_uc:U1|Eatual~6                                       ; Lost fanout                                                            ;
+; Total Number of Removed Registers = 34                                                     ;                                                                        ;
++--------------------------------------------------------------------------------------------+------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -217,14 +328,152 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 121   ;
+; Number of registers using Synchronous Clear  ; 44    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 97    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 41    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------+
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[0] ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1|Q[8]                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[0] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: interface_hcsr04:INT|interface_hcsr04_uc:U1 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; inicial        ; 000   ; Unsigned Binary                                                 ;
+; preparacao     ; 001   ; Unsigned Binary                                                 ;
+; envia_trigger  ; 010   ; Unsigned Binary                                                 ;
+; espera_echo    ; 011   ; Unsigned Binary                                                 ;
+; medida         ; 100   ; Unsigned Binary                                                 ;
+; armazenamento  ; 101   ; Unsigned Binary                                                 ;
+; final_medida   ; 110   ; Unsigned Binary                                                 ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: interface_hcsr04:INT|interface_hcsr04_fd:U2|gerador_pulso:U1 ;
++----------------+-------+----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------+
+; largura        ; 500   ; Signed Integer                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2 ;
++----------------+-------+--------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------+
+; R              ; 2941  ; Signed Integer                                                                 ;
+; N              ; 12    ; Signed Integer                                                                 ;
++----------------+-------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                             ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; R              ; 2941  ; Signed Integer                                                                                   ;
+; N              ; 12    ; Signed Integer                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1 ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                           ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------+
+; M              ; 2941  ; Signed Integer                                                                                                 ;
+; N              ; 12    ; Signed Integer                                                                                                 ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                             ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; inicial        ; 000   ; Unsigned Binary                                                                                  ;
+; espera         ; 001   ; Unsigned Binary                                                                                  ;
+; contagem       ; 010   ; Unsigned Binary                                                                                  ;
+; estado_final   ; 011   ; Unsigned Binary                                                                                  ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: interface_hcsr04:INT|interface_hcsr04_fd:U2|registrador_n:U3 ;
++----------------+-------+----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------+
+; N              ; 12    ; Signed Integer                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: controle_servo:servo|circuito_pwm:gera_pwm ;
++----------------+---------+--------------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                         ;
++----------------+---------+--------------------------------------------------------------+
+; conf_periodo   ; 1000000 ; Signed Integer                                               ;
+; largura_00     ; 0       ; Signed Integer                                               ;
+; largura_01     ; 50000   ; Signed Integer                                               ;
+; largura_10     ; 75000   ; Signed Integer                                               ;
+; largura_11     ; 100000  ; Signed Integer                                               ;
++----------------+---------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1" ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                  ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+; zera_as ; Input  ; Info     ; Stuck at GND                                                                             ;
+; Q       ; Output ; Info     ; Explicitly unconnected                                                                   ;
+; meio    ; Output ; Info     ; Explicitly unconnected                                                                   ;
++---------+--------+----------+------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "interface_hcsr04:INT|interface_hcsr04_fd:U2|gerador_pulso:U1" ;
++--------+--------+----------+-------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                     ;
++--------+--------+----------+-------------------------------------------------------------+
+; para   ; Input  ; Info     ; Stuck at GND                                                ;
+; pronto ; Output ; Info     ; Explicitly unconnected                                      ;
++--------+--------+----------+-------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Port Connectivity Checks: "interface_hcsr04:INT|interface_hcsr04_fd:U2" ;
++------+--------+----------+----------------------------------------------+
+; Port ; Type   ; Severity ; Details                                      ;
++------+--------+----------+----------------------------------------------+
+; fim  ; Output ; Info     ; Explicitly unconnected                       ;
++------+--------+----------+----------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -232,13 +481,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
+; arriav_ff             ; 121                         ;
+;     CLR               ; 48                          ;
+;     CLR SCLR          ; 32                          ;
+;     ENA               ; 12                          ;
+;     ENA CLR           ; 17                          ;
+;     ENA SCLR          ; 12                          ;
+; arriav_lcell_comb     ; 207                         ;
+;     arith             ; 76                          ;
+;         1 data inputs ; 76                          ;
+;     normal            ; 131                         ;
 ;         0 data inputs ; 1                           ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 69                          ;
+;         5 data inputs ; 13                          ;
+;         6 data inputs ; 19                          ;
 ; boundary_port         ; 43                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 5.10                        ;
+; Average LUT depth     ; 2.87                        ;
 +-----------------------+-----------------------------+
 
 
@@ -247,7 +510,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -257,10 +520,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Sep 16 10:43:40 2026
+    Info: Processing started: Wed Sep 16 10:55:58 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off desafio-exp3 -c desafio-exp3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia3/exp3-arquivos/controle_servo.v
+    Info (12023): Found entity 1: controle_servo File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/controle_servo.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia3/exp3-arquivos/circuito_pwm.v
+    Info (12023): Found entity 1: circuito_pwm File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/circuito_pwm.v Line: 16
 Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia3/exp3-arquivos/registrador_n.v
     Info (12023): Found entity 1: registrador_n File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/registrador_n.v Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia3/exp3-arquivos/interface_hcsr04_uc.v
@@ -300,72 +567,37 @@ Info (12021): Found 1 design units, including 1 entities, in source file /projet
 Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia3/exp3-arquivos/contador_bcd_3digitos.v
     Info (12023): Found entity 1: contador_bcd_3digitos File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_bcd_3digitos.v Line: 14
 Info (12127): Elaborating entity "exp3_desafio" for the top level hierarchy
-Warning (10034): Output port "hex0" at exp3_desafio.v(8) has no driver File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 8
-Warning (10034): Output port "hex1" at exp3_desafio.v(9) has no driver File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 9
-Warning (10034): Output port "hex2" at exp3_desafio.v(10) has no driver File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 10
 Warning (10034): Output port "db_posicao" at exp3_desafio.v(17) has no driver File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 17
-Warning (10034): Output port "db_estado" at exp3_desafio.v(19) has no driver File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 19
-Warning (10034): Output port "trigger" at exp3_desafio.v(7) has no driver File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 7
-Warning (10034): Output port "pronto" at exp3_desafio.v(11) has no driver File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 11
-Warning (10034): Output port "controle_servo" at exp3_desafio.v(12) has no driver File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 12
-Warning (10034): Output port "db_medir" at exp3_desafio.v(13) has no driver File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 13
-Warning (10034): Output port "db_echo" at exp3_desafio.v(14) has no driver File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 14
-Warning (10034): Output port "db_trigger" at exp3_desafio.v(15) has no driver File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 15
-Warning (10034): Output port "db_controle" at exp3_desafio.v(16) has no driver File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 16
+Info (12128): Elaborating entity "interface_hcsr04" for hierarchy "interface_hcsr04:INT" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 38
+Info (12128): Elaborating entity "interface_hcsr04_uc" for hierarchy "interface_hcsr04:INT|interface_hcsr04_uc:U1" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/interface_hcsr04.v Line: 43
+Info (12128): Elaborating entity "interface_hcsr04_fd" for hierarchy "interface_hcsr04:INT|interface_hcsr04_fd:U2" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/interface_hcsr04.v Line: 56
+Info (12128): Elaborating entity "gerador_pulso" for hierarchy "interface_hcsr04:INT|interface_hcsr04_fd:U2|gerador_pulso:U1" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/interface_hcsr04_fd.v Line: 42
+Info (12128): Elaborating entity "contador_cm" for hierarchy "interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/interface_hcsr04_fd.v Line: 57
+Info (12128): Elaborating entity "contador_cm_fd" for hierarchy "interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_cm.v Line: 52
+Info (12128): Elaborating entity "contador_m" for hierarchy "interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_cm_fd.v Line: 44
+Info (12128): Elaborating entity "contador_bcd_3digitos" for hierarchy "interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_cm_fd.v Line: 55
+Info (12128): Elaborating entity "contador_cm_uc" for hierarchy "interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_cm.v Line: 65
+Info (10264): Verilog HDL Case Statement information at contador_cm_uc.v(87): all case item expressions in this case statement are onehot File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_cm_uc.v Line: 87
+Info (12128): Elaborating entity "registrador_n" for hierarchy "interface_hcsr04:INT|interface_hcsr04_fd:U2|registrador_n:U3" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/interface_hcsr04_fd.v Line: 68
+Info (12128): Elaborating entity "hexa7seg" for hierarchy "hexa7seg:H0" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 44
+Info (12128): Elaborating entity "edge_detector" for hierarchy "edge_detector:DB" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 60
+Info (12128): Elaborating entity "controle_servo" for hierarchy "controle_servo:servo" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 80
+Info (12128): Elaborating entity "circuito_pwm" for hierarchy "controle_servo:servo|circuito_pwm:gera_pwm" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/controle_servo.v Line: 15
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "trigger" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 7
-    Warning (13410): Pin "hex0[0]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 8
-    Warning (13410): Pin "hex0[1]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 8
-    Warning (13410): Pin "hex0[2]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 8
-    Warning (13410): Pin "hex0[3]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 8
-    Warning (13410): Pin "hex0[4]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 8
-    Warning (13410): Pin "hex0[5]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 8
-    Warning (13410): Pin "hex0[6]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 8
-    Warning (13410): Pin "hex1[0]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 9
-    Warning (13410): Pin "hex1[1]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 9
-    Warning (13410): Pin "hex1[2]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 9
-    Warning (13410): Pin "hex1[3]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 9
-    Warning (13410): Pin "hex1[4]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 9
-    Warning (13410): Pin "hex1[5]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 9
-    Warning (13410): Pin "hex1[6]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 9
-    Warning (13410): Pin "hex2[0]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 10
-    Warning (13410): Pin "hex2[1]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 10
-    Warning (13410): Pin "hex2[2]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 10
-    Warning (13410): Pin "hex2[3]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 10
-    Warning (13410): Pin "hex2[4]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 10
-    Warning (13410): Pin "hex2[5]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 10
-    Warning (13410): Pin "hex2[6]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 10
-    Warning (13410): Pin "pronto" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 11
-    Warning (13410): Pin "controle_servo" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 12
-    Warning (13410): Pin "db_medir" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 13
-    Warning (13410): Pin "db_echo" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 14
-    Warning (13410): Pin "db_trigger" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 15
-    Warning (13410): Pin "db_controle" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 16
     Warning (13410): Pin "db_posicao[0]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 17
     Warning (13410): Pin "db_posicao[1]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 17
-    Warning (13410): Pin "db_estado[0]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 19
-    Warning (13410): Pin "db_estado[1]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 19
-    Warning (13410): Pin "db_estado[2]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 19
-    Warning (13410): Pin "db_estado[3]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 19
-    Warning (13410): Pin "db_estado[4]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 19
-    Warning (13410): Pin "db_estado[5]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 19
-    Warning (13410): Pin "db_estado[6]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 19
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 7 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 6 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clock" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 2
-    Warning (15610): No output dependent on input pin "reset" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 3
-    Warning (15610): No output dependent on input pin "medir" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 4
-    Warning (15610): No output dependent on input pin "echo" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 5
-    Warning (15610): No output dependent on input pin "posicao[0]" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 6
-    Warning (15610): No output dependent on input pin "posicao[1]" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v Line: 6
-Info (21057): Implemented 43 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 260 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 37 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 58 warnings
-    Info: Peak virtual memory: 4795 megabytes
-    Info: Processing ended: Wed Sep 16 10:43:51 2026
-    Info: Elapsed time: 00:00:11
+    Info (21061): Implemented 217 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4820 megabytes
+    Info: Processing ended: Wed Sep 16 10:56:10 2026
+    Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:28
 
 

@@ -1,0 +1,35 @@
+Quartus Prime Archive log --	C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/quartus-desafio/exp3_desafio_T6BA6.qarlog
+
+Archive:	C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/quartus-desafio/exp3_desafio_T6BA6.qar
+Date:		Wed Sep 16 11:17:34 2026
+Quartus Prime		20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/circuito_pwm.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_bcd_3digitos.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_bcd_3digitos_tb.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_cm.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_cm_fd.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_cm_tb.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_cm_uc.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_m.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_m_tb.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/controle_servo.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/edge_detector.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_sensor.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/gerador_pulso.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/gerador_pulso_tb.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/hexa7seg.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/interface_hcsr04.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/interface_hcsr04_fd.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/interface_hcsr04_tb.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/interface_hcsr04_uc.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/registrador_n.v
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/quartus-desafio/desafio-exp3.qpf
+C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/quartus-desafio/desafio-exp3.qsf
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 24 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
