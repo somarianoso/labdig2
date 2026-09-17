@@ -1,0 +1,23 @@
+
+State Machine - |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual
+Name Eatual.estado_final Eatual.contagem Eatual.espera Eatual.inicial 
+Eatual.inicial 0 0 0 0 
+Eatual.espera 0 0 1 1 
+Eatual.contagem 0 1 0 1 
+Eatual.estado_final 1 0 0 1 
+
+State Machine - |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado
+Name reg_estado.parado reg_estado.final_pulso reg_estado.contagem 
+reg_estado.parado 0 0 0 
+reg_estado.contagem 1 0 1 
+reg_estado.final_pulso 1 1 0 
+
+State Machine - |exp3_desafio|interface_hcsr04:INT|interface_hcsr04_uc:U1|Eatual
+Name Eatual.final_medida Eatual.armazenamento Eatual.medida Eatual.espera_echo Eatual.envia_trigger Eatual.preparacao Eatual.inicial 
+Eatual.inicial 0 0 0 0 0 0 0 
+Eatual.preparacao 0 0 0 0 0 1 1 
+Eatual.envia_trigger 0 0 0 0 1 0 1 
+Eatual.espera_echo 0 0 0 1 0 0 1 
+Eatual.medida 0 0 1 0 0 0 1 
+Eatual.armazenamento 0 1 0 0 0 0 1 
+Eatual.final_medida 1 0 0 0 0 0 1 

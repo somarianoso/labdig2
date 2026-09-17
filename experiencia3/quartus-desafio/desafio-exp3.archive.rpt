@@ -1,0 +1,121 @@
+Archive Project report for desafio-exp3
+Wed Sep 16 11:17:34 2026
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Wed Sep 16 11:17:34 2026 ;
+; Revision Name          ; desafio-exp3                          ;
+; Top-level Entity Name  ; exp3_desafio                          ;
+; Family                 ; Cyclone V                             ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/quartus-desafio/exp3_desafio_T6BA6.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'desafio-exp3.archive.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4821 megabytes
+    Info: Processing ended: Wed Sep 16 11:17:34 2026
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++----------------------------------------------------------------------------------------+
+; Files Archived                                                                         ;
++----------------------------------------------------------------------------------------+
+; File Name                                                                              ;
++----------------------------------------------------------------------------------------+
+; ../exp3-arquivos/circuito_pwm.v                                                        ;
+; ../exp3-arquivos/contador_bcd_3digitos.v                                               ;
+; ../exp3-arquivos/contador_bcd_3digitos_tb.v                                            ;
+; ../exp3-arquivos/contador_cm.v                                                         ;
+; ../exp3-arquivos/contador_cm_fd.v                                                      ;
+; ../exp3-arquivos/contador_cm_tb.v                                                      ;
+; ../exp3-arquivos/contador_cm_uc.v                                                      ;
+; ../exp3-arquivos/contador_m.v                                                          ;
+; ../exp3-arquivos/contador_m_tb.v                                                       ;
+; ../exp3-arquivos/controle_servo.v                                                      ;
+; ../exp3-arquivos/edge_detector.v                                                       ;
+; ../exp3-arquivos/exp3_desafio.v                                                        ;
+; ../exp3-arquivos/exp3_sensor.v                                                         ;
+; ../exp3-arquivos/gerador_pulso.v                                                       ;
+; ../exp3-arquivos/gerador_pulso_tb.v                                                    ;
+; ../exp3-arquivos/hexa7seg.v                                                            ;
+; ../exp3-arquivos/interface_hcsr04.v                                                    ;
+; ../exp3-arquivos/interface_hcsr04_fd.v                                                 ;
+; ../exp3-arquivos/interface_hcsr04_tb.v                                                 ;
+; ../exp3-arquivos/interface_hcsr04_uc.v                                                 ;
+; ../exp3-arquivos/registrador_n.v                                                       ;
+; c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf                           ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/circuito_pwm.v             ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_bcd_3digitos.v    ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_bcd_3digitos_tb.v ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_cm.v              ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_cm_fd.v           ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_cm_tb.v           ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_cm_uc.v           ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_m.v               ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/contador_m_tb.v            ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/controle_servo.v           ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/edge_detector.v            ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_desafio.v             ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/exp3_sensor.v              ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/gerador_pulso.v            ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/gerador_pulso_tb.v         ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/hexa7seg.v                 ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/interface_hcsr04.v         ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/interface_hcsr04_fd.v      ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/interface_hcsr04_tb.v      ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/interface_hcsr04_uc.v      ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia3/exp3-arquivos/registrador_n.v            ;
+; desafio-exp3.qpf                                                                       ;
+; desafio-exp3.qsf                                                                       ;
++----------------------------------------------------------------------------------------+
+
+
