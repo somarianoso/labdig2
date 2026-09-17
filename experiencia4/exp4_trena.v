@@ -16,4 +16,6 @@ output db_saida_serial,
 output  [6:0] db_estado 
 );
 
+
+
 endmodule
