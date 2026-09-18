@@ -1,0 +1,127 @@
+C:/labdig2/experiencia3/exp3-gabriel/registrador_n.v {1 {vlog -work work -stats=none C:/labdig2/experiencia3/exp3-gabriel/registrador_n.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module registrador_n
+
+Top level modules:
+	registrador_n
+
+} {} {}} C:/labdig2/experiencia3/exp3-gabriel/contador_m_tb.v {1 {vlog -work work -stats=none C:/labdig2/experiencia3/exp3-gabriel/contador_m_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module contador_m_tb
+
+Top level modules:
+	contador_m_tb
+
+} {} {}} C:/labdig2/experiencia3/exp3-gabriel/interface_hcsr04.v {1 {vlog -work work -stats=none C:/labdig2/experiencia3/exp3-gabriel/interface_hcsr04.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module interface_hcsr04
+
+Top level modules:
+	interface_hcsr04
+
+} {} {}} C:/labdig2/experiencia3/exp3-gabriel/interface_hcsr04_fd.v {1 {vlog -work work -stats=none C:/labdig2/experiencia3/exp3-gabriel/interface_hcsr04_fd.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module interface_hcsr04_fd
+
+Top level modules:
+	interface_hcsr04_fd
+
+} {} {}} C:/labdig2/experiencia3/exp3-gabriel/contador_cm_tb.v {1 {vlog -work work -stats=none C:/labdig2/experiencia3/exp3-gabriel/contador_cm_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module contador_cm_tb
+
+Top level modules:
+	contador_cm_tb
+
+} {} {}} C:/labdig2/experiencia3/exp3-gabriel/contador_m.v {1 {vlog -work work -stats=none C:/labdig2/experiencia3/exp3-gabriel/contador_m.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module contador_m
+
+Top level modules:
+	contador_m
+
+} {} {}} C:/labdig2/experiencia3/exp3-gabriel/contador_bcd_3digitos.v {1 {vlog -work work -stats=none C:/labdig2/experiencia3/exp3-gabriel/contador_bcd_3digitos.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module contador_bcd_3digitos
+
+Top level modules:
+	contador_bcd_3digitos
+
+} {} {}} C:/labdig2/experiencia3/exp3-gabriel/exp3_sensor.v {1 {vlog -work work -stats=none C:/labdig2/experiencia3/exp3-gabriel/exp3_sensor.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module exp3_sensor
+
+Top level modules:
+	exp3_sensor
+
+} {} {}} C:/labdig2/experiencia3/exp3-gabriel/contador_cm_fd.v {1 {vlog -work work -stats=none C:/labdig2/experiencia3/exp3-gabriel/contador_cm_fd.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module contador_cm_fd
+
+Top level modules:
+	contador_cm_fd
+
+} {} {}} C:/labdig2/experiencia3/exp3-gabriel/gerador_pulso_tb.v {1 {vlog -work work -stats=none C:/labdig2/experiencia3/exp3-gabriel/gerador_pulso_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module gerador_pulso_tb
+
+Top level modules:
+	gerador_pulso_tb
+
+} {} {}} C:/labdig2/experiencia3/exp3-gabriel/interface_hcsr04_uc.v {1 {vlog -work work -stats=none C:/labdig2/experiencia3/exp3-gabriel/interface_hcsr04_uc.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module interface_hcsr04_uc
+
+Top level modules:
+	interface_hcsr04_uc
+
+} {} {}} C:/labdig2/experiencia3/exp3-gabriel/hexa7seg.v {1 {vlog -work work -stats=none C:/labdig2/experiencia3/exp3-gabriel/hexa7seg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module hexa7seg
+
+Top level modules:
+	hexa7seg
+
+} {} {}} C:/labdig2/experiencia3/exp3-gabriel/contador_bcd_3digitos_tb.v {1 {vlog -work work -stats=none C:/labdig2/experiencia3/exp3-gabriel/contador_bcd_3digitos_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module contador_bcd_3digitos_tb
+
+Top level modules:
+	contador_bcd_3digitos_tb
+
+} {} {}} C:/labdig2/experiencia3/exp3-gabriel/gerador_pulso.v {1 {vlog -work work -stats=none C:/labdig2/experiencia3/exp3-gabriel/gerador_pulso.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module gerador_pulso
+
+Top level modules:
+	gerador_pulso
+
+} {} {}} C:/labdig2/experiencia3/exp3-gabriel/edge_detector.v {1 {vlog -work work -stats=none C:/labdig2/experiencia3/exp3-gabriel/edge_detector.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module edge_detector
+
+Top level modules:
+	edge_detector
+
+} {} {}} C:/labdig2/experiencia3/exp3-gabriel/contador_cm_uc.v {1 {vlog -work work -stats=none C:/labdig2/experiencia3/exp3-gabriel/contador_cm_uc.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module contador_cm_uc
+
+Top level modules:
+	contador_cm_uc
+
+} {} {}} C:/labdig2/experiencia3/exp3-gabriel/contador_cm.v {1 {vlog -work work -stats=none C:/labdig2/experiencia3/exp3-gabriel/contador_cm.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module contador_cm
+
+Top level modules:
+	contador_cm
+
+} {} {}} C:/labdig2/experiencia3/exp3-gabriel/interface_hcsr04_tb.v {1 {vlog -work work -stats=none C:/labdig2/experiencia3/exp3-gabriel/interface_hcsr04_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module interface_hcsr04_tb
+
+Top level modules:
+	interface_hcsr04_tb
+
+} {} {}}
