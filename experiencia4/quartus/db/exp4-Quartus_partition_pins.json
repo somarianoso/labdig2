@@ -1,0 +1,165 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "trigger",
+					"strict" : false
+				},
+				{
+					"name" : "saida_serial",
+					"strict" : false
+				},
+				{
+					"name" : "medida0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "medida0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "medida0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "medida0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "medida0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "medida0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "medida0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "medida1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "medida1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "medida1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "medida1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "medida1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "medida1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "medida1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "medida2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "medida2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "medida2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "medida2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "medida2[4]",
+					"strict" : false
+				},
+				{
+					"name" : "medida2[5]",
+					"strict" : false
+				},
+				{
+					"name" : "medida2[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pronto",
+					"strict" : false
+				},
+				{
+					"name" : "db_mensurar",
+					"strict" : false
+				},
+				{
+					"name" : "db_echo",
+					"strict" : false
+				},
+				{
+					"name" : "db_trigger",
+					"strict" : false
+				},
+				{
+					"name" : "db_saida_serial",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[0]",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[1]",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[2]",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[3]",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[4]",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[5]",
+					"strict" : false
+				},
+				{
+					"name" : "db_estado[6]",
+					"strict" : false
+				},
+				{
+					"name" : "mensurar",
+					"strict" : false
+				},
+				{
+					"name" : "echo",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

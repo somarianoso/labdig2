@@ -1,0 +1,36 @@
+Quartus Prime Archive log --	D:/Documents/LabDig2/labdig2/experiencia4/quartus/exp4-Quartus.qarlog
+
+Archive:	D:/Documents/LabDig2/labdig2/experiencia4/quartus/exp4-Quartus.qar
+Date:		Mon Sep 21 22:33:31 2026
+Quartus Prime		20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+D:/Documents/LabDig2/labdig2/experiencia4/contador_bcd_3digitos.v
+D:/Documents/LabDig2/labdig2/experiencia4/contador_cm.v
+D:/Documents/LabDig2/labdig2/experiencia4/contador_cm_fd.v
+D:/Documents/LabDig2/labdig2/experiencia4/contador_cm_uc.v
+D:/Documents/LabDig2/labdig2/experiencia4/contador_m.v
+D:/Documents/LabDig2/labdig2/experiencia4/deslocador_n.v
+D:/Documents/LabDig2/labdig2/experiencia4/edge_detector.v
+D:/Documents/LabDig2/labdig2/experiencia4/exp4_trena.v
+D:/Documents/LabDig2/labdig2/experiencia4/exp4_trena_fd.v
+D:/Documents/LabDig2/labdig2/experiencia4/exp4_trena_tb.v
+D:/Documents/LabDig2/labdig2/experiencia4/exp4_trena_uc.v
+D:/Documents/LabDig2/labdig2/experiencia4/gerador_pulso.v
+D:/Documents/LabDig2/labdig2/experiencia4/hexa7seg.v
+D:/Documents/LabDig2/labdig2/experiencia4/interface_hcsr04.v
+D:/Documents/LabDig2/labdig2/experiencia4/interface_hcsr04_fd.v
+D:/Documents/LabDig2/labdig2/experiencia4/interface_hcsr04_uc.v
+D:/Documents/LabDig2/labdig2/experiencia4/mux_4x1_n.v
+D:/Documents/LabDig2/labdig2/experiencia4/mux_4x1_n_tb.sv
+D:/Documents/LabDig2/labdig2/experiencia4/quartus/exp4-Quartus.qpf
+D:/Documents/LabDig2/labdig2/experiencia4/quartus/exp4-Quartus.qsf
+D:/Documents/LabDig2/labdig2/experiencia4/registrador_n.v
+D:/Documents/LabDig2/labdig2/experiencia4/tx_serial_7E1.v
+D:/Documents/LabDig2/labdig2/experiencia4/tx_serial_7E1_fd.v
+D:/Documents/LabDig2/labdig2/experiencia4/tx_serial_uc.v
+d:/quartus/quartus/bin64/assignment_defaults.qdf
+	======= Total: 25 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

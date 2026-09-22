@@ -1,0 +1,123 @@
+Archive Project report for exp4-Quartus
+Mon Sep 21 22:33:31 2026
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Mon Sep 21 22:33:31 2026 ;
+; Revision Name          ; exp4-Quartus                          ;
+; Top-level Entity Name  ; exp4_trena                            ;
+; Family                 ; Cyclone V                             ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory D:/Documents/LabDig2/labdig2/experiencia4/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'D:/Documents/LabDig2/labdig2/experiencia4/quartus/exp4-Quartus.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'exp4-Quartus.archive.rpt'
+Info (23030): Evaluation of Tcl script d:/quartus/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4826 megabytes
+    Info: Processing ended: Mon Sep 21 22:33:31 2026
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++-------------------------------------------------------------------+
+; Files Archived                                                    ;
++-------------------------------------------------------------------+
+; File Name                                                         ;
++-------------------------------------------------------------------+
+; ../contador_bcd_3digitos.v                                        ;
+; ../contador_cm.v                                                  ;
+; ../contador_cm_fd.v                                               ;
+; ../contador_cm_uc.v                                               ;
+; ../contador_m.v                                                   ;
+; ../deslocador_n.v                                                 ;
+; ../edge_detector.v                                                ;
+; ../exp4_trena.v                                                   ;
+; ../exp4_trena_fd.v                                                ;
+; ../exp4_trena_tb.v                                                ;
+; ../exp4_trena_uc.v                                                ;
+; ../gerador_pulso.v                                                ;
+; ../hexa7seg.v                                                     ;
+; ../interface_hcsr04.v                                             ;
+; ../interface_hcsr04_fd.v                                          ;
+; ../interface_hcsr04_uc.v                                          ;
+; ../mux_4x1_n.v                                                    ;
+; ../mux_4x1_n_tb.sv                                                ;
+; ../registrador_n.v                                                ;
+; ../tx_serial_7E1.v                                                ;
+; ../tx_serial_7E1_fd.v                                             ;
+; ../tx_serial_uc.v                                                 ;
+; D:/Documents/LabDig2/labdig2/experiencia4/contador_bcd_3digitos.v ;
+; D:/Documents/LabDig2/labdig2/experiencia4/contador_cm.v           ;
+; D:/Documents/LabDig2/labdig2/experiencia4/contador_cm_fd.v        ;
+; D:/Documents/LabDig2/labdig2/experiencia4/contador_cm_uc.v        ;
+; D:/Documents/LabDig2/labdig2/experiencia4/contador_m.v            ;
+; D:/Documents/LabDig2/labdig2/experiencia4/deslocador_n.v          ;
+; D:/Documents/LabDig2/labdig2/experiencia4/edge_detector.v         ;
+; D:/Documents/LabDig2/labdig2/experiencia4/exp4_trena.v            ;
+; D:/Documents/LabDig2/labdig2/experiencia4/exp4_trena_fd.v         ;
+; D:/Documents/LabDig2/labdig2/experiencia4/exp4_trena_tb.v         ;
+; D:/Documents/LabDig2/labdig2/experiencia4/exp4_trena_uc.v         ;
+; D:/Documents/LabDig2/labdig2/experiencia4/gerador_pulso.v         ;
+; D:/Documents/LabDig2/labdig2/experiencia4/hexa7seg.v              ;
+; D:/Documents/LabDig2/labdig2/experiencia4/interface_hcsr04.v      ;
+; D:/Documents/LabDig2/labdig2/experiencia4/interface_hcsr04_fd.v   ;
+; D:/Documents/LabDig2/labdig2/experiencia4/interface_hcsr04_uc.v   ;
+; D:/Documents/LabDig2/labdig2/experiencia4/mux_4x1_n.v             ;
+; D:/Documents/LabDig2/labdig2/experiencia4/mux_4x1_n_tb.sv         ;
+; D:/Documents/LabDig2/labdig2/experiencia4/registrador_n.v         ;
+; D:/Documents/LabDig2/labdig2/experiencia4/tx_serial_7E1.v         ;
+; D:/Documents/LabDig2/labdig2/experiencia4/tx_serial_7E1_fd.v      ;
+; D:/Documents/LabDig2/labdig2/experiencia4/tx_serial_uc.v          ;
+; d:/quartus/quartus/bin64/assignment_defaults.qdf                  ;
+; exp4-Quartus.qpf                                                  ;
+; exp4-Quartus.qsf                                                  ;
++-------------------------------------------------------------------+
+
+
