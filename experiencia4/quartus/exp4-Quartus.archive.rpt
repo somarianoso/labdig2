@@ -1,5 +1,5 @@
 Archive Project report for exp4-Quartus
-Mon Sep 21 22:33:31 2026
+Wed Sep 23 11:02:41 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -36,9 +36,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Mon Sep 21 22:33:31 2026 ;
+; Archive Project Status ; Successful - Wed Sep 23 11:02:41 2026 ;
 ; Revision Name          ; exp4-Quartus                          ;
-; Top-level Entity Name  ; exp4_trena                            ;
+; Top-level Entity Name  ; exp4_trena_desafio                    ;
 ; Family                 ; Cyclone V                             ;
 +------------------------+---------------------------------------+
 
@@ -51,73 +51,79 @@ Info: File Set 'Source control' contains:
     Info: Automatically detected source files
 Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
 Info: Archive will store files relative to the closest common parent directory
-Info (13213): Using common directory D:/Documents/LabDig2/labdig2/experiencia4/
+Info (13213): Using common directory C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive 'D:/Documents/LabDig2/labdig2/experiencia4/quartus/exp4-Quartus.qar'
+Info: Generated archive 'C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/quartus/exp4_desafio_T6BA6.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'exp4-Quartus.archive.rpt'
-Info (23030): Evaluation of Tcl script d:/quartus/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4826 megabytes
-    Info: Processing ended: Mon Sep 21 22:33:31 2026
+    Info: Peak virtual memory: 4822 megabytes
+    Info: Processing ended: Wed Sep 23 11:02:41 2026
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 
-+-------------------------------------------------------------------+
-; Files Archived                                                    ;
-+-------------------------------------------------------------------+
-; File Name                                                         ;
-+-------------------------------------------------------------------+
-; ../contador_bcd_3digitos.v                                        ;
-; ../contador_cm.v                                                  ;
-; ../contador_cm_fd.v                                               ;
-; ../contador_cm_uc.v                                               ;
-; ../contador_m.v                                                   ;
-; ../deslocador_n.v                                                 ;
-; ../edge_detector.v                                                ;
-; ../exp4_trena.v                                                   ;
-; ../exp4_trena_fd.v                                                ;
-; ../exp4_trena_tb.v                                                ;
-; ../exp4_trena_uc.v                                                ;
-; ../gerador_pulso.v                                                ;
-; ../hexa7seg.v                                                     ;
-; ../interface_hcsr04.v                                             ;
-; ../interface_hcsr04_fd.v                                          ;
-; ../interface_hcsr04_uc.v                                          ;
-; ../mux_4x1_n.v                                                    ;
-; ../mux_4x1_n_tb.sv                                                ;
-; ../registrador_n.v                                                ;
-; ../tx_serial_7E1.v                                                ;
-; ../tx_serial_7E1_fd.v                                             ;
-; ../tx_serial_uc.v                                                 ;
-; D:/Documents/LabDig2/labdig2/experiencia4/contador_bcd_3digitos.v ;
-; D:/Documents/LabDig2/labdig2/experiencia4/contador_cm.v           ;
-; D:/Documents/LabDig2/labdig2/experiencia4/contador_cm_fd.v        ;
-; D:/Documents/LabDig2/labdig2/experiencia4/contador_cm_uc.v        ;
-; D:/Documents/LabDig2/labdig2/experiencia4/contador_m.v            ;
-; D:/Documents/LabDig2/labdig2/experiencia4/deslocador_n.v          ;
-; D:/Documents/LabDig2/labdig2/experiencia4/edge_detector.v         ;
-; D:/Documents/LabDig2/labdig2/experiencia4/exp4_trena.v            ;
-; D:/Documents/LabDig2/labdig2/experiencia4/exp4_trena_fd.v         ;
-; D:/Documents/LabDig2/labdig2/experiencia4/exp4_trena_tb.v         ;
-; D:/Documents/LabDig2/labdig2/experiencia4/exp4_trena_uc.v         ;
-; D:/Documents/LabDig2/labdig2/experiencia4/gerador_pulso.v         ;
-; D:/Documents/LabDig2/labdig2/experiencia4/hexa7seg.v              ;
-; D:/Documents/LabDig2/labdig2/experiencia4/interface_hcsr04.v      ;
-; D:/Documents/LabDig2/labdig2/experiencia4/interface_hcsr04_fd.v   ;
-; D:/Documents/LabDig2/labdig2/experiencia4/interface_hcsr04_uc.v   ;
-; D:/Documents/LabDig2/labdig2/experiencia4/mux_4x1_n.v             ;
-; D:/Documents/LabDig2/labdig2/experiencia4/mux_4x1_n_tb.sv         ;
-; D:/Documents/LabDig2/labdig2/experiencia4/registrador_n.v         ;
-; D:/Documents/LabDig2/labdig2/experiencia4/tx_serial_7E1.v         ;
-; D:/Documents/LabDig2/labdig2/experiencia4/tx_serial_7E1_fd.v      ;
-; D:/Documents/LabDig2/labdig2/experiencia4/tx_serial_uc.v          ;
-; d:/quartus/quartus/bin64/assignment_defaults.qdf                  ;
-; exp4-Quartus.qpf                                                  ;
-; exp4-Quartus.qsf                                                  ;
-+-------------------------------------------------------------------+
++-----------------------------------------------------------------------+
+; Files Archived                                                        ;
++-----------------------------------------------------------------------+
+; File Name                                                             ;
++-----------------------------------------------------------------------+
+; ../contador_bcd_3digitos.v                                            ;
+; ../contador_cm.v                                                      ;
+; ../contador_cm_fd.v                                                   ;
+; ../contador_cm_uc.v                                                   ;
+; ../contador_m.v                                                       ;
+; ../deslocador_n.v                                                     ;
+; ../edge_detector.v                                                    ;
+; ../exp4_trena.v                                                       ;
+; ../exp4_trena_desafio.v                                               ;
+; ../exp4_trena_desafio_fd.v                                            ;
+; ../exp4_trena_desafio_uc.v                                            ;
+; ../exp4_trena_fd.v                                                    ;
+; ../exp4_trena_tb.v                                                    ;
+; ../exp4_trena_uc.v                                                    ;
+; ../gerador_pulso.v                                                    ;
+; ../hexa7seg.v                                                         ;
+; ../interface_hcsr04.v                                                 ;
+; ../interface_hcsr04_fd.v                                              ;
+; ../interface_hcsr04_uc.v                                              ;
+; ../mux_4x1_n.v                                                        ;
+; ../mux_4x1_n_tb.sv                                                    ;
+; ../registrador_n.v                                                    ;
+; ../tx_serial_7E1.v                                                    ;
+; ../tx_serial_7E1_fd.v                                                 ;
+; ../tx_serial_uc.v                                                     ;
+; c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf          ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/contador_bcd_3digitos.v ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/contador_cm.v           ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/contador_cm_fd.v        ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/contador_cm_uc.v        ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/contador_m.v            ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/deslocador_n.v          ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/edge_detector.v         ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena.v            ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_desafio.v    ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_desafio_fd.v ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_desafio_uc.v ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_fd.v         ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_tb.v         ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_uc.v         ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/gerador_pulso.v         ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/hexa7seg.v              ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/interface_hcsr04.v      ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/interface_hcsr04_fd.v   ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/interface_hcsr04_uc.v   ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/mux_4x1_n.v             ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/mux_4x1_n_tb.sv         ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/registrador_n.v         ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_7E1.v         ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_7E1_fd.v      ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_uc.v          ;
+; exp4-Quartus.qpf                                                      ;
+; exp4-Quartus.qsf                                                      ;
++-----------------------------------------------------------------------+
 
 
