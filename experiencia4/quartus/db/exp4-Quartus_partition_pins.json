@@ -144,10 +144,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "mensurar",
-					"strict" : false
-				},
-				{
 					"name" : "echo",
 					"strict" : false
 				},

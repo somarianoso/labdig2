@@ -1,5 +1,5 @@
 
-State Machine - |exp4_trena|exp4_trena_uc:UC|Eatual
+State Machine - |exp4_trena_desafio|exp4_trena_desafio_uc:UC|Eatual
 Name Eatual.Final Eatual.EsperaTxHash1 Eatual.EsperaTxHash0 Eatual.TransmiteHashtag Eatual.EsperaTxUni1 Eatual.EsperaTxUni0 Eatual.TransmiteUnidade Eatual.EsperaTxDez1 Eatual.EsperaTxDez0 Eatual.TransmiteDezena Eatual.EsperaTxCent1 Eatual.EsperaTxCent0 Eatual.TransmiteCentena Eatual.AguardaMedida Eatual.PreparaMedida Eatual.Inicial 
 Eatual.Inicial 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 Eatual.PreparaMedida 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
@@ -18,7 +18,7 @@ Eatual.EsperaTxHash0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1
 Eatual.EsperaTxHash1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 Eatual.Final 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 
-State Machine - |exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual
+State Machine - |exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual
 Name Eatual.transmissao Eatual.espera Eatual.preparacao Eatual.final_tx Eatual.inicial 
 Eatual.inicial 0 0 0 0 0 
 Eatual.preparacao 0 0 1 0 1 
@@ -26,20 +26,20 @@ Eatual.espera 0 1 0 0 1
 Eatual.transmissao 1 0 0 0 1 
 Eatual.final_tx 0 0 0 1 1 
 
-State Machine - |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual
+State Machine - |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual
 Name Eatual.estado_final Eatual.contagem Eatual.espera Eatual.inicial 
 Eatual.inicial 0 0 0 0 
 Eatual.espera 0 0 1 1 
 Eatual.contagem 0 1 0 1 
 Eatual.estado_final 1 0 0 1 
 
-State Machine - |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado
+State Machine - |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado
 Name reg_estado.parado reg_estado.final_pulso reg_estado.contagem 
 reg_estado.parado 0 0 0 
 reg_estado.contagem 1 0 1 
 reg_estado.final_pulso 1 1 0 
 
-State Machine - |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual
+State Machine - |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual
 Name Eatual.final_medida Eatual.armazenamento Eatual.medida Eatual.espera_echo Eatual.envia_trigger Eatual.preparacao Eatual.inicial 
 Eatual.inicial 0 0 0 0 0 0 0 
 Eatual.preparacao 0 0 0 0 0 1 1 

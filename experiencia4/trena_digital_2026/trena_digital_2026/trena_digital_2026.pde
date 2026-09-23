@@ -34,7 +34,7 @@ Serial myPort; // define objeto da porta serial
 //  ============ CONFIGURACAO SERIAL =================
 //  ajustar porta serial de sua montagem fisica
 
-    String   porta = "COM4";  // <== acertar valor ***
+    String   porta = "COM3";  // <== acertar valor ***
     int   baudrate = 115200;  // 115200;
     char    parity = 'E';     // par
     int   databits = 7;       // 7 bits de dados

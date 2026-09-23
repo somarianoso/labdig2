@@ -1,4 +1,4 @@
-module exp4_trena_uc (
+module exp4_trena_desafio_uc (
     input wire       clock,
     input wire       reset,
     input wire       mensurar,

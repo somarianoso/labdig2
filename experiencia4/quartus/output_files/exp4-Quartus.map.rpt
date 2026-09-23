@@ -1,5 +1,5 @@
 Analysis & Synthesis report for exp4-Quartus
-Wed Sep 23 09:24:00 2026
+Wed Sep 23 10:47:48 2026
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -13,38 +13,41 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |exp4_trena|exp4_trena_uc:UC|Eatual
-  9. State Machine - |exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual
- 10. State Machine - |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual
- 11. State Machine - |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado
- 12. State Machine - |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual
+  8. State Machine - |exp4_trena_desafio|exp4_trena_desafio_uc:UC|Eatual
+  9. State Machine - |exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual
+ 10. State Machine - |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual
+ 11. State Machine - |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado
+ 12. State Machine - |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual
  13. Registers Removed During Synthesis
  14. General Register Statistics
  15. Inverted Register Statistics
  16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Parameter Settings for User Entity Instance: exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1
- 18. Parameter Settings for User Entity Instance: exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1
- 19. Parameter Settings for User Entity Instance: exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2
- 20. Parameter Settings for User Entity Instance: exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD
- 21. Parameter Settings for User Entity Instance: exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1
- 22. Parameter Settings for User Entity Instance: exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC
- 23. Parameter Settings for User Entity Instance: exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3
- 24. Parameter Settings for User Entity Instance: exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1
- 25. Parameter Settings for User Entity Instance: exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2
- 26. Parameter Settings for User Entity Instance: exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_uc:U2_UC
- 27. Parameter Settings for User Entity Instance: exp4_trena_fd:FD|tx_serial_7E1:U2|contador_m:U3_TICK
- 28. Parameter Settings for User Entity Instance: exp4_trena_uc:UC
- 29. Port Connectivity Checks: "exp4_trena_fd:FD|tx_serial_7E1:U2|contador_m:U3_TICK"
- 30. Port Connectivity Checks: "exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2"
- 31. Port Connectivity Checks: "exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1"
- 32. Port Connectivity Checks: "exp4_trena_fd:FD|tx_serial_7E1:U2"
- 33. Port Connectivity Checks: "exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1"
- 34. Port Connectivity Checks: "exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1"
- 35. Port Connectivity Checks: "exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2"
- 36. Port Connectivity Checks: "exp4_trena_fd:FD|interface_hcsr04:U1"
- 37. Post-Synthesis Netlist Statistics for Top Partition
- 38. Elapsed Time Per Partition
- 39. Analysis & Synthesis Messages
+ 17. Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1
+ 18. Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1
+ 19. Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2
+ 20. Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD
+ 21. Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1
+ 22. Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC
+ 23. Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3
+ 24. Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1
+ 25. Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2
+ 26. Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_uc:U2_UC
+ 27. Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|contador_m:U3_TICK
+ 28. Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|contador_m:U3
+ 29. Parameter Settings for User Entity Instance: exp4_trena_desafio_uc:UC
+ 30. Port Connectivity Checks: "exp4_trena_desafio_uc:UC"
+ 31. Port Connectivity Checks: "exp4_trena_desafio_fd:FD|contador_m:U3"
+ 32. Port Connectivity Checks: "exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|contador_m:U3_TICK"
+ 33. Port Connectivity Checks: "exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2"
+ 34. Port Connectivity Checks: "exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1"
+ 35. Port Connectivity Checks: "exp4_trena_desafio_fd:FD|tx_serial_7E1:U2"
+ 36. Port Connectivity Checks: "exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1"
+ 37. Port Connectivity Checks: "exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1"
+ 38. Port Connectivity Checks: "exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2"
+ 39. Port Connectivity Checks: "exp4_trena_desafio_fd:FD|interface_hcsr04:U1"
+ 40. Post-Synthesis Netlist Statistics for Top Partition
+ 41. Elapsed Time Per Partition
+ 42. Analysis & Synthesis Messages
 
 
 
@@ -71,14 +74,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Sep 23 09:24:00 2026       ;
+; Analysis & Synthesis Status     ; Successful - Wed Sep 23 10:47:47 2026       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; exp4-Quartus                                ;
-; Top-level Entity Name           ; exp4_trena                                  ;
+; Top-level Entity Name           ; exp4_trena_desafio                          ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 127                                         ;
-; Total pins                      ; 39                                          ;
+; Total registers                 ; 153                                         ;
+; Total pins                      ; 38                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -97,7 +100,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CEBA4F23C7        ;                    ;
-; Top-level entity name                                                           ; exp4_trena         ; exp4-Quartus       ;
+; Top-level entity name                                                           ; exp4_trena_desafio ; exp4-Quartus       ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -200,6 +203,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                          ; Library ;
 +----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
+; ../exp4_trena_desafio_uc.v       ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_desafio_uc.v ;         ;
+; ../exp4_trena_desafio_fd.v       ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_desafio_fd.v ;         ;
+; ../exp4_trena_desafio.v          ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_desafio.v    ;         ;
 ; ../tx_serial_uc.v                ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_uc.v          ;         ;
 ; ../tx_serial_7E1_fd.v            ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_7E1_fd.v      ;         ;
 ; ../tx_serial_7E1.v               ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_7E1.v         ;         ;
@@ -209,9 +215,6 @@ https://fpgasoftware.intel.com/eula.
 ; ../interface_hcsr04.v            ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/interface_hcsr04.v      ;         ;
 ; ../hexa7seg.v                    ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/hexa7seg.v              ;         ;
 ; ../gerador_pulso.v               ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/gerador_pulso.v         ;         ;
-; ../exp4_trena_uc.v               ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_uc.v         ;         ;
-; ../exp4_trena_fd.v               ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_fd.v         ;         ;
-; ../exp4_trena.v                  ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena.v            ;         ;
 ; ../edge_detector.v               ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/edge_detector.v         ;         ;
 ; ../deslocador_n.v                ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/deslocador_n.v          ;         ;
 ; ../contador_m.v                  ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/contador_m.v            ;         ;
@@ -227,64 +230,65 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 111         ;
+; Estimate of Logic utilization (ALMs needed) ; 130         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 205         ;
+; Combinational ALUT usage for logic          ; 238         ;
 ;     -- 7 input functions                    ; 1           ;
-;     -- 6 input functions                    ; 13          ;
-;     -- 5 input functions                    ; 20          ;
+;     -- 6 input functions                    ; 19          ;
+;     -- 5 input functions                    ; 21          ;
 ;     -- 4 input functions                    ; 75          ;
-;     -- <=3 input functions                  ; 96          ;
+;     -- <=3 input functions                  ; 122         ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 127         ;
+; Dedicated logic registers                   ; 153         ;
 ;                                             ;             ;
-; I/O pins                                    ; 39          ;
+; I/O pins                                    ; 38          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 127         ;
-; Total fan-out                               ; 1185        ;
-; Average fan-out                             ; 2.89        ;
+; Maximum fan-out                             ; 153         ;
+; Total fan-out                               ; 1353        ;
+; Average fan-out                             ; 2.90        ;
 +---------------------------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                              ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                               ; Entity Name           ; Library Name ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |exp4_trena                                  ; 205 (0)             ; 127 (0)                   ; 0                 ; 0          ; 39   ; 0            ; |exp4_trena                                                                                                                       ; exp4_trena            ; work         ;
-;    |exp4_trena_fd:FD|                        ; 152 (3)             ; 111 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|exp4_trena_fd:FD                                                                                                      ; exp4_trena_fd         ; work         ;
-;       |interface_hcsr04:U1|                  ; 115 (0)             ; 81 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1                                                                                  ; interface_hcsr04      ; work         ;
-;          |interface_hcsr04_fd:U2|            ; 110 (0)             ; 74 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2                                                           ; interface_hcsr04_fd   ; work         ;
-;             |contador_cm:U2|                 ; 36 (0)              ; 27 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2                                            ; contador_cm           ; work         ;
-;                |contador_cm_fd:FD|           ; 33 (0)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD                          ; contador_cm_fd        ; work         ;
-;                   |contador_bcd_3digitos:U2| ; 17 (17)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2 ; contador_bcd_3digitos ; work         ;
-;                   |contador_m:U1|            ; 16 (16)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1            ; contador_m            ; work         ;
-;                |contador_cm_uc:UC|           ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC                          ; contador_cm_uc        ; work         ;
-;             |gerador_pulso:U1|               ; 74 (74)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1                                          ; gerador_pulso         ; work         ;
-;             |registrador_n:U3|               ; 0 (0)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3                                          ; registrador_n         ; work         ;
-;          |interface_hcsr04_uc:U1|            ; 5 (5)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1                                                           ; interface_hcsr04_uc   ; work         ;
-;       |tx_serial_7E1:U2|                     ; 34 (0)              ; 30 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2                                                                                     ; tx_serial_7E1         ; work         ;
-;          |contador_m:U3_TICK|                ; 12 (12)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2|contador_m:U3_TICK                                                                  ; contador_m            ; work         ;
-;          |edge_detector:U4_ED|               ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2|edge_detector:U4_ED                                                                 ; edge_detector         ; work         ;
-;          |tx_serial_7E1_fd:U1_FD|            ; 17 (1)              ; 14 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD                                                              ; tx_serial_7E1_fd      ; work         ;
-;             |contador_m:U2|                  ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2                                                ; contador_m            ; work         ;
-;             |deslocador_n:U1|                ; 11 (11)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1                                              ; deslocador_n          ; work         ;
-;          |tx_serial_uc:U2_UC|                ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_uc:U2_UC                                                                  ; tx_serial_uc          ; work         ;
-;    |exp4_trena_uc:UC|                        ; 25 (25)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|exp4_trena_uc:UC                                                                                                      ; exp4_trena_uc         ; work         ;
-;    |hexa7seg:HEX0|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|hexa7seg:HEX0                                                                                                         ; hexa7seg              ; work         ;
-;    |hexa7seg:HEX1|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|hexa7seg:HEX1                                                                                                         ; hexa7seg              ; work         ;
-;    |hexa7seg:HEX2|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|hexa7seg:HEX2                                                                                                         ; hexa7seg              ; work         ;
-;    |hexa7seg:HEX_ESTADO|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena|hexa7seg:HEX_ESTADO                                                                                                   ; hexa7seg              ; work         ;
-+----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                              ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                               ; Entity Name           ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; |exp4_trena_desafio                          ; 238 (0)             ; 153 (0)                   ; 0                 ; 0          ; 38   ; 0            ; |exp4_trena_desafio                                                                                                                               ; exp4_trena_desafio    ; work         ;
+;    |exp4_trena_desafio_fd:FD|                ; 184 (3)             ; 137 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD                                                                                                      ; exp4_trena_desafio_fd ; work         ;
+;       |contador_m:U3|                        ; 32 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|contador_m:U3                                                                                        ; contador_m            ; work         ;
+;       |interface_hcsr04:U1|                  ; 115 (0)             ; 81 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1                                                                                  ; interface_hcsr04      ; work         ;
+;          |interface_hcsr04_fd:U2|            ; 110 (0)             ; 74 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2                                                           ; interface_hcsr04_fd   ; work         ;
+;             |contador_cm:U2|                 ; 36 (0)              ; 27 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2                                            ; contador_cm           ; work         ;
+;                |contador_cm_fd:FD|           ; 33 (0)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD                          ; contador_cm_fd        ; work         ;
+;                   |contador_bcd_3digitos:U2| ; 17 (17)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2 ; contador_bcd_3digitos ; work         ;
+;                   |contador_m:U1|            ; 16 (16)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1            ; contador_m            ; work         ;
+;                |contador_cm_uc:UC|           ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC                          ; contador_cm_uc        ; work         ;
+;             |gerador_pulso:U1|               ; 74 (74)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1                                          ; gerador_pulso         ; work         ;
+;             |registrador_n:U3|               ; 0 (0)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3                                          ; registrador_n         ; work         ;
+;          |interface_hcsr04_uc:U1|            ; 5 (5)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1                                                           ; interface_hcsr04_uc   ; work         ;
+;       |tx_serial_7E1:U2|                     ; 34 (0)              ; 30 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2                                                                                     ; tx_serial_7E1         ; work         ;
+;          |contador_m:U3_TICK|                ; 12 (12)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|contador_m:U3_TICK                                                                  ; contador_m            ; work         ;
+;          |edge_detector:U4_ED|               ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|edge_detector:U4_ED                                                                 ; edge_detector         ; work         ;
+;          |tx_serial_7E1_fd:U1_FD|            ; 17 (1)              ; 14 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD                                                              ; tx_serial_7E1_fd      ; work         ;
+;             |contador_m:U2|                  ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2                                                ; contador_m            ; work         ;
+;             |deslocador_n:U1|                ; 11 (11)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1                                              ; deslocador_n          ; work         ;
+;          |tx_serial_uc:U2_UC|                ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_uc:U2_UC                                                                  ; tx_serial_uc          ; work         ;
+;    |exp4_trena_desafio_uc:UC|                ; 26 (26)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|exp4_trena_desafio_uc:UC                                                                                                      ; exp4_trena_desafio_uc ; work         ;
+;    |hexa7seg:HEX0|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|hexa7seg:HEX0                                                                                                                 ; hexa7seg              ; work         ;
+;    |hexa7seg:HEX1|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|hexa7seg:HEX1                                                                                                                 ; hexa7seg              ; work         ;
+;    |hexa7seg:HEX2|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|hexa7seg:HEX2                                                                                                                 ; hexa7seg              ; work         ;
+;    |hexa7seg:HEX_ESTADO|                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |exp4_trena_desafio|hexa7seg:HEX_ESTADO                                                                                                           ; hexa7seg              ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |exp4_trena|exp4_trena_uc:UC|Eatual                                                                                                                                                                                                                                                                                                                                              ;
+; State Machine - |exp4_trena_desafio|exp4_trena_desafio_uc:UC|Eatual                                                                                                                                                                                                                                                                                                                              ;
 +-------------------------+--------------+----------------------+----------------------+-------------------------+---------------------+---------------------+-------------------------+---------------------+---------------------+------------------------+----------------------+----------------------+-------------------------+----------------------+----------------------+----------------+
 ; Name                    ; Eatual.Final ; Eatual.EsperaTxHash1 ; Eatual.EsperaTxHash0 ; Eatual.TransmiteHashtag ; Eatual.EsperaTxUni1 ; Eatual.EsperaTxUni0 ; Eatual.TransmiteUnidade ; Eatual.EsperaTxDez1 ; Eatual.EsperaTxDez0 ; Eatual.TransmiteDezena ; Eatual.EsperaTxCent1 ; Eatual.EsperaTxCent0 ; Eatual.TransmiteCentena ; Eatual.AguardaMedida ; Eatual.PreparaMedida ; Eatual.Inicial ;
 +-------------------------+--------------+----------------------+----------------------+-------------------------+---------------------+---------------------+-------------------------+---------------------+---------------------+------------------------+----------------------+----------------------+-------------------------+----------------------+----------------------+----------------+
@@ -309,7 +313,7 @@ Encoding Type:  One-Hot
 
 Encoding Type:  One-Hot
 +----------------------------------------------------------------------------------------------------------------+
-; State Machine - |exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual                        ;
+; State Machine - |exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual        ;
 +--------------------+--------------------+---------------+-------------------+-----------------+----------------+
 ; Name               ; Eatual.transmissao ; Eatual.espera ; Eatual.preparacao ; Eatual.final_tx ; Eatual.inicial ;
 +--------------------+--------------------+---------------+-------------------+-----------------+----------------+
@@ -322,33 +326,33 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual ;
-+---------------------+---------------------+-----------------+---------------+---------------------------------------------------+
-; Name                ; Eatual.estado_final ; Eatual.contagem ; Eatual.espera ; Eatual.inicial                                    ;
-+---------------------+---------------------+-----------------+---------------+---------------------------------------------------+
-; Eatual.inicial      ; 0                   ; 0               ; 0             ; 0                                                 ;
-; Eatual.espera       ; 0                   ; 0               ; 1             ; 1                                                 ;
-; Eatual.contagem     ; 0                   ; 1               ; 0             ; 1                                                 ;
-; Eatual.estado_final ; 1                   ; 0               ; 0             ; 1                                                 ;
-+---------------------+---------------------+-----------------+---------------+---------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual ;
++---------------------+---------------------+-----------------+---------------+-------------------------------------------------------------------+
+; Name                ; Eatual.estado_final ; Eatual.contagem ; Eatual.espera ; Eatual.inicial                                                    ;
++---------------------+---------------------+-----------------+---------------+-------------------------------------------------------------------+
+; Eatual.inicial      ; 0                   ; 0               ; 0             ; 0                                                                 ;
+; Eatual.espera       ; 0                   ; 0               ; 1             ; 1                                                                 ;
+; Eatual.contagem     ; 0                   ; 1               ; 0             ; 1                                                                 ;
+; Eatual.estado_final ; 1                   ; 0               ; 0             ; 1                                                                 ;
++---------------------+---------------------+-----------------+---------------+-------------------------------------------------------------------+
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------+
-; State Machine - |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado ;
-+------------------------+-------------------+------------------------+-----------------------------------------------+
-; Name                   ; reg_estado.parado ; reg_estado.final_pulso ; reg_estado.contagem                           ;
-+------------------------+-------------------+------------------------+-----------------------------------------------+
-; reg_estado.parado      ; 0                 ; 0                      ; 0                                             ;
-; reg_estado.contagem    ; 1                 ; 0                      ; 1                                             ;
-; reg_estado.final_pulso ; 1                 ; 1                      ; 0                                             ;
-+------------------------+-------------------+------------------------+-----------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado ;
++------------------------+-------------------+------------------------+---------------------------------------------------------------+
+; Name                   ; reg_estado.parado ; reg_estado.final_pulso ; reg_estado.contagem                                           ;
++------------------------+-------------------+------------------------+---------------------------------------------------------------+
+; reg_estado.parado      ; 0                 ; 0                      ; 0                                                             ;
+; reg_estado.contagem    ; 1                 ; 0                      ; 1                                                             ;
+; reg_estado.final_pulso ; 1                 ; 1                      ; 0                                                             ;
++------------------------+-------------------+------------------------+---------------------------------------------------------------+
 
 
 Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual                                                                     ;
+; State Machine - |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual                                                     ;
 +----------------------+---------------------+----------------------+---------------+--------------------+----------------------+-------------------+----------------+
 ; Name                 ; Eatual.final_medida ; Eatual.armazenamento ; Eatual.medida ; Eatual.espera_echo ; Eatual.envia_trigger ; Eatual.preparacao ; Eatual.inicial ;
 +----------------------+---------------------+----------------------+---------------+--------------------+----------------------+-------------------+----------------+
@@ -362,27 +366,27 @@ Encoding Type:  One-Hot
 +----------------------+---------------------+----------------------+---------------+--------------------+----------------------+-------------------+----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                  ;
-+------------------------------------------------------------------------------------------------------------+----------------------------------------+
-; Register name                                                                                              ; Reason for Removal                     ;
-+------------------------------------------------------------------------------------------------------------+----------------------------------------+
-; exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[10]                            ; Stuck at VCC due to stuck port data_in ;
-; exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual.espera ; Lost fanout                            ;
-; exp4_trena_uc:UC|Eatual~4                                                                                  ; Lost fanout                            ;
-; exp4_trena_uc:UC|Eatual~5                                                                                  ; Lost fanout                            ;
-; exp4_trena_uc:UC|Eatual~6                                                                                  ; Lost fanout                            ;
-; exp4_trena_uc:UC|Eatual~7                                                                                  ; Lost fanout                            ;
-; exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual~5                                              ; Lost fanout                            ;
-; exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual~6                                              ; Lost fanout                            ;
-; exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual~4      ; Lost fanout                            ;
-; exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual~5      ; Lost fanout                            ;
-; exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual~6      ; Lost fanout                            ;
-; exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual~4                                       ; Lost fanout                            ;
-; exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual~5                                       ; Lost fanout                            ;
-; exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual~6                                       ; Lost fanout                            ;
-; Total Number of Removed Registers = 14                                                                     ;                                        ;
-+------------------------------------------------------------------------------------------------------------+----------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                          ;
++--------------------------------------------------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                                                                      ; Reason for Removal                     ;
++--------------------------------------------------------------------------------------------------------------------+----------------------------------------+
+; exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[10]                            ; Stuck at VCC due to stuck port data_in ;
+; exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual.espera ; Lost fanout                            ;
+; exp4_trena_desafio_uc:UC|Eatual~4                                                                                  ; Lost fanout                            ;
+; exp4_trena_desafio_uc:UC|Eatual~5                                                                                  ; Lost fanout                            ;
+; exp4_trena_desafio_uc:UC|Eatual~6                                                                                  ; Lost fanout                            ;
+; exp4_trena_desafio_uc:UC|Eatual~7                                                                                  ; Lost fanout                            ;
+; exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual~5                                              ; Lost fanout                            ;
+; exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual~6                                              ; Lost fanout                            ;
+; exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual~4      ; Lost fanout                            ;
+; exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual~5      ; Lost fanout                            ;
+; exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual~6      ; Lost fanout                            ;
+; exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual~4                                       ; Lost fanout                            ;
+; exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual~5                                       ; Lost fanout                            ;
+; exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual~6                                       ; Lost fanout                            ;
+; Total Number of Removed Registers = 14                                                                             ;                                        ;
++--------------------------------------------------------------------------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -390,8 +394,8 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 127   ;
-; Number of registers using Synchronous Clear  ; 21    ;
+; Total registers                              ; 153   ;
+; Number of registers using Synchronous Clear  ; 47    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 90    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -400,220 +404,252 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 
 
++--------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                     ;
++----------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                      ; Fan out ;
++----------------------------------------------------------------------------------------+---------+
+; exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[0] ; 2       ;
+; exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[1] ; 1       ;
+; exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[2] ; 1       ;
+; exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[3] ; 1       ;
+; exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[4] ; 1       ;
+; exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[5] ; 1       ;
+; exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[6] ; 1       ;
+; exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[7] ; 1       ;
+; exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[8] ; 1       ;
+; exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[9] ; 1       ;
+; Total number of inverted registers = 10                                                ;         ;
++----------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|contador_m:U3_TICK|Q[4]                                                                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[1]                                                     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[1] ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1|Q[11]                ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[0] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[0] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[1]                                                  ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[2]                                                  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |exp4_trena_desafio|exp4_trena_desafio_fd:FD|Mux3                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1 ;
++----------------+-------+-----------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------------+
+; inicial        ; 000   ; Unsigned Binary                                                                         ;
+; preparacao     ; 001   ; Unsigned Binary                                                                         ;
+; envia_trigger  ; 010   ; Unsigned Binary                                                                         ;
+; espera_echo    ; 011   ; Unsigned Binary                                                                         ;
+; medida         ; 100   ; Unsigned Binary                                                                         ;
+; armazenamento  ; 101   ; Unsigned Binary                                                                         ;
+; final_medida   ; 110   ; Unsigned Binary                                                                         ;
++----------------+-------+-----------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1 ;
++----------------+-------+----------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                     ;
++----------------+-------+----------------------------------------------------------------------------------------------------------+
+; largura        ; 500   ; Signed Integer                                                                                           ;
++----------------+-------+----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2 ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; R              ; 2941  ; Signed Integer                                                                                         ;
+; N              ; 12    ; Signed Integer                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                     ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+; R              ; 2941  ; Signed Integer                                                                                                           ;
+; N              ; 12    ; Signed Integer                                                                                                           ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1 ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------+
+; M              ; 2941  ; Signed Integer                                                                                                                         ;
+; N              ; 12    ; Signed Integer                                                                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                     ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+; inicial        ; 000   ; Unsigned Binary                                                                                                          ;
+; espera         ; 001   ; Unsigned Binary                                                                                                          ;
+; contagem       ; 010   ; Unsigned Binary                                                                                                          ;
+; estado_final   ; 011   ; Unsigned Binary                                                                                                          ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3 ;
++----------------+-------+----------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                     ;
++----------------+-------+----------------------------------------------------------------------------------------------------------+
+; N              ; 12    ; Signed Integer                                                                                           ;
++----------------+-------+----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; N              ; 11    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2 ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+; M              ; 12    ; Signed Integer                                                                                     ;
+; N              ; 4     ; Signed Integer                                                                                     ;
++----------------+-------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_uc:U2_UC ;
++----------------+-------+----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------+
+; inicial        ; 0000  ; Unsigned Binary                                                                  ;
+; preparacao     ; 0001  ; Unsigned Binary                                                                  ;
+; espera         ; 0011  ; Unsigned Binary                                                                  ;
+; transmissao    ; 0111  ; Unsigned Binary                                                                  ;
+; final_tx       ; 1111  ; Unsigned Binary                                                                  ;
++----------------+-------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|contador_m:U3_TICK ;
++----------------+-------+----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------+
+; M              ; 434   ; Signed Integer                                                                   ;
+; N              ; 9     ; Signed Integer                                                                   ;
++----------------+-------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: exp4_trena_desafio_fd:FD|contador_m:U3 ;
++----------------+----------+---------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                    ;
++----------------+----------+---------------------------------------------------------+
+; M              ; 50000000 ; Signed Integer                                          ;
+; N              ; 26       ; Signed Integer                                          ;
++----------------+----------+---------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: exp4_trena_desafio_uc:UC ;
++------------------+-------+--------------------------------------------+
+; Parameter Name   ; Value ; Type                                       ;
++------------------+-------+--------------------------------------------+
+; Inicial          ; 0000  ; Unsigned Binary                            ;
+; PreparaMedida    ; 0001  ; Unsigned Binary                            ;
+; AguardaMedida    ; 0010  ; Unsigned Binary                            ;
+; TransmiteCentena ; 0011  ; Unsigned Binary                            ;
+; EsperaTxCent0    ; 0100  ; Unsigned Binary                            ;
+; EsperaTxCent1    ; 0101  ; Unsigned Binary                            ;
+; TransmiteDezena  ; 0110  ; Unsigned Binary                            ;
+; EsperaTxDez0     ; 0111  ; Unsigned Binary                            ;
+; EsperaTxDez1     ; 1000  ; Unsigned Binary                            ;
+; TransmiteUnidade ; 1001  ; Unsigned Binary                            ;
+; EsperaTxUni0     ; 1010  ; Unsigned Binary                            ;
+; EsperaTxUni1     ; 1011  ; Unsigned Binary                            ;
+; TransmiteHashtag ; 1100  ; Unsigned Binary                            ;
+; EsperaTxHash0    ; 1101  ; Unsigned Binary                            ;
+; EsperaTxHash1    ; 1110  ; Unsigned Binary                            ;
+; Final            ; 1111  ; Unsigned Binary                            ;
++------------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "exp4_trena_desafio_uc:UC"       ;
++---------------+--------+----------+------------------------+
+; Port          ; Type   ; Severity ; Details                ;
++---------------+--------+----------+------------------------+
+; zera_contador ; Output ; Info     ; Explicitly unconnected ;
++---------------+--------+----------+------------------------+
+
+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "exp4_trena_desafio_fd:FD|contador_m:U3" ;
++---------+--------+----------+--------------------------------------+
+; Port    ; Type   ; Severity ; Details                              ;
++---------+--------+----------+--------------------------------------+
+; zera_as ; Input  ; Info     ; Stuck at GND                         ;
+; conta   ; Input  ; Info     ; Stuck at VCC                         ;
+; Q       ; Output ; Info     ; Explicitly unconnected               ;
+; meio    ; Output ; Info     ; Explicitly unconnected               ;
++---------+--------+----------+--------------------------------------+
+
+
 +------------------------------------------------------------------------------------------+
-; Inverted Register Statistics                                                             ;
-+--------------------------------------------------------------------------------+---------+
-; Inverted Register                                                              ; Fan out ;
-+--------------------------------------------------------------------------------+---------+
-; exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[0] ; 2       ;
-; exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[1] ; 1       ;
-; exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[2] ; 1       ;
-; exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[3] ; 1       ;
-; exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[4] ; 1       ;
-; exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[5] ; 1       ;
-; exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[6] ; 1       ;
-; exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[7] ; 1       ;
-; exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[8] ; 1       ;
-; exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[9] ; 1       ;
-; Total number of inverted registers = 10                                        ;         ;
-+--------------------------------------------------------------------------------+---------+
+; Port Connectivity Checks: "exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|contador_m:U3_TICK" ;
++---------+--------+----------+------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                    ;
++---------+--------+----------+------------------------------------------------------------+
+; zera_as ; Input  ; Info     ; Stuck at GND                                               ;
+; conta   ; Input  ; Info     ; Stuck at VCC                                               ;
+; Q       ; Output ; Info     ; Explicitly unconnected                                     ;
+; meio    ; Output ; Info     ; Explicitly unconnected                                     ;
++---------+--------+----------+------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2|contador_m:U3_TICK|Q[2]                                                                       ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[3]                                                     ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[0] ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1|Q[10]                ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[1] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[3] ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[1]                                                  ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[3]                                                  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |exp4_trena|exp4_trena_fd:FD|Mux3                                                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1 ;
-+----------------+-------+---------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                            ;
-+----------------+-------+---------------------------------------------------------------------------------+
-; inicial        ; 000   ; Unsigned Binary                                                                 ;
-; preparacao     ; 001   ; Unsigned Binary                                                                 ;
-; envia_trigger  ; 010   ; Unsigned Binary                                                                 ;
-; espera_echo    ; 011   ; Unsigned Binary                                                                 ;
-; medida         ; 100   ; Unsigned Binary                                                                 ;
-; armazenamento  ; 101   ; Unsigned Binary                                                                 ;
-; final_medida   ; 110   ; Unsigned Binary                                                                 ;
-+----------------+-------+---------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1 ;
-+----------------+-------+--------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                             ;
-+----------------+-------+--------------------------------------------------------------------------------------------------+
-; largura        ; 500   ; Signed Integer                                                                                   ;
-+----------------+-------+--------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2 ;
-+----------------+-------+------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                           ;
-+----------------+-------+------------------------------------------------------------------------------------------------+
-; R              ; 2941  ; Signed Integer                                                                                 ;
-; N              ; 12    ; Signed Integer                                                                                 ;
-+----------------+-------+------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD ;
-+----------------+-------+------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                             ;
-+----------------+-------+------------------------------------------------------------------------------------------------------------------+
-; R              ; 2941  ; Signed Integer                                                                                                   ;
-; N              ; 12    ; Signed Integer                                                                                                   ;
-+----------------+-------+------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1 ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                           ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------+
-; M              ; 2941  ; Signed Integer                                                                                                                 ;
-; N              ; 12    ; Signed Integer                                                                                                                 ;
-+----------------+-------+--------------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC ;
-+----------------+-------+------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                             ;
-+----------------+-------+------------------------------------------------------------------------------------------------------------------+
-; inicial        ; 000   ; Unsigned Binary                                                                                                  ;
-; espera         ; 001   ; Unsigned Binary                                                                                                  ;
-; contagem       ; 010   ; Unsigned Binary                                                                                                  ;
-; estado_final   ; 011   ; Unsigned Binary                                                                                                  ;
-+----------------+-------+------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3 ;
-+----------------+-------+--------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                             ;
-+----------------+-------+--------------------------------------------------------------------------------------------------+
-; N              ; 12    ; Signed Integer                                                                                   ;
-+----------------+-------+--------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1 ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                         ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
-; N              ; 11    ; Signed Integer                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2 ;
-+----------------+-------+--------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                       ;
-+----------------+-------+--------------------------------------------------------------------------------------------+
-; M              ; 12    ; Signed Integer                                                                             ;
-; N              ; 4     ; Signed Integer                                                                             ;
-+----------------+-------+--------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_uc:U2_UC ;
-+----------------+-------+--------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                     ;
-+----------------+-------+--------------------------------------------------------------------------+
-; inicial        ; 0000  ; Unsigned Binary                                                          ;
-; preparacao     ; 0001  ; Unsigned Binary                                                          ;
-; espera         ; 0011  ; Unsigned Binary                                                          ;
-; transmissao    ; 0111  ; Unsigned Binary                                                          ;
-; final_tx       ; 1111  ; Unsigned Binary                                                          ;
-+----------------+-------+--------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: exp4_trena_fd:FD|tx_serial_7E1:U2|contador_m:U3_TICK ;
-+----------------+-------+--------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                     ;
-+----------------+-------+--------------------------------------------------------------------------+
-; M              ; 434   ; Signed Integer                                                           ;
-; N              ; 9     ; Signed Integer                                                           ;
-+----------------+-------+--------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: exp4_trena_uc:UC ;
-+------------------+-------+------------------------------------+
-; Parameter Name   ; Value ; Type                               ;
-+------------------+-------+------------------------------------+
-; Inicial          ; 0000  ; Unsigned Binary                    ;
-; PreparaMedida    ; 0001  ; Unsigned Binary                    ;
-; AguardaMedida    ; 0010  ; Unsigned Binary                    ;
-; TransmiteCentena ; 0011  ; Unsigned Binary                    ;
-; EsperaTxCent0    ; 0100  ; Unsigned Binary                    ;
-; EsperaTxCent1    ; 0101  ; Unsigned Binary                    ;
-; TransmiteDezena  ; 0110  ; Unsigned Binary                    ;
-; EsperaTxDez0     ; 0111  ; Unsigned Binary                    ;
-; EsperaTxDez1     ; 1000  ; Unsigned Binary                    ;
-; TransmiteUnidade ; 1001  ; Unsigned Binary                    ;
-; EsperaTxUni0     ; 1010  ; Unsigned Binary                    ;
-; EsperaTxUni1     ; 1011  ; Unsigned Binary                    ;
-; TransmiteHashtag ; 1100  ; Unsigned Binary                    ;
-; EsperaTxHash0    ; 1101  ; Unsigned Binary                    ;
-; EsperaTxHash1    ; 1110  ; Unsigned Binary                    ;
-; Final            ; 1111  ; Unsigned Binary                    ;
-+------------------+-------+------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------+
-; Port Connectivity Checks: "exp4_trena_fd:FD|tx_serial_7E1:U2|contador_m:U3_TICK" ;
-+---------+--------+----------+----------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                            ;
-+---------+--------+----------+----------------------------------------------------+
-; zera_as ; Input  ; Info     ; Stuck at GND                                       ;
-; conta   ; Input  ; Info     ; Stuck at VCC                                       ;
-; Q       ; Output ; Info     ; Explicitly unconnected                             ;
-; meio    ; Output ; Info     ; Explicitly unconnected                             ;
-+---------+--------+----------+----------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2" ;
-+---------+--------+----------+----------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                              ;
-+---------+--------+----------+----------------------------------------------------------------------+
-; zera_as ; Input  ; Info     ; Stuck at GND                                                         ;
-; Q       ; Output ; Info     ; Explicitly unconnected                                               ;
-; meio    ; Output ; Info     ; Explicitly unconnected                                               ;
-+---------+--------+----------+----------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2" ;
++---------+--------+----------+------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                      ;
++---------+--------+----------+------------------------------------------------------------------------------+
+; zera_as ; Input  ; Info     ; Stuck at GND                                                                 ;
+; Q       ; Output ; Info     ; Explicitly unconnected                                                       ;
+; meio    ; Output ; Info     ; Explicitly unconnected                                                       ;
++---------+--------+----------+------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1"                     ;
+; Port Connectivity Checks: "exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1"             ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port           ; Type   ; Severity ; Details                                                                             ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -626,7 +662,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "exp4_trena_fd:FD|tx_serial_7E1:U2"                                                                                  ;
+; Port Connectivity Checks: "exp4_trena_desafio_fd:FD|tx_serial_7E1:U2"                                                                          ;
 +-----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 ; Port            ; Type   ; Severity ; Details                                                                                                  ;
 +-----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
@@ -640,43 +676,43 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1" ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                  ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; zera_as ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; Q       ; Output ; Info     ; Explicitly unconnected                                                                                   ;
-; meio    ; Output ; Info     ; Explicitly unconnected                                                                                   ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1" ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                          ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------+
+; zera_as ; Input  ; Info     ; Stuck at GND                                                                                                     ;
+; Q       ; Output ; Info     ; Explicitly unconnected                                                                                           ;
+; meio    ; Output ; Info     ; Explicitly unconnected                                                                                           ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1" ;
-+--------+--------+----------+-----------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                     ;
-+--------+--------+----------+-----------------------------------------------------------------------------+
-; para   ; Input  ; Info     ; Stuck at GND                                                                ;
-; pronto ; Output ; Info     ; Explicitly unconnected                                                      ;
-+--------+--------+----------+-----------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1" ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; para   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; pronto ; Output ; Info     ; Explicitly unconnected                                                              ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2" ;
-+------+--------+----------+--------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                      ;
-+------+--------+----------+--------------------------------------------------------------+
-; fim  ; Output ; Info     ; Explicitly unconnected                                       ;
-+------+--------+----------+--------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2" ;
++------+--------+----------+----------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                              ;
++------+--------+----------+----------------------------------------------------------------------+
+; fim  ; Output ; Info     ; Explicitly unconnected                                               ;
++------+--------+----------+----------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------+
-; Port Connectivity Checks: "exp4_trena_fd:FD|interface_hcsr04:U1" ;
-+-----------+--------+----------+----------------------------------+
-; Port      ; Type   ; Severity ; Details                          ;
-+-----------+--------+----------+----------------------------------+
-; db_estado ; Output ; Info     ; Explicitly unconnected           ;
-+-----------+--------+----------+----------------------------------+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "exp4_trena_desafio_fd:FD|interface_hcsr04:U1" ;
++-----------+--------+----------+------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                  ;
++-----------+--------+----------+------------------------------------------+
+; db_estado ; Output ; Info     ; Explicitly unconnected                   ;
++-----------+--------+----------+------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -684,28 +720,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 127                         ;
+; arriav_ff             ; 153                         ;
 ;     CLR               ; 68                          ;
 ;     ENA               ; 16                          ;
 ;     ENA CLR           ; 22                          ;
 ;     ENA SCLR          ; 12                          ;
-;     SCLR              ; 9                           ;
-; arriav_lcell_comb     ; 212                         ;
-;     arith             ; 53                          ;
-;         1 data inputs ; 53                          ;
+;     SCLR              ; 35                          ;
+; arriav_lcell_comb     ; 245                         ;
+;     arith             ; 79                          ;
+;         1 data inputs ; 79                          ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 158                         ;
+;     normal            ; 165                         ;
 ;         1 data inputs ; 7                           ;
-;         2 data inputs ; 21                          ;
-;         3 data inputs ; 22                          ;
+;         2 data inputs ; 22                          ;
+;         3 data inputs ; 21                          ;
 ;         4 data inputs ; 75                          ;
-;         5 data inputs ; 20                          ;
-;         6 data inputs ; 13                          ;
-; boundary_port         ; 39                          ;
+;         5 data inputs ; 21                          ;
+;         6 data inputs ; 19                          ;
+; boundary_port         ; 38                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.10                        ;
-; Average LUT depth     ; 2.51                        ;
+; Average LUT depth     ; 2.60                        ;
 +-----------------------+-----------------------------+
 
 
@@ -724,10 +760,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Sep 23 09:23:48 2026
+    Info: Processing started: Wed Sep 23 10:47:33 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off exp4-Quartus -c exp4-Quartus
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia4/exp4_trena_desafio_uc.v
+    Info (12023): Found entity 1: exp4_trena_desafio_uc File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_desafio_uc.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia4/exp4_trena_desafio_fd.v
+    Info (12023): Found entity 1: exp4_trena_desafio_fd File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_desafio_fd.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia4/exp4_trena_desafio.v
+    Info (12023): Found entity 1: exp4_trena_desafio File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_desafio.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia4/tx_serial_uc.v
     Info (12023): Found entity 1: tx_serial_uc File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_uc.v Line: 17
 Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia4/tx_serial_7e1_fd.v
@@ -772,43 +814,44 @@ Info (12021): Found 1 design units, including 1 entities, in source file /projet
     Info (12023): Found entity 1: contador_cm File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/contador_cm.v Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia4/contador_bcd_3digitos.v
     Info (12023): Found entity 1: contador_bcd_3digitos File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/contador_bcd_3digitos.v Line: 14
-Info (12127): Elaborating entity "exp4_trena" for the top level hierarchy
-Info (12128): Elaborating entity "exp4_trena_fd" for hierarchy "exp4_trena_fd:FD" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena.v Line: 51
-Info (12128): Elaborating entity "interface_hcsr04" for hierarchy "exp4_trena_fd:FD|interface_hcsr04:U1" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_fd.v Line: 38
-Info (12128): Elaborating entity "interface_hcsr04_uc" for hierarchy "exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/interface_hcsr04.v Line: 43
-Info (12128): Elaborating entity "interface_hcsr04_fd" for hierarchy "exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/interface_hcsr04.v Line: 56
-Info (12128): Elaborating entity "gerador_pulso" for hierarchy "exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/interface_hcsr04_fd.v Line: 42
-Info (12128): Elaborating entity "contador_cm" for hierarchy "exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/interface_hcsr04_fd.v Line: 57
-Info (12128): Elaborating entity "contador_cm_fd" for hierarchy "exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/contador_cm.v Line: 52
-Info (12128): Elaborating entity "contador_m" for hierarchy "exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/contador_cm_fd.v Line: 44
-Info (12128): Elaborating entity "contador_bcd_3digitos" for hierarchy "exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/contador_cm_fd.v Line: 55
-Info (12128): Elaborating entity "contador_cm_uc" for hierarchy "exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/contador_cm.v Line: 65
+Info (12127): Elaborating entity "exp4_trena_desafio" for the top level hierarchy
+Info (12128): Elaborating entity "exp4_trena_desafio_fd" for hierarchy "exp4_trena_desafio_fd:FD" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_desafio.v Line: 57
+Info (12128): Elaborating entity "interface_hcsr04" for hierarchy "exp4_trena_desafio_fd:FD|interface_hcsr04:U1" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_desafio_fd.v Line: 40
+Info (12128): Elaborating entity "interface_hcsr04_uc" for hierarchy "exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/interface_hcsr04.v Line: 43
+Info (12128): Elaborating entity "interface_hcsr04_fd" for hierarchy "exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/interface_hcsr04.v Line: 56
+Info (12128): Elaborating entity "gerador_pulso" for hierarchy "exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/interface_hcsr04_fd.v Line: 42
+Info (12128): Elaborating entity "contador_cm" for hierarchy "exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/interface_hcsr04_fd.v Line: 57
+Info (12128): Elaborating entity "contador_cm_fd" for hierarchy "exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/contador_cm.v Line: 52
+Info (12128): Elaborating entity "contador_m" for hierarchy "exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/contador_cm_fd.v Line: 44
+Info (12128): Elaborating entity "contador_bcd_3digitos" for hierarchy "exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/contador_cm_fd.v Line: 55
+Info (12128): Elaborating entity "contador_cm_uc" for hierarchy "exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/contador_cm.v Line: 65
 Info (10264): Verilog HDL Case Statement information at contador_cm_uc.v(87): all case item expressions in this case statement are onehot File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/contador_cm_uc.v Line: 87
-Info (12128): Elaborating entity "registrador_n" for hierarchy "exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/interface_hcsr04_fd.v Line: 68
-Info (12128): Elaborating entity "tx_serial_7E1" for hierarchy "exp4_trena_fd:FD|tx_serial_7E1:U2" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_fd.v Line: 63
-Info (12128): Elaborating entity "tx_serial_7E1_fd" for hierarchy "exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_7E1.v Line: 42
-Info (12128): Elaborating entity "deslocador_n" for hierarchy "exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_7E1_fd.v Line: 54
-Info (12128): Elaborating entity "contador_m" for hierarchy "exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_7E1_fd.v Line: 68
-Info (12128): Elaborating entity "tx_serial_uc" for hierarchy "exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_uc:U2_UC" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_7E1.v Line: 58
-Info (12128): Elaborating entity "contador_m" for hierarchy "exp4_trena_fd:FD|tx_serial_7E1:U2|contador_m:U3_TICK" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_7E1.v Line: 74
-Info (12128): Elaborating entity "edge_detector" for hierarchy "exp4_trena_fd:FD|tx_serial_7E1:U2|edge_detector:U4_ED" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_7E1.v Line: 83
-Info (12128): Elaborating entity "hexa7seg" for hierarchy "exp4_trena_fd:FD|tx_serial_7E1:U2|hexa7seg:HEX0" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_7E1.v Line: 99
-Info (12128): Elaborating entity "exp4_trena_uc" for hierarchy "exp4_trena_uc:UC" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena.v Line: 65
-Warning (10270): Verilog HDL Case Statement warning at exp4_trena_uc.v(88): incomplete case statement has no default case item File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_uc.v Line: 88
-Info (10264): Verilog HDL Case Statement information at exp4_trena_uc.v(88): all case item expressions in this case statement are onehot File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_uc.v Line: 88
+Info (12128): Elaborating entity "registrador_n" for hierarchy "exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/interface_hcsr04_fd.v Line: 68
+Info (12128): Elaborating entity "tx_serial_7E1" for hierarchy "exp4_trena_desafio_fd:FD|tx_serial_7E1:U2" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_desafio_fd.v Line: 65
+Info (12128): Elaborating entity "tx_serial_7E1_fd" for hierarchy "exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_7E1.v Line: 42
+Info (12128): Elaborating entity "deslocador_n" for hierarchy "exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_7E1_fd.v Line: 54
+Info (12128): Elaborating entity "contador_m" for hierarchy "exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_7E1_fd.v Line: 68
+Info (12128): Elaborating entity "tx_serial_uc" for hierarchy "exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_uc:U2_UC" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_7E1.v Line: 58
+Info (12128): Elaborating entity "contador_m" for hierarchy "exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|contador_m:U3_TICK" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_7E1.v Line: 74
+Info (12128): Elaborating entity "edge_detector" for hierarchy "exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|edge_detector:U4_ED" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_7E1.v Line: 83
+Info (12128): Elaborating entity "hexa7seg" for hierarchy "exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|hexa7seg:HEX0" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/tx_serial_7E1.v Line: 99
+Info (12128): Elaborating entity "contador_m" for hierarchy "exp4_trena_desafio_fd:FD|contador_m:U3" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_desafio_fd.v Line: 78
+Info (12128): Elaborating entity "exp4_trena_desafio_uc" for hierarchy "exp4_trena_desafio_uc:UC" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_desafio.v Line: 72
+Warning (10270): Verilog HDL Case Statement warning at exp4_trena_desafio_uc.v(90): incomplete case statement has no default case item File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_desafio_uc.v Line: 90
+Info (10264): Verilog HDL Case Statement information at exp4_trena_desafio_uc.v(90): all case item expressions in this case statement are onehot File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia4/exp4_trena_desafio_uc.v Line: 90
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 13 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 259 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
+Info (21057): Implemented 291 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
     Info (21059): Implemented 35 output pins
-    Info (21061): Implemented 220 logic cells
+    Info (21061): Implemented 253 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4823 megabytes
-    Info: Processing ended: Wed Sep 23 09:24:00 2026
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Peak virtual memory: 4822 megabytes
+    Info: Processing ended: Wed Sep 23 10:47:48 2026
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:36
 
 

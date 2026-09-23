@@ -1,10 +1,9 @@
-|exp4_trena
+|exp4_trena_desafio
 clock => clock.IN2
 reset => reset.IN2
-mensurar => mensurar.IN1
 echo => echo.IN1
-trigger << exp4_trena_fd:FD.trigger
-saida_serial << exp4_trena_fd:FD.saida_serial
+trigger << exp4_trena_desafio_fd:FD.trigger
+saida_serial << exp4_trena_desafio_fd:FD.saida_serial
 medida0[0] << hexa7seg:HEX0.display
 medida0[1] << hexa7seg:HEX0.display
 medida0[2] << hexa7seg:HEX0.display
@@ -26,11 +25,11 @@ medida2[3] << hexa7seg:HEX2.display
 medida2[4] << hexa7seg:HEX2.display
 medida2[5] << hexa7seg:HEX2.display
 medida2[6] << hexa7seg:HEX2.display
-pronto << exp4_trena_uc:UC.pronto
-db_mensurar << mensurar.DB_MAX_OUTPUT_PORT_TYPE
+pronto << exp4_trena_desafio_uc:UC.pronto
+db_mensurar << w_mensurar_automatico.DB_MAX_OUTPUT_PORT_TYPE
 db_echo << echo.DB_MAX_OUTPUT_PORT_TYPE
-db_trigger << exp4_trena_fd:FD.trigger
-db_saida_serial << exp4_trena_fd:FD.saida_serial
+db_trigger << exp4_trena_desafio_fd:FD.trigger
+db_saida_serial << exp4_trena_desafio_fd:FD.saida_serial
 db_estado[0] << hexa7seg:HEX_ESTADO.display
 db_estado[1] << hexa7seg:HEX_ESTADO.display
 db_estado[2] << hexa7seg:HEX_ESTADO.display
@@ -40,8 +39,8 @@ db_estado[5] << hexa7seg:HEX_ESTADO.display
 db_estado[6] << hexa7seg:HEX_ESTADO.display
 
 
-|exp4_trena|exp4_trena_fd:FD
-clock => clock.IN2
+|exp4_trena_desafio|exp4_trena_desafio_fd:FD
+clock => clock.IN3
 reset => reset.IN2
 medir => medir.IN1
 echo => echo.IN1
@@ -56,6 +55,7 @@ sel_letra[1] => Mux0.IN1
 sel_letra[1] => Mux1.IN1
 sel_letra[1] => Mux2.IN1
 sel_letra[1] => Mux3.IN1
+zera_contador => zera_contador.IN1
 trigger <= interface_hcsr04:U1.trigger
 medida0[0] <= interface_hcsr04:U1.medida
 medida0[1] <= interface_hcsr04:U1.medida
@@ -72,9 +72,10 @@ medida2[3] <= interface_hcsr04:U1.medida
 saida_serial <= tx_serial_7E1:U2.saida_serial
 pronto_medida <= interface_hcsr04:U1.pronto
 pronto_serial <= tx_serial_7E1:U2.pronto
+mensurar_automatico <= contador_m:U3.fim
 
 
-|exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1
+|exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1
 clock => clock.IN2
 reset => reset.IN1
 medir => medir.IN1
@@ -99,7 +100,7 @@ db_estado[2] <= interface_hcsr04_uc:U1.db_estado
 db_estado[3] <= interface_hcsr04_uc:U1.db_estado
 
 
-|exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1
+|exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_uc:U1
 clock => Eatual~1.DATAIN
 reset => Eatual~3.DATAIN
 medir => Eprox.preparacao.DATAB
@@ -118,7 +119,7 @@ db_estado[2] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
 db_estado[3] <= db_estado[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2
+|exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2
 clock => clock.IN3
 pulso => pulso.IN1
 zera => zera.IN3
@@ -141,7 +142,7 @@ distancia[10] <= registrador_n:U3.Q
 distancia[11] <= registrador_n:U3.Q
 
 
-|exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1
+|exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1
 clock => reg_cont[0].CLK
 clock => reg_cont[1].CLK
 clock => reg_cont[2].CLK
@@ -249,7 +250,7 @@ pulso <= pulso.DB_MAX_OUTPUT_PORT_TYPE
 pronto <= pronto.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2
+|exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2
 clock => clock.IN2
 reset => reset.IN1
 pulso => pulso.IN2
@@ -269,7 +270,7 @@ fim <= contador_cm_fd:FD.fim
 pronto <= contador_cm_uc:UC.pronto
 
 
-|exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD
+|exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD
 clock => clock.IN2
 pulso => ~NO_FANOUT~
 zera_tick => zera_tick.IN1
@@ -292,7 +293,7 @@ digito2[3] <= contador_bcd_3digitos:U2.digito2
 fim <= contador_bcd_3digitos:U2.fim
 
 
-|exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1
+|exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1
 clock => Q[0]~reg0.CLK
 clock => Q[1]~reg0.CLK
 clock => Q[2]~reg0.CLK
@@ -357,7 +358,7 @@ fim <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 meio <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2
+|exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2
 clock => s_dig2[0].CLK
 clock => s_dig2[1].CLK
 clock => s_dig2[2].CLK
@@ -409,7 +410,7 @@ digito2[3] <= s_dig2[3].DB_MAX_OUTPUT_PORT_TYPE
 fim <= fim.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC
+|exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC
 clock => Eatual~1.DATAIN
 reset => Eatual~3.DATAIN
 pulso => Selector1.IN1
@@ -424,7 +425,7 @@ conta_bcd <= conta_bcd.DB_MAX_OUTPUT_PORT_TYPE
 pronto <= pronto.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|exp4_trena|exp4_trena_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3
+|exp4_trena_desafio|exp4_trena_desafio_fd:FD|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3
 clock => IQ[0].CLK
 clock => IQ[1].CLK
 clock => IQ[2].CLK
@@ -487,7 +488,7 @@ Q[10] <= IQ[10].DB_MAX_OUTPUT_PORT_TYPE
 Q[11] <= IQ[11].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2
+|exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2
 clock => clock.IN4
 reset => s_reset.IN3
 partida => s_partida.IN1
@@ -513,7 +514,7 @@ db_estado[5] <= hexa7seg:HEX0.display
 db_estado[6] <= hexa7seg:HEX0.display
 
 
-|exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD
+|exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD
 clock => clock.IN2
 reset => reset.IN1
 zera => zera.IN1
@@ -531,7 +532,7 @@ saida_serial <= deslocador_n:U1.saida
 fim <= contador_m:U2.fim
 
 
-|exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1
+|exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1
 clock => IQ[0].CLK
 clock => IQ[1].CLK
 clock => IQ[2].CLK
@@ -601,7 +602,7 @@ saida[9] <= IQ[9].DB_MAX_OUTPUT_PORT_TYPE
 saida[10] <= IQ[10].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2
+|exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2
 clock => Q[0]~reg0.CLK
 clock => Q[1]~reg0.CLK
 clock => Q[2]~reg0.CLK
@@ -626,7 +627,7 @@ fim <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 meio <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2|tx_serial_uc:U2_UC
+|exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|tx_serial_uc:U2_UC
 clock => Eatual~1.DATAIN
 reset => Eatual~3.DATAIN
 partida => Eprox.preparacao.DATAB
@@ -649,7 +650,7 @@ db_estado[2] <= db_estado.DB_MAX_OUTPUT_PORT_TYPE
 db_estado[3] <= db_estado[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2|contador_m:U3_TICK
+|exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|contador_m:U3_TICK
 clock => Q[0]~reg0.CLK
 clock => Q[1]~reg0.CLK
 clock => Q[2]~reg0.CLK
@@ -699,7 +700,7 @@ fim <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 meio <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2|edge_detector:U4_ED
+|exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|edge_detector:U4_ED
 clock => reg1.CLK
 clock => reg0.CLK
 reset => reg1.ACLR
@@ -708,7 +709,7 @@ sinal => reg0.DATAIN
 pulso <= pulso.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|exp4_trena|exp4_trena_fd:FD|tx_serial_7E1:U2|hexa7seg:HEX0
+|exp4_trena_desafio|exp4_trena_desafio_fd:FD|tx_serial_7E1:U2|hexa7seg:HEX0
 hexa[0] => Decoder0.IN3
 hexa[1] => Decoder0.IN2
 hexa[2] => Decoder0.IN1
@@ -722,7 +723,142 @@ display[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|exp4_trena|exp4_trena_uc:UC
+|exp4_trena_desafio|exp4_trena_desafio_fd:FD|contador_m:U3
+clock => Q[0]~reg0.CLK
+clock => Q[1]~reg0.CLK
+clock => Q[2]~reg0.CLK
+clock => Q[3]~reg0.CLK
+clock => Q[4]~reg0.CLK
+clock => Q[5]~reg0.CLK
+clock => Q[6]~reg0.CLK
+clock => Q[7]~reg0.CLK
+clock => Q[8]~reg0.CLK
+clock => Q[9]~reg0.CLK
+clock => Q[10]~reg0.CLK
+clock => Q[11]~reg0.CLK
+clock => Q[12]~reg0.CLK
+clock => Q[13]~reg0.CLK
+clock => Q[14]~reg0.CLK
+clock => Q[15]~reg0.CLK
+clock => Q[16]~reg0.CLK
+clock => Q[17]~reg0.CLK
+clock => Q[18]~reg0.CLK
+clock => Q[19]~reg0.CLK
+clock => Q[20]~reg0.CLK
+clock => Q[21]~reg0.CLK
+clock => Q[22]~reg0.CLK
+clock => Q[23]~reg0.CLK
+clock => Q[24]~reg0.CLK
+clock => Q[25]~reg0.CLK
+zera_as => Q[0]~reg0.ACLR
+zera_as => Q[1]~reg0.ACLR
+zera_as => Q[2]~reg0.ACLR
+zera_as => Q[3]~reg0.ACLR
+zera_as => Q[4]~reg0.ACLR
+zera_as => Q[5]~reg0.ACLR
+zera_as => Q[6]~reg0.ACLR
+zera_as => Q[7]~reg0.ACLR
+zera_as => Q[8]~reg0.ACLR
+zera_as => Q[9]~reg0.ACLR
+zera_as => Q[10]~reg0.ACLR
+zera_as => Q[11]~reg0.ACLR
+zera_as => Q[12]~reg0.ACLR
+zera_as => Q[13]~reg0.ACLR
+zera_as => Q[14]~reg0.ACLR
+zera_as => Q[15]~reg0.ACLR
+zera_as => Q[16]~reg0.ACLR
+zera_as => Q[17]~reg0.ACLR
+zera_as => Q[18]~reg0.ACLR
+zera_as => Q[19]~reg0.ACLR
+zera_as => Q[20]~reg0.ACLR
+zera_as => Q[21]~reg0.ACLR
+zera_as => Q[22]~reg0.ACLR
+zera_as => Q[23]~reg0.ACLR
+zera_as => Q[24]~reg0.ACLR
+zera_as => Q[25]~reg0.ACLR
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+zera_s => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+conta => Q.OUTPUTSELECT
+Q[0] <= Q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[16] <= Q[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[17] <= Q[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[18] <= Q[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[19] <= Q[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[20] <= Q[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[21] <= Q[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[22] <= Q[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[23] <= Q[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[24] <= Q[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Q[25] <= Q[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+fim <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+meio <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exp4_trena_desafio|exp4_trena_desafio_uc:UC
 clock => Eatual~1.DATAIN
 reset => Eatual~3.DATAIN
 mensurar => Selector0.IN2
@@ -742,7 +878,7 @@ pronto_serial => Selector7.IN1
 pronto_serial => Selector9.IN1
 pronto_medida => Eprox.TransmiteCentena.DATAB
 pronto_medida => Selector1.IN2
-medir <= medir.DB_MAX_OUTPUT_PORT_TYPE
+medir <= zera_contador.DB_MAX_OUTPUT_PORT_TYPE
 pronto <= pronto.DB_MAX_OUTPUT_PORT_TYPE
 db_estado[0] <= WideOr17.DB_MAX_OUTPUT_PORT_TYPE
 db_estado[1] <= WideOr16.DB_MAX_OUTPUT_PORT_TYPE
@@ -751,9 +887,10 @@ db_estado[3] <= WideOr14.DB_MAX_OUTPUT_PORT_TYPE
 transmite_serial <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
 sel_letra[0] <= WideOr13.DB_MAX_OUTPUT_PORT_TYPE
 sel_letra[1] <= WideOr12.DB_MAX_OUTPUT_PORT_TYPE
+zera_contador <= zera_contador.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|exp4_trena|hexa7seg:HEX0
+|exp4_trena_desafio|hexa7seg:HEX0
 hexa[0] => Decoder0.IN3
 hexa[1] => Decoder0.IN2
 hexa[2] => Decoder0.IN1
@@ -767,7 +904,7 @@ display[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|exp4_trena|hexa7seg:HEX1
+|exp4_trena_desafio|hexa7seg:HEX1
 hexa[0] => Decoder0.IN3
 hexa[1] => Decoder0.IN2
 hexa[2] => Decoder0.IN1
@@ -781,7 +918,7 @@ display[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|exp4_trena|hexa7seg:HEX2
+|exp4_trena_desafio|hexa7seg:HEX2
 hexa[0] => Decoder0.IN3
 hexa[1] => Decoder0.IN2
 hexa[2] => Decoder0.IN1
@@ -795,7 +932,7 @@ display[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|exp4_trena|hexa7seg:HEX_ESTADO
+|exp4_trena_desafio|hexa7seg:HEX_ESTADO
 hexa[0] => Decoder0.IN3
 hexa[1] => Decoder0.IN2
 hexa[2] => Decoder0.IN1

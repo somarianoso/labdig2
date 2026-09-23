@@ -1,13 +1,13 @@
-Fitter Status : Successful - Wed Sep 23 09:24:24 2026
+Fitter Status : Successful - Wed Sep 23 10:48:16 2026
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : exp4-Quartus
-Top-level Entity Name : exp4_trena
+Top-level Entity Name : exp4_trena_desafio
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 110 / 18,480 ( < 1 % )
-Total registers : 151
-Total pins : 39 / 224 ( 17 % )
+Logic utilization (in ALMs) : 130 / 18,480 ( < 1 % )
+Total registers : 188
+Total pins : 38 / 224 ( 17 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 3,153,920 ( 0 % )
 Total RAM Blocks : 0 / 308 ( 0 % )
