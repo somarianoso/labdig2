@@ -725,9 +725,9 @@ display[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 |exp4_trena|exp4_trena_uc:UC
 clock => Eatual~1.DATAIN
 reset => Eatual~3.DATAIN
+mensurar => Selector0.IN2
 mensurar => Eprox.PreparaMedida.DATAB
-mensurar => Selector10.IN2
-mensurar => Selector0.IN1
+mensurar => Selector10.IN1
 pronto_serial => Selector2.IN3
 pronto_serial => Eprox.TransmiteDezena.DATAB
 pronto_serial => Selector4.IN3
