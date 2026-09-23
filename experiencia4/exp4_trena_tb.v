@@ -14,7 +14,7 @@ module exp4_trena_tb;
     // Sinais de entrada
     reg         clock_in = 0;
     reg         reset_in = 0;
-    reg         mensurar_in = 0;
+    reg         mensurar_in = 1;
     reg         echo_in = 0;
 
     // Sinais de saida
@@ -61,7 +61,7 @@ module exp4_trena_tb;
     // Tarefa para inicializar o sistema
     task reset_dut;
     begin
-        mensurar_in = 1'b0;
+        mensurar_in = 1'b1;
         echo_in     = 1'b0;
 
         #(2 * clockPeriod);
@@ -84,9 +84,9 @@ module exp4_trena_tb;
 
             // 4.2: envia pulso mensurar
             @(negedge clock_in);
-            mensurar_in = 1'b1;
-            #(5 * clockPeriod);
             mensurar_in = 1'b0;
+            #(5 * clockPeriod);
+            mensurar_in = 1'b1;
 
             // 4.3: espera 400 us entre trigger e echo
             #(400_000);

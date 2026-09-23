@@ -48,7 +48,7 @@ module exp4_trena_uc (
     // Lógica de próximo estado (Combinacional)
     always @* begin
         case (Eatual)
-            Inicial:          Eprox = mensurar ? PreparaMedida : Inicial;
+            Inicial:          Eprox = !mensurar ? PreparaMedida : Inicial;
             PreparaMedida:    Eprox = AguardaMedida;
             AguardaMedida:    Eprox = pronto_medida ? TransmiteCentena : AguardaMedida;
             
@@ -72,7 +72,7 @@ module exp4_trena_uc (
             EsperaTxHash0:    Eprox = (pronto_serial == 1'b0) ? EsperaTxHash1 : EsperaTxHash0;
             EsperaTxHash1:    Eprox = (pronto_serial == 1'b1) ? Final : EsperaTxHash1;
             
-            Final:            Eprox = (mensurar == 1'b0) ? Inicial : Final;
+            Final:            Eprox = (mensurar == 1'b1) ? Inicial : Final;
             default:          Eprox = Inicial;
         endcase
     end
