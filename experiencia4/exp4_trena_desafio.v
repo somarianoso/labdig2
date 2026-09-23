@@ -37,7 +37,7 @@ module exp4_trena (
     wire w_zera_contador;
 
     // Instanciação do Fluxo de Dados (FD)
-    exp4_trena_fd FD (
+    exp4_trena_desafio_fd FD (
         .clock(clock),
         .reset(reset),
         .medir(s_medir),
@@ -57,7 +57,7 @@ module exp4_trena (
     );
 
     // Instanciação da Unidade de Controle (UC)
-    exp4_trena_uc UC (
+    exp4_trena_desafio_uc UC (
         .clock(clock),
         .reset(reset),
         .mensurar(w_mensurar_automatico), 
