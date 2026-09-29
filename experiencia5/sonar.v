@@ -19,6 +19,7 @@ module sonar (
     wire [2:0] w_sel_letra;
     wire w_pronto_serial;
     wire w_pronto_medida;
+    wire w_mensurar_automatico;
 
     // Unidade de Controle (UC)
     sonar_uc uc_sonar (
@@ -27,6 +28,7 @@ module sonar (
         .mensurar          (ligar),
         .pronto_serial     (w_pronto_serial),
         .pronto_medida     (w_pronto_medida),
+        .fim_2seg          (w_mensurar_automatico),
         .medir             (w_medir),
         .contar_endereco   (w_contar_endereco),
         .zera_endereco     (w_zera_endereco),
@@ -57,7 +59,7 @@ module sonar (
         .saida_serial      (saida_serial),
         .pronto_medida     (w_pronto_medida),
         .pronto_serial     (w_pronto_serial),
-        .mensurar_automatico(),
+        .mensurar_automatico(w_mensurar_automatico),
         .pwm               (pwm)
     );
 
