@@ -16,14 +16,14 @@ module sonar_uc (
 
     // Declaração dos estados
     parameter Inicial          = 4'h0;
-    parameter PreparaMedida    = 4'h1;
-    parameter AguardaMedida    = 4'h2;
-    parameter ZeraContador     = 4'h3;
-    parameter TransmiteLaco    = 4'h4;  // Estado de transmissão em loop
+    parameter PreparaMedida    = 4'h1;  // Inicia medição do sonar
+    parameter AguardaMedida    = 4'h2;  // Aguarda conclusão da medição
+    parameter ZeraContador     = 4'h3;  // Reseta contador de caracteres
+    parameter TransmiteLaco    = 4'h4;  // Estado de transmissão em loop (8 caracteres)
     parameter EsperaPronto0    = 4'h5;  // Aguarda pronto_serial = 0
     parameter EsperaPronto1    = 4'h6;  // Aguarda pronto_serial = 1
-    parameter ProximaPosicao   = 4'h7;  // Incrementa contador e verifica se terminou
-    parameter Final            = 4'h8;
+    parameter ProximaPosicao   = 4'h7;  // Incrementa posição do servo
+    parameter Final            = 4'h8;  // Ciclo completo (volta para medir próxima posição)
 
     // Variáveis de estado
     reg [3:0] Eatual, Eprox;
@@ -55,15 +55,16 @@ module sonar_uc (
             AguardaMedida:    Eprox = pronto_medida ? ZeraContador : AguardaMedida;
             ZeraContador:     Eprox = TransmiteLaco;
             
-            // Loop genérico de transmissão (0-7)
+            // Loop genérico de transmissão (0-7 caracteres)
             TransmiteLaco:    Eprox = EsperaPronto0;
-            EsperaPronto0:     Eprox = (pronto_serial == 1'b0) ? EsperaPronto1 : EsperaPronto0;
-            EsperaPronto1:     Eprox = (pronto_serial == 1'b1) ? ProximaPosicao : EsperaPronto1;
+            EsperaPronto0:    Eprox = (pronto_serial == 1'b0) ? EsperaPronto1 : EsperaPronto0;
+            EsperaPronto1:    Eprox = (pronto_serial == 1'b1) ? ProximaPosicao : EsperaPronto1;
             
-            // Verifica se terminou as 8 transmissões
+            // Após 8 transmissões, incrementa posição e volta a medir
             ProximaPosicao:   Eprox = (contador_transmissoes == 4'h7) ? Final : TransmiteLaco;
             
-            Final:            Eprox = (mensurar == 1'b1) ? Inicial : Final;
+            // Final: incrementa servo e volta a medir (ciclo contínuo)
+            Final:            Eprox = (mensurar == 1'b1) ? PreparaMedida : Final;
             default:          Eprox = Inicial;
         endcase
     end
@@ -109,7 +110,8 @@ module sonar_uc (
             end
             
             Final: begin
-                pronto = 1'b1;
+                // Incrementa servo para próxima posição antes de medir novamente
+                contar_endereco = 1'b1;
             end
         endcase
 
