@@ -90,8 +90,9 @@ module sonar_fd #(
         .meio    () 
     );
 
-    // U4: Contador de Endereço (0 a 7 posições)
+    // U4: Contador de Endereço (0 a 7 posições - movimento "vai" 000→111→000)
     contador_endereco U4 (
+        .clock    (clock),
         .conta    (contar_endereco),
         .zera     (zera_endereco),
         .endereco (w_endereco)
