@@ -3,6 +3,7 @@ module sonar_fd #(
 ) ( 
     input  wire       clock,
     input  wire       reset,
+    input  wire       habilitado,
     input  wire       medir,
     input  wire       echo,
     input  wire       transmite_serial,
@@ -26,8 +27,10 @@ module sonar_fd #(
     wire [2:0]  bitsConversao;
     wire [2:0]  w_endereco;
     wire [23:0] w_posicao;
+    wire        reset_operacao;
 
     assign bitsConversao = 3'b011;
+    assign reset_operacao = reset | ~habilitado;
 
     // Fatiamento dos 12 bits para as saídas BCD de 4 bits
     assign medida0 = w_medida[3:0];   // Unidade
@@ -37,7 +40,7 @@ module sonar_fd #(
     // U1: Módulo da Interface do Sensor
     interface_hcsr04 U1 (
         .clock    (clock),
-        .reset    (reset),
+        .reset    (reset_operacao),
         .medir    (medir),
         .echo     (echo),
         .trigger  (trigger),
@@ -51,9 +54,9 @@ module sonar_fd #(
     // MUX 8x1 para compor a mensagem: "ANG,DIS#"
     always @(*) begin
         case(sel_letra)
-            3'b000: dados_ascii = w_posicao[23:16][6:0];  // Ângulo - Centena (da ROM)
-            3'b001: dados_ascii = w_posicao[15:8][6:0];   // Ângulo - Dezena  (da ROM)
-            3'b010: dados_ascii = w_posicao[7:0][6:0];    // Ângulo - Unidade (da ROM)
+            3'b000: dados_ascii = w_posicao[22:16];       // Ângulo - Centena (da ROM)
+            3'b001: dados_ascii = w_posicao[14:8];        // Ângulo - Dezena  (da ROM)
+            3'b010: dados_ascii = w_posicao[6:0];         // Ângulo - Unidade (da ROM)
             3'b011: dados_ascii = 7'h2C;                  // Vírgula ','
             3'b100: dados_ascii = {bitsConversao, medida2}; // Distância - Centena
             3'b101: dados_ascii = {bitsConversao, medida1}; // Distância - Dezena
@@ -66,7 +69,7 @@ module sonar_fd #(
     // U2: Módulo de Transmissão Serial
     tx_serial_7E1 U2 (
         .clock          (clock),
-        .reset          (reset),
+        .reset          (reset_operacao),
         .partida        (transmite_serial),
         .dados_ascii    (dados_ascii),
         .saida_serial   (saida_serial),
@@ -83,7 +86,7 @@ module sonar_fd #(
     ) U3 (
         .clock   (clock),
         .zera_as (1'b0),
-        .zera_s  (zera_contador),
+        .zera_s  (zera_contador | ~habilitado),
         .conta   (1'b1),
         .Q       (), 
         .fim     (mensurar_automatico),
@@ -94,7 +97,7 @@ module sonar_fd #(
     contador_endereco U4 (
         .clock    (clock),
         .conta    (contar_endereco),
-        .zera     (zera_endereco),
+        .zera     (zera_endereco | reset),
         .endereco (w_endereco)
     );
 

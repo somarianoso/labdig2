@@ -1,0 +1,936 @@
+Analysis & Synthesis report for exp5_quartus
+Tue Sep 29 05:44:48 2026
+Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual
+  9. State Machine - |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual
+ 10. State Machine - |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado
+ 11. State Machine - |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual
+ 12. State Machine - |sonar|sonar_uc:uc_sonar|Eatual
+ 13. Registers Removed During Synthesis
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Parameter Settings for User Entity Instance: Top-level Entity: |sonar
+ 18. Parameter Settings for User Entity Instance: sonar_uc:uc_sonar
+ 19. Parameter Settings for User Entity Instance: sonar_fd:fd_sonar
+ 20. Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1
+ 21. Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1
+ 22. Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2
+ 23. Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD
+ 24. Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1
+ 25. Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC
+ 26. Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3
+ 27. Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1
+ 28. Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2
+ 29. Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC
+ 30. Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK
+ 31. Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|contador_m:U3
+ 32. Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm
+ 33. Port Connectivity Checks: "sonar_fd:fd_sonar|controle_servo_8:U6"
+ 34. Port Connectivity Checks: "sonar_fd:fd_sonar|rom_angulos_8x24:U5"
+ 35. Port Connectivity Checks: "sonar_fd:fd_sonar|contador_m:U3"
+ 36. Port Connectivity Checks: "sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK"
+ 37. Port Connectivity Checks: "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2"
+ 38. Port Connectivity Checks: "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1"
+ 39. Port Connectivity Checks: "sonar_fd:fd_sonar|tx_serial_7E1:U2"
+ 40. Port Connectivity Checks: "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1"
+ 41. Port Connectivity Checks: "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1"
+ 42. Port Connectivity Checks: "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2"
+ 43. Port Connectivity Checks: "sonar_fd:fd_sonar|interface_hcsr04:U1"
+ 44. Port Connectivity Checks: "sonar_fd:fd_sonar"
+ 45. Port Connectivity Checks: "sonar_uc:uc_sonar"
+ 46. Post-Synthesis Netlist Statistics for Top Partition
+ 47. Elapsed Time Per Partition
+ 48. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Sep 29 05:44:48 2026           ;
+; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
+; Revision Name                   ; exp5_quartus                                    ;
+; Top-level Entity Name           ; sonar                                           ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 202                                             ;
+; Total pins                      ; 8                                               ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0                                               ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CEBA4F23C7        ;                    ;
+; Top-level entity name                                                           ; sonar              ; exp5_quartus       ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 8           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
+; tx_serial_uc.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/tx_serial_uc.v          ;         ;
+; tx_serial_7E1_fd.v               ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/tx_serial_7E1_fd.v      ;         ;
+; tx_serial_7E1.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/tx_serial_7E1.v         ;         ;
+; sonar_uc.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/sonar_uc.v              ;         ;
+; sonar_fd.v                       ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/sonar_fd.v              ;         ;
+; sonar.v                          ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/sonar.v                 ;         ;
+; rom_angulos_8x24.v               ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/rom_angulos_8x24.v      ;         ;
+; registrador_n.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/registrador_n.v         ;         ;
+; interface_hcsr04_uc.v            ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/interface_hcsr04_uc.v   ;         ;
+; interface_hcsr04_fd.v            ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/interface_hcsr04_fd.v   ;         ;
+; interface_hcsr04.v               ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/interface_hcsr04.v      ;         ;
+; gerador_pulso.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/gerador_pulso.v         ;         ;
+; deslocador_n.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/deslocador_n.v          ;         ;
+; controle_servo_8.v               ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/controle_servo_8.v      ;         ;
+; contador_m.v                     ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/contador_m.v            ;         ;
+; contador_endereco.v              ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/contador_endereco.v     ;         ;
+; contador_cm_uc.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/contador_cm_uc.v        ;         ;
+; contador_cm_fd.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/contador_cm_fd.v        ;         ;
+; contador_cm.v                    ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/contador_cm.v           ;         ;
+; contador_bcd_3digitos.v          ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/contador_bcd_3digitos.v ;         ;
+; circuito_pwm.v                   ; yes             ; User Verilog HDL File  ; C:/Users/Sophia/Documents/labdig2/experiencia5/circuito_pwm.v          ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 160         ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 281         ;
+;     -- 7 input functions                    ; 3           ;
+;     -- 6 input functions                    ; 33          ;
+;     -- 5 input functions                    ; 20          ;
+;     -- 4 input functions                    ; 51          ;
+;     -- <=3 input functions                  ; 174         ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 202         ;
+;                                             ;             ;
+; I/O pins                                    ; 8           ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; clock~input ;
+; Maximum fan-out                             ; 202         ;
+; Total fan-out                               ; 1605        ;
+; Average fan-out                             ; 3.22        ;
++---------------------------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                          ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name           ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; |sonar                                       ; 281 (0)             ; 202 (0)                   ; 0                 ; 0          ; 8    ; 0            ; |sonar                                                                                                                        ; sonar                 ; work         ;
+;    |sonar_fd:fd_sonar|                       ; 265 (6)             ; 188 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar                                                                                                      ; sonar_fd              ; work         ;
+;       |contador_endereco:U4|                 ; 4 (4)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|contador_endereco:U4                                                                                 ; contador_endereco     ; work         ;
+;       |contador_m:U3|                        ; 34 (34)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|contador_m:U3                                                                                        ; contador_m            ; work         ;
+;       |controle_servo_8:U6|                  ; 71 (0)              ; 49 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|controle_servo_8:U6                                                                                  ; controle_servo_8      ; work         ;
+;          |circuito_pwm:gera_pwm|             ; 71 (71)             ; 49 (49)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm                                                            ; circuito_pwm          ; work         ;
+;       |interface_hcsr04:U1|                  ; 116 (0)             ; 81 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1                                                                                  ; interface_hcsr04      ; work         ;
+;          |interface_hcsr04_fd:U2|            ; 110 (0)             ; 74 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2                                                           ; interface_hcsr04_fd   ; work         ;
+;             |contador_cm:U2|                 ; 36 (0)              ; 27 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2                                            ; contador_cm           ; work         ;
+;                |contador_cm_fd:FD|           ; 33 (0)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD                          ; contador_cm_fd        ; work         ;
+;                   |contador_bcd_3digitos:U2| ; 17 (17)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2 ; contador_bcd_3digitos ; work         ;
+;                   |contador_m:U1|            ; 16 (16)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1            ; contador_m            ; work         ;
+;                |contador_cm_uc:UC|           ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC                          ; contador_cm_uc        ; work         ;
+;             |gerador_pulso:U1|               ; 74 (74)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1                                          ; gerador_pulso         ; work         ;
+;             |registrador_n:U3|               ; 0 (0)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3                                          ; registrador_n         ; work         ;
+;          |interface_hcsr04_uc:U1|            ; 6 (6)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1                                                           ; interface_hcsr04_uc   ; work         ;
+;       |rom_angulos_8x24:U5|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|rom_angulos_8x24:U5                                                                                  ; rom_angulos_8x24      ; work         ;
+;       |tx_serial_7E1:U2|                     ; 33 (0)              ; 28 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2                                                                                     ; tx_serial_7E1         ; work         ;
+;          |contador_m:U3_TICK|                ; 12 (12)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK                                                                  ; contador_m            ; work         ;
+;          |tx_serial_7E1_fd:U1_FD|            ; 16 (0)              ; 14 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD                                                              ; tx_serial_7E1_fd      ; work         ;
+;             |contador_m:U2|                  ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2                                                ; contador_m            ; work         ;
+;             |deslocador_n:U1|                ; 11 (11)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1                                              ; deslocador_n          ; work         ;
+;          |tx_serial_uc:U2_UC|                ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC                                                                  ; tx_serial_uc          ; work         ;
+;    |sonar_uc:uc_sonar|                       ; 16 (16)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_uc:uc_sonar                                                                                                      ; sonar_uc              ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------+
+; State Machine - |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual                            ;
++--------------------+--------------------+---------------+-------------------+-----------------+----------------+
+; Name               ; Eatual.transmissao ; Eatual.espera ; Eatual.preparacao ; Eatual.final_tx ; Eatual.inicial ;
++--------------------+--------------------+---------------+-------------------+-----------------+----------------+
+; Eatual.inicial     ; 0                  ; 0             ; 0                 ; 0               ; 0              ;
+; Eatual.preparacao  ; 0                  ; 0             ; 1                 ; 0               ; 1              ;
+; Eatual.espera      ; 0                  ; 1             ; 0                 ; 0               ; 1              ;
+; Eatual.transmissao ; 1                  ; 0             ; 0                 ; 0               ; 1              ;
+; Eatual.final_tx    ; 0                  ; 0             ; 0                 ; 1               ; 1              ;
++--------------------+--------------------+---------------+-------------------+-----------------+----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual ;
++---------------------+---------------------+-----------------+---------------+-----------------------------------------------+
+; Name                ; Eatual.estado_final ; Eatual.contagem ; Eatual.espera ; Eatual.inicial                                ;
++---------------------+---------------------+-----------------+---------------+-----------------------------------------------+
+; Eatual.inicial      ; 0                   ; 0               ; 0             ; 0                                             ;
+; Eatual.espera       ; 0                   ; 0               ; 1             ; 1                                             ;
+; Eatual.contagem     ; 0                   ; 1               ; 0             ; 1                                             ;
+; Eatual.estado_final ; 1                   ; 0               ; 0             ; 1                                             ;
++---------------------+---------------------+-----------------+---------------+-----------------------------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------+
+; State Machine - |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado ;
++------------------------+-------------------+------------------------+-------------------------------------------+
+; Name                   ; reg_estado.parado ; reg_estado.final_pulso ; reg_estado.contagem                       ;
++------------------------+-------------------+------------------------+-------------------------------------------+
+; reg_estado.parado      ; 0                 ; 0                      ; 0                                         ;
+; reg_estado.contagem    ; 1                 ; 0                      ; 1                                         ;
+; reg_estado.final_pulso ; 1                 ; 1                      ; 0                                         ;
++------------------------+-------------------+------------------------+-------------------------------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual                                                                         ;
++----------------------+---------------------+----------------------+---------------+--------------------+----------------------+-------------------+----------------+
+; Name                 ; Eatual.final_medida ; Eatual.armazenamento ; Eatual.medida ; Eatual.espera_echo ; Eatual.envia_trigger ; Eatual.preparacao ; Eatual.inicial ;
++----------------------+---------------------+----------------------+---------------+--------------------+----------------------+-------------------+----------------+
+; Eatual.inicial       ; 0                   ; 0                    ; 0             ; 0                  ; 0                    ; 0                 ; 0              ;
+; Eatual.preparacao    ; 0                   ; 0                    ; 0             ; 0                  ; 0                    ; 1                 ; 1              ;
+; Eatual.envia_trigger ; 0                   ; 0                    ; 0             ; 0                  ; 1                    ; 0                 ; 1              ;
+; Eatual.espera_echo   ; 0                   ; 0                    ; 0             ; 1                  ; 0                    ; 0                 ; 1              ;
+; Eatual.medida        ; 0                   ; 0                    ; 1             ; 0                  ; 0                    ; 0                 ; 1              ;
+; Eatual.armazenamento ; 0                   ; 1                    ; 0             ; 0                  ; 0                    ; 0                 ; 1              ;
+; Eatual.final_medida  ; 1                   ; 0                    ; 0             ; 0                  ; 0                    ; 0                 ; 1              ;
++----------------------+---------------------+----------------------+---------------+--------------------+----------------------+-------------------+----------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |sonar|sonar_uc:uc_sonar|Eatual                                                                                                                                                                                                                   ;
++---------------------------+-------------------------+----------------------+---------------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------+
+; Name                      ; Eatual.VerificaMensurar ; Eatual.AvancaPosicao ; Eatual.EsperaTemporizador ; Eatual.VerificaFimTx ; Eatual.EsperaPronto1 ; Eatual.EsperaPronto0 ; Eatual.TransmiteLaco ; Eatual.AguardaMedida ; Eatual.PreparaMedida ; Eatual.Inicial ;
++---------------------------+-------------------------+----------------------+---------------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------+
+; Eatual.Inicial            ; 0                       ; 0                    ; 0                         ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0              ;
+; Eatual.PreparaMedida      ; 0                       ; 0                    ; 0                         ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1                    ; 1              ;
+; Eatual.AguardaMedida      ; 0                       ; 0                    ; 0                         ; 0                    ; 0                    ; 0                    ; 0                    ; 1                    ; 0                    ; 1              ;
+; Eatual.TransmiteLaco      ; 0                       ; 0                    ; 0                         ; 0                    ; 0                    ; 0                    ; 1                    ; 0                    ; 0                    ; 1              ;
+; Eatual.EsperaPronto0      ; 0                       ; 0                    ; 0                         ; 0                    ; 0                    ; 1                    ; 0                    ; 0                    ; 0                    ; 1              ;
+; Eatual.EsperaPronto1      ; 0                       ; 0                    ; 0                         ; 0                    ; 1                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1              ;
+; Eatual.VerificaFimTx      ; 0                       ; 0                    ; 0                         ; 1                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1              ;
+; Eatual.EsperaTemporizador ; 0                       ; 0                    ; 1                         ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1              ;
+; Eatual.AvancaPosicao      ; 0                       ; 1                    ; 0                         ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1              ;
+; Eatual.VerificaMensurar   ; 1                       ; 0                    ; 0                         ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1              ;
++---------------------------+-------------------------+----------------------+---------------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                   ;
++-------------------------------------------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                                                               ; Reason for Removal                     ;
++-------------------------------------------------------------------------------------------------------------+----------------------------------------+
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[0,17..31]                           ; Stuck at GND due to stuck port data_in ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[10]                            ; Stuck at VCC due to stuck port data_in ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual.espera ; Lost fanout                            ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual~5                                              ; Lost fanout                            ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual~6                                              ; Lost fanout                            ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual~4      ; Lost fanout                            ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual~5      ; Lost fanout                            ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual~6      ; Lost fanout                            ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual~4                                       ; Lost fanout                            ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual~5                                       ; Lost fanout                            ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual~6                                       ; Lost fanout                            ;
+; sonar_uc:uc_sonar|Eatual~4                                                                                  ; Lost fanout                            ;
+; sonar_uc:uc_sonar|Eatual~5                                                                                  ; Lost fanout                            ;
+; sonar_uc:uc_sonar|Eatual~6                                                                                  ; Lost fanout                            ;
+; sonar_uc:uc_sonar|Eatual~7                                                                                  ; Lost fanout                            ;
+; sonar_uc:uc_sonar|contador_transmissoes[3]                                                                  ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 31                                                                      ;                                        ;
++-------------------------------------------------------------------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 202   ;
+; Number of registers using Synchronous Clear  ; 85    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 135   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 69    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                              ;
++---------------------------------------------------------------------------------+---------+
+; Inverted Register                                                               ; Fan out ;
++---------------------------------------------------------------------------------+---------+
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[0] ; 1       ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[15]     ; 2       ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[11]     ; 2       ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[4]      ; 1       ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[3]      ; 1       ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[7]      ; 2       ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[5]      ; 2       ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[1] ; 1       ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[2] ; 1       ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[3] ; 1       ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[4] ; 1       ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[5] ; 1       ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[6] ; 1       ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[7] ; 1       ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[8] ; 1       ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[9] ; 1       ;
+; Total number of inverted registers = 16                                         ;         ;
++---------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK|Q[0]                                                                       ;
+; 3:1                ; 27 bits   ; 54 LEs        ; 0 LEs                ; 54 LEs                 ; Yes        ; |sonar|sonar_fd:fd_sonar|contador_m:U3|Q[4]                                                                                             ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |sonar|sonar_uc:uc_sonar|contador_transmissoes[3]                                                                                       ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[1]                                                     ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|contador_endereco:U4|endereco[1]                                                                               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[0] ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1|Q[2]                 ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[0] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[1] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[1]                                                  ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[5]                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |sonar ;
++----------------+-----------+------------------------------------------+
+; Parameter Name ; Value     ; Type                                     ;
++----------------+-----------+------------------------------------------+
+; CONTAGEM_2SEG  ; 100000000 ; Signed Integer                           ;
++----------------+-----------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sonar_uc:uc_sonar ;
++--------------------+-------+-----------------------------------+
+; Parameter Name     ; Value ; Type                              ;
++--------------------+-------+-----------------------------------+
+; Inicial            ; 0000  ; Unsigned Binary                   ;
+; PreparaMedida      ; 0001  ; Unsigned Binary                   ;
+; AguardaMedida      ; 0010  ; Unsigned Binary                   ;
+; TransmiteLaco      ; 0011  ; Unsigned Binary                   ;
+; EsperaPronto0      ; 0100  ; Unsigned Binary                   ;
+; EsperaPronto1      ; 0101  ; Unsigned Binary                   ;
+; VerificaFimTx      ; 0110  ; Unsigned Binary                   ;
+; EsperaTemporizador ; 0111  ; Unsigned Binary                   ;
+; AvancaPosicao      ; 1000  ; Unsigned Binary                   ;
+; VerificaMensurar   ; 1001  ; Unsigned Binary                   ;
++--------------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sonar_fd:fd_sonar ;
++----------------+-----------+-----------------------------------+
+; Parameter Name ; Value     ; Type                              ;
++----------------+-----------+-----------------------------------+
+; CONTAGEM_2SEG  ; 100000000 ; Signed Integer                    ;
++----------------+-----------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1 ;
++----------------+-------+----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                             ;
++----------------+-------+----------------------------------------------------------------------------------+
+; inicial        ; 000   ; Unsigned Binary                                                                  ;
+; preparacao     ; 001   ; Unsigned Binary                                                                  ;
+; envia_trigger  ; 010   ; Unsigned Binary                                                                  ;
+; espera_echo    ; 011   ; Unsigned Binary                                                                  ;
+; medida         ; 100   ; Unsigned Binary                                                                  ;
+; armazenamento  ; 101   ; Unsigned Binary                                                                  ;
+; final_medida   ; 110   ; Unsigned Binary                                                                  ;
++----------------+-------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1 ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; largura        ; 500   ; Signed Integer                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2 ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+; R              ; 2941  ; Signed Integer                                                                                  ;
+; N              ; 12    ; Signed Integer                                                                                  ;
++----------------+-------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------+
+; R              ; 2941  ; Signed Integer                                                                                                    ;
+; N              ; 12    ; Signed Integer                                                                                                    ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1 ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------------+
+; M              ; 2941  ; Signed Integer                                                                                                                  ;
+; N              ; 12    ; Signed Integer                                                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                              ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------+
+; inicial        ; 000   ; Unsigned Binary                                                                                                   ;
+; espera         ; 001   ; Unsigned Binary                                                                                                   ;
+; contagem       ; 010   ; Unsigned Binary                                                                                                   ;
+; estado_final   ; 011   ; Unsigned Binary                                                                                                   ;
++----------------+-------+-------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3 ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+; N              ; 12    ; Signed Integer                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1 ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; N              ; 11    ; Signed Integer                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2 ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+; M              ; 12    ; Signed Integer                                                                              ;
+; N              ; 4     ; Signed Integer                                                                              ;
++----------------+-------+---------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; inicial        ; 0000  ; Unsigned Binary                                                           ;
+; preparacao     ; 0001  ; Unsigned Binary                                                           ;
+; espera         ; 0011  ; Unsigned Binary                                                           ;
+; transmissao    ; 0111  ; Unsigned Binary                                                           ;
+; final_tx       ; 1111  ; Unsigned Binary                                                           ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; M              ; 434   ; Signed Integer                                                            ;
+; N              ; 9     ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|contador_m:U3 ;
++----------------+-----------+-------------------------------------------------+
+; Parameter Name ; Value     ; Type                                            ;
++----------------+-----------+-------------------------------------------------+
+; M              ; 100000000 ; Signed Integer                                  ;
+; N              ; 27        ; Signed Integer                                  ;
++----------------+-----------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm ;
++----------------+---------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                                          ;
++----------------+---------+-------------------------------------------------------------------------------+
+; conf_periodo   ; 1000000 ; Signed Integer                                                                ;
+; largura_000    ; 35000   ; Signed Integer                                                                ;
+; largura_001    ; 45700   ; Signed Integer                                                                ;
+; largura_010    ; 56450   ; Signed Integer                                                                ;
+; largura_011    ; 67150   ; Signed Integer                                                                ;
+; largura_100    ; 77850   ; Signed Integer                                                                ;
+; largura_101    ; 88550   ; Signed Integer                                                                ;
+; largura_110    ; 99300   ; Signed Integer                                                                ;
+; largura_111    ; 110000  ; Signed Integer                                                                ;
++----------------+---------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "sonar_fd:fd_sonar|controle_servo_8:U6" ;
++-------------+--------+----------+---------------------------------+
+; Port        ; Type   ; Severity ; Details                         ;
++-------------+--------+----------+---------------------------------+
+; db_reset    ; Output ; Info     ; Explicitly unconnected          ;
+; db_posicao  ; Output ; Info     ; Explicitly unconnected          ;
+; db_controle ; Output ; Info     ; Explicitly unconnected          ;
++-------------+--------+----------+---------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sonar_fd:fd_sonar|rom_angulos_8x24:U5"                                                   ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; saida[23] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; saida[15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; saida[7]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "sonar_fd:fd_sonar|contador_m:U3" ;
++---------+--------+----------+-------------------------------+
+; Port    ; Type   ; Severity ; Details                       ;
++---------+--------+----------+-------------------------------+
+; zera_as ; Input  ; Info     ; Stuck at GND                  ;
+; conta   ; Input  ; Info     ; Stuck at VCC                  ;
+; Q       ; Output ; Info     ; Explicitly unconnected        ;
+; meio    ; Output ; Info     ; Explicitly unconnected        ;
++---------+--------+----------+-------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK" ;
++---------+--------+----------+-----------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                             ;
++---------+--------+----------+-----------------------------------------------------+
+; zera_as ; Input  ; Info     ; Stuck at GND                                        ;
+; conta   ; Input  ; Info     ; Stuck at VCC                                        ;
+; Q       ; Output ; Info     ; Explicitly unconnected                              ;
+; meio    ; Output ; Info     ; Explicitly unconnected                              ;
++---------+--------+----------+-----------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2" ;
++---------+--------+----------+-----------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                               ;
++---------+--------+----------+-----------------------------------------------------------------------+
+; zera_as ; Input  ; Info     ; Stuck at GND                                                          ;
+; Q       ; Output ; Info     ; Explicitly unconnected                                                ;
+; meio    ; Output ; Info     ; Explicitly unconnected                                                ;
++---------+--------+----------+-----------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1"                    ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; entrada_serial ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dados[10]      ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; dados[1]       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; dados[0]       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; saida[10..1]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "sonar_fd:fd_sonar|tx_serial_7E1:U2" ;
++-----------------+--------+----------+--------------------------+
+; Port            ; Type   ; Severity ; Details                  ;
++-----------------+--------+----------+--------------------------+
+; db_partida      ; Output ; Info     ; Explicitly unconnected   ;
+; db_saida_serial ; Output ; Info     ; Explicitly unconnected   ;
+; db_estado       ; Output ; Info     ; Explicitly unconnected   ;
++-----------------+--------+----------+--------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1" ;
++---------+--------+----------+-----------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                   ;
++---------+--------+----------+-----------------------------------------------------------------------------------------------------------+
+; zera_as ; Input  ; Info     ; Stuck at GND                                                                                              ;
+; Q       ; Output ; Info     ; Explicitly unconnected                                                                                    ;
+; meio    ; Output ; Info     ; Explicitly unconnected                                                                                    ;
++---------+--------+----------+-----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1" ;
++--------+--------+----------+------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                      ;
++--------+--------+----------+------------------------------------------------------------------------------+
+; para   ; Input  ; Info     ; Stuck at GND                                                                 ;
+; pronto ; Output ; Info     ; Explicitly unconnected                                                       ;
++--------+--------+----------+------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2" ;
++------+--------+----------+---------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                       ;
++------+--------+----------+---------------------------------------------------------------+
+; fim  ; Output ; Info     ; Explicitly unconnected                                        ;
++------+--------+----------+---------------------------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "sonar_fd:fd_sonar|interface_hcsr04:U1" ;
++-----------+--------+----------+-----------------------------------+
+; Port      ; Type   ; Severity ; Details                           ;
++-----------+--------+----------+-----------------------------------+
+; db_reset  ; Output ; Info     ; Explicitly unconnected            ;
+; db_medir  ; Output ; Info     ; Explicitly unconnected            ;
+; db_estado ; Output ; Info     ; Explicitly unconnected            ;
++-----------+--------+----------+-----------------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "sonar_fd:fd_sonar"        ;
++---------+--------+----------+------------------------+
+; Port    ; Type   ; Severity ; Details                ;
++---------+--------+----------+------------------------+
+; medida0 ; Output ; Info     ; Explicitly unconnected ;
+; medida1 ; Output ; Info     ; Explicitly unconnected ;
+; medida2 ; Output ; Info     ; Explicitly unconnected ;
++---------+--------+----------+------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "sonar_uc:uc_sonar"          ;
++-----------+--------+----------+------------------------+
+; Port      ; Type   ; Severity ; Details                ;
++-----------+--------+----------+------------------------+
+; db_estado ; Output ; Info     ; Explicitly unconnected ;
++-----------+--------+----------+------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 202                         ;
+;     CLR               ; 60                          ;
+;     CLR SCLR          ; 37                          ;
+;     ENA               ; 19                          ;
+;     ENA CLR           ; 38                          ;
+;     ENA SCLR          ; 12                          ;
+;     SCLR              ; 36                          ;
+; arriav_lcell_comb     ; 283                         ;
+;     arith             ; 112                         ;
+;         1 data inputs ; 112                         ;
+;     extend            ; 3                           ;
+;         7 data inputs ; 3                           ;
+;     normal            ; 168                         ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 26                          ;
+;         3 data inputs ; 35                          ;
+;         4 data inputs ; 51                          ;
+;         5 data inputs ; 20                          ;
+;         6 data inputs ; 33                          ;
+; boundary_port         ; 8                           ;
+;                       ;                             ;
+; Max LUT depth         ; 5.10                        ;
+; Average LUT depth     ; 2.71                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+    Info: Processing started: Tue Sep 29 05:44:36 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off exp5_quartus -c exp5_quartus
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file tx_serial_uc.v
+    Info (12023): Found entity 1: tx_serial_uc File: C:/Users/Sophia/Documents/labdig2/experiencia5/tx_serial_uc.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file tx_serial_7e1_fd.v
+    Info (12023): Found entity 1: tx_serial_7E1_fd File: C:/Users/Sophia/Documents/labdig2/experiencia5/tx_serial_7E1_fd.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file tx_serial_7e1.v
+    Info (12023): Found entity 1: tx_serial_7E1 File: C:/Users/Sophia/Documents/labdig2/experiencia5/tx_serial_7E1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sonar_uc.v
+    Info (12023): Found entity 1: sonar_uc File: C:/Users/Sophia/Documents/labdig2/experiencia5/sonar_uc.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sonar_tb.v
+    Info (12023): Found entity 1: sonar_tb File: C:/Users/Sophia/Documents/labdig2/experiencia5/sonar_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file sonar_fd.v
+    Info (12023): Found entity 1: sonar_fd File: C:/Users/Sophia/Documents/labdig2/experiencia5/sonar_fd.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sonar.v
+    Info (12023): Found entity 1: sonar File: C:/Users/Sophia/Documents/labdig2/experiencia5/sonar.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rom_angulos_8x24_tb.v
+    Info (12023): Found entity 1: rom_angulos_8x24_tb File: C:/Users/Sophia/Documents/labdig2/experiencia5/rom_angulos_8x24_tb.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file rom_angulos_8x24.v
+    Info (12023): Found entity 1: rom_angulos_8x24 File: C:/Users/Sophia/Documents/labdig2/experiencia5/rom_angulos_8x24.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file registrador_n.v
+    Info (12023): Found entity 1: registrador_n File: C:/Users/Sophia/Documents/labdig2/experiencia5/registrador_n.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file interface_hcsr04_uc.v
+    Info (12023): Found entity 1: interface_hcsr04_uc File: C:/Users/Sophia/Documents/labdig2/experiencia5/interface_hcsr04_uc.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file interface_hcsr04_fd.v
+    Info (12023): Found entity 1: interface_hcsr04_fd File: C:/Users/Sophia/Documents/labdig2/experiencia5/interface_hcsr04_fd.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file interface_hcsr04.v
+    Info (12023): Found entity 1: interface_hcsr04 File: C:/Users/Sophia/Documents/labdig2/experiencia5/interface_hcsr04.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file gerador_pulso.v
+    Info (12023): Found entity 1: gerador_pulso File: C:/Users/Sophia/Documents/labdig2/experiencia5/gerador_pulso.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file deslocador_n.v
+    Info (12023): Found entity 1: deslocador_n File: C:/Users/Sophia/Documents/labdig2/experiencia5/deslocador_n.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file controle_servo_8_tb.v
+    Info (12023): Found entity 1: controle_servo_8_tb File: C:/Users/Sophia/Documents/labdig2/experiencia5/controle_servo_8_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file controle_servo_8.v
+    Info (12023): Found entity 1: controle_servo_8 File: C:/Users/Sophia/Documents/labdig2/experiencia5/controle_servo_8.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file contador_m.v
+    Info (12023): Found entity 1: contador_m File: C:/Users/Sophia/Documents/labdig2/experiencia5/contador_m.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file contador_endereco.v
+    Info (12023): Found entity 1: contador_endereco File: C:/Users/Sophia/Documents/labdig2/experiencia5/contador_endereco.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file contador_cm_uc.v
+    Info (12023): Found entity 1: contador_cm_uc File: C:/Users/Sophia/Documents/labdig2/experiencia5/contador_cm_uc.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file contador_cm_fd.v
+    Info (12023): Found entity 1: contador_cm_fd File: C:/Users/Sophia/Documents/labdig2/experiencia5/contador_cm_fd.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file contador_cm.v
+    Info (12023): Found entity 1: contador_cm File: C:/Users/Sophia/Documents/labdig2/experiencia5/contador_cm.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file contador_bcd_3digitos.v
+    Info (12023): Found entity 1: contador_bcd_3digitos File: C:/Users/Sophia/Documents/labdig2/experiencia5/contador_bcd_3digitos.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file circuito_pwm.v
+    Info (12023): Found entity 1: circuito_pwm File: C:/Users/Sophia/Documents/labdig2/experiencia5/circuito_pwm.v Line: 20
+Info (12127): Elaborating entity "sonar" for the top level hierarchy
+Info (12128): Elaborating entity "sonar_uc" for hierarchy "sonar_uc:uc_sonar" File: C:/Users/Sophia/Documents/labdig2/experiencia5/sonar.v Line: 42
+Warning (10270): Verilog HDL Case Statement warning at sonar_uc.v(112): incomplete case statement has no default case item File: C:/Users/Sophia/Documents/labdig2/experiencia5/sonar_uc.v Line: 112
+Info (10264): Verilog HDL Case Statement information at sonar_uc.v(112): all case item expressions in this case statement are onehot File: C:/Users/Sophia/Documents/labdig2/experiencia5/sonar_uc.v Line: 112
+Info (12128): Elaborating entity "sonar_fd" for hierarchy "sonar_fd:fd_sonar" File: C:/Users/Sophia/Documents/labdig2/experiencia5/sonar.v Line: 67
+Info (12128): Elaborating entity "interface_hcsr04" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1" File: C:/Users/Sophia/Documents/labdig2/experiencia5/sonar_fd.v Line: 52
+Info (12128): Elaborating entity "interface_hcsr04_uc" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1" File: C:/Users/Sophia/Documents/labdig2/experiencia5/interface_hcsr04.v Line: 53
+Info (12128): Elaborating entity "interface_hcsr04_fd" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2" File: C:/Users/Sophia/Documents/labdig2/experiencia5/interface_hcsr04.v Line: 66
+Info (12128): Elaborating entity "gerador_pulso" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1" File: C:/Users/Sophia/Documents/labdig2/experiencia5/interface_hcsr04_fd.v Line: 42
+Info (12128): Elaborating entity "contador_cm" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2" File: C:/Users/Sophia/Documents/labdig2/experiencia5/interface_hcsr04_fd.v Line: 57
+Info (12128): Elaborating entity "contador_cm_fd" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD" File: C:/Users/Sophia/Documents/labdig2/experiencia5/contador_cm.v Line: 52
+Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1" File: C:/Users/Sophia/Documents/labdig2/experiencia5/contador_cm_fd.v Line: 44
+Info (12128): Elaborating entity "contador_bcd_3digitos" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2" File: C:/Users/Sophia/Documents/labdig2/experiencia5/contador_cm_fd.v Line: 55
+Info (12128): Elaborating entity "contador_cm_uc" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC" File: C:/Users/Sophia/Documents/labdig2/experiencia5/contador_cm.v Line: 65
+Info (10264): Verilog HDL Case Statement information at contador_cm_uc.v(87): all case item expressions in this case statement are onehot File: C:/Users/Sophia/Documents/labdig2/experiencia5/contador_cm_uc.v Line: 87
+Info (12128): Elaborating entity "registrador_n" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3" File: C:/Users/Sophia/Documents/labdig2/experiencia5/interface_hcsr04_fd.v Line: 68
+Info (12128): Elaborating entity "tx_serial_7E1" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2" File: C:/Users/Sophia/Documents/labdig2/experiencia5/sonar_fd.v Line: 80
+Info (12128): Elaborating entity "tx_serial_7E1_fd" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD" File: C:/Users/Sophia/Documents/labdig2/experiencia5/tx_serial_7E1.v Line: 39
+Info (12128): Elaborating entity "deslocador_n" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1" File: C:/Users/Sophia/Documents/labdig2/experiencia5/tx_serial_7E1_fd.v Line: 54
+Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2" File: C:/Users/Sophia/Documents/labdig2/experiencia5/tx_serial_7E1_fd.v Line: 68
+Info (12128): Elaborating entity "tx_serial_uc" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC" File: C:/Users/Sophia/Documents/labdig2/experiencia5/tx_serial_7E1.v Line: 55
+Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK" File: C:/Users/Sophia/Documents/labdig2/experiencia5/tx_serial_7E1.v Line: 69
+Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|contador_m:U3" File: C:/Users/Sophia/Documents/labdig2/experiencia5/sonar_fd.v Line: 94
+Info (12128): Elaborating entity "contador_endereco" for hierarchy "sonar_fd:fd_sonar|contador_endereco:U4" File: C:/Users/Sophia/Documents/labdig2/experiencia5/sonar_fd.v Line: 102
+Info (12128): Elaborating entity "rom_angulos_8x24" for hierarchy "sonar_fd:fd_sonar|rom_angulos_8x24:U5" File: C:/Users/Sophia/Documents/labdig2/experiencia5/sonar_fd.v Line: 108
+Warning (10030): Net "tabela_angulos.data_a" at rom_angulos_8x24.v(11) has no driver or initial value, using a default initial value '0' File: C:/Users/Sophia/Documents/labdig2/experiencia5/rom_angulos_8x24.v Line: 11
+Warning (10030): Net "tabela_angulos.waddr_a" at rom_angulos_8x24.v(11) has no driver or initial value, using a default initial value '0' File: C:/Users/Sophia/Documents/labdig2/experiencia5/rom_angulos_8x24.v Line: 11
+Warning (10030): Net "tabela_angulos.we_a" at rom_angulos_8x24.v(11) has no driver or initial value, using a default initial value '0' File: C:/Users/Sophia/Documents/labdig2/experiencia5/rom_angulos_8x24.v Line: 11
+Info (12128): Elaborating entity "controle_servo_8" for hierarchy "sonar_fd:fd_sonar|controle_servo_8:U6" File: C:/Users/Sophia/Documents/labdig2/experiencia5/sonar_fd.v Line: 119
+Info (12128): Elaborating entity "circuito_pwm" for hierarchy "sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm" File: C:/Users/Sophia/Documents/labdig2/experiencia5/controle_servo_8.v Line: 30
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "sonar_fd:fd_sonar|rom_angulos_8x24:U5|tabela_angulos" is uninferred due to inappropriate RAM size File: C:/Users/Sophia/Documents/labdig2/experiencia5/rom_angulos_8x24.v Line: 11
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 13 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 307 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 299 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4892 megabytes
+    Info: Processing ended: Tue Sep 29 05:44:48 2026
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:19
+
+

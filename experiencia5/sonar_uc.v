@@ -25,21 +25,29 @@ module sonar_uc (
     parameter VerificaFimTx      = 4'h6;  
     parameter EsperaTemporizador = 4'h7;  // Aguarda 2 segundos
     parameter AvancaPosicao      = 4'h8;  // Incrementa servo e gera pulso de fim
+    parameter VerificaMensurar   = 4'h9;
 
     // Variáveis de estado
     reg [3:0] Eatual, Eprox;
     reg [3:0] contador_transmissoes;  
+    reg ciclo_2seg_decorrido;
 
     // Memória de estado e contadores (Sequencial)
     always @(posedge clock or posedge reset) begin
         if (reset) begin
             Eatual <= Inicial;
             contador_transmissoes <= 4'h0;
+            ciclo_2seg_decorrido <= 1'b0;
         end else begin
             Eatual <= Eprox;
+
+            if (!mensurar || Eatual == Inicial || Eatual == AvancaPosicao)
+                ciclo_2seg_decorrido <= 1'b0;
+            else if (fim_2seg)
+                ciclo_2seg_decorrido <= 1'b1;
             
             // Lógica do contador de letras enviadas (0 a 7)
-            if (Eatual == Inicial || Eatual == AvancaPosicao) begin
+            if (!mensurar || Eatual == Inicial || Eatual == AvancaPosicao) begin
                 contador_transmissoes <= 4'h0; // Reinicia contador para o próximo ciclo
             end
             else if (Eatual == VerificaFimTx && Eprox == TransmiteLaco) begin
@@ -50,15 +58,17 @@ module sonar_uc (
 
     // Lógica de próximo estado (Combinacional)
     always @* begin
-        case (Eatual)
+        if (!mensurar) begin
+            Eprox = Inicial;
+        end else case (Eatual)
             Inicial:            
                 Eprox = mensurar ? PreparaMedida : Inicial; // CORRIGIDO: Só avança se mensurar for 1
             
-            PreparaMedida:      
+            PreparaMedida:
                 Eprox = AguardaMedida;
             
-            AguardaMedida:      
-                Eprox = !mensurar ? Inicial : (pronto_medida ? TransmiteLaco : AguardaMedida);
+            AguardaMedida:
+                Eprox = pronto_medida ? TransmiteLaco : AguardaMedida;
             
             // Loop de transmissão (0 a 7 caracteres)
             TransmiteLaco:      
@@ -71,14 +81,16 @@ module sonar_uc (
                 Eprox = (pronto_serial == 1'b1) ? VerificaFimTx : EsperaPronto1;
             
             VerificaFimTx:      
-                // Se transmitiu 8 vezes (contador = 7), vai esperar os 2 segundos. Se não, envia próxima letra
+                // Finaliza a mensagem ou inicia os caracteres restantes.
                 Eprox = (contador_transmissoes == 4'h7) ? EsperaTemporizador : TransmiteLaco;
             
             EsperaTemporizador: 
-                // Se desligar a chave, aborta a espera. Caso contrário aguarda o pulso de 2s.
-                Eprox = !mensurar ? Inicial : (fim_2seg ? AvancaPosicao : EsperaTemporizador);
+                Eprox = (ciclo_2seg_decorrido || fim_2seg) ? AvancaPosicao : EsperaTemporizador;
             
-            AvancaPosicao:      
+            AvancaPosicao:
+                Eprox = VerificaMensurar;
+
+            VerificaMensurar:
                 Eprox = mensurar ? PreparaMedida : Inicial;
                 
             default:            
@@ -99,7 +111,6 @@ module sonar_uc (
 
         case (Eatual)
             Inicial: begin
-                zera_endereco = 1'b1; // Só zera a posição no arranque inicial do sistema
                 zera_contador = 1'b1; // Mantém o temporizador zerado enquanto desligado
             end
             
@@ -112,16 +123,20 @@ module sonar_uc (
             end
             
             VerificaFimTx: begin
-                // Prepara o temporizador garantindo que zera logo antes de entrar na espera
-                if (contador_transmissoes == 4'h7)
-                    zera_contador = 1'b1;
+                zera_contador = 1'b0;
             end
             
             AvancaPosicao: begin
+                zera_contador  = 1'b1;
                 contar_endereco = 1'b1; // Dá APENAS um pulso para mudar para a próxima posição
                 pronto          = 1'b1; // Gera o pulso fim_posicao
             end
         endcase
+
+        medir = medir && mensurar;
+        contar_endereco = contar_endereco && mensurar;
+        pronto = pronto && mensurar;
+        transmite_serial = transmite_serial && mensurar;
 
         db_estado = Eatual;
     end

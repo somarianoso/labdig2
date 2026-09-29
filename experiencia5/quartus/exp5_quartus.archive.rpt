@@ -1,0 +1,103 @@
+Archive Project report for exp5_quartus
+Tue Sep 29 05:53:10 2026
+Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++----------------------------------------------------------------+
+; Archive Project Summary                                        ;
++------------------------+---------------------------------------+
+; Archive Project Status ; Successful - Tue Sep 29 05:53:10 2026 ;
+; Revision Name          ; exp5_quartus                          ;
+; Top-level Entity Name  ; sonar                                 ;
+; Family                 ; Cyclone V                             ;
++------------------------+---------------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
+Info: Archive will store files relative to the closest common parent directory
+Info (13213): Using common directory C:/Users/Sophia/Documents/labdig2/experiencia5/
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated archive 'C:/Users/Sophia/Documents/labdig2/experiencia5/exp5_quartus.qar'
+Info: ----------------------------------------------------------
+Info: ----------------------------------------------------------
+Info: Generated report 'exp5_quartus.archive.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/24.1std/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4866 megabytes
+    Info: Processing ended: Tue Sep 29 05:53:10 2026
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++-----------------------------------------------------------------+
+; Files Archived                                                  ;
++-----------------------------------------------------------------+
+; File Name                                                       ;
++-----------------------------------------------------------------+
+; c:/intelfpga_lite/24.1std/quartus/bin64/assignment_defaults.qdf ;
+; circuito_pwm.v                                                  ;
+; contador_bcd_3digitos.v                                         ;
+; contador_cm.v                                                   ;
+; contador_cm_fd.v                                                ;
+; contador_cm_uc.v                                                ;
+; contador_endereco.v                                             ;
+; contador_m.v                                                    ;
+; controle_servo_8.v                                              ;
+; controle_servo_8_tb.v                                           ;
+; deslocador_n.v                                                  ;
+; exp5_quartus.qpf                                                ;
+; exp5_quartus.qsf                                                ;
+; gerador_pulso.v                                                 ;
+; interface_hcsr04.v                                              ;
+; interface_hcsr04_fd.v                                           ;
+; interface_hcsr04_uc.v                                           ;
+; registrador_n.v                                                 ;
+; rom_angulos_8x24.v                                              ;
+; rom_angulos_8x24_tb.v                                           ;
+; sonar.v                                                         ;
+; sonar_fd.v                                                      ;
+; sonar_tb.v                                                      ;
+; sonar_uc.v                                                      ;
+; tx_serial_7E1.v                                                 ;
+; tx_serial_7E1_fd.v                                              ;
+; tx_serial_uc.v                                                  ;
++-----------------------------------------------------------------+
+
+

@@ -77,7 +77,7 @@ module interface_hcsr04_uc (
     always @(*) begin
         case (Eatual)
             preparacao: zera = 1'b1;
-            default:    zera = 1'b0;
+            default:    zera = reset;
         endcase
 
         /* completar para outras saidas */

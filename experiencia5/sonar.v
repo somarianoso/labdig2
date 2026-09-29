@@ -1,4 +1,6 @@
-module sonar (
+module sonar #(
+    parameter CONTAGEM_2SEG = 100_000_000
+) (
     input  wire clock,
     input  wire reset,
     input  wire ligar,
@@ -41,10 +43,11 @@ module sonar (
 
     // Unidade de Fluxo de Dados (FD)
     sonar_fd #(
-        .CONTAGEM_2SEG(100_000_000)  // Ajustar para 10000 em simulação
+        .CONTAGEM_2SEG(CONTAGEM_2SEG)
     ) fd_sonar (
         .clock             (clock),
         .reset             (reset),
+        .habilitado        (ligar),
         .medir             (w_medir),
         .echo              (echo),
         .transmite_serial  (w_transmite_serial),
