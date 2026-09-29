@@ -1,0 +1,73 @@
+/* -------------------------------------------------------------
+ * Arquivo   : tx_serial_7E1_fd.v
+ *--------------------------------------------------------------
+ * Descricao : fluxo de dados do circuito base de transmissao 
+ *             serial assincrona (7E1) 
+ *             ==> contem deslocador com 11 bits e contador
+ *                 modulo 12
+ * 
+ *--------------------------------------------------------------
+ * Revisoes  :
+ *     Data        Versao  Autor             Descricao
+ *     30/08/2025  1.0     Edson Midorikawa  criacao
+ *     08/09/2026  2.0     Gabriel, Sophia, Luis    Modificacao de 7N2 para 7E1
+ *--------------------------------------------------------------
+ */
+ 
+ module tx_serial_7E1_fd (
+    input        clock        ,
+    input        reset        ,
+    input        zera         ,
+    input        conta        ,
+    input        carrega      ,
+    input        desloca      ,
+    input  [6:0] dados_ascii  ,
+    output       saida_serial ,
+    output       fim
+);
+
+    wire [10:0] s_dados;
+    wire [10:0] s_saida;
+    wire        paridade;
+
+    // paridade par para 7 bits de dados: total de '1' deve ser par nos dados ascii
+    assign paridade = ^dados_ascii[6:0]; // 0 ^ 1 ^ 1 ^ 0 ^ 1 ^ 1 = 0
+
+    // composicao dos dados seriais: repouso + start + dados + paridade + stop
+    assign s_dados[0]   = 1'b1;             // repouso
+    assign s_dados[1]   = 1'b0;             // start bit
+    assign s_dados[8:2] = dados_ascii[6:0]; // dado
+    assign s_dados[9]   = paridade;         // paridade par
+    assign s_dados[10]  = 1'b1;             // stop bit
+  
+    // Instanciação do deslocador_n
+    deslocador_n #(
+        .N(11) 
+    ) U1 (
+        .clock         (clock  ),
+        .reset         (reset  ),
+        .carrega       (carrega),
+        .desloca       (desloca),
+        .entrada_serial(1'b1   ), 
+        .dados         (s_dados),
+        .saida         (s_saida)
+    );
+    
+    // Instanciação do contador_m
+    contador_m #(
+        .M(12),
+        .N(4)
+    ) U2 (
+        .clock   (clock),
+        .zera_as (1'b0 ),
+        .zera_s  (zera ),
+        .conta   (conta),
+        .Q       (     ), // porta Q em aberto (desconectada)
+        .fim     (fim  ),
+        .meio    (     )  // porta meio em aberto (desconectada)
+    );
+    
+    // Saida serial do transmissor
+    assign saida_serial = s_saida[0];
+  
+endmodule
