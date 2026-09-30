@@ -11,6 +11,8 @@ module sonar_fd #(
     input  wire       zera_contador,
     input  wire       contar_endereco,
     input  wire       zera_endereco,
+    input wire zera_timeout_echo,
+    input wire conta_timeout_echo,
     output wire       trigger,
     output wire [3:0] medida0, 
     output wire [3:0] medida1, 
@@ -19,7 +21,8 @@ module sonar_fd #(
     output wire       pronto_medida,
     output wire       pronto_serial,
     output wire       mensurar_automatico,
-    output wire       pwm
+    output wire       pwm,
+    output wire timeout_echo
 );
 
     wire [11:0] w_medida; 
@@ -116,6 +119,20 @@ module sonar_fd #(
         .db_reset    (),
         .db_posicao  (),
         .db_controle ()
+    );
+
+    // U7: Temporizador (timeout echo a cada 1 seg)
+    contador_m #(
+        .M(50_000_000),
+        .N(26) // Log2(100.000.000) = 26.57 (27 bits necessários)
+    ) U7 (
+        .clock   (clock),
+        .zera_as (1'b0),
+        .zera_s  (zera_timeout_echo | ~habilitado),
+        .conta   (conta_timeout_echo),
+        .Q       (), 
+        .fim     (timeout_echo),
+        .meio    () 
     );
 
 endmodule

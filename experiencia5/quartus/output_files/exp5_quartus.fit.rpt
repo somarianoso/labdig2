@@ -1,6 +1,6 @@
 Fitter report for exp5_quartus
-Tue Sep 29 05:46:00 2026
-Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+Wed Sep 30 11:01:14 2026
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -43,47 +43,47 @@ Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2025  Altera Corporation. All rights reserved.
-Your use of Altera Corporation's design tools, logic functions 
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, the Altera Quartus Prime License Agreement,
-the Altera IP License Agreement, or other applicable license
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
-Altera and sold by Altera or its authorized distributors.  Please
-refer to the Altera Software License Subscription Agreements 
-on the Quartus Prime software download page.
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Fitter Summary                                                                    ;
-+---------------------------------+-------------------------------------------------+
-; Fitter Status                   ; Successful - Tue Sep 29 05:46:00 2026           ;
-; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
-; Revision Name                   ; exp5_quartus                                    ;
-; Top-level Entity Name           ; sonar                                           ;
-; Family                          ; Cyclone V                                       ;
-; Device                          ; 5CEBA4F23C7                                     ;
-; Timing Models                   ; Final                                           ;
-; Logic utilization (in ALMs)     ; 160 / 18,480 ( < 1 % )                          ;
-; Total registers                 ; 247                                             ;
-; Total pins                      ; 8 / 224 ( 4 % )                                 ;
-; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                           ;
-; Total RAM Blocks                ; 0 / 308 ( 0 % )                                 ;
-; Total DSP Blocks                ; 0 / 66 ( 0 % )                                  ;
-; Total HSSI RX PCSs              ; 0                                               ;
-; Total HSSI PMA RX Deserializers ; 0                                               ;
-; Total HSSI TX PCSs              ; 0                                               ;
-; Total HSSI PMA TX Serializers   ; 0                                               ;
-; Total PLLs                      ; 0 / 4 ( 0 % )                                   ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
-+---------------------------------+-------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Fitter Summary                                                                ;
++---------------------------------+---------------------------------------------+
+; Fitter Status                   ; Successful - Wed Sep 30 11:01:14 2026       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; exp5_quartus                                ;
+; Top-level Entity Name           ; sonar                                       ;
+; Family                          ; Cyclone V                                   ;
+; Device                          ; 5CEBA4F23C7                                 ;
+; Timing Models                   ; Final                                       ;
+; Logic utilization (in ALMs)     ; 179 / 18,480 ( < 1 % )                      ;
+; Total registers                 ; 259                                         ;
+; Total pins                      ; 8 / 224 ( 4 % )                             ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0 / 3,153,920 ( 0 % )                       ;
+; Total RAM Blocks                ; 0 / 308 ( 0 % )                             ;
+; Total DSP Blocks                ; 0 / 66 ( 0 % )                              ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0 / 4 ( 0 % )                               ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
++---------------------------------+---------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -150,21 +150,17 @@ on the Quartus Prime software download page.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.05        ;
-; Maximum used               ; 8           ;
+; Average used               ; 1.04        ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.7%      ;
-;     Processor 3            ;   0.7%      ;
-;     Processor 4            ;   0.7%      ;
-;     Processor 5            ;   0.7%      ;
-;     Processor 6            ;   0.6%      ;
-;     Processor 7            ;   0.6%      ;
-;     Processor 8            ;   0.6%      ;
+;     Processor 2            ;   1.4%      ;
+;     Processor 3            ;   1.3%      ;
+;     Processor 4            ;   1.3%      ;
 +----------------------------+-------------+
 
 
@@ -174,51 +170,36 @@ on the Quartus Prime software download page.
 ; Node                                                                                                                             ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                                                                                                                           ; Destination Port ; Destination Port Name ;
 +----------------------------------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+--------------------------------------------------------------------------------------------------------------------------------------------+------------------+-----------------------+
 ; clock~inputCLKENA0                                                                                                               ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                                                                                            ;                  ;                       ;
-; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[1]                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[1]~DUPLICATE                                                          ;                  ;                       ;
 ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[2]                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[2]~DUPLICATE                                                          ;                  ;                       ;
-; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[3]                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[3]~DUPLICATE                                                          ;                  ;                       ;
-; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[4]                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[4]~DUPLICATE                                                          ;                  ;                       ;
-; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[5]                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[5]~DUPLICATE                                                          ;                  ;                       ;
-; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[7]                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[7]~DUPLICATE                                                          ;                  ;                       ;
-; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[8]                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[8]~DUPLICATE                                                          ;                  ;                       ;
-; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[10]                                                         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[10]~DUPLICATE                                                         ;                  ;                       ;
-; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[11]                                                         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[11]~DUPLICATE                                                         ;                  ;                       ;
-; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[12]                                                         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[12]~DUPLICATE                                                         ;                  ;                       ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[9]                                                          ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[9]~DUPLICATE                                                          ;                  ;                       ;
 ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[13]                                                         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[13]~DUPLICATE                                                         ;                  ;                       ;
-; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[14]                                                         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[14]~DUPLICATE                                                         ;                  ;                       ;
-; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[15]                                                         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[15]~DUPLICATE                                                         ;                  ;                       ;
-; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[17]                                                         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[17]~DUPLICATE                                                         ;                  ;                       ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[18]                                                         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[18]~DUPLICATE                                                         ;                  ;                       ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[19]                                                         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[19]~DUPLICATE                                                         ;                  ;                       ;
 ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[22]                                                         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[22]~DUPLICATE                                                         ;                  ;                       ;
-; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[26]                                                         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[26]~DUPLICATE                                                         ;                  ;                       ;
 ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[0] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[0]~DUPLICATE ;                  ;                       ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[2] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[2]~DUPLICATE ;                  ;                       ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[2] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[2]~DUPLICATE ;                  ;                       ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[1] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[1]~DUPLICATE ;                  ;                       ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[1] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[1]~DUPLICATE ;                  ;                       ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[3] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[3]~DUPLICATE ;                  ;                       ;
 ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[0] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[0]~DUPLICATE ;                  ;                       ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[2] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[2]~DUPLICATE ;                  ;                       ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[1] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[1]~DUPLICATE ;                  ;                       ;
 ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[0]                                        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[0]~DUPLICATE                                        ;                  ;                       ;
 ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[1]                                        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[1]~DUPLICATE                                        ;                  ;                       ;
 ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]~DUPLICATE                                        ;                  ;                       ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[3]                                        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[3]~DUPLICATE                                        ;                  ;                       ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[4]                                        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[4]~DUPLICATE                                        ;                  ;                       ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[5]                                        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[5]~DUPLICATE                                        ;                  ;                       ;
 ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[6]                                        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[6]~DUPLICATE                                        ;                  ;                       ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[10]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[10]~DUPLICATE                                       ;                  ;                       ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[11]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[11]~DUPLICATE                                       ;                  ;                       ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[15]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[15]~DUPLICATE                                       ;                  ;                       ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[17]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[17]~DUPLICATE                                       ;                  ;                       ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[19]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[19]~DUPLICATE                                       ;                  ;                       ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[7]                                        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[7]~DUPLICATE                                        ;                  ;                       ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[9]                                        ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[9]~DUPLICATE                                        ;                  ;                       ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[12]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[12]~DUPLICATE                                       ;                  ;                       ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[14]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[14]~DUPLICATE                                       ;                  ;                       ;
 ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[20]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[20]~DUPLICATE                                       ;                  ;                       ;
 ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[21]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[21]~DUPLICATE                                       ;                  ;                       ;
 ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[22]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[22]~DUPLICATE                                       ;                  ;                       ;
 ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[23]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[23]~DUPLICATE                                       ;                  ;                       ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[24]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[24]~DUPLICATE                                       ;                  ;                       ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[25]                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[25]~DUPLICATE                                       ;                  ;                       ;
 ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.contagem                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.contagem~DUPLICATE                                ;                  ;                       ;
 ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.final_pulso                             ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.final_pulso~DUPLICATE                             ;                  ;                       ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual.envia_trigger                                                ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual.envia_trigger~DUPLICATE                                                ;                  ;                       ;
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[0]                                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[0]~DUPLICATE                                                     ;                  ;                       ;
 ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[1]                                                     ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[1]~DUPLICATE                                                     ;                  ;                       ;
 ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.transmissao                                                         ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.transmissao~DUPLICATE                                                         ;                  ;                       ;
+; sonar_uc:uc_sonar|contador_transmissoes[1]                                                                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_uc:uc_sonar|contador_transmissoes[1]~DUPLICATE                                                                                       ;                  ;                       ;
+; sonar_uc:uc_sonar|contador_transmissoes[2]                                                                                       ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; sonar_uc:uc_sonar|contador_transmissoes[2]~DUPLICATE                                                                                       ;                  ;                       ;
 +----------------------------------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+--------------------------------------------------------------------------------------------------------------------------------------------+------------------+-----------------------+
 
 
@@ -228,8 +209,8 @@ on the Quartus Prime software download page.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 501 ) ; 0.00 % ( 0 / 501 )         ; 0.00 % ( 0 / 501 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 501 ) ; 0.00 % ( 0 / 501 )         ; 0.00 % ( 0 / 501 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 563 ) ; 0.00 % ( 0 / 563 )         ; 0.00 % ( 0 / 563 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 563 ) ; 0.00 % ( 0 / 563 )         ; 0.00 % ( 0 / 563 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -252,7 +233,7 @@ on the Quartus Prime software download page.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 501 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 563 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -260,7 +241,7 @@ on the Quartus Prime software download page.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/Sophia/Documents/labdig2/experiencia5/output_files/exp5_quartus.pin.
+The pin-out file can be found in C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/quartus/output_files/exp5_quartus.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -268,14 +249,14 @@ The pin-out file can be found in C:/Users/Sophia/Documents/labdig2/experiencia5/
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 160 / 18,480       ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 160                ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 171 / 18,480       ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 94                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 70                 ;       ;
-;         [c] ALMs used for registers                         ; 7                  ;       ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 179 / 18,480       ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 179                ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 186 / 18,480       ; 1 %   ;
+;         [a] ALMs used for LUT logic and registers           ; 111                ;       ;
+;         [b] ALMs used for LUT logic                         ; 71                 ;       ;
+;         [c] ALMs used for registers                         ; 4                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 11 / 18,480        ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 7 / 18,480         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18,480         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -284,25 +265,25 @@ The pin-out file can be found in C:/Users/Sophia/Documents/labdig2/experiencia5/
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 25 / 1,848         ; 1 %   ;
-;     -- Logic LABs                                           ; 25                 ;       ;
+; Total LABs:  partially or completely used                   ; 26 / 1,848         ; 1 %   ;
+;     -- Logic LABs                                           ; 26                 ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 282                ;       ;
+; Combinational ALUT usage for logic                          ; 317                ;       ;
 ;     -- 7 input functions                                    ; 3                  ;       ;
-;     -- 6 input functions                                    ; 33                 ;       ;
-;     -- 5 input functions                                    ; 20                 ;       ;
+;     -- 6 input functions                                    ; 37                 ;       ;
+;     -- 5 input functions                                    ; 21                 ;       ;
 ;     -- 4 input functions                                    ; 51                 ;       ;
-;     -- <=3 input functions                                  ; 175                ;       ;
-; Combinational ALUT usage for route-throughs                 ; 6                  ;       ;
+;     -- <=3 input functions                                  ; 205                ;       ;
+; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Dedicated logic registers                                   ; 247                ;       ;
+; Dedicated logic registers                                   ; 259                ;       ;
 ;     -- By type:                                             ;                    ;       ;
-;         -- Primary logic registers                          ; 202 / 36,960       ; < 1 % ;
-;         -- Secondary logic registers                        ; 45 / 36,960        ; < 1 % ;
+;         -- Primary logic registers                          ; 229 / 36,960       ; < 1 % ;
+;         -- Secondary logic registers                        ; 30 / 36,960        ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
-;         -- Design implementation registers                  ; 202                ;       ;
-;         -- Routing optimization registers                   ; 45                 ;       ;
+;         -- Design implementation registers                  ; 229                ;       ;
+;         -- Routing optimization registers                   ; 30                 ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
 ; I/O pins                                                    ; 8 / 224            ; 4 %   ;
@@ -328,12 +309,12 @@ The pin-out file can be found in C:/Users/Sophia/Documents/labdig2/experiencia5/
 ; Remote update blocks                                        ; 0 / 1              ; 0 %   ;
 ; Oscillator blocks                                           ; 0 / 1              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 3              ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 0.1% / 0.1% / 0.2% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 1.9% / 1.9% / 1.9% ;       ;
-; Maximum fan-out                                             ; 247                ;       ;
-; Highest non-global fan-out                                  ; 85                 ;       ;
-; Total fan-out                                               ; 1763               ;       ;
-; Average fan-out                                             ; 3.19               ;       ;
+; Average interconnect usage (total/H/V)                      ; 0.2% / 0.1% / 0.2% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 2.2% / 2.1% / 2.5% ;       ;
+; Maximum fan-out                                             ; 259                ;       ;
+; Highest non-global fan-out                                  ; 78                 ;       ;
+; Total fan-out                                               ; 1908               ;       ;
+; Average fan-out                                             ; 3.22               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -342,14 +323,14 @@ The pin-out file can be found in C:/Users/Sophia/Documents/labdig2/experiencia5/
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Statistic                                                   ; Top                   ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+-----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 160 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 160                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 171 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 94                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 70                    ; 0                              ;
-;         [c] ALMs used for registers                         ; 7                     ; 0                              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 179 / 18480 ( < 1 % ) ; 0 / 18480 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 179                   ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 186 / 18480 ( 1 % )   ; 0 / 18480 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 111                   ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 71                    ; 0                              ;
+;         [c] ALMs used for registers                         ; 4                     ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 11 / 18480 ( < 1 % )  ; 0 / 18480 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 7 / 18480 ( < 1 % )   ; 0 / 18480 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 18480 ( 0 % )     ; 0 / 18480 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
@@ -358,28 +339,28 @@ The pin-out file can be found in C:/Users/Sophia/Documents/labdig2/experiencia5/
 ;                                                             ;                       ;                                ;
 ; Difficulty packing design                                   ; Low                   ; Low                            ;
 ;                                                             ;                       ;                                ;
-; Total LABs:  partially or completely used                   ; 25 / 1848 ( 1 % )     ; 0 / 1848 ( 0 % )               ;
-;     -- Logic LABs                                           ; 25                    ; 0                              ;
+; Total LABs:  partially or completely used                   ; 26 / 1848 ( 1 % )     ; 0 / 1848 ( 0 % )               ;
+;     -- Logic LABs                                           ; 26                    ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
-; Combinational ALUT usage for logic                          ; 282                   ; 0                              ;
+; Combinational ALUT usage for logic                          ; 317                   ; 0                              ;
 ;     -- 7 input functions                                    ; 3                     ; 0                              ;
-;     -- 6 input functions                                    ; 33                    ; 0                              ;
-;     -- 5 input functions                                    ; 20                    ; 0                              ;
+;     -- 6 input functions                                    ; 37                    ; 0                              ;
+;     -- 5 input functions                                    ; 21                    ; 0                              ;
 ;     -- 4 input functions                                    ; 51                    ; 0                              ;
-;     -- <=3 input functions                                  ; 175                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 6                     ; 0                              ;
+;     -- <=3 input functions                                  ; 205                   ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 0                     ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
 ;     -- 64-address deep                                      ; 0                     ; 0                              ;
 ;     -- 32-address deep                                      ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
-;         -- Primary logic registers                          ; 202 / 36960 ( < 1 % ) ; 0 / 36960 ( 0 % )              ;
-;         -- Secondary logic registers                        ; 45 / 36960 ( < 1 % )  ; 0 / 36960 ( 0 % )              ;
+;         -- Primary logic registers                          ; 229 / 36960 ( < 1 % ) ; 0 / 36960 ( 0 % )              ;
+;         -- Secondary logic registers                        ; 30 / 36960 ( < 1 % )  ; 0 / 36960 ( 0 % )              ;
 ;     -- By function:                                         ;                       ;                                ;
-;         -- Design implementation registers                  ; 202                   ; 0                              ;
-;         -- Routing optimization registers                   ; 45                    ; 0                              ;
+;         -- Design implementation registers                  ; 229                   ; 0                              ;
+;         -- Routing optimization registers                   ; 30                    ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
@@ -396,8 +377,8 @@ The pin-out file can be found in C:/Users/Sophia/Documents/labdig2/experiencia5/
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 1763                  ; 0                              ;
-;     -- Registered Connections                               ; 674                   ; 0                              ;
+;     -- Total Connections                                    ; 1908                  ; 0                              ;
+;     -- Registered Connections                               ; 733                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
 ;     -- Top                                                  ; 0                     ; 0                              ;
@@ -429,10 +410,10 @@ The pin-out file can be found in C:/Users/Sophia/Documents/labdig2/experiencia5/
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; Name  ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; clock ; M9    ; 3B       ; 22           ; 0            ; 0            ; 247                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; clock ; M9    ; 3B       ; 22           ; 0            ; 0            ; 259                   ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 ; echo  ; B12   ; 7A       ; 36           ; 45           ; 34           ; 5                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; ligar ; V13   ; 4A       ; 33           ; 0            ; 57           ; 22                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
-; reset ; U13   ; 4A       ; 33           ; 0            ; 40           ; 85                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; ligar ; V13   ; 4A       ; 33           ; 0            ; 57           ; 21                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
+; reset ; U13   ; 4A       ; 33           ; 0            ; 40           ; 78                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; User                 ; no        ;
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -978,30 +959,31 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                   ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name           ; Library Name ;
 +----------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |sonar                                       ; 159.5 (0.5)          ; 171.0 (0.5)                      ; 11.5 (0.0)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 282 (1)             ; 247 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 8    ; 0            ; |sonar                                                                                                                        ; sonar                 ; work         ;
-;    |sonar_fd:fd_sonar|                       ; 149.0 (3.3)          ; 159.3 (4.8)                      ; 10.3 (1.5)                                        ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 265 (6)             ; 233 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar                                                                                                      ; sonar_fd              ; work         ;
-;       |contador_endereco:U4|                 ; 1.8 (1.8)            ; 2.0 (2.0)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 3 (3)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|contador_endereco:U4                                                                                 ; contador_endereco     ; work         ;
-;       |contador_m:U3|                        ; 17.5 (17.5)          ; 19.5 (19.5)                      ; 2.0 (2.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (34)             ; 27 (27)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|contador_m:U3                                                                                        ; contador_m            ; work         ;
-;       |controle_servo_8:U6|                  ; 41.5 (0.0)           ; 44.5 (0.0)                       ; 3.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 71 (0)              ; 65 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|controle_servo_8:U6                                                                                  ; controle_servo_8      ; work         ;
-;          |circuito_pwm:gera_pwm|             ; 41.5 (41.5)          ; 44.5 (44.5)                      ; 3.0 (3.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 71 (71)             ; 65 (65)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm                                                            ; circuito_pwm          ; work         ;
-;       |interface_hcsr04:U1|                  ; 66.3 (0.0)           ; 68.3 (0.0)                       ; 2.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 116 (0)             ; 107 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1                                                                                  ; interface_hcsr04      ; work         ;
-;          |interface_hcsr04_fd:U2|            ; 62.3 (0.0)           ; 64.5 (0.0)                       ; 2.2 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 110 (0)             ; 99 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2                                                           ; interface_hcsr04_fd   ; work         ;
-;             |contador_cm:U2|                 ; 18.3 (0.0)           ; 20.5 (0.0)                       ; 2.2 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 36 (0)              ; 32 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2                                            ; contador_cm           ; work         ;
-;                |contador_cm_fd:FD|           ; 16.7 (0.0)           ; 19.0 (0.0)                       ; 2.3 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 33 (0)              ; 29 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD                          ; contador_cm_fd        ; work         ;
-;                   |contador_bcd_3digitos:U2| ; 9.0 (9.0)            ; 10.2 (10.2)                      ; 1.2 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 17 (17)             ; 17 (17)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2 ; contador_bcd_3digitos ; work         ;
-;                   |contador_m:U1|            ; 7.7 (7.7)            ; 8.8 (8.8)                        ; 1.2 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 16 (16)             ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1            ; contador_m            ; work         ;
-;                |contador_cm_uc:UC|           ; 1.5 (1.5)            ; 1.5 (1.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 3 (3)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC                          ; contador_cm_uc        ; work         ;
-;             |gerador_pulso:U1|               ; 38.8 (38.8)          ; 38.8 (38.8)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 74 (74)             ; 55 (55)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1                                          ; gerador_pulso         ; work         ;
-;             |registrador_n:U3|               ; 4.0 (4.0)            ; 5.2 (5.2)                        ; 1.2 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3                                          ; registrador_n         ; work         ;
-;          |interface_hcsr04_uc:U1|            ; 3.8 (3.8)            ; 3.8 (3.8)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (6)               ; 8 (8)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1                                                           ; interface_hcsr04_uc   ; work         ;
+; |sonar                                       ; 178.5 (0.5)          ; 185.0 (0.5)                      ; 6.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 317 (1)             ; 259 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 8    ; 0            ; |sonar                                                                                                                        ; sonar                 ; work         ;
+;    |sonar_fd:fd_sonar|                       ; 167.8 (3.7)          ; 173.3 (3.7)                      ; 5.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 299 (7)             ; 242 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar                                                                                                      ; sonar_fd              ; work         ;
+;       |contador_endereco:U4|                 ; 1.6 (1.6)            ; 1.6 (1.6)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 4 (4)               ; 3 (3)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|contador_endereco:U4                                                                                 ; contador_endereco     ; work         ;
+;       |contador_m:U3|                        ; 18.5 (18.5)          ; 20.0 (20.0)                      ; 1.5 (1.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (34)             ; 27 (27)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|contador_m:U3                                                                                        ; contador_m            ; work         ;
+;       |contador_m:U7|                        ; 18.3 (18.3)          ; 18.3 (18.3)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 33 (33)             ; 26 (26)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|contador_m:U7                                                                                        ; contador_m            ; work         ;
+;       |controle_servo_8:U6|                  ; 40.0 (0.0)           ; 42.7 (0.0)                       ; 2.7 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 71 (0)              ; 55 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|controle_servo_8:U6                                                                                  ; controle_servo_8      ; work         ;
+;          |circuito_pwm:gera_pwm|             ; 40.0 (40.0)          ; 42.7 (42.7)                      ; 2.7 (2.7)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 71 (71)             ; 55 (55)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm                                                            ; circuito_pwm          ; work         ;
+;       |interface_hcsr04:U1|                  ; 66.2 (0.0)           ; 66.7 (0.0)                       ; 0.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 116 (0)             ; 101 (0)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1                                                                                  ; interface_hcsr04      ; work         ;
+;          |interface_hcsr04_fd:U2|            ; 62.2 (0.0)           ; 63.3 (0.0)                       ; 1.2 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 110 (0)             ; 94 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2                                                           ; interface_hcsr04_fd   ; work         ;
+;             |contador_cm:U2|                 ; 18.0 (0.0)           ; 20.7 (0.0)                       ; 2.7 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 36 (0)              ; 33 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2                                            ; contador_cm           ; work         ;
+;                |contador_cm_fd:FD|           ; 16.5 (0.0)           ; 19.0 (0.0)                       ; 2.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 33 (0)              ; 30 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD                          ; contador_cm_fd        ; work         ;
+;                   |contador_bcd_3digitos:U2| ; 8.8 (8.8)            ; 10.0 (10.0)                      ; 1.2 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 17 (17)             ; 18 (18)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2 ; contador_bcd_3digitos ; work         ;
+;                   |contador_m:U1|            ; 7.7 (7.7)            ; 9.0 (9.0)                        ; 1.3 (1.3)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 16 (16)             ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1            ; contador_m            ; work         ;
+;                |contador_cm_uc:UC|           ; 1.5 (1.5)            ; 1.7 (1.7)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 3 (3)               ; 3 (3)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC                          ; contador_cm_uc        ; work         ;
+;             |gerador_pulso:U1|               ; 39.2 (39.2)          ; 39.2 (39.2)                      ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 74 (74)             ; 49 (49)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1                                          ; gerador_pulso         ; work         ;
+;             |registrador_n:U3|               ; 3.5 (3.5)            ; 3.5 (3.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 0 (0)               ; 12 (12)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3                                          ; registrador_n         ; work         ;
+;          |interface_hcsr04_uc:U1|            ; 3.3 (3.3)            ; 3.3 (3.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (6)               ; 7 (7)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1                                                           ; interface_hcsr04_uc   ; work         ;
 ;       |rom_angulos_8x24:U5|                  ; 0.3 (0.3)            ; 0.3 (0.3)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|rom_angulos_8x24:U5                                                                                  ; rom_angulos_8x24      ; work         ;
-;       |tx_serial_7E1:U2|                     ; 18.2 (0.0)           ; 19.8 (0.0)                       ; 1.7 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 33 (0)              ; 31 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2                                                                                     ; tx_serial_7E1         ; work         ;
+;       |tx_serial_7E1:U2|                     ; 18.0 (0.0)           ; 20.0 (0.0)                       ; 2.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 33 (0)              ; 30 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2                                                                                     ; tx_serial_7E1         ; work         ;
 ;          |contador_m:U3_TICK|                ; 6.5 (6.5)            ; 6.5 (6.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 12 (12)             ; 9 (9)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK                                                                  ; contador_m            ; work         ;
-;          |tx_serial_7E1_fd:U1_FD|            ; 8.3 (0.0)            ; 9.8 (0.0)                        ; 1.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 16 (0)              ; 16 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD                                                              ; tx_serial_7E1_fd      ; work         ;
-;             |contador_m:U2|                  ; 2.5 (2.5)            ; 3.5 (3.5)                        ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 5 (5)               ; 6 (6)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2                                                ; contador_m            ; work         ;
-;             |deslocador_n:U1|                ; 5.8 (5.8)            ; 6.3 (6.3)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 11 (11)             ; 10 (10)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1                                              ; deslocador_n          ; work         ;
-;          |tx_serial_uc:U2_UC|                ; 3.3 (3.3)            ; 3.5 (3.5)                        ; 0.2 (0.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 5 (5)               ; 6 (6)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC                                                                  ; tx_serial_uc          ; work         ;
-;    |sonar_uc:uc_sonar|                       ; 10.0 (10.0)          ; 11.2 (11.2)                      ; 1.2 (1.2)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 16 (16)             ; 14 (14)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_uc:uc_sonar                                                                                                      ; sonar_uc              ; work         ;
+;          |tx_serial_7E1_fd:U1_FD|            ; 8.5 (0.0)            ; 10.0 (0.0)                       ; 1.5 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 16 (0)              ; 15 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD                                                              ; tx_serial_7E1_fd      ; work         ;
+;             |contador_m:U2|                  ; 2.5 (2.5)            ; 3.5 (3.5)                        ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 5 (5)               ; 5 (5)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2                                                ; contador_m            ; work         ;
+;             |deslocador_n:U1|                ; 6.0 (6.0)            ; 6.5 (6.5)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 11 (11)             ; 10 (10)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1                                              ; deslocador_n          ; work         ;
+;          |tx_serial_uc:U2_UC|                ; 3.0 (3.0)            ; 3.5 (3.5)                        ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 5 (5)               ; 6 (6)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC                                                                  ; tx_serial_uc          ; work         ;
+;    |sonar_uc:uc_sonar|                       ; 10.2 (10.2)          ; 11.2 (11.2)                      ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 17 (17)             ; 17 (17)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |sonar|sonar_uc:uc_sonar                                                                                                      ; sonar_uc              ; work         ;
 +----------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1028,68 +1010,67 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                                                                                                       ; Pad To Core Index ; Setting ;
 +---------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
 ; ligar                                                                                                                     ;                   ;         ;
+;      - sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                             ; 1                 ; 0       ;
 ;      - sonar_uc:uc_sonar|Eatual.EsperaTemporizador                                                                        ; 1                 ; 0       ;
+;      - sonar_uc:uc_sonar|Eatual.AguardaMedida                                                                             ; 1                 ; 0       ;
 ;      - sonar_uc:uc_sonar|Eatual.PreparaMedida                                                                             ; 1                 ; 0       ;
 ;      - sonar_uc:uc_sonar|Eatual.TransmiteLaco                                                                             ; 1                 ; 0       ;
-;      - sonar_uc:uc_sonar|Eatual.AguardaMedida                                                                             ; 1                 ; 0       ;
 ;      - sonar_uc:uc_sonar|Eatual.EsperaPronto0                                                                             ; 1                 ; 0       ;
 ;      - sonar_uc:uc_sonar|pronto                                                                                           ; 1                 ; 0       ;
 ;      - sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|zera~0                                                ; 1                 ; 0       ;
 ;      - sonar_fd:fd_sonar|reset_operacao                                                                                   ; 1                 ; 0       ;
-;      - sonar_uc:uc_sonar|Eprox.AvancaPosicao~0                                                                            ; 1                 ; 0       ;
 ;      - sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eprox.preparacao~0                                    ; 1                 ; 0       ;
 ;      - sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eprox.preparacao~0                                           ; 1                 ; 0       ;
 ;      - sonar_uc:uc_sonar|Eatual.Inicial                                                                                   ; 1                 ; 0       ;
-;      - sonar_uc:uc_sonar|ciclo_2seg_decorrido~0                                                                           ; 1                 ; 0       ;
-;      - sonar_fd:fd_sonar|contador_m:U3|Q[4]~0                                                                             ; 1                 ; 0       ;
+;      - sonar_fd:fd_sonar|contador_m:U3|Q[1]~0                                                                             ; 1                 ; 0       ;
+;      - sonar_fd:fd_sonar|contador_m:U7|Q[11]~0                                                                            ; 1                 ; 0       ;
+;      - sonar_fd:fd_sonar|contador_m:U7|Q[11]~1                                                                            ; 1                 ; 0       ;
 ;      - sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Selector0~0                                           ; 1                 ; 0       ;
 ;      - sonar_fd:fd_sonar|contador_endereco:U4|endereco[1]~1                                                               ; 1                 ; 0       ;
 ;      - sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Selector0~0                                                  ; 1                 ; 0       ;
-;      - sonar_uc:uc_sonar|contador_transmissoes[2]~0                                                                       ; 1                 ; 0       ;
-;      - sonar_uc:uc_sonar|contador_transmissoes[1]~1                                                                       ; 1                 ; 0       ;
-;      - sonar_uc:uc_sonar|contador_transmissoes[0]~2                                                                       ; 1                 ; 0       ;
 ;      - sonar_uc:uc_sonar|Eprox.VerificaFimTx~0                                                                            ; 1                 ; 0       ;
+;      - sonar_uc:uc_sonar|Eprox.ContaTransmissoes~0                                                                        ; 1                 ; 0       ;
 ;      - sonar_uc:uc_sonar|Eprox.EsperaPronto1~0                                                                            ; 1                 ; 0       ;
 ; clock                                                                                                                     ;                   ;         ;
 ; reset                                                                                                                     ;                   ;         ;
 ;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                  ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[0]                                            ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[1]                                            ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[6]                                            ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[5]                                            ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[31]                                           ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[30]                                           ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[29]                                           ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[28]                                           ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[27]                                           ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[26]                                           ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[25]                                           ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[2]                                            ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[16]                                           ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[15]                                           ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[24]                                           ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[30]                                           ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[14]                                           ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[23]                                           ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[10]                                           ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[13]                                           ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[12]                                           ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[11]                                           ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[28]                                           ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[31]                                           ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[23]                                           ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[9]                                            ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[24]                                           ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[8]                                            ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[7]                                            ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[0]                                            ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[6]                                            ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[17]                                           ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[4]                                            ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[3]                                            ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[2]                                            ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[1]                                            ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[22]                                           ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[21]                                           ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[20]                                           ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[4]                                            ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[9]                                            ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[19]                                           ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[10]                                           ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[18]                                           ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[3]                                            ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[17]                                           ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[8]                                            ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[7]                                            ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[19]                                           ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[25]                                           ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[26]                                           ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[27]                                           ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[29]                                           ; 0                 ; 0       ;
 ;      - sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                             ; 0                 ; 0       ;
 ;      - sonar_uc:uc_sonar|Eatual.EsperaTemporizador                                                                        ; 0                 ; 0       ;
+;      - sonar_uc:uc_sonar|Eatual.AguardaMedida                                                                             ; 0                 ; 0       ;
 ;      - sonar_uc:uc_sonar|Eatual.PreparaMedida                                                                             ; 0                 ; 0       ;
 ;      - sonar_uc:uc_sonar|Eatual.TransmiteLaco                                                                             ; 0                 ; 0       ;
-;      - sonar_uc:uc_sonar|Eatual.AguardaMedida                                                                             ; 0                 ; 0       ;
 ;      - sonar_uc:uc_sonar|Eatual.EsperaPronto0                                                                             ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|zera~0                                                ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[16]                                        ; 0                 ; 0       ;
@@ -1109,7 +1090,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[7]                                         ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[5]                                         ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|reset_operacao                                                                                   ; 0                 ; 0       ;
-;      - sonar_uc:uc_sonar|ciclo_2seg_decorrido                                                                             ; 0                 ; 0       ;
+;      - sonar_uc:uc_sonar|contador_transmissoes[3]                                                                         ; 0                 ; 0       ;
 ;      - sonar_uc:uc_sonar|contador_transmissoes[2]                                                                         ; 0                 ; 0       ;
 ;      - sonar_uc:uc_sonar|contador_transmissoes[1]                                                                         ; 0                 ; 0       ;
 ;      - sonar_uc:uc_sonar|contador_transmissoes[0]                                                                         ; 0                 ; 0       ;
@@ -1120,29 +1101,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - sonar_fd:fd_sonar|contador_endereco:U4|endereco[1]~1                                                               ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|contador_endereco:U4|endereco~2                                                                  ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|contador_endereco:U4|endereco~3                                                                  ; 0                 ; 0       ;
+;      - sonar_uc:uc_sonar|Eatual.ContaTransmissoes                                                                         ; 0                 ; 0       ;
 ;      - sonar_uc:uc_sonar|Eatual.EsperaPronto1                                                                             ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[12]~DUPLICATE                                 ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[15]~DUPLICATE                                 ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[14]~DUPLICATE                                 ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[13]~DUPLICATE                                 ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[11]~DUPLICATE                                 ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[10]~DUPLICATE                                 ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[4]~DUPLICATE                                  ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[3]~DUPLICATE                                  ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[9]~DUPLICATE                                  ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[2]~DUPLICATE                                  ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[1]~DUPLICATE                                  ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[8]~DUPLICATE                                  ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[7]~DUPLICATE                                  ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[5]~DUPLICATE                                  ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[17]~DUPLICATE                                 ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[26]~DUPLICATE                                 ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[18]~DUPLICATE                                 ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[19]~DUPLICATE                                 ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[22]~DUPLICATE                                 ; 0                 ; 0       ;
+;      - sonar_uc:uc_sonar|contador_transmissoes[2]~DUPLICATE                                                               ; 0                 ; 0       ;
+;      - sonar_uc:uc_sonar|contador_transmissoes[1]~DUPLICATE                                                               ; 0                 ; 0       ;
 ; echo                                                                                                                      ;                   ;         ;
 ;      - sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eprox.estado_final~0 ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Selector2~0                                           ; 0                 ; 0       ;
-;      - sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Selector0~0          ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Selector1~0          ; 0                 ; 0       ;
 ;      - sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Selector1~0                                           ; 0                 ; 0       ;
+;      - sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Selector0~0          ; 0                 ; 0       ;
 +---------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
 
 
@@ -1151,22 +1125,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------------------------------------------------------------+----------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                                                                               ; Location             ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +------------------------------------------------------------------------------------------------------------------------------------+----------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
-; clock                                                                                                                              ; PIN_M9               ; 247     ; Clock                     ; yes    ; Global Clock         ; GCLK4            ; --                        ;
-; ligar                                                                                                                              ; PIN_V13              ; 22      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; reset                                                                                                                              ; PIN_U13              ; 85      ; Async. clear              ; no     ; --                   ; --               ; --                        ;
-; sonar_fd:fd_sonar|contador_endereco:U4|endereco[1]~1                                                                               ; MLABCELL_X37_Y15_N18 ; 3       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[4]~0                                                                                             ; MLABCELL_X37_Y15_N48 ; 27      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|Equal0~6                                                               ; LABCELL_X39_Y12_N3   ; 64      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[0]~1 ; LABCELL_X36_Y17_N36  ; 6       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[0]~1 ; LABCELL_X36_Y17_N3   ; 5       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[1]~1 ; LABCELL_X36_Y17_N33  ; 6       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1|Q[2]~0                 ; LABCELL_X35_Y17_N36  ; 12      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1|Q[2]~1                 ; LABCELL_X36_Y17_N57  ; 12      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual.armazenamento                                                  ; FF_X36_Y17_N17       ; 13      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|zera~0                                                                ; LABCELL_X35_Y18_N6   ; 70      ; Async. clear              ; no     ; --                   ; --               ; --                        ;
-; sonar_fd:fd_sonar|reset_operacao                                                                                                   ; LABCELL_X35_Y18_N30  ; 24      ; Async. clear              ; no     ; --                   ; --               ; --                        ;
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK|Q[0]~0                                                                       ; LABCELL_X39_Y16_N6   ; 9       ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[1]~1                                                  ; LABCELL_X40_Y18_N21  ; 16      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; clock                                                                                                                              ; PIN_M9               ; 259     ; Clock                     ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; ligar                                                                                                                              ; PIN_V13              ; 21      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; reset                                                                                                                              ; PIN_U13              ; 78      ; Async. clear              ; no     ; --                   ; --               ; --                        ;
+; sonar_fd:fd_sonar|contador_endereco:U4|endereco[1]~1                                                                               ; LABCELL_X35_Y13_N15  ; 3       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; sonar_fd:fd_sonar|contador_m:U3|Q[1]~0                                                                                             ; MLABCELL_X37_Y22_N33 ; 27      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; sonar_fd:fd_sonar|contador_m:U7|Q[11]~0                                                                                            ; MLABCELL_X37_Y22_N30 ; 26      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; sonar_fd:fd_sonar|contador_m:U7|Q[11]~1                                                                                            ; LABCELL_X36_Y20_N57  ; 26      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|Equal0~6                                                               ; LABCELL_X35_Y12_N54  ; 54      ; Clock enable, Sync. clear ; no     ; --                   ; --               ; --                        ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[3]~1 ; LABCELL_X35_Y14_N6   ; 6       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[0]~1 ; LABCELL_X35_Y14_N36  ; 6       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[3]~1 ; LABCELL_X35_Y15_N54  ; 6       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1|Q[1]~0                 ; LABCELL_X36_Y15_N51  ; 12      ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1|Q[1]~1                 ; LABCELL_X35_Y15_N21  ; 12      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual.armazenamento                                                  ; FF_X35_Y13_N11       ; 13      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|zera~0                                                                ; LABCELL_X36_Y13_N0   ; 64      ; Async. clear              ; no     ; --                   ; --               ; --                        ;
+; sonar_fd:fd_sonar|reset_operacao                                                                                                   ; LABCELL_X35_Y13_N33  ; 23      ; Async. clear              ; no     ; --                   ; --               ; --                        ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK|Q[3]~0                                                                       ; LABCELL_X36_Y17_N21  ; 9       ; Sync. clear               ; no     ; --                   ; --               ; --                        ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[1]~1                                                  ; LABCELL_X35_Y17_N15  ; 15      ; Clock enable              ; no     ; --                   ; --               ; --                        ;
+; sonar_uc:uc_sonar|contador_transmissoes[1]~2                                                                                       ; LABCELL_X36_Y18_N27  ; 6       ; Clock enable              ; no     ; --                   ; --               ; --                        ;
 +------------------------------------------------------------------------------------------------------------------------------------+----------------------+---------+---------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1175,7 +1152,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+----------------------+------------------+---------------------------+
 ; Name  ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------+----------+---------+----------------------+------------------+---------------------------+
-; clock ; PIN_M9   ; 247     ; Global Clock         ; GCLK4            ; --                        ;
+; clock ; PIN_M9   ; 259     ; Global Clock         ; GCLK6            ; --                        ;
 +-------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1184,21 +1161,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+-------------------------+
 ; Routing Resource Type        ; Usage                   ;
 +------------------------------+-------------------------+
-; Block interconnects          ; 344 / 140,056 ( < 1 % ) ;
-; C12 interconnects            ; 8 / 6,048 ( < 1 % )     ;
-; C2 interconnects             ; 79 / 54,648 ( < 1 % )   ;
-; C4 interconnects             ; 45 / 25,920 ( < 1 % )   ;
+; Block interconnects          ; 367 / 140,056 ( < 1 % ) ;
+; C12 interconnects            ; 11 / 6,048 ( < 1 % )    ;
+; C2 interconnects             ; 87 / 54,648 ( < 1 % )   ;
+; C4 interconnects             ; 60 / 25,920 ( < 1 % )   ;
 ; DQS bus muxes                ; 0 / 17 ( 0 % )          ;
 ; DQS-18 I/O buses             ; 0 / 17 ( 0 % )          ;
 ; DQS-9 I/O buses              ; 0 / 17 ( 0 % )          ;
-; Direct links                 ; 120 / 140,056 ( < 1 % ) ;
+; Direct links                 ; 94 / 140,056 ( < 1 % )  ;
 ; Global clocks                ; 1 / 16 ( 6 % )          ;
-; Local interconnects          ; 160 / 36,960 ( < 1 % )  ;
+; Local interconnects          ; 205 / 36,960 ( < 1 % )  ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )          ;
 ; R14 interconnects            ; 2 / 5,984 ( < 1 % )     ;
-; R14/C12 interconnect drivers ; 7 / 9,504 ( < 1 % )     ;
-; R3 interconnects             ; 119 / 60,192 ( < 1 % )  ;
-; R6 interconnects             ; 105 / 127,072 ( < 1 % ) ;
+; R14/C12 interconnect drivers ; 10 / 9,504 ( < 1 % )    ;
+; R3 interconnects             ; 132 / 60,192 ( < 1 % )  ;
+; R6 interconnects             ; 133 / 127,072 ( < 1 % ) ;
 ; Spine clocks                 ; 1 / 120 ( < 1 % )       ;
 ; Wire stub REs                ; 0 / 7,344 ( 0 % )       ;
 +------------------------------+-------------------------+
@@ -1322,7 +1299,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; clock           ; clock                ; 32.5              ;
+; clock           ; clock                ; 32.8              ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -1333,106 +1310,106 @@ This will disable optimization of problematic paths and expose them for further 
 +----------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+-------------------+
 ; Source Register                                                                                                                  ; Destination Register                                                                                                             ; Delay Added in ns ;
 +----------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+-------------------+
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[7]                                        ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.351             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[6]                                        ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.351             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[5]                                        ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.351             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[4]                                        ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.351             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[3]                                        ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.351             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.351             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[0] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[3] ; 0.330             ;
-; sonar_fd:fd_sonar|contador_endereco:U4|endereco[1]                                                                               ; sonar_fd:fd_sonar|contador_endereco:U4|endereco[2]                                                                               ; 0.329             ;
-; sonar_uc:uc_sonar|contador_transmissoes[0]                                                                                       ; sonar_uc:uc_sonar|contador_transmissoes[1]                                                                                       ; 0.329             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[2] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[3] ; 0.328             ;
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[1]                                                     ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[3]                                                     ; 0.328             ;
-; sonar_fd:fd_sonar|contador_endereco:U4|endereco[0]                                                                               ; sonar_fd:fd_sonar|contador_endereco:U4|endereco[2]                                                                               ; 0.327             ;
-; sonar_uc:uc_sonar|ciclo_2seg_decorrido                                                                                           ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.325             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[1] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[3] ; 0.325             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.final_pulso                             ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[18]                                       ; 0.324             ;
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[2]                                                     ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[3]                                                     ; 0.323             ;
-; sonar_uc:uc_sonar|Eatual.PreparaMedida                                                                                           ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual.inicial                                                      ; 0.323             ;
-; sonar_uc:uc_sonar|Eatual.EsperaPronto1                                                                                           ; sonar_uc:uc_sonar|Eatual.VerificaFimTx                                                                                           ; 0.323             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[0] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[2] ; 0.315             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[0] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[2] ; 0.314             ;
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK|Q[7]                                                                       ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.espera                                                              ; 0.313             ;
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK|Q[6]                                                                       ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.espera                                                              ; 0.313             ;
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK|Q[5]                                                                       ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.espera                                                              ; 0.313             ;
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK|Q[4]                                                                       ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.espera                                                              ; 0.313             ;
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK|Q[0]                                                                       ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.espera                                                              ; 0.313             ;
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK|Q[3]                                                                       ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.espera                                                              ; 0.313             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual.estado_final                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual.inicial                     ; 0.310             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual.contagem                    ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual.estado_final                ; 0.308             ;
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.transmissao                                                         ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.final_tx                                                            ; 0.308             ;
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[0]                                                     ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[1]                                                     ; 0.306             ;
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[1]                                                  ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[0]                                                  ; 0.294             ;
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.espera                                                              ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.transmissao                                                         ; 0.292             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[31]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[30]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[29]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[28]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[27]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[26]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[25]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[24]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[23]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[22]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[21]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[19]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[18]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[17]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[16]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[15]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[14]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[13]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[12]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[11]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[10]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[9]                                        ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[8]                                        ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[1]                                        ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[20]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[0]                                        ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[2]                                        ; 0.284             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.parado                                  ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.contagem                                ; 0.281             ;
-; sonar_uc:uc_sonar|contador_transmissoes[1]                                                                                       ; sonar_uc:uc_sonar|contador_transmissoes[2]                                                                                       ; 0.280             ;
-; sonar_uc:uc_sonar|Eatual.EsperaTemporizador                                                                                      ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.277             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[1] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[2] ; 0.277             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[1] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[2] ; 0.276             ;
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[3]                                                     ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[2]                                                     ; 0.275             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual.inicial                                                      ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual.preparacao                                                   ; 0.275             ;
-; sonar_uc:uc_sonar|contador_transmissoes[2]                                                                                       ; sonar_uc:uc_sonar|contador_transmissoes[1]                                                                                       ; 0.274             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[2] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[3] ; 0.274             ;
-; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; sonar_uc:uc_sonar|ciclo_2seg_decorrido                                                                                           ; 0.271             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[26]                                                                                            ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[24]                                                                                            ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[23]                                                                                            ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[22]                                                                                            ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[21]                                                                                            ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[20]                                                                                            ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[19]                                                                                            ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[18]                                                                                            ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[17]                                                                                            ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[16]                                                                                            ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[15]                                                                                            ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[14]                                                                                            ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[13]                                                                                            ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[12]                                                                                            ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[11]                                                                                            ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[10]                                                                                            ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[9]                                                                                             ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[8]                                                                                             ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[7]                                                                                             ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[6]                                                                                             ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[5]                                                                                             ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[4]                                                                                             ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[3]                                                                                             ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[2]                                                                                             ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[1]                                                                                             ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[0]                                                                                             ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|contador_m:U3|Q[25]                                                                                            ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.270             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[3] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[1] ; 0.269             ;
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[9]                                                  ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[8]                                                  ; 0.264             ;
-; sonar_uc:uc_sonar|Eatual.VerificaMensurar                                                                                        ; sonar_uc:uc_sonar|Eatual.PreparaMedida                                                                                           ; 0.264             ;
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.inicial                                                             ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.preparacao                                                          ; 0.262             ;
-; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[2] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[3] ; 0.259             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[1]                                                     ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[1]                                                     ; 0.356             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[0]                                                     ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[1]                                                     ; 0.355             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[0] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[2] ; 0.336             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[0] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[3] ; 0.335             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[2] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[3] ; 0.334             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[3]                                                     ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[1]                                                     ; 0.333             ;
+; sonar_uc:uc_sonar|contador_transmissoes[1]                                                                                       ; sonar_uc:uc_sonar|Eatual.EsperaTemporizador                                                                                      ; 0.333             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[1] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[3] ; 0.332             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK|Q[4]                                                                       ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.espera                                                              ; 0.329             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK|Q[3]                                                                       ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.espera                                                              ; 0.329             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK|Q[2]                                                                       ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.espera                                                              ; 0.329             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK|Q[1]                                                                       ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.espera                                                              ; 0.329             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK|Q[0]                                                                       ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.espera                                                              ; 0.329             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK|Q[7]                                                                       ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.espera                                                              ; 0.329             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[1] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[2] ; 0.328             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[2]                                                     ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[3]                                                     ; 0.327             ;
+; sonar_uc:uc_sonar|contador_transmissoes[2]                                                                                       ; sonar_uc:uc_sonar|Eatual.EsperaTemporizador                                                                                      ; 0.327             ;
+; sonar_uc:uc_sonar|Eatual.ContaTransmissoes                                                                                       ; sonar_uc:uc_sonar|Eatual.TransmiteLaco                                                                                           ; 0.327             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[0] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[3] ; 0.315             ;
+; sonar_fd:fd_sonar|contador_endereco:U4|endereco[2]                                                                               ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[1]                                                       ; 0.315             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual.estado_final                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual.contagem                    ; 0.314             ;
+; sonar_uc:uc_sonar|Eatual.AguardaMedida                                                                                           ; sonar_uc:uc_sonar|Eatual.AvancaPosicao                                                                                           ; 0.314             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.transmissao                                                         ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.final_tx                                                            ; 0.313             ;
+; sonar_fd:fd_sonar|contador_endereco:U4|endereco[0]                                                                               ; sonar_fd:fd_sonar|contador_endereco:U4|endereco[2]                                                                               ; 0.311             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[3] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[1] ; 0.301             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[1]                                                  ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[0]                                                  ; 0.298             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual.envia_trigger                                                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual.espera_echo                                                  ; 0.298             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.espera                                                              ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.transmissao                                                         ; 0.296             ;
+; sonar_uc:uc_sonar|contador_transmissoes[3]                                                                                       ; sonar_uc:uc_sonar|Eatual.EsperaTemporizador                                                                                      ; 0.296             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual.final_medida                                                 ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual.inicial                                                      ; 0.285             ;
+; sonar_uc:uc_sonar|Eatual.TransmiteLaco                                                                                           ; sonar_uc:uc_sonar|Eatual.EsperaPronto0                                                                                           ; 0.282             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[1] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[3] ; 0.279             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[2] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[3] ; 0.275             ;
+; sonar_uc:uc_sonar|contador_transmissoes[0]                                                                                       ; sonar_uc:uc_sonar|contador_transmissoes[1]                                                                                       ; 0.275             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[12]                                                      ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.271             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[11]                                                      ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.271             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[15]                                                      ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.271             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[14]                                                      ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.271             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[13]                                                      ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.271             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[15]                                                         ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.271             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[14]                                                         ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.271             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[13]                                                         ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.271             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[12]                                                         ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.271             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[11]                                                         ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.271             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.parado                                  ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.contagem                                ; 0.270             ;
+; sonar_uc:uc_sonar|Eatual.VerificaMensurar                                                                                        ; sonar_uc:uc_sonar|Eatual.PreparaMedida                                                                                           ; 0.268             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.inicial                                                             ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.preparacao                                                          ; 0.267             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.final_pulso                             ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.parado                                  ; 0.267             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual.contagem                    ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC|Eatual.estado_final                ; 0.265             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[2]                                                  ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[1]                                                  ; 0.263             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[2] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[3] ; 0.260             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[5]                                                  ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[4]                                                  ; 0.258             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[3]                                                  ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[2]                                                  ; 0.258             ;
+; sonar_uc:uc_sonar|Eatual.EsperaPronto0                                                                                           ; sonar_uc:uc_sonar|Eatual.EsperaPronto1                                                                                           ; 0.258             ;
+; sonar_uc:uc_sonar|Eatual.EsperaPronto1                                                                                           ; sonar_uc:uc_sonar|Eatual.VerificaFimTx                                                                                           ; 0.258             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual.espera_echo                                                  ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual.medida                                                       ; 0.258             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[3] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[1] ; 0.255             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK|Q[8]                                                                       ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.transmissao                                                         ; 0.254             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK|Q[5]                                                                       ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.transmissao                                                         ; 0.254             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK|Q[6]                                                                       ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC|Eatual.transmissao                                                         ; 0.254             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[10]                                                      ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.253             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[9]                                                       ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.253             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[10]                                                         ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.253             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[9]                                                          ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.253             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual.medida                                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual.armazenamento                                                ; 0.250             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.contagem                                ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[19]                                       ; 0.246             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[6]                                                  ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[5]                                                  ; 0.244             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[7]                                                  ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[6]                                                  ; 0.240             ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[4]                                                  ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[3]                                                  ; 0.240             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[19]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.final_pulso                             ; 0.215             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[18]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.final_pulso                             ; 0.215             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[17]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.final_pulso                             ; 0.215             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[16]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.final_pulso                             ; 0.215             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[15]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.final_pulso                             ; 0.215             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[14]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.final_pulso                             ; 0.215             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[3] ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[1] ; 0.215             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[4]                                                       ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.211             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[3]                                                       ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.211             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[2]                                                       ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.211             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[1]                                                       ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.211             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[6]                                                       ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.211             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[5]                                                       ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.211             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[8]                                                       ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.211             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|largura_pwm[7]                                                       ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.211             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[8]                                                          ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.211             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[7]                                                          ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.211             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[6]                                                          ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.211             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[5]                                                          ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.211             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[4]                                                          ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.211             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[3]                                                          ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.211             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[2]                                                          ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.211             ;
+; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|contagem[1]                                                          ; sonar_fd:fd_sonar|controle_servo_8:U6|circuito_pwm:gera_pwm|s_pwm                                                                ; 0.211             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual.inicial                                                      ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1|Eatual.preparacao                                                   ; 0.186             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[31]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.final_pulso                             ; 0.126             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[30]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.final_pulso                             ; 0.126             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[29]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.final_pulso                             ; 0.126             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[28]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.final_pulso                             ; 0.126             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[27]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.final_pulso                             ; 0.126             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[26]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.final_pulso                             ; 0.126             ;
+; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_cont[25]                                       ; sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1|reg_estado.final_pulso                             ; 0.126             ;
 +----------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------+-------------------+
 Note: This table only shows the top 100 path(s) that have the largest delay added for hold.
 
@@ -1441,7 +1418,7 @@ Note: This table only shows the top 100 path(s) that have the largest delay adde
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (119006): Selected device 5CEBA4F23C7 for design "exp5_quartus"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -1450,7 +1427,7 @@ Warning (292013): Feature LogicLock is only available with a valid subscription 
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
 Info (184020): Starting Fitter periphery placement operations
 Info (11191): Automatically promoted 1 clock (1 global)
-    Info (11162): clock~inputCLKENA0 with 202 fanout uses global clock CLKCTRL_G4
+    Info (11162): clock~inputCLKENA0 with 229 fanout uses global clock CLKCTRL_G6
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'exp5_quartus.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -1460,36 +1437,36 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:08
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:07
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
-Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:21
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X33_Y11 to location X43_Y22
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
-Info (11888): Total time spent on timing analysis during the Fitter is 1.07 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.77 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
-Info (144001): Generated suppressed messages file C:/Users/Sophia/Documents/labdig2/experiencia5/output_files/exp5_quartus.fit.smsg
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
+Info (144001): Generated suppressed messages file C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/quartus/output_files/exp5_quartus.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 6746 megabytes
-    Info: Processing ended: Tue Sep 29 05:46:01 2026
-    Info: Elapsed time: 00:01:12
-    Info: Total CPU time (on all processors): 00:02:07
+    Info: Peak virtual memory: 6254 megabytes
+    Info: Processing ended: Wed Sep 30 11:01:15 2026
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:49
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/Sophia/Documents/labdig2/experiencia5/output_files/exp5_quartus.fit.smsg.
+The suppressed messages can be found in C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/quartus/output_files/exp5_quartus.fit.smsg.
 
 

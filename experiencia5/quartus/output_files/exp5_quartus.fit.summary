@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue Sep 29 05:46:00 2026
-Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+Fitter Status : Successful - Wed Sep 30 11:01:14 2026
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : exp5_quartus
 Top-level Entity Name : sonar
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 160 / 18,480 ( < 1 % )
-Total registers : 247
+Logic utilization (in ALMs) : 179 / 18,480 ( < 1 % )
+Total registers : 259
 Total pins : 8 / 224 ( 4 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 3,153,920 ( 0 % )

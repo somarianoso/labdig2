@@ -1,0 +1,41 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "trigger",
+					"strict" : false
+				},
+				{
+					"name" : "pwm",
+					"strict" : false
+				},
+				{
+					"name" : "saida_serial",
+					"strict" : false
+				},
+				{
+					"name" : "fim_posicao",
+					"strict" : false
+				},
+				{
+					"name" : "ligar",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "echo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

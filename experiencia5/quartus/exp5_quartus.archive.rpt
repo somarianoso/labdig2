@@ -1,6 +1,6 @@
 Archive Project report for exp5_quartus
-Tue Sep 29 05:53:10 2026
-Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+Wed Sep 30 11:11:36 2026
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -16,27 +16,27 @@ Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2025  Altera Corporation. All rights reserved.
-Your use of Altera Corporation's design tools, logic functions 
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, the Altera Quartus Prime License Agreement,
-the Altera IP License Agreement, or other applicable license
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
-Altera and sold by Altera or its authorized distributors.  Please
-refer to the Altera Software License Subscription Agreements 
-on the Quartus Prime software download page.
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
 +----------------------------------------------------------------+
 ; Archive Project Summary                                        ;
 +------------------------+---------------------------------------+
-; Archive Project Status ; Successful - Tue Sep 29 05:53:10 2026 ;
+; Archive Project Status ; Successful - Wed Sep 30 11:11:36 2026 ;
 ; Revision Name          ; exp5_quartus                          ;
 ; Top-level Entity Name  ; sonar                                 ;
 ; Family                 ; Cyclone V                             ;
@@ -51,53 +51,77 @@ Info: File Set 'Source control' contains:
     Info: Automatically detected source files
 Warning: Hierarchical Platform Designer systems and custom IP components(_hw.tcl and associated files) are not archived by the Quartus Archiver
 Info: Archive will store files relative to the closest common parent directory
-Info (13213): Using common directory C:/Users/Sophia/Documents/labdig2/experiencia5/
+Info (13213): Using common directory C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
-Info: Generated archive 'C:/Users/Sophia/Documents/labdig2/experiencia5/exp5_quartus.qar'
+Info: Generated archive 'C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/quartus/exp5_quartus.qar'
 Info: ----------------------------------------------------------
 Info: ----------------------------------------------------------
 Info: Generated report 'exp5_quartus.archive.rpt'
-Info (23030): Evaluation of Tcl script c:/intelfpga_lite/24.1std/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4866 megabytes
-    Info: Processing ended: Tue Sep 29 05:53:10 2026
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4821 megabytes
+    Info: Processing ended: Wed Sep 30 11:11:37 2026
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 
-+-----------------------------------------------------------------+
-; Files Archived                                                  ;
-+-----------------------------------------------------------------+
-; File Name                                                       ;
-+-----------------------------------------------------------------+
-; c:/intelfpga_lite/24.1std/quartus/bin64/assignment_defaults.qdf ;
-; circuito_pwm.v                                                  ;
-; contador_bcd_3digitos.v                                         ;
-; contador_cm.v                                                   ;
-; contador_cm_fd.v                                                ;
-; contador_cm_uc.v                                                ;
-; contador_endereco.v                                             ;
-; contador_m.v                                                    ;
-; controle_servo_8.v                                              ;
-; controle_servo_8_tb.v                                           ;
-; deslocador_n.v                                                  ;
-; exp5_quartus.qpf                                                ;
-; exp5_quartus.qsf                                                ;
-; gerador_pulso.v                                                 ;
-; interface_hcsr04.v                                              ;
-; interface_hcsr04_fd.v                                           ;
-; interface_hcsr04_uc.v                                           ;
-; registrador_n.v                                                 ;
-; rom_angulos_8x24.v                                              ;
-; rom_angulos_8x24_tb.v                                           ;
-; sonar.v                                                         ;
-; sonar_fd.v                                                      ;
-; sonar_tb.v                                                      ;
-; sonar_uc.v                                                      ;
-; tx_serial_7E1.v                                                 ;
-; tx_serial_7E1_fd.v                                              ;
-; tx_serial_uc.v                                                  ;
-+-----------------------------------------------------------------+
++-----------------------------------------------------------------------+
+; Files Archived                                                        ;
++-----------------------------------------------------------------------+
+; File Name                                                             ;
++-----------------------------------------------------------------------+
+; ../circuito_pwm.v                                                     ;
+; ../contador_bcd_3digitos.v                                            ;
+; ../contador_cm.v                                                      ;
+; ../contador_cm_fd.v                                                   ;
+; ../contador_cm_uc.v                                                   ;
+; ../contador_endereco.v                                                ;
+; ../contador_m.v                                                       ;
+; ../controle_servo_8.v                                                 ;
+; ../controle_servo_8_tb.v                                              ;
+; ../deslocador_n.v                                                     ;
+; ../gerador_pulso.v                                                    ;
+; ../interface_hcsr04.v                                                 ;
+; ../interface_hcsr04_fd.v                                              ;
+; ../interface_hcsr04_uc.v                                              ;
+; ../registrador_n.v                                                    ;
+; ../rom_angulos_8x24.v                                                 ;
+; ../rom_angulos_8x24_tb.v                                              ;
+; ../sonar.v                                                            ;
+; ../sonar_fd.v                                                         ;
+; ../sonar_tb.v                                                         ;
+; ../sonar_uc.v                                                         ;
+; ../tx_serial_7E1.v                                                    ;
+; ../tx_serial_7E1_fd.v                                                 ;
+; ../tx_serial_uc.v                                                     ;
+; c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf          ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/circuito_pwm.v          ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/contador_bcd_3digitos.v ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/contador_cm.v           ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/contador_cm_fd.v        ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/contador_cm_uc.v        ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/contador_endereco.v     ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/contador_m.v            ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/controle_servo_8.v      ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/controle_servo_8_tb.v   ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/deslocador_n.v          ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/gerador_pulso.v         ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/interface_hcsr04.v      ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/interface_hcsr04_fd.v   ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/interface_hcsr04_uc.v   ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/registrador_n.v         ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/rom_angulos_8x24.v      ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/rom_angulos_8x24_tb.v   ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/sonar.v                 ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/sonar_fd.v              ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/sonar_tb.v              ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/sonar_uc.v              ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/tx_serial_7E1.v         ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/tx_serial_7E1_fd.v      ;
+; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia5/tx_serial_uc.v          ;
+; exp5_quartus.qpf                                                      ;
+; exp5_quartus.qsf                                                      ;
++-----------------------------------------------------------------------+
 
 

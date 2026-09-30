@@ -22,6 +22,7 @@ module sonar #(
     wire w_pronto_serial;
     wire w_pronto_medida;
     wire w_mensurar_automatico;
+    wire w_timeout_echo;
 
     // Unidade de Controle (UC)
     sonar_uc uc_sonar (
@@ -31,6 +32,7 @@ module sonar #(
         .pronto_serial     (w_pronto_serial),
         .pronto_medida     (w_pronto_medida),
         .fim_2seg          (w_mensurar_automatico),
+        .timeout_echo (w_timeout_echo),
         .medir             (w_medir),
         .contar_endereco   (w_contar_endereco),
         .zera_endereco     (w_zera_endereco),
@@ -38,7 +40,9 @@ module sonar #(
         .pronto            (w_pronto),
         .db_estado         (),
         .transmite_serial  (w_transmite_serial),
-        .sel_letra         (w_sel_letra)
+        .sel_letra         (w_sel_letra),
+        .zera_timeout_echo (w_zera_timeout_echo),
+        .conta_timeout_echo (w_conta_timeout_echo),
     );
 
     // Unidade de Fluxo de Dados (FD)
@@ -55,6 +59,8 @@ module sonar #(
         .zera_contador     (w_zera_contador),
         .contar_endereco   (w_contar_endereco),
         .zera_endereco     (w_zera_endereco),
+        .zera_timeout_echo (w_zera_timeout_echo),
+        .conta_timeout_echo (w_conta_timeout_echo),
         .trigger           (trigger),
         .medida0           (),
         .medida1           (),
@@ -63,7 +69,8 @@ module sonar #(
         .pronto_medida     (w_pronto_medida),
         .pronto_serial     (w_pronto_serial),
         .mensurar_automatico(w_mensurar_automatico),
-        .pwm               (pwm)
+        .pwm               (pwm),
+        .timeout_echo (w_timeout_echo)
     );
 
     // Sinal de fim de posição (quando atingiu a última posição)
