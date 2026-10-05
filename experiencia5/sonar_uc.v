@@ -6,6 +6,7 @@ module sonar_uc (
     input wire       pronto_medida,
     input wire       fim_2seg,        // NOVO SINAL: vem do timer no sonar_fd (mensurar_automatico)
     input wire       timeout_echo,
+    input wire       fim_tx_8,
     output reg       medir,
     output reg       contar_endereco,
     output reg       zera_endereco,
@@ -13,7 +14,6 @@ module sonar_uc (
     output reg       pronto,
     output reg [3:0] db_estado, 
     output reg       transmite_serial,
-    output reg [2:0] sel_letra,
     output reg zera_timeout_echo,
     output reg conta_timeout_echo
 );
@@ -29,27 +29,16 @@ module sonar_uc (
     parameter EsperaTemporizador = 4'h7;  // Aguarda 2 segundos
     parameter AvancaPosicao      = 4'h8;  // Incrementa servo e gera pulso de fim
     parameter VerificaMensurar   = 4'h9;
-    parameter ContaTransmissoes = 4'hA;
 
     // Variáveis de estado
     reg [3:0] Eatual, Eprox;
-    reg [3:0] contador_transmissoes;  
 
-    // Memória de estado e contadores (Sequencial)
+    // Memória de estado (Sequencial)
     always @(posedge clock or posedge reset) begin
         if (reset) begin
             Eatual <= Inicial;
-            contador_transmissoes <= 4'h0;
         end else begin
             Eatual <= Eprox;
-            
-            // Lógica do contador de letras enviadas (0 a 7)
-            if (Eatual == Inicial || Eatual == AvancaPosicao) begin
-                contador_transmissoes <= 4'h0; // Reinicia contador para o próximo ciclo
-            end
-            else if (Eatual == ContaTransmissoes) begin
-                contador_transmissoes <= contador_transmissoes + 1'b1;
-            end
         end
     end
 
@@ -79,13 +68,10 @@ module sonar_uc (
             
             VerificaFimTx:      
                 // Finaliza a mensagem ou inicia os caracteres restantes.
-                Eprox = (contador_transmissoes == 4'h7) ? EsperaTemporizador : ContaTransmissoes;
+                Eprox = fim_tx_8 ? EsperaTemporizador : TransmiteLaco;
 
-            ContaTransmissoes:
-                Eprox = TransmiteLaco;
-            
             EsperaTemporizador: 
-                Eprox = (fim_2seg) ? AvancaPosicao : EsperaTemporizador;
+                Eprox = (fim_2seg == 1'b1) ? AvancaPosicao : EsperaTemporizador;
             
             AvancaPosicao:
                 Eprox = VerificaMensurar;
@@ -109,16 +95,15 @@ module sonar_uc (
         transmite_serial  = 1'b0;
         conta_timeout_echo  = 1'b0;
         zera_timeout_echo  = 1'b0;
-        sel_letra         = contador_transmissoes[2:0]; // Sempre seleciona o dado atual
 
         case (Eatual)
             Inicial: begin
-                zera_contador = 1'b1; // Mantém o temporizador zerado enquanto desligado
+                zera_contador = 1'b1;
             end
             
             PreparaMedida: begin
                 medir = 1'b1;
-                zera_contador = 1'b1; // Mantém o temporizador zerado enquanto desligado
+                zera_contador = 1'b1;
                 zera_timeout_echo = 1'b1;
             end
 
@@ -130,14 +115,14 @@ module sonar_uc (
                 transmite_serial = 1'b1;
             end
             
-            VerificaFimTx: begin
+            EsperaTemporizador: begin
                 zera_contador = 1'b0;
             end
             
             AvancaPosicao: begin
                 zera_contador  = 1'b1;
-                contar_endereco = 1'b1; // Dá APENAS um pulso para mudar para a próxima posição
-                pronto          = 1'b1; // Gera o pulso fim_posicao
+                contar_endereco = 1'b1;
+                pronto          = 1'b1;
             end
         endcase
 
