@@ -1,6 +1,6 @@
-Info (10281): Verilog HDL Declaration information at sonar.v(15): object "hex0" differs only in case from object "HEX0" in the same scope File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 15
-Info (10281): Verilog HDL Declaration information at sonar.v(16): object "hex1" differs only in case from object "HEX1" in the same scope File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 16
-Info (10281): Verilog HDL Declaration information at sonar.v(17): object "hex2" differs only in case from object "HEX2" in the same scope File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 17
-Info (10281): Verilog HDL Declaration information at sonar.v(18): object "hex3" differs only in case from object "HEX3" in the same scope File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 18
-Info (10281): Verilog HDL Declaration information at sonar.v(19): object "hex4" differs only in case from object "HEX4" in the same scope File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 19
-Info (10281): Verilog HDL Declaration information at sonar.v(20): object "hex5" differs only in case from object "HEX5" in the same scope File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 20
+Info (10281): Verilog HDL Declaration information at sonar.v(15): object "hex0" differs only in case from object "HEX0" in the same scope File: C:/labdig2/experiencia6/sonar.v Line: 15
+Info (10281): Verilog HDL Declaration information at sonar.v(16): object "hex1" differs only in case from object "HEX1" in the same scope File: C:/labdig2/experiencia6/sonar.v Line: 16
+Info (10281): Verilog HDL Declaration information at sonar.v(17): object "hex2" differs only in case from object "HEX2" in the same scope File: C:/labdig2/experiencia6/sonar.v Line: 17
+Info (10281): Verilog HDL Declaration information at sonar.v(18): object "hex3" differs only in case from object "HEX3" in the same scope File: C:/labdig2/experiencia6/sonar.v Line: 18
+Info (10281): Verilog HDL Declaration information at sonar.v(19): object "hex4" differs only in case from object "HEX4" in the same scope File: C:/labdig2/experiencia6/sonar.v Line: 19
+Info (10281): Verilog HDL Declaration information at sonar.v(20): object "hex5" differs only in case from object "HEX5" in the same scope File: C:/labdig2/experiencia6/sonar.v Line: 20

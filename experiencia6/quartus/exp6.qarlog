@@ -1,0 +1,43 @@
+Quartus Prime Archive log --	C:/labdig2/experiencia6/quartus/exp6.qarlog
+
+Archive:	C:/labdig2/experiencia6/quartus/exp6.qar
+Date:		Tue Oct  6 16:55:28 2026
+Quartus Prime		25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+
+	=========== Files Selected: ===========
+C:/labdig2/experiencia6/circuito_pwm.v
+C:/labdig2/experiencia6/contador_bcd_3digitos.v
+C:/labdig2/experiencia6/contador_cm.v
+C:/labdig2/experiencia6/contador_cm_fd.v
+C:/labdig2/experiencia6/contador_cm_uc.v
+C:/labdig2/experiencia6/contador_endereco.v
+C:/labdig2/experiencia6/contador_m.v
+C:/labdig2/experiencia6/controle_servo_8.v
+C:/labdig2/experiencia6/deslocador_n.v
+C:/labdig2/experiencia6/gerador_pulso.v
+C:/labdig2/experiencia6/hexa7seg.v
+C:/labdig2/experiencia6/interface_hcsr04.v
+C:/labdig2/experiencia6/interface_hcsr04_fd.v
+C:/labdig2/experiencia6/interface_hcsr04_uc.v
+C:/labdig2/experiencia6/quartus/exp6.qpf
+C:/labdig2/experiencia6/quartus/exp6.qsf
+C:/labdig2/experiencia6/quartus/exp6_assignment_defaults.qdf
+C:/labdig2/experiencia6/registrador_n.v
+C:/labdig2/experiencia6/rom_angulos_8x24.v
+C:/labdig2/experiencia6/rx_serial_7E1.v
+C:/labdig2/experiencia6/rx_serial_7E1_fd.v
+C:/labdig2/experiencia6/rx_serial_tb.v
+C:/labdig2/experiencia6/rx_serial_uc.v
+C:/labdig2/experiencia6/sonar.v
+C:/labdig2/experiencia6/sonar_fd.v
+C:/labdig2/experiencia6/sonar_mode_tb.v
+C:/labdig2/experiencia6/sonar_tb.v
+C:/labdig2/experiencia6/sonar_uc.v
+C:/labdig2/experiencia6/sonar_uc_moore_tb.v
+C:/labdig2/experiencia6/tx_serial_7E1.v
+C:/labdig2/experiencia6/tx_serial_7E1_fd.v
+C:/labdig2/experiencia6/tx_serial_uc.v
+	======= Total: 32 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

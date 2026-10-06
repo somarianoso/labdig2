@@ -30,7 +30,16 @@ module sonar_fd #(
     output wire [3:0] db_estado_tx,
     output wire [3:0] db_estado_hcsr04,
     output wire [2:0] posicao_servo,
-    output wire [6:0] dado_rx_recebido
+    output wire [6:0] dado_rx_recebido,    
+    // === NOVAS PORTAS PARA O TOP LEVEL ===
+    output wire [6:0] dado_tx_transmitido,
+    output wire [3:0] estado_tx_sonar,
+    output wire [2:0] contagem_selmux,
+    output wire [3:0] angulo2,
+    output wire [3:0] angulo1,
+    output wire [3:0] angulo0,
+    output wire       paridade_par,
+    output wire       pronto_rx
 );
 
     wire [11:0] w_medida;
@@ -49,6 +58,19 @@ module sonar_fd #(
     assign bitsConversao = 3'b011;
     assign reset_operacao = reset | ~habilitado;
     assign dado_rx_recebido = w_dados_ascii_rx;
+
+    // === CONECTANDO OS NOVOS SINAIS ===
+    assign dado_tx_transmitido = dados_ascii;
+    assign estado_tx_sonar     = w_q_tx;
+    assign contagem_selmux     = w_sel_letra;
+    assign paridade_par        = w_paridade_par;
+    assign pronto_rx           = w_pronto_rx;
+
+    // Fatiamento dos ângulos (a ROM retorna ASCII em 24 bits: ex. 0x31, 0x32, 0x30 para "120")
+    // Pegamos apenas os 4 bits menos significativos de cada byte para enviar aos displays
+    assign angulo2 = w_posicao[19:16]; // Centena
+    assign angulo1 = w_posicao[11:8];  // Dezena
+    assign angulo0 = w_posicao[3:0];   // Unidade
 
     // Fatiamento dos 12 bits para as saídas BCD de 4 bits
     assign medida0 = w_medida[3:0];

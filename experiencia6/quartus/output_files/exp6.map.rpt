@@ -1,6 +1,6 @@
 Analysis & Synthesis report for exp6
-Tue Oct 06 15:28:51 2026
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Tue Oct  6 16:51:48 2026
+Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
 ---------------------
@@ -45,74 +45,71 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  37. Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|contador_m:U4
  38. Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|controle_servo_8:U7|circuito_pwm:gera_pwm
  39. Parameter Settings for User Entity Instance: sonar_fd:fd_sonar|contador_m:U8
- 40. Port Connectivity Checks: "hexa7seg:HEX5"
- 41. Port Connectivity Checks: "hexa7seg:HEX3"
- 42. Port Connectivity Checks: "sonar_fd:fd_sonar|contador_m:U8"
- 43. Port Connectivity Checks: "sonar_fd:fd_sonar|controle_servo_8:U7"
- 44. Port Connectivity Checks: "sonar_fd:fd_sonar|rom_angulos_8x24:U6"
- 45. Port Connectivity Checks: "sonar_fd:fd_sonar|contador_m:U4"
- 46. Port Connectivity Checks: "sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK"
- 47. Port Connectivity Checks: "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2"
- 48. Port Connectivity Checks: "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1"
- 49. Port Connectivity Checks: "sonar_fd:fd_sonar|tx_serial_7E1:U2"
- 50. Port Connectivity Checks: "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1"
- 51. Port Connectivity Checks: "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1"
- 52. Port Connectivity Checks: "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2"
- 53. Port Connectivity Checks: "sonar_fd:fd_sonar|interface_hcsr04:U1"
- 54. Port Connectivity Checks: "sonar_fd:fd_sonar|contador_m:U3_tx"
- 55. Port Connectivity Checks: "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|contador_m:U3_TICK"
- 56. Port Connectivity Checks: "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|contador_m:CONT"
- 57. Port Connectivity Checks: "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL"
- 58. Port Connectivity Checks: "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx"
- 59. Port Connectivity Checks: "sonar_fd:fd_sonar"
- 60. Post-Synthesis Netlist Statistics for Top Partition
- 61. Elapsed Time Per Partition
- 62. Analysis & Synthesis Messages
- 63. Analysis & Synthesis Suppressed Messages
+ 40. Port Connectivity Checks: "sonar_fd:fd_sonar|contador_m:U8"
+ 41. Port Connectivity Checks: "sonar_fd:fd_sonar|controle_servo_8:U7"
+ 42. Port Connectivity Checks: "sonar_fd:fd_sonar|rom_angulos_8x24:U6"
+ 43. Port Connectivity Checks: "sonar_fd:fd_sonar|contador_m:U4"
+ 44. Port Connectivity Checks: "sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK"
+ 45. Port Connectivity Checks: "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2"
+ 46. Port Connectivity Checks: "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1"
+ 47. Port Connectivity Checks: "sonar_fd:fd_sonar|tx_serial_7E1:U2"
+ 48. Port Connectivity Checks: "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1"
+ 49. Port Connectivity Checks: "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1"
+ 50. Port Connectivity Checks: "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2"
+ 51. Port Connectivity Checks: "sonar_fd:fd_sonar|interface_hcsr04:U1"
+ 52. Port Connectivity Checks: "sonar_fd:fd_sonar|contador_m:U3_tx"
+ 53. Port Connectivity Checks: "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|contador_m:U3_TICK"
+ 54. Port Connectivity Checks: "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|contador_m:CONT"
+ 55. Port Connectivity Checks: "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL"
+ 56. Port Connectivity Checks: "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx"
+ 57. Post-Synthesis Netlist Statistics for Top Partition
+ 58. Elapsed Time Per Partition
+ 59. Analysis & Synthesis Messages
+ 60. Analysis & Synthesis Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2020  Intel Corporation. All rights reserved.
-Your use of Intel Corporation's design tools, logic functions 
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Intel Program License 
-Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 06 15:28:51 2026       ;
-; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                   ; exp6                                        ;
-; Top-level Entity Name           ; sonar                                       ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 274                                         ;
-; Total pins                      ; 64                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Oct  6 16:51:48 2026           ;
+; Quartus Prime Version           ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
+; Revision Name                   ; exp6                                            ;
+; Top-level Entity Name           ; sonar                                           ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 274                                             ;
+; Total pins                      ; 64                                              ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0                                               ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -207,49 +204,49 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                      ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
-; ../tx_serial_uc.v                ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/tx_serial_uc.v          ;         ;
-; ../tx_serial_7E1_fd.v            ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/tx_serial_7E1_fd.v      ;         ;
-; ../tx_serial_7E1.v               ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/tx_serial_7E1.v         ;         ;
-; ../sonar_uc.v                    ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/sonar_uc.v              ;         ;
-; ../sonar_fd.v                    ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/sonar_fd.v              ;         ;
-; ../sonar.v                       ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/sonar.v                 ;         ;
-; ../rx_serial_uc.v                ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/rx_serial_uc.v          ;         ;
-; ../rx_serial_7E1_fd.v            ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/rx_serial_7E1_fd.v      ;         ;
-; ../rx_serial_7E1.v               ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/rx_serial_7E1.v         ;         ;
-; ../rom_angulos_8x24.v            ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/rom_angulos_8x24.v      ;         ;
-; ../registrador_n.v               ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/registrador_n.v         ;         ;
-; ../interface_hcsr04_uc.v         ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/interface_hcsr04_uc.v   ;         ;
-; ../interface_hcsr04_fd.v         ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/interface_hcsr04_fd.v   ;         ;
-; ../interface_hcsr04.v            ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/interface_hcsr04.v      ;         ;
-; ../hexa7seg.v                    ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/hexa7seg.v              ;         ;
-; ../gerador_pulso.v               ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/gerador_pulso.v         ;         ;
-; ../deslocador_n.v                ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/deslocador_n.v          ;         ;
-; ../controle_servo_8.v            ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/controle_servo_8.v      ;         ;
-; ../contador_m.v                  ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/contador_m.v            ;         ;
-; ../contador_endereco.v           ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/contador_endereco.v     ;         ;
-; ../contador_cm_uc.v              ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/contador_cm_uc.v        ;         ;
-; ../contador_cm_fd.v              ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/contador_cm_fd.v        ;         ;
-; ../contador_cm.v                 ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/contador_cm.v           ;         ;
-; ../contador_bcd_3digitos.v       ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/contador_bcd_3digitos.v ;         ;
-; ../circuito_pwm.v                ; yes             ; User Verilog HDL File  ; D:/Documents/LabDig2/labdig2/experiencia6/circuito_pwm.v          ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                  ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                    ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------+---------+
+; ../tx_serial_uc.v                ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/tx_serial_uc.v          ;         ;
+; ../tx_serial_7E1_fd.v            ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/tx_serial_7E1_fd.v      ;         ;
+; ../tx_serial_7E1.v               ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/tx_serial_7E1.v         ;         ;
+; ../sonar_uc.v                    ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/sonar_uc.v              ;         ;
+; ../sonar_fd.v                    ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/sonar_fd.v              ;         ;
+; ../sonar.v                       ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/sonar.v                 ;         ;
+; ../rx_serial_uc.v                ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/rx_serial_uc.v          ;         ;
+; ../rx_serial_7E1_fd.v            ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/rx_serial_7E1_fd.v      ;         ;
+; ../rx_serial_7E1.v               ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/rx_serial_7E1.v         ;         ;
+; ../rom_angulos_8x24.v            ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/rom_angulos_8x24.v      ;         ;
+; ../registrador_n.v               ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/registrador_n.v         ;         ;
+; ../interface_hcsr04_uc.v         ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/interface_hcsr04_uc.v   ;         ;
+; ../interface_hcsr04_fd.v         ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/interface_hcsr04_fd.v   ;         ;
+; ../interface_hcsr04.v            ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/interface_hcsr04.v      ;         ;
+; ../hexa7seg.v                    ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/hexa7seg.v              ;         ;
+; ../gerador_pulso.v               ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/gerador_pulso.v         ;         ;
+; ../deslocador_n.v                ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/deslocador_n.v          ;         ;
+; ../controle_servo_8.v            ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/controle_servo_8.v      ;         ;
+; ../contador_m.v                  ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/contador_m.v            ;         ;
+; ../contador_endereco.v           ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/contador_endereco.v     ;         ;
+; ../contador_cm_uc.v              ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/contador_cm_uc.v        ;         ;
+; ../contador_cm_fd.v              ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/contador_cm_fd.v        ;         ;
+; ../contador_cm.v                 ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/contador_cm.v           ;         ;
+; ../contador_bcd_3digitos.v       ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/contador_bcd_3digitos.v ;         ;
+; ../circuito_pwm.v                ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/circuito_pwm.v          ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -257,14 +254,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 235         ;
+; Estimate of Logic utilization (ALMs needed) ; 268         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 421         ;
-;     -- 7 input functions                    ; 3           ;
-;     -- 6 input functions                    ; 44          ;
-;     -- 5 input functions                    ; 35          ;
-;     -- 4 input functions                    ; 97          ;
-;     -- <=3 input functions                  ; 242         ;
+; Combinational ALUT usage for logic          ; 466         ;
+;     -- 7 input functions                    ; 5           ;
+;     -- 6 input functions                    ; 62          ;
+;     -- 5 input functions                    ; 29          ;
+;     -- 4 input functions                    ; 123         ;
+;     -- <=3 input functions                  ; 247         ;
 ;                                             ;             ;
 ; Dedicated logic registers                   ; 274         ;
 ;                                             ;             ;
@@ -274,8 +271,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
 ; Maximum fan-out                             ; 274         ;
-; Total fan-out                               ; 2432        ;
-; Average fan-out                             ; 2.96        ;
+; Total fan-out                               ; 2647        ;
+; Average fan-out                             ; 3.05        ;
 +---------------------------------------------+-------------+
 
 
@@ -284,19 +281,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name           ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |sonar                                       ; 421 (6)             ; 274 (0)                   ; 0                 ; 0          ; 64   ; 0            ; |sonar                                                                                                                        ; sonar                 ; work         ;
+; |sonar                                       ; 466 (33)            ; 274 (0)                   ; 0                 ; 0          ; 64   ; 0            ; |sonar                                                                                                                        ; sonar                 ; work         ;
 ;    |hexa7seg:HEX0|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|hexa7seg:HEX0                                                                                                          ; hexa7seg              ; work         ;
 ;    |hexa7seg:HEX1|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|hexa7seg:HEX1                                                                                                          ; hexa7seg              ; work         ;
 ;    |hexa7seg:HEX2|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|hexa7seg:HEX2                                                                                                          ; hexa7seg              ; work         ;
+;    |hexa7seg:HEX3|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|hexa7seg:HEX3                                                                                                          ; hexa7seg              ; work         ;
 ;    |hexa7seg:HEX4|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|hexa7seg:HEX4                                                                                                          ; hexa7seg              ; work         ;
-;    |sonar_fd:fd_sonar|                       ; 353 (9)             ; 255 (1)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar                                                                                                      ; sonar_fd              ; work         ;
+;    |hexa7seg:HEX5|                           ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|hexa7seg:HEX5                                                                                                          ; hexa7seg              ; work         ;
+;    |sonar_fd:fd_sonar|                       ; 361 (15)            ; 255 (1)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar                                                                                                      ; sonar_fd              ; work         ;
 ;       |contador_endereco:U5|                 ; 4 (4)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|contador_endereco:U5                                                                                 ; contador_endereco     ; work         ;
-;       |contador_m:U3_tx|                     ; 7 (7)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|contador_m:U3_tx                                                                                     ; contador_m            ; work         ;
-;       |contador_m:U4|                        ; 35 (35)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|contador_m:U4                                                                                        ; contador_m            ; work         ;
+;       |contador_m:U3_tx|                     ; 9 (9)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|contador_m:U3_tx                                                                                     ; contador_m            ; work         ;
+;       |contador_m:U4|                        ; 34 (34)             ; 27 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|contador_m:U4                                                                                        ; contador_m            ; work         ;
 ;       |contador_m:U8|                        ; 33 (33)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|contador_m:U8                                                                                        ; contador_m            ; work         ;
-;       |controle_servo_8:U7|                  ; 71 (0)              ; 49 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|controle_servo_8:U7                                                                                  ; controle_servo_8      ; work         ;
-;          |circuito_pwm:gera_pwm|             ; 71 (71)             ; 49 (49)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|controle_servo_8:U7|circuito_pwm:gera_pwm                                                            ; circuito_pwm          ; work         ;
-;       |interface_hcsr04:U1|                  ; 116 (0)             ; 81 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1                                                                                  ; interface_hcsr04      ; work         ;
+;       |controle_servo_8:U7|                  ; 70 (0)              ; 49 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|controle_servo_8:U7                                                                                  ; controle_servo_8      ; work         ;
+;          |circuito_pwm:gera_pwm|             ; 70 (70)             ; 49 (49)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|controle_servo_8:U7|circuito_pwm:gera_pwm                                                            ; circuito_pwm          ; work         ;
+;       |interface_hcsr04:U1|                  ; 117 (0)             ; 81 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1                                                                                  ; interface_hcsr04      ; work         ;
 ;          |interface_hcsr04_fd:U2|            ; 110 (0)             ; 74 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2                                                           ; interface_hcsr04_fd   ; work         ;
 ;             |contador_cm:U2|                 ; 36 (0)              ; 27 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2                                            ; contador_cm           ; work         ;
 ;                |contador_cm_fd:FD|           ; 33 (0)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD                          ; contador_cm_fd        ; work         ;
@@ -305,9 +304,9 @@ https://fpgasoftware.intel.com/eula.
 ;                |contador_cm_uc:UC|           ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC                          ; contador_cm_uc        ; work         ;
 ;             |gerador_pulso:U1|               ; 74 (74)             ; 35 (35)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1                                          ; gerador_pulso         ; work         ;
 ;             |registrador_n:U3|               ; 0 (0)               ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3                                          ; registrador_n         ; work         ;
-;          |interface_hcsr04_uc:U1|            ; 6 (6)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1                                                           ; interface_hcsr04_uc   ; work         ;
+;          |interface_hcsr04_uc:U1|            ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1                                                           ; interface_hcsr04_uc   ; work         ;
 ;       |rom_angulos_8x24:U6|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|rom_angulos_8x24:U6                                                                                  ; rom_angulos_8x24      ; work         ;
-;       |rx_serial_7E1:U0_rx|                  ; 43 (1)              ; 36 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|rx_serial_7E1:U0_rx                                                                                  ; rx_serial_7E1         ; work         ;
+;       |rx_serial_7E1:U0_rx|                  ; 44 (2)              ; 36 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|rx_serial_7E1:U0_rx                                                                                  ; rx_serial_7E1         ; work         ;
 ;          |contador_m:U3_TICK|                ; 13 (13)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|contador_m:U3_TICK                                                               ; contador_m            ; work         ;
 ;          |rx_serial_7E1_fd:U1_FD|            ; 23 (0)              ; 21 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD                                                           ; rx_serial_7E1_fd      ; work         ;
 ;             |contador_m:CONT|                ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|contador_m:CONT                                           ; contador_m            ; work         ;
@@ -320,7 +319,7 @@ https://fpgasoftware.intel.com/eula.
 ;             |contador_m:U2|                  ; 5 (5)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2                                                ; contador_m            ; work         ;
 ;             |deslocador_n:U1|                ; 11 (11)             ; 10 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1                                              ; deslocador_n          ; work         ;
 ;          |tx_serial_uc:U2_UC|                ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC                                                                  ; tx_serial_uc          ; work         ;
-;    |sonar_uc:uc_sonar|                       ; 34 (34)             ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_uc:uc_sonar                                                                                                      ; sonar_uc              ; work         ;
+;    |sonar_uc:uc_sonar|                       ; 30 (30)             ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |sonar|sonar_uc:uc_sonar                                                                                                      ; sonar_uc              ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -472,7 +471,7 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                     ; Fan out ;
 +---------------------------------------------------------------------------------------+---------+
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[0]       ; 1       ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[0]       ; 2       ;
 ; sonar_fd:fd_sonar|controle_servo_8:U7|circuito_pwm:gera_pwm|largura_pwm[15]           ; 2       ;
 ; sonar_fd:fd_sonar|controle_servo_8:U7|circuito_pwm:gera_pwm|largura_pwm[11]           ; 2       ;
 ; sonar_fd:fd_sonar|controle_servo_8:U7|circuito_pwm:gera_pwm|largura_pwm[4]            ; 1       ;
@@ -480,17 +479,17 @@ Encoding Type:  One-Hot
 ; sonar_fd:fd_sonar|controle_servo_8:U7|circuito_pwm:gera_pwm|largura_pwm[7]            ; 2       ;
 ; sonar_fd:fd_sonar|controle_servo_8:U7|circuito_pwm:gera_pwm|largura_pwm[5]            ; 2       ;
 ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[1]       ; 1       ;
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[2]       ; 1       ;
-; sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL|IQ[6]  ; 2       ;
-; sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL|IQ[4]  ; 2       ;
-; sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL|IQ[3]  ; 2       ;
 ; sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL|IQ[2]  ; 1       ;
-; sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL|IQ[9]  ; 2       ;
-; sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL|IQ[8]  ; 2       ;
-; sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL|IQ[7]  ; 2       ;
+; sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL|IQ[3]  ; 2       ;
+; sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL|IQ[4]  ; 2       ;
 ; sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL|IQ[5]  ; 2       ;
-; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[3]       ; 1       ;
+; sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL|IQ[6]  ; 2       ;
+; sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL|IQ[7]  ; 2       ;
+; sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL|IQ[8]  ; 2       ;
+; sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL|IQ[9]  ; 2       ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[2]       ; 1       ;
 ; sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL|IQ[10] ; 1       ;
+; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[3]       ; 1       ;
 ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[4]       ; 1       ;
 ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[5]       ; 1       ;
 ; sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[6]       ; 1       ;
@@ -506,21 +505,28 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 27 bits   ; 54 LEs        ; 0 LEs                ; 54 LEs                 ; Yes        ; |sonar|sonar_fd:fd_sonar|contador_m:U4|Q[2]                                                                                             ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK|Q[0]                                                                       ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |sonar|sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|contador_m:U3_TICK|Q[1]                                                                    ;
-; 4:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |sonar|sonar_fd:fd_sonar|contador_m:U8|Q[11]                                                                                            ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[3]                                                     ;
+; 3:1                ; 27 bits   ; 54 LEs        ; 0 LEs                ; 54 LEs                 ; Yes        ; |sonar|sonar_fd:fd_sonar|contador_m:U4|Q[9]                                                                                             ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|contador_m:U3_TICK|Q[1]                                                                       ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |sonar|sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|contador_m:U3_TICK|Q[2]                                                                    ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|contador_m:U3_tx|Q[2]                                                                                          ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |sonar|sonar_fd:fd_sonar|contador_m:U8|Q[1]                                                                                             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2|Q[1]                                                     ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|contador_m:CONT|Q[0]                                                ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|contador_m:U3_tx|Q[3]                                                                                          ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[2] ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1|Q[10]                ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|contador_endereco:U5|endereco[1]                                                                               ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig0[0] ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1|Q[7]                 ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig1[1] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[0] ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|contador_endereco:U5|endereco[2]                                                                               ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[0]                                                  ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[2]                                                  ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL|IQ[7]                                             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2|s_dig2[2] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[8]                                                  ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|deslocador_n:U1|IQ[3]                                                  ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |sonar|sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL|IQ[4]                                             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |sonar|Mux0                                                                                                                             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |sonar|Mux5                                                                                                                             ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |sonar|Mux24                                                                                                                            ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |sonar|Mux18                                                                                                                            ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |sonar|Mux1                                                                                                                             ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |sonar|Mux29                                                                                                                            ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |sonar|sonar_fd:fd_sonar|Mux5                                                                                                           ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |sonar|sonar_uc:uc_sonar|estado_proximo.normal_decide_modo                                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -781,24 +787,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------+
-; Port Connectivity Checks: "hexa7seg:HEX5"    ;
-+------------+-------+----------+--------------+
-; Port       ; Type  ; Severity ; Details      ;
-+------------+-------+----------+--------------+
-; hexa[3..1] ; Input ; Info     ; Stuck at GND ;
-+------------+-------+----------+--------------+
-
-
-+-------------------------------------------+
-; Port Connectivity Checks: "hexa7seg:HEX3" ;
-+------+-------+----------+-----------------+
-; Port ; Type  ; Severity ; Details         ;
-+------+-------+----------+-----------------+
-; hexa ; Input ; Info     ; Stuck at GND    ;
-+------+-------+----------+-----------------+
-
-
 +-------------------------------------------------------------+
 ; Port Connectivity Checks: "sonar_fd:fd_sonar|contador_m:U8" ;
 +---------+--------+----------+-------------------------------+
@@ -929,15 +917,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+--------+----------+------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "sonar_fd:fd_sonar|contador_m:U3_tx"                                                    ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; zera_as ; Input  ; Info     ; Stuck at GND                                                                        ;
-; Q[3]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; meio    ; Output ; Info     ; Explicitly unconnected                                                              ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "sonar_fd:fd_sonar|contador_m:U3_tx" ;
++---------+--------+----------+----------------------------------+
+; Port    ; Type   ; Severity ; Details                          ;
++---------+--------+----------+----------------------------------+
+; zera_as ; Input  ; Info     ; Stuck at GND                     ;
+; meio    ; Output ; Info     ; Explicitly unconnected           ;
++---------+--------+----------+----------------------------------+
 
 
 +--------------------------------------------------------------------------------------+
@@ -984,19 +971,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+--------+----------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "sonar_fd:fd_sonar"                                                                              ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port             ; Type   ; Severity ; Details                                                                             ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-; db_estado_rx     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; db_estado_tx     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; db_estado_hcsr04 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; posicao_servo    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; dado_rx_recebido ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -1009,23 +983,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR           ; 59                          ;
 ;     ENA SCLR          ; 38                          ;
 ;     SCLR              ; 45                          ;
-; arriav_lcell_comb     ; 429                         ;
+; arriav_lcell_comb     ; 474                         ;
 ;     arith             ; 147                         ;
 ;         1 data inputs ; 147                         ;
-;     extend            ; 3                           ;
-;         7 data inputs ; 3                           ;
-;     normal            ; 279                         ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 14                          ;
-;         2 data inputs ; 40                          ;
-;         3 data inputs ; 47                          ;
-;         4 data inputs ; 97                          ;
-;         5 data inputs ; 35                          ;
-;         6 data inputs ; 44                          ;
+;     extend            ; 5                           ;
+;         7 data inputs ; 5                           ;
+;     normal            ; 322                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 15                          ;
+;         2 data inputs ; 46                          ;
+;         3 data inputs ; 46                          ;
+;         4 data inputs ; 123                         ;
+;         5 data inputs ; 29                          ;
+;         6 data inputs ; 62                          ;
 ; boundary_port         ; 64                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.10                        ;
-; Average LUT depth     ; 2.60                        ;
+; Average LUT depth     ; 2.82                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1034,7 +1008,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -1043,143 +1017,133 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Oct 06 15:28:41 2026
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+    Info: Processing started: Tue Oct  6 16:51:20 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off exp6 -c exp6
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/tx_serial_uc.v
-    Info (12023): Found entity 1: tx_serial_uc File: D:/Documents/LabDig2/labdig2/experiencia6/tx_serial_uc.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/tx_serial_7e1_fd.v
-    Info (12023): Found entity 1: tx_serial_7E1_fd File: D:/Documents/LabDig2/labdig2/experiencia6/tx_serial_7E1_fd.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/tx_serial_7e1.v
-    Info (12023): Found entity 1: tx_serial_7E1 File: D:/Documents/LabDig2/labdig2/experiencia6/tx_serial_7E1.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/sonar_uc_moore_tb.v
-    Info (12023): Found entity 1: sonar_uc_moore_tb File: D:/Documents/LabDig2/labdig2/experiencia6/sonar_uc_moore_tb.v Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/sonar_uc.v
-    Info (12023): Found entity 1: sonar_uc File: D:/Documents/LabDig2/labdig2/experiencia6/sonar_uc.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/sonar_tb.v
-    Info (12023): Found entity 1: sonar_tb File: D:/Documents/LabDig2/labdig2/experiencia6/sonar_tb.v Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/sonar_mode_tb.v
-    Info (12023): Found entity 1: sonar_mode_tb File: D:/Documents/LabDig2/labdig2/experiencia6/sonar_mode_tb.v Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/sonar_fd.v
-    Info (12023): Found entity 1: sonar_fd File: D:/Documents/LabDig2/labdig2/experiencia6/sonar_fd.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/sonar.v
-    Info (12023): Found entity 1: sonar File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/rx_serial_uc.v
-    Info (12023): Found entity 1: rx_serial_uc File: D:/Documents/LabDig2/labdig2/experiencia6/rx_serial_uc.v Line: 15
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/rx_serial_tb.v
-    Info (12023): Found entity 1: rx_serial_tb File: D:/Documents/LabDig2/labdig2/experiencia6/rx_serial_tb.v Line: 19
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/rx_serial_7e1_fd.v
-    Info (12023): Found entity 1: rx_serial_7E1_fd File: D:/Documents/LabDig2/labdig2/experiencia6/rx_serial_7E1_fd.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/rx_serial_7e1.v
-    Info (12023): Found entity 1: rx_serial_7E1 File: D:/Documents/LabDig2/labdig2/experiencia6/rx_serial_7E1.v Line: 19
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/rom_angulos_8x24.v
-    Info (12023): Found entity 1: rom_angulos_8x24 File: D:/Documents/LabDig2/labdig2/experiencia6/rom_angulos_8x24.v Line: 5
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/registrador_n.v
-    Info (12023): Found entity 1: registrador_n File: D:/Documents/LabDig2/labdig2/experiencia6/registrador_n.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/interface_hcsr04_uc.v
-    Info (12023): Found entity 1: interface_hcsr04_uc File: D:/Documents/LabDig2/labdig2/experiencia6/interface_hcsr04_uc.v Line: 14
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/interface_hcsr04_fd.v
-    Info (12023): Found entity 1: interface_hcsr04_fd File: D:/Documents/LabDig2/labdig2/experiencia6/interface_hcsr04_fd.v Line: 15
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/interface_hcsr04.v
-    Info (12023): Found entity 1: interface_hcsr04 File: D:/Documents/LabDig2/labdig2/experiencia6/interface_hcsr04.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/hexa7seg.v
-    Info (12023): Found entity 1: hexa7seg File: D:/Documents/LabDig2/labdig2/experiencia6/hexa7seg.v Line: 22
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/gerador_pulso.v
-    Info (12023): Found entity 1: gerador_pulso File: D:/Documents/LabDig2/labdig2/experiencia6/gerador_pulso.v Line: 14
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/deslocador_n.v
-    Info (12023): Found entity 1: deslocador_n File: D:/Documents/LabDig2/labdig2/experiencia6/deslocador_n.v Line: 15
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/controle_servo_8.v
-    Info (12023): Found entity 1: controle_servo_8 File: D:/Documents/LabDig2/labdig2/experiencia6/controle_servo_8.v Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/contador_m.v
-    Info (12023): Found entity 1: contador_m File: D:/Documents/LabDig2/labdig2/experiencia6/contador_m.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/contador_endereco.v
-    Info (12023): Found entity 1: contador_endereco File: D:/Documents/LabDig2/labdig2/experiencia6/contador_endereco.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/contador_cm_uc.v
-    Info (12023): Found entity 1: contador_cm_uc File: D:/Documents/LabDig2/labdig2/experiencia6/contador_cm_uc.v Line: 16
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/contador_cm_fd.v
-    Info (12023): Found entity 1: contador_cm_fd File: D:/Documents/LabDig2/labdig2/experiencia6/contador_cm_fd.v Line: 15
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/contador_cm.v
-    Info (12023): Found entity 1: contador_cm File: D:/Documents/LabDig2/labdig2/experiencia6/contador_cm.v Line: 15
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/contador_bcd_3digitos.v
-    Info (12023): Found entity 1: contador_bcd_3digitos File: D:/Documents/LabDig2/labdig2/experiencia6/contador_bcd_3digitos.v Line: 14
-Info (12021): Found 1 design units, including 1 entities, in source file /documents/labdig2/labdig2/experiencia6/circuito_pwm.v
-    Info (12023): Found entity 1: circuito_pwm File: D:/Documents/LabDig2/labdig2/experiencia6/circuito_pwm.v Line: 20
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/tx_serial_uc.v
+    Info (12023): Found entity 1: tx_serial_uc File: C:/labdig2/experiencia6/tx_serial_uc.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/tx_serial_7e1_fd.v
+    Info (12023): Found entity 1: tx_serial_7E1_fd File: C:/labdig2/experiencia6/tx_serial_7E1_fd.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/tx_serial_7e1.v
+    Info (12023): Found entity 1: tx_serial_7E1 File: C:/labdig2/experiencia6/tx_serial_7E1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/sonar_uc_moore_tb.v
+    Info (12023): Found entity 1: sonar_uc_moore_tb File: C:/labdig2/experiencia6/sonar_uc_moore_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/sonar_uc.v
+    Info (12023): Found entity 1: sonar_uc File: C:/labdig2/experiencia6/sonar_uc.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/sonar_tb.v
+    Info (12023): Found entity 1: sonar_tb File: C:/labdig2/experiencia6/sonar_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/sonar_mode_tb.v
+    Info (12023): Found entity 1: sonar_mode_tb File: C:/labdig2/experiencia6/sonar_mode_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/sonar_fd.v
+    Info (12023): Found entity 1: sonar_fd File: C:/labdig2/experiencia6/sonar_fd.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/sonar.v
+    Info (12023): Found entity 1: sonar File: C:/labdig2/experiencia6/sonar.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/rx_serial_uc.v
+    Info (12023): Found entity 1: rx_serial_uc File: C:/labdig2/experiencia6/rx_serial_uc.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/rx_serial_tb.v
+    Info (12023): Found entity 1: rx_serial_tb File: C:/labdig2/experiencia6/rx_serial_tb.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/rx_serial_7e1_fd.v
+    Info (12023): Found entity 1: rx_serial_7E1_fd File: C:/labdig2/experiencia6/rx_serial_7E1_fd.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/rx_serial_7e1.v
+    Info (12023): Found entity 1: rx_serial_7E1 File: C:/labdig2/experiencia6/rx_serial_7E1.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/rom_angulos_8x24.v
+    Info (12023): Found entity 1: rom_angulos_8x24 File: C:/labdig2/experiencia6/rom_angulos_8x24.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/registrador_n.v
+    Info (12023): Found entity 1: registrador_n File: C:/labdig2/experiencia6/registrador_n.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/interface_hcsr04_uc.v
+    Info (12023): Found entity 1: interface_hcsr04_uc File: C:/labdig2/experiencia6/interface_hcsr04_uc.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/interface_hcsr04_fd.v
+    Info (12023): Found entity 1: interface_hcsr04_fd File: C:/labdig2/experiencia6/interface_hcsr04_fd.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/interface_hcsr04.v
+    Info (12023): Found entity 1: interface_hcsr04 File: C:/labdig2/experiencia6/interface_hcsr04.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/hexa7seg.v
+    Info (12023): Found entity 1: hexa7seg File: C:/labdig2/experiencia6/hexa7seg.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/gerador_pulso.v
+    Info (12023): Found entity 1: gerador_pulso File: C:/labdig2/experiencia6/gerador_pulso.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/deslocador_n.v
+    Info (12023): Found entity 1: deslocador_n File: C:/labdig2/experiencia6/deslocador_n.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/controle_servo_8.v
+    Info (12023): Found entity 1: controle_servo_8 File: C:/labdig2/experiencia6/controle_servo_8.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/contador_m.v
+    Info (12023): Found entity 1: contador_m File: C:/labdig2/experiencia6/contador_m.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/contador_endereco.v
+    Info (12023): Found entity 1: contador_endereco File: C:/labdig2/experiencia6/contador_endereco.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/contador_cm_uc.v
+    Info (12023): Found entity 1: contador_cm_uc File: C:/labdig2/experiencia6/contador_cm_uc.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/contador_cm_fd.v
+    Info (12023): Found entity 1: contador_cm_fd File: C:/labdig2/experiencia6/contador_cm_fd.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/contador_cm.v
+    Info (12023): Found entity 1: contador_cm File: C:/labdig2/experiencia6/contador_cm.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/contador_bcd_3digitos.v
+    Info (12023): Found entity 1: contador_bcd_3digitos File: C:/labdig2/experiencia6/contador_bcd_3digitos.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/circuito_pwm.v
+    Info (12023): Found entity 1: circuito_pwm File: C:/labdig2/experiencia6/circuito_pwm.v Line: 20
 Info (12127): Elaborating entity "sonar" for the top level hierarchy
-Info (12128): Elaborating entity "sonar_uc" for hierarchy "sonar_uc:uc_sonar" File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 71
-Info (10264): Verilog HDL Case Statement information at sonar_uc.v(132): all case item expressions in this case statement are onehot File: D:/Documents/LabDig2/labdig2/experiencia6/sonar_uc.v Line: 132
-Info (10264): Verilog HDL Case Statement information at sonar_uc.v(187): all case item expressions in this case statement are onehot File: D:/Documents/LabDig2/labdig2/experiencia6/sonar_uc.v Line: 187
-Info (12128): Elaborating entity "sonar_fd" for hierarchy "sonar_fd:fd_sonar" File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 106
-Info (12128): Elaborating entity "rx_serial_7E1" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx" File: D:/Documents/LabDig2/labdig2/experiencia6/sonar_fd.v Line: 69
-Info (12128): Elaborating entity "rx_serial_7E1_fd" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD" File: D:/Documents/LabDig2/labdig2/experiencia6/rx_serial_7E1.v Line: 60
-Info (12128): Elaborating entity "deslocador_n" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL" File: D:/Documents/LabDig2/labdig2/experiencia6/rx_serial_7E1_fd.v Line: 46
-Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|contador_m:CONT" File: D:/Documents/LabDig2/labdig2/experiencia6/rx_serial_7E1_fd.v Line: 60
-Info (12128): Elaborating entity "registrador_n" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|registrador_n:REG" File: D:/Documents/LabDig2/labdig2/experiencia6/rx_serial_7E1_fd.v Line: 70
-Info (12128): Elaborating entity "rx_serial_uc" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_uc:U2_UC" File: D:/Documents/LabDig2/labdig2/experiencia6/rx_serial_7E1.v Line: 78
-Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|contador_m:U3_TICK" File: D:/Documents/LabDig2/labdig2/experiencia6/rx_serial_7E1.v Line: 96
-Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|contador_m:U3_tx" File: D:/Documents/LabDig2/labdig2/experiencia6/sonar_fd.v Line: 97
-Info (12128): Elaborating entity "interface_hcsr04" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1" File: D:/Documents/LabDig2/labdig2/experiencia6/sonar_fd.v Line: 128
-Info (12128): Elaborating entity "interface_hcsr04_uc" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1" File: D:/Documents/LabDig2/labdig2/experiencia6/interface_hcsr04.v Line: 53
-Info (12128): Elaborating entity "interface_hcsr04_fd" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2" File: D:/Documents/LabDig2/labdig2/experiencia6/interface_hcsr04.v Line: 66
-Info (12128): Elaborating entity "gerador_pulso" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1" File: D:/Documents/LabDig2/labdig2/experiencia6/interface_hcsr04_fd.v Line: 42
-Info (12128): Elaborating entity "contador_cm" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2" File: D:/Documents/LabDig2/labdig2/experiencia6/interface_hcsr04_fd.v Line: 57
-Info (12128): Elaborating entity "contador_cm_fd" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD" File: D:/Documents/LabDig2/labdig2/experiencia6/contador_cm.v Line: 52
-Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1" File: D:/Documents/LabDig2/labdig2/experiencia6/contador_cm_fd.v Line: 44
-Info (12128): Elaborating entity "contador_bcd_3digitos" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2" File: D:/Documents/LabDig2/labdig2/experiencia6/contador_cm_fd.v Line: 55
-Info (12128): Elaborating entity "contador_cm_uc" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC" File: D:/Documents/LabDig2/labdig2/experiencia6/contador_cm.v Line: 65
-Info (10264): Verilog HDL Case Statement information at contador_cm_uc.v(87): all case item expressions in this case statement are onehot File: D:/Documents/LabDig2/labdig2/experiencia6/contador_cm_uc.v Line: 87
-Info (12128): Elaborating entity "registrador_n" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3" File: D:/Documents/LabDig2/labdig2/experiencia6/interface_hcsr04_fd.v Line: 68
-Info (12128): Elaborating entity "tx_serial_7E1" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2" File: D:/Documents/LabDig2/labdig2/experiencia6/sonar_fd.v Line: 141
-Info (12128): Elaborating entity "tx_serial_7E1_fd" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD" File: D:/Documents/LabDig2/labdig2/experiencia6/tx_serial_7E1.v Line: 39
-Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2" File: D:/Documents/LabDig2/labdig2/experiencia6/tx_serial_7E1_fd.v Line: 68
-Info (12128): Elaborating entity "tx_serial_uc" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC" File: D:/Documents/LabDig2/labdig2/experiencia6/tx_serial_7E1.v Line: 55
-Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|contador_m:U4" File: D:/Documents/LabDig2/labdig2/experiencia6/sonar_fd.v Line: 155
-Info (12128): Elaborating entity "contador_endereco" for hierarchy "sonar_fd:fd_sonar|contador_endereco:U5" File: D:/Documents/LabDig2/labdig2/experiencia6/sonar_fd.v Line: 163
-Info (12128): Elaborating entity "rom_angulos_8x24" for hierarchy "sonar_fd:fd_sonar|rom_angulos_8x24:U6" File: D:/Documents/LabDig2/labdig2/experiencia6/sonar_fd.v Line: 169
-Warning (10030): Net "tabela_angulos.data_a" at rom_angulos_8x24.v(11) has no driver or initial value, using a default initial value '0' File: D:/Documents/LabDig2/labdig2/experiencia6/rom_angulos_8x24.v Line: 11
-Warning (10030): Net "tabela_angulos.waddr_a" at rom_angulos_8x24.v(11) has no driver or initial value, using a default initial value '0' File: D:/Documents/LabDig2/labdig2/experiencia6/rom_angulos_8x24.v Line: 11
-Warning (10030): Net "tabela_angulos.we_a" at rom_angulos_8x24.v(11) has no driver or initial value, using a default initial value '0' File: D:/Documents/LabDig2/labdig2/experiencia6/rom_angulos_8x24.v Line: 11
-Info (12128): Elaborating entity "controle_servo_8" for hierarchy "sonar_fd:fd_sonar|controle_servo_8:U7" File: D:/Documents/LabDig2/labdig2/experiencia6/sonar_fd.v Line: 180
-Info (12128): Elaborating entity "circuito_pwm" for hierarchy "sonar_fd:fd_sonar|controle_servo_8:U7|circuito_pwm:gera_pwm" File: D:/Documents/LabDig2/labdig2/experiencia6/controle_servo_8.v Line: 30
-Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|contador_m:U8" File: D:/Documents/LabDig2/labdig2/experiencia6/sonar_fd.v Line: 194
-Info (12128): Elaborating entity "hexa7seg" for hierarchy "hexa7seg:HEX0" File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 118
+Info (12128): Elaborating entity "sonar_uc" for hierarchy "sonar_uc:uc_sonar" File: C:/labdig2/experiencia6/sonar.v Line: 78
+Info (10264): Verilog HDL Case Statement information at sonar_uc.v(132): all case item expressions in this case statement are onehot File: C:/labdig2/experiencia6/sonar_uc.v Line: 132
+Info (10264): Verilog HDL Case Statement information at sonar_uc.v(187): all case item expressions in this case statement are onehot File: C:/labdig2/experiencia6/sonar_uc.v Line: 187
+Info (12128): Elaborating entity "sonar_fd" for hierarchy "sonar_fd:fd_sonar" File: C:/labdig2/experiencia6/sonar.v Line: 122
+Info (12128): Elaborating entity "rx_serial_7E1" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx" File: C:/labdig2/experiencia6/sonar_fd.v Line: 91
+Info (12128): Elaborating entity "rx_serial_7E1_fd" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD" File: C:/labdig2/experiencia6/rx_serial_7E1.v Line: 60
+Info (12128): Elaborating entity "deslocador_n" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL" File: C:/labdig2/experiencia6/rx_serial_7E1_fd.v Line: 46
+Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|contador_m:CONT" File: C:/labdig2/experiencia6/rx_serial_7E1_fd.v Line: 60
+Info (12128): Elaborating entity "registrador_n" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|registrador_n:REG" File: C:/labdig2/experiencia6/rx_serial_7E1_fd.v Line: 70
+Info (12128): Elaborating entity "rx_serial_uc" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_uc:U2_UC" File: C:/labdig2/experiencia6/rx_serial_7E1.v Line: 78
+Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|contador_m:U3_TICK" File: C:/labdig2/experiencia6/rx_serial_7E1.v Line: 96
+Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|contador_m:U3_tx" File: C:/labdig2/experiencia6/sonar_fd.v Line: 119
+Info (12128): Elaborating entity "interface_hcsr04" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1" File: C:/labdig2/experiencia6/sonar_fd.v Line: 150
+Info (12128): Elaborating entity "interface_hcsr04_uc" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1" File: C:/labdig2/experiencia6/interface_hcsr04.v Line: 53
+Info (12128): Elaborating entity "interface_hcsr04_fd" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2" File: C:/labdig2/experiencia6/interface_hcsr04.v Line: 66
+Info (12128): Elaborating entity "gerador_pulso" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1" File: C:/labdig2/experiencia6/interface_hcsr04_fd.v Line: 42
+Info (12128): Elaborating entity "contador_cm" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2" File: C:/labdig2/experiencia6/interface_hcsr04_fd.v Line: 57
+Info (12128): Elaborating entity "contador_cm_fd" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD" File: C:/labdig2/experiencia6/contador_cm.v Line: 52
+Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1" File: C:/labdig2/experiencia6/contador_cm_fd.v Line: 44
+Info (12128): Elaborating entity "contador_bcd_3digitos" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2" File: C:/labdig2/experiencia6/contador_cm_fd.v Line: 55
+Info (12128): Elaborating entity "contador_cm_uc" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC" File: C:/labdig2/experiencia6/contador_cm.v Line: 65
+Info (10264): Verilog HDL Case Statement information at contador_cm_uc.v(87): all case item expressions in this case statement are onehot File: C:/labdig2/experiencia6/contador_cm_uc.v Line: 87
+Info (12128): Elaborating entity "registrador_n" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3" File: C:/labdig2/experiencia6/interface_hcsr04_fd.v Line: 68
+Info (12128): Elaborating entity "tx_serial_7E1" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2" File: C:/labdig2/experiencia6/sonar_fd.v Line: 163
+Info (12128): Elaborating entity "tx_serial_7E1_fd" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD" File: C:/labdig2/experiencia6/tx_serial_7E1.v Line: 39
+Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2" File: C:/labdig2/experiencia6/tx_serial_7E1_fd.v Line: 68
+Info (12128): Elaborating entity "tx_serial_uc" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC" File: C:/labdig2/experiencia6/tx_serial_7E1.v Line: 55
+Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|contador_m:U4" File: C:/labdig2/experiencia6/sonar_fd.v Line: 177
+Info (12128): Elaborating entity "contador_endereco" for hierarchy "sonar_fd:fd_sonar|contador_endereco:U5" File: C:/labdig2/experiencia6/sonar_fd.v Line: 185
+Info (12128): Elaborating entity "rom_angulos_8x24" for hierarchy "sonar_fd:fd_sonar|rom_angulos_8x24:U6" File: C:/labdig2/experiencia6/sonar_fd.v Line: 191
+Warning (10030): Net "tabela_angulos.data_a" at rom_angulos_8x24.v(11) has no driver or initial value, using a default initial value '0' File: C:/labdig2/experiencia6/rom_angulos_8x24.v Line: 11
+Warning (10030): Net "tabela_angulos.waddr_a" at rom_angulos_8x24.v(11) has no driver or initial value, using a default initial value '0' File: C:/labdig2/experiencia6/rom_angulos_8x24.v Line: 11
+Warning (10030): Net "tabela_angulos.we_a" at rom_angulos_8x24.v(11) has no driver or initial value, using a default initial value '0' File: C:/labdig2/experiencia6/rom_angulos_8x24.v Line: 11
+Info (12128): Elaborating entity "controle_servo_8" for hierarchy "sonar_fd:fd_sonar|controle_servo_8:U7" File: C:/labdig2/experiencia6/sonar_fd.v Line: 202
+Info (12128): Elaborating entity "circuito_pwm" for hierarchy "sonar_fd:fd_sonar|controle_servo_8:U7|circuito_pwm:gera_pwm" File: C:/labdig2/experiencia6/controle_servo_8.v Line: 30
+Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|contador_m:U8" File: C:/labdig2/experiencia6/sonar_fd.v Line: 216
+Info (12128): Elaborating entity "hexa7seg" for hierarchy "hexa7seg:HEX0" File: C:/labdig2/experiencia6/sonar.v Line: 201
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "sonar_fd:fd_sonar|rom_angulos_8x24:U6|tabela_angulos" is uninferred due to inappropriate RAM size File: D:/Documents/LabDig2/labdig2/experiencia6/rom_angulos_8x24.v Line: 11
+    Info (276004): RAM logic "sonar_fd:fd_sonar|rom_angulos_8x24:U6|tabela_angulos" is uninferred due to inappropriate RAM size File: C:/labdig2/experiencia6/rom_angulos_8x24.v Line: 11
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "hex3[0]" is stuck at GND File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 18
-    Warning (13410): Pin "hex3[1]" is stuck at GND File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 18
-    Warning (13410): Pin "hex3[2]" is stuck at GND File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 18
-    Warning (13410): Pin "hex3[3]" is stuck at GND File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 18
-    Warning (13410): Pin "hex3[4]" is stuck at GND File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 18
-    Warning (13410): Pin "hex3[5]" is stuck at GND File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 18
-    Warning (13410): Pin "hex3[6]" is stuck at VCC File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 18
-    Warning (13410): Pin "hex5[1]" is stuck at GND File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 20
-    Warning (13410): Pin "hex5[2]" is stuck at GND File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 20
-    Warning (13410): Pin "hex5[6]" is stuck at VCC File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 20
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 22
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 22
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 22
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: D:/Documents/LabDig2/labdig2/experiencia6/sonar.v Line: 22
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/labdig2/experiencia6/sonar.v Line: 22
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/labdig2/experiencia6/sonar.v Line: 22
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/labdig2/experiencia6/sonar.v Line: 22
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/labdig2/experiencia6/sonar.v Line: 22
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 18 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file D:/Documents/LabDig2/labdig2/experiencia6/quartus/output_files/exp6.map.smsg
+Info (144001): Generated suppressed messages file C:/labdig2/experiencia6/quartus/output_files/exp6.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 504 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 548 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 57 output pins
-    Info (21061): Implemented 440 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4822 megabytes
-    Info: Processing ended: Tue Oct 06 15:28:51 2026
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+    Info (21061): Implemented 484 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4826 megabytes
+    Info: Processing ended: Tue Oct  6 16:51:48 2026
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:30
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/Documents/LabDig2/labdig2/experiencia6/quartus/output_files/exp6.map.smsg.
+The suppressed messages can be found in C:/labdig2/experiencia6/quartus/output_files/exp6.map.smsg.
 
 

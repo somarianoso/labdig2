@@ -45,7 +45,14 @@ module sonar #(
     wire [3:0]  w_estado_hcsr04;
     wire [2:0]  w_posicao_servo;
     wire [6:0]  w_dado_rx_recebido;
-    wire [23:0] mux_out;
+    wire [6:0]  w_dado_tx_transmitido;
+    wire [3:0]  w_estado_tx_sonar;
+    wire [2:0]  w_contagem_selmux;
+    wire [3:0]  w_angulo2;
+    wire [3:0]  w_angulo1;
+    wire [3:0]  w_angulo0;
+    wire        w_paridade_par;
+    wire        w_pronto_rx;
 
     sonar_uc uc_sonar (
         .clock             (clock),
@@ -102,16 +109,92 @@ module sonar #(
         .db_estado_tx       (w_estado_tx),
         .db_estado_hcsr04   (w_estado_hcsr04),
         .posicao_servo      (w_posicao_servo),
-        .dado_rx_recebido   (w_dado_rx_recebido)
+        .dado_rx_recebido   (w_dado_rx_recebido),
+        // === CONEXÕES QUE ESTAVAM FALTANDO ===
+        .dado_tx_transmitido(w_dado_tx_transmitido),
+        .estado_tx_sonar    (w_estado_tx_sonar),
+        .contagem_selmux    (w_contagem_selmux),
+        .angulo2            (w_angulo2),
+        .angulo1            (w_angulo1),
+        .angulo0            (w_angulo0),
+        .paridade_par       (w_paridade_par),
+        .pronto_rx          (w_pronto_rx)
     );
 
-    assign mux_out = {3'b000, w_estado_uc, 4'h0, w_medida2, w_medida1, w_medida0};
 
+    // ========================================================
+    // MULTIPLEXAÇÃO DE DEPURAÇÃO (MUX 4x1 - 24 bits)
+    // ========================================================
+    wire [23:0] sinais00, sinais01, sinais10, sinais11;
+    reg  [23:0] mux_out;
+
+    // ========================================================
+    // sel_mux == 00: servomotor + HC-SR04
+    // HEX5: posição do servo (3 bits c/ padding)
+    // HEX4: estado_hcsr04
+    // HEX3: a definir (apagado)
+    // HEX2, HEX1, HEX0: distancia2, distancia1, distancia0
+    // ========================================================
+    assign sinais00 = { {1'b0, w_posicao_servo}, w_estado_hcsr04, 4'h0, w_medida2, w_medida1, w_medida0 };    
+    
+    // ========================================================
+    // sel_mux == 01: uart
+    // HEX5: estado_tx
+    // HEX4, HEX3: DADO_TX1 e DADO_TX0 (nibbles do dado ASCII transmitido)
+    // HEX2: estado_rx
+    // HEX1, HEX0: DADO_RX1 e DADO_RX0 (nibbles do dado ASCII recebido)
+    // ========================================================    
+    assign sinais01 = { w_estado_tx, {1'b0, w_dado_tx_transmitido[6:4]}, w_dado_tx_transmitido[3:0], w_estado_rx, {1'b0, w_dado_rx_recebido[6:4]}, w_dado_rx_recebido[3:0] };    
+    
+    // ========================================================
+    // sel_mux == 10: tx dados sonar
+    // HEX5: estado_tx_sonar
+    // HEX4: contagem_selmux
+    // HEX3, HEX2: dado_sonar1, dado_sonar2
+    // HEX1, HEX0: a definir (apagados)
+    // ========================================================
+    // HEX3 e HEX2 mostrando o caractere atual da mensagem "ANG,DIS#"
+    assign sinais10 = { w_estado_tx_sonar, {1'b0, w_contagem_selmux}, 
+                        {1'b0, w_dado_tx_transmitido[6:4]}, w_dado_tx_transmitido[3:0], 
+                        4'h0, 4'h0 };    
+    // ========================================================
+    // sel_mux == 11: sonar
+    // HEX5: estado_sonar (bit mais significativo, p/ fechar 5 bits)
+    // HEX4: a definir (usaremos para os 4 bits menos significativos do estado)
+    // HEX3: a definir (apagado)
+    // HEX2, HEX1, HEX0: angulo2, angulo1, angulo0
+    // ========================================================
+    assign sinais11 = { {3'b000, w_estado_uc[4]}, w_estado_uc[3:0], 4'h0, 
+                        w_angulo2, w_angulo1, w_angulo0 };    
+    
     always @(*) begin
         case (sel_mux)
-            2'b00: LEDR = {4'b0000, w_timeout_echo, w_pronto_medida, w_medir, pwm, echo, trigger};
-            2'b01: LEDR = {6'b000000, w_mensurar_automatico, w_pronto, w_modo_solicitado, db_modo};
-            default: LEDR = 10'b0000000000;
+            2'b00: mux_out = sinais00;
+            2'b01: mux_out = sinais01;
+            2'b10: mux_out = sinais10;
+            2'b11: mux_out = sinais11;
+            default: mux_out = 24'h000000;
+        endcase
+    end
+
+    // ========================================================
+    // MULTIPLEXAÇÃO DOS 10 LEDs VERMELHOS (LEDR[9:0])
+    // ========================================================
+    always @(*) begin
+        case (sel_mux)
+            2'b00: // Sinais físicos do Sensor e Servo
+                LEDR = {4'b0000, w_timeout_echo, w_pronto_medida, w_medir, pwm, echo, trigger};
+            
+            2'b01: // Sinais da UART
+                LEDR = {4'b0000, w_paridade_par, w_pronto_rx, entrada_serial, w_transmite_serial, w_pronto_serial, saida_serial};
+            
+            2'b10: // Sinais de temporização / timeout
+                LEDR = {6'b000000, w_zera_transmissao, w_fim_tx_8, w_pronto_serial, w_transmite_serial};
+            
+            2'b11: // Sinais da Máquina Central e Modos
+                    LEDR = {6'b000000, db_modo, w_mensurar_automatico, w_pronto, w_modo_solicitado};                
+            default: 
+                LEDR = 10'b0000000000;
         endcase
     end
 
