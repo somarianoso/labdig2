@@ -17,7 +17,8 @@ module sonar #(
     output wire [6:0] hex2,
     output wire [6:0] hex3,
     output wire [6:0] hex4,
-    output wire [6:0] hex5
+    output wire [6:0] hex5,
+    output reg  [9:0] LEDR
 );
 
     wire        w_medir;
@@ -139,8 +140,10 @@ module sonar #(
     // HEX3, HEX2: dado_sonar1, dado_sonar2
     // HEX1, HEX0: a definir (apagados)
     // ========================================================
-    assign sinais10 = { w_estado_tx_sonar, w_contagem_selmux, 4'h0, 4'h0, 4'h0, 4'h0 };    
-    
+    // HEX3 e HEX2 mostrando o caractere atual da mensagem "ANG,DIS#"
+    assign sinais10 = { w_estado_tx_sonar, {1'b0, w_contagem_selmux}, 
+                        {1'b0, w_dado_tx_transmitido[6:4]}, w_dado_tx_transmitido[3:0], 
+                        4'h0, 4'h0 };    
     // ========================================================
     // sel_mux == 11: sonar
     // HEX5: estado_sonar (bit mais significativo, p/ fechar 5 bits)
@@ -148,7 +151,8 @@ module sonar #(
     // HEX3: a definir (apagado)
     // HEX2, HEX1, HEX0: angulo2, angulo1, angulo0
     // ========================================================
-    assign sinais11 = { {3'b000, w_estado_uc[4]}, w_estado_uc[3:0], 4'h0, w_angulo2, w_angulo1, w_angulo0 };    
+    assign sinais11 = { {3'b000, w_estado_uc[4]}, w_estado_uc[3:0], 4'h0, 
+                        w_angulo2, w_angulo1, w_angulo0 };    
     
     always @(*) begin
         case (sel_mux)
@@ -157,6 +161,28 @@ module sonar #(
             2'b10: mux_out = sinais10;
             2'b11: mux_out = sinais11;
             default: mux_out = 24'h000000;
+        endcase
+    end
+
+    // ========================================================
+    // MULTIPLEXAÇÃO DOS 10 LEDs VERMELHOS (LEDR[9:0])
+    // ========================================================
+    always @(*) begin
+        case (sel_mux)
+            2'b00: // Sinais físicos do Sensor e Servo
+                LEDR = {4'b0000, w_timeout_echo, w_pronto_medida, w_medir, pwm, echo, trigger};
+            
+            2'b01: // Sinais da UART
+                LEDR = {4'b0000, w_paridade_par, w_pronto_rx, entrada_serial, w_transmite_serial, w_pronto_serial, saida_serial};
+            
+            2'b10: // Sinais de temporização / timeout
+                LEDR = {6'b000000, w_zera_transmissao, w_fim_tx_8, w_pronto_serial, w_transmite_serial};
+            
+            2'b11: // Sinais da Máquina Central e Modos
+                LEDR = {6'b000000, w_mensurar_automatico, w_pronto, w_modo_solicitado, w_modo_atual};
+                
+            default: 
+                LEDR = 10'b0000000000;
         endcase
     end
 
