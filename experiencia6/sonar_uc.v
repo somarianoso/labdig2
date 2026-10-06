@@ -1,154 +1,172 @@
 module sonar_uc (
-    input wire       clock,
-    input wire       reset,
-    input wire       mensurar,
-    input wire       pronto_serial,
-    input wire       pronto_medida,
-    input wire       fim_2seg,        // NOVO SINAL: vem do timer no sonar_fd (mensurar_automatico)
-    input wire       timeout_echo,
-    input wire       modo, //novo que pega a entrada serial a ou v
-    output reg       medir,
-    output reg       contar_endereco,
-    output reg       zera_endereco,
-    output reg       zera_contador,
-    output reg       pronto,
-    output reg [3:0] db_estado, 
-    output reg       transmite_serial,
-    output reg [2:0] sel_letra,
-    output reg zera_timeout_echo,
-    output reg conta_timeout_echo,
-    output reg db_modo //nova saida
+    input  wire       clock,
+    input  wire       reset,
+    input  wire       mensurar,
+    input  wire       pronto_serial,
+    input  wire       pronto_medida,
+    input  wire       fim_2seg,
+    input  wire       timeout_echo,
+    input  wire       fim_tx_8,
+    input  wire [6:0] dados_ascii_rx,
+    input  wire       pronto_rx,
+    output reg        medir,
+    output reg        contar_endereco,
+    output reg        zera_endereco,
+    output reg        zera_contador,
+    output reg        zera_transmissao,
+    output reg        pronto,
+    output reg  [3:0] db_estado,
+    output reg        transmite_serial,
+    output reg        zera_timeout_echo,
+    output reg        conta_timeout_echo,
+    output reg        db_modo
 );
 
-    // Declaração dos estados
-    parameter Inicial            = 4'h0;
-    parameter PreparaMedida      = 4'h1;  
-    parameter AguardaMedida      = 4'h2;  
-    parameter TransmiteLaco      = 4'h3;  
-    parameter EsperaPronto0      = 4'h4;  
-    parameter EsperaPronto1      = 4'h5;  
-    parameter VerificaFimTx      = 4'h6;  
-    parameter EsperaTemporizador = 4'h7;  // Aguarda 2 segundos
-    parameter AvancaPosicao      = 4'h8;  // Incrementa servo e gera pulso de fim
-    parameter VerificaMensurar   = 4'h9;
-    parameter ContaTransmissoes = 4'hA;
+    localparam Inicial            = 4'h0;
+    localparam PreparaMedida      = 4'h1;
+    localparam AguardaMedida      = 4'h2;
+    localparam TransmiteCaractere = 4'h3;
+    localparam EsperaPronto0      = 4'h4;
+    localparam EsperaPronto1      = 4'h5;
+    localparam VerificaFimTx      = 4'h6;
+    localparam EsperaTemporizador = 4'h7;
+    localparam AvancaPosicao      = 4'h8;
+    localparam ModoAtencao        = 4'h9;
 
-    // Variáveis de estado
-    reg [3:0] Eatual, Eprox;
-    reg [3:0] contador_transmissoes;  
+    reg [3:0] estado_atual;
+    reg [3:0] estado_proximo;
+    reg       modo;
+    reg       ciclo_em_atencao;
+    wire      modo_atencao_efetivo;
 
-    // Memória de estado e contadores (Sequencial)
+    // Reconhece 'a' no mesmo ciclo em que a varredura tentaria avancar.
+    assign modo_atencao_efetivo = modo || (pronto_rx && dados_ascii_rx == 7'h61);
+
     always @(posedge clock or posedge reset) begin
         if (reset) begin
-            Eatual <= Inicial;
-            contador_transmissoes <= 4'h0;
+            estado_atual      <= Inicial;
+            modo              <= 1'b0;
+            ciclo_em_atencao  <= 1'b0;
         end else begin
-            Eatual <= Eprox;
-            
-            // Lógica do contador de letras enviadas (0 a 7)
-            if (Eatual == Inicial || Eatual == AvancaPosicao) begin
-                contador_transmissoes <= 4'h0; // Reinicia contador para o próximo ciclo
+            estado_atual <= estado_proximo;
+
+            if (pronto_rx) begin
+                case (dados_ascii_rx)
+                    7'h61: modo <= 1'b1; // 'a': atencao
+                    7'h76: modo <= 1'b0; // 'v': voltar a localizacao
+                    default: modo <= modo;
+                endcase
             end
-            else if (Eatual == ContaTransmissoes) begin
-                contador_transmissoes <= contador_transmissoes + 1'b1;
-            end
+
+            // Guarda o modo no inicio da medida para nao pular a posicao ao voltar.
+            if (estado_atual == PreparaMedida)
+                ciclo_em_atencao <= modo;
         end
     end
 
-    // Lógica de próximo estado (Combinacional)
     always @* begin
+        estado_proximo = estado_atual;
+
         if (!mensurar) begin
-            Eprox = Inicial;
-        end else case (Eatual)
-            Inicial:            
-                Eprox = mensurar ? PreparaMedida : Inicial; // CORRIGIDO: Só avança se mensurar for 1
-            
-            PreparaMedida:
-                Eprox = AguardaMedida;
-            
-            AguardaMedida:
-                Eprox = pronto_medida ? TransmiteLaco : ((timeout_echo == 1'b1) ? AvancaPosicao : AguardaMedida);
-            
-            // Loop de transmissão (0 a 7 caracteres)
-            TransmiteLaco:      
-                Eprox = EsperaPronto0;
-            
-            EsperaPronto0:      
-                Eprox = (pronto_serial == 1'b0) ? EsperaPronto1 : EsperaPronto0;
-            
-            EsperaPronto1:      
-                Eprox = (pronto_serial == 1'b1) ? VerificaFimTx : EsperaPronto1;
-            
-            VerificaFimTx:      
-                // Finaliza a mensagem ou inicia os caracteres restantes.
-                Eprox = (contador_transmissoes == 4'h7) ? EsperaTemporizador : ContaTransmissoes;
+            estado_proximo = Inicial;
+        end else begin
+            case (estado_atual)
+                Inicial:
+                    estado_proximo = PreparaMedida;
 
-            ContaTransmissoes:
-                Eprox = TransmiteLaco;
-            
-            EsperaTemporizador: 
-                Eprox = (fim_2seg) ? AvancaPosicao : EsperaTemporizador;
-            
-            AvancaPosicao:
-                Eprox = VerificaMensurar;
+                PreparaMedida:
+                    estado_proximo = AguardaMedida;
 
-            VerificaMensurar:
-                Eprox = mensurar ? PreparaMedida : Inicial;
-                
-            default:            
-                Eprox = Inicial;
-        endcase
+                AguardaMedida: begin
+                    if (pronto_medida)
+                        estado_proximo = TransmiteCaractere;
+                    else if (timeout_echo)
+                        estado_proximo = EsperaTemporizador;
+                end
+
+                TransmiteCaractere:
+                    estado_proximo = EsperaPronto0;
+
+                EsperaPronto0:
+                    estado_proximo = pronto_serial ? EsperaPronto0 : EsperaPronto1;
+
+                EsperaPronto1:
+                    estado_proximo = pronto_serial ? VerificaFimTx : EsperaPronto1;
+
+                VerificaFimTx:
+                    estado_proximo = fim_tx_8 ? EsperaTemporizador : TransmiteCaractere;
+
+                EsperaTemporizador: begin
+                    if (fim_2seg) begin
+                        if (modo_atencao_efetivo || ciclo_em_atencao)
+                            estado_proximo = ModoAtencao;
+                        else
+                            estado_proximo = AvancaPosicao;
+                    end
+                end
+
+                AvancaPosicao:
+                    estado_proximo = modo_atencao_efetivo ? ModoAtencao : PreparaMedida;
+
+                ModoAtencao:
+                    estado_proximo = PreparaMedida;
+
+                default:
+                    estado_proximo = Inicial;
+            endcase
+        end
     end
 
-    // Lógica de saídas (Máquina de Moore)
     always @* begin
-        // Valores por defeito
-        medir             = 1'b0;
-        contar_endereco   = 1'b0;
-        zera_endereco     = 1'b0;
-        zera_contador     = 1'b0;
-        pronto            = 1'b0;
+        medir              = 1'b0;
+        contar_endereco    = 1'b0;
+        zera_endereco      = 1'b0;
+        zera_contador      = 1'b0;
+        zera_transmissao   = 1'b0;
+        pronto             = 1'b0;
         transmite_serial  = 1'b0;
-        conta_timeout_echo  = 1'b0;
         zera_timeout_echo  = 1'b0;
-        sel_letra         = contador_transmissoes[2:0]; // Sempre seleciona o dado atual
+        conta_timeout_echo = 1'b0;
+        db_modo            = modo;
 
-        case (Eatual)
+        case (estado_atual)
             Inicial: begin
-                zera_contador = 1'b1; // Mantém o temporizador zerado enquanto desligado
-            end
-            
-            PreparaMedida: begin
-                medir = 1'b1;
-                zera_contador = 1'b1; // Mantém o temporizador zerado enquanto desligado
+                zera_contador    = 1'b1;
+                zera_transmissao = 1'b1;
                 zera_timeout_echo = 1'b1;
             end
 
-            AguardaMedida: begin
+            PreparaMedida: begin
+                medir              = 1'b1;
+                zera_contador      = 1'b1;
+                zera_transmissao   = 1'b1;
+                zera_timeout_echo  = 1'b1;
+            end
+
+            AguardaMedida:
                 conta_timeout_echo = 1'b1;
-            end
-            
-            TransmiteLaco: begin
+
+            TransmiteCaractere:
                 transmite_serial = 1'b1;
-            end
-            
-            VerificaFimTx: begin
-                zera_contador = 1'b0;
-            end
-            
+
+            EsperaTemporizador:
+                ;
+
             AvancaPosicao: begin
-                zera_contador  = 1'b1;
-                contar_endereco = 1'b1; // Dá APENAS um pulso para mudar para a próxima posição
-                pronto          = 1'b1; // Gera o pulso fim_posicao
+                contar_endereco = !modo_atencao_efetivo;
+                pronto          = !modo_atencao_efetivo;
+                zera_contador   = 1'b1;
             end
+
+            default:
+                ;
         endcase
 
-        medir = medir && mensurar;
-        contar_endereco = contar_endereco && mensurar;
-        pronto = pronto && mensurar;
-        transmite_serial = transmite_serial && mensurar;
-
-        db_estado = Eatual;
+        medir             = medir && mensurar;
+        contar_endereco   = contar_endereco && mensurar;
+        pronto            = pronto && mensurar;
+        transmite_serial  = transmite_serial && mensurar;
+        db_estado         = estado_atual;
     end
 
 endmodule
