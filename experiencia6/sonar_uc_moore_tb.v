@@ -44,7 +44,28 @@ module sonar_uc_moore_tb;
 
     always #5 clock = ~clock;
 
-    sonar_uc dut (.*);
+    sonar_uc dut (
+        .clock              (clock),
+        .reset              (reset),
+        .mensurar           (mensurar),
+        .pronto_serial      (pronto_serial),
+        .pronto_medida      (pronto_medida),
+        .fim_2seg           (fim_2seg),
+        .timeout_echo       (timeout_echo),
+        .fim_tx_8           (fim_tx_8),
+        .modo_solicitado    (modo_solicitado),
+        .medir              (medir),
+        .contar_endereco    (contar_endereco),
+        .zera_endereco      (zera_endereco),
+        .zera_contador      (zera_contador),
+        .zera_transmissao   (zera_transmissao),
+        .pronto             (pronto),
+        .db_estado          (db_estado),
+        .transmite_serial   (transmite_serial),
+        .zera_timeout_echo  (zera_timeout_echo),
+        .conta_timeout_echo (conta_timeout_echo),
+        .db_modo            (db_modo)
+    );
 
     task step;
         begin

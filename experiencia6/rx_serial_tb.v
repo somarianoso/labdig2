@@ -13,136 +13,104 @@
  *      27/09/2026  1.0     Edson Midorikawa  revisao para 7E1
  * ---------------------------------------------------------------------------
  */
- 
+
 `timescale 1ns/1ns
 
 module rx_serial_tb;
 
-  // Declaração de sinais para conectar o componente a ser testado (DUT)
-  logic       clock_in         = 1'b0;
-  logic       reset_in         = 1'b0;
-  logic       pronto_out       = 1'b0;
-  logic [6:0] dados_ascii_out  = 1'b0;
-  logic       paridade_out     = 1'b0;
-  logic       paridade_par_out = 1'b0;
+    reg        clock_in         = 1'b0;
+    reg        reset_in         = 1'b0;
+    wire       pronto_out;
+    wire [6:0] dados_ascii_out;
+    wire       paridade_out;
+    wire       paridade_par_out;
 
-  // Sinais usados com UART_WRITE_BYTE
-  logic       Sinal_Serial;
-  logic [7:0] serialData;
+    reg        Sinal_Serial;
+    reg [7:0]  serialData;
+    reg [7:0]  casos_teste_dado [0:7];
+    reg [7:0]  casos_teste_id   [0:7];
 
-  // Configurações do clock
-  localparam clockPeriod = 20ns; // clock 50MHz
-  localparam bitPeriod   = 434*clockPeriod; // 115.200 bauds
+    localparam clockPeriod = 20;
+    localparam bitPeriod   = 434 * clockPeriod;
 
-  // Gerador de clock
-  always #(clockPeriod/2) clock_in = ~clock_in;
+    always #(clockPeriod/2) clock_in = ~clock_in;
 
-  // UART_WRITE_BYTE()
-  // Procedimento para geracao da sequencia de comunicacao serial
-  // - com envio de 8 dados seriais + 2 stop bits
-  // - adaptacao de codigo acessado de:
-  //   https://nandland.com/uart-serial-port-module/
-  // - pode ser usado para testar diversas configurações (7O1, 8E1,7N2, etc)
-  task UART_WRITE_BYTE (
-    input  logic [7:0] Data_In
-  );
-    begin
+    task UART_WRITE_BYTE;
+        input [7:0] Data_In;
+        integer ii;
+        begin
+            Sinal_Serial = 1'b0;
+            #bitPeriod;
 
-      // envia Start Bit
-      Sinal_Serial = 1'b0;
-      #bitPeriod;
+            for (ii = 0; ii < 8; ii = ii + 1) begin
+                Sinal_Serial = Data_In[ii];
+                #bitPeriod;
+            end
 
-      // envia 8 bits seriais
-      for (integer ii=0; ii<8; ii++) begin
-        Sinal_Serial = Data_In[ii];
+            Sinal_Serial = 1'b1;
+            #(2 * bitPeriod);
+        end
+    endtask
+
+    integer caso;
+    integer ii;
+
+    rx_serial_7E1 DUT (
+        .clock        (clock_in),
+        .reset        (reset_in),
+        .RX           (Sinal_Serial),
+        .pronto       (pronto_out),
+        .dados_ascii  (dados_ascii_out),
+        .paridade     (paridade_out),
+        .paridade_par (paridade_par_out),
+        .db_clock     (),
+        .db_tick      (),
+        .db_estado    ()
+    );
+
+    initial begin
+        casos_teste_id[0] = 8'd1;
+        casos_teste_dado[0] = 8'b00110101;
+        casos_teste_id[1] = 8'd2;
+        casos_teste_dado[1] = 8'b11010101;
+        casos_teste_id[2] = 8'd3;
+        casos_teste_dado[2] = 8'b11111101;
+        casos_teste_id[3] = 8'd4;
+        casos_teste_dado[3] = 8'b10110101;
+        casos_teste_id[4] = 8'd5;
+        casos_teste_dado[4] = 8'b01000001;
+        casos_teste_id[5] = 8'd6;
+        casos_teste_dado[5] = 8'b11000001;
+        casos_teste_id[6] = 8'd7;
+        casos_teste_dado[6] = 8'b00000000;
+        casos_teste_id[7] = 8'd8;
+        casos_teste_dado[7] = 8'b10000000;
+
+        $display("Inicio da simulacao");
+        Sinal_Serial = 1'b1;
+
+        reset_in = 1'b1;
+        #(5 * clockPeriod);
+        reset_in = 1'b0;
         #bitPeriod;
-      end
 
-      // envia 2 Stop Bits
-      Sinal_Serial = 1'b1;
-      #(2*bitPeriod); 
+        for (ii = 0; ii < 8; ii = ii + 1) begin
+            caso = casos_teste_id[ii];
+            $display("Caso de teste %0d", casos_teste_id[ii]);
+            serialData = casos_teste_dado[ii];
+            #(2 * bitPeriod);
+            UART_WRITE_BYTE(serialData);
+            #bitPeriod;
+            #(2 * bitPeriod);
+        end
 
+        caso = 99;
+        reset_in = 1'b0;
+        reset_in = #(5 * clockPeriod) 1'b1;
+        #bitPeriod;
+
+        $display("Fim da simulacao");
+        $stop;
     end
-  endtask
-
-  // Casos de teste
-  typedef struct {
-    integer     id;
-    logic [7:0] dado;
-  } caso_teste_type;
-
-  // Array dos casos de teste
-  localparam caso_teste_type casos_teste [] = '{
-    '{1, 8'b00110101}, // 35H (dado=35H + paridade=0) OK para 7E1
-    '{2, 8'b11010101}, // D5H (dado=55H + paridade=1) Erro para 7E1
-    '{3, 8'b11111101}, // FDH (dado=7DH + paridade=1) Erro para 7E1
-    '{4, 8'b10110101}, // B5H (dado=35H + paridade=1) Erro para 7E1
-    '{5, 8'b01000001}, // 41H (dado=41H + paridade=0) OK para 7E1
-    '{6, 8'b11000001}, // C1H (dado=41H + paridade=1) Erro para 7E1
-    '{7, 8'b00000000}, // 00H (dado=00H + paridade=0) OK para 7E1
-    '{8, 8'b10000000}  // 80H (dado=00H + paridade=1) Erro para 7E1
-    // inserir aqui outros casos de teste (inserir "," na linha anterior)
-  };
-
-  integer caso;
-
-  // Instanciação do DUT (Device Under Test)
-  // => instancia modulo rx_serial_8N1 de autoria de Augusto Vaccarelli
-  rx_serial_7E1 DUT (
-    .clock       ( clock_in         ),
-    .reset       ( reset_in         ), 
-    .RX          ( Sinal_Serial     ),
-    .pronto      ( pronto_out       ),
-    .dados_ascii ( dados_ascii_out  ),
-    .paridade    ( paridade_out     ),
-    .paridade_par( paridade_par_out ),
-    .db_clock    (                  ), // desconectados
-    .db_tick     (                  ),
-    .db_estado   (                  )    
-  );                                
-
-  // Geracao dos sinais de entrada (estimulo)
-  initial begin
-    // inicio da simulacao
-    $display("Inicio da simulacao");
-
-    // Valores iniciais
-    Sinal_Serial = 1'b1;
-
-    // reset com 5 periodos de clock
-    reset_in = 1'b1;
-    #(5*clockPeriod);
-    reset_in = 1'b0;
-    #bitPeriod;
-
-    // loop pelos casos de teste
-    foreach (casos_teste[i]) begin
-      caso = casos_teste[i].id;
-      $display("Caso de teste %0d", casos_teste[i].id);
-      serialData = casos_teste[i].dado;
-
-      // 1) aguarda 2 periodos de bit antes de enviar bits
-      # (2*bitPeriod);
-
-      // 2) envia bits seriais para circuito de recepcao 
-      //    usando task UART_WRITE_BYTE()
-      UART_WRITE_BYTE(serialData);
-      #bitPeriod;
-
-      // 3) intervalo entre casos de teste
-      # (2*bitPeriod);
-    end
-
-    // final dos casos de teste da simulacao
-    caso = 99;
-    // Reset do circuito
-    reset_in = 1'b0;
-    reset_in = # (5*clockPeriod) 1'b1;
-    #bitPeriod;
-
-    // fim da simulação
-    $display("Fim da simulacao");
-    $stop;
-  end
 
 endmodule
