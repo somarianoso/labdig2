@@ -27,8 +27,7 @@ module sonar #(
     wire        w_fim_tx_8;
     wire        w_zera_timeout_echo;
     wire        w_conta_timeout_echo;
-    wire [6:0]  w_dados_ascii_rx;
-    wire        w_pronto_rx;
+    wire        w_modo_solicitado;
 
     sonar_uc uc_sonar (
         .clock              (clock),
@@ -39,8 +38,7 @@ module sonar #(
         .fim_2seg           (w_mensurar_automatico),
         .timeout_echo       (w_timeout_echo),
         .fim_tx_8           (w_fim_tx_8),
-        .dados_ascii_rx     (w_dados_ascii_rx),
-        .pronto_rx          (w_pronto_rx),
+        .modo_solicitado    (w_modo_solicitado),
         .medir              (w_medir),
         .contar_endereco    (w_contar_endereco),
         .zera_endereco      (w_zera_endereco),
@@ -81,8 +79,7 @@ module sonar #(
         .pwm                (pwm),
         .timeout_echo       (w_timeout_echo),
         .fim_tx_8           (w_fim_tx_8),
-        .dados_ascii_rx     (w_dados_ascii_rx),
-        .pronto_rx          (w_pronto_rx)
+        .modo_solicitado    (w_modo_solicitado)
     );
 
     assign fim_posicao = w_pronto;

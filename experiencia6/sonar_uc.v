@@ -7,112 +7,112 @@ module sonar_uc (
     input  wire       fim_2seg,
     input  wire       timeout_echo,
     input  wire       fim_tx_8,
-    input  wire [6:0] dados_ascii_rx,
-    input  wire       pronto_rx,
+    input  wire       modo_solicitado,
     output reg        medir,
     output reg        contar_endereco,
     output reg        zera_endereco,
     output reg        zera_contador,
     output reg        zera_transmissao,
     output reg        pronto,
-    output reg  [3:0] db_estado,
+    output reg  [4:0] db_estado,
     output reg        transmite_serial,
     output reg        zera_timeout_echo,
     output reg        conta_timeout_echo,
     output reg        db_modo
 );
 
-    localparam Inicial            = 4'h0;
-    localparam PreparaMedida      = 4'h1;
-    localparam AguardaMedida      = 4'h2;
-    localparam TransmiteCaractere = 4'h3;
-    localparam EsperaPronto0      = 4'h4;
-    localparam EsperaPronto1      = 4'h5;
-    localparam VerificaFimTx      = 4'h6;
-    localparam EsperaTemporizador = 4'h7;
-    localparam AvancaPosicao      = 4'h8;
-    localparam ModoAtencao        = 4'h9;
+    localparam inicial                 = 5'd0;
 
-    reg [3:0] estado_atual;
-    reg [3:0] estado_proximo;
-    reg       modo;
-    reg       ciclo_em_atencao;
-    wire      modo_atencao_efetivo;
+    localparam normal_prepara         = 5'd1;
+    localparam normal_aguarda_medida  = 5'd2;
+    localparam normal_inicia_tx       = 5'd3;
+    localparam normal_espera_tx_baixo = 5'd4;
+    localparam normal_espera_tx_alto  = 5'd5;
+    localparam normal_verifica_tx     = 5'd6;
+    localparam normal_aguarda_2s      = 5'd7;
+    localparam normal_decide_modo     = 5'd8;
+    localparam normal_avanca_posicao  = 5'd9;
 
-    // Reconhece 'a' no mesmo ciclo em que a varredura tentaria avancar.
-    assign modo_atencao_efetivo = modo || (pronto_rx && dados_ascii_rx == 7'h61);
+    localparam atencao_prepara         = 5'd10;
+    localparam atencao_aguarda_medida  = 5'd11;
+    localparam atencao_inicia_tx       = 5'd12;
+    localparam atencao_espera_tx_baixo = 5'd13;
+    localparam atencao_espera_tx_alto  = 5'd14;
+    localparam atencao_verifica_tx     = 5'd15;
+    localparam atencao_aguarda_2s      = 5'd16;
+    localparam atencao_decide_modo     = 5'd17;
+    localparam atencao_mantem_posicao  = 5'd18;
+
+    reg [4:0] estado_atual;
+    reg [4:0] estado_proximo;
 
     always @(posedge clock or posedge reset) begin
-        if (reset) begin
-            estado_atual      <= Inicial;
-            modo              <= 1'b0;
-            ciclo_em_atencao  <= 1'b0;
-        end else begin
+        if (reset)
+            estado_atual <= inicial;
+        else
             estado_atual <= estado_proximo;
-
-            if (pronto_rx) begin
-                case (dados_ascii_rx)
-                    7'h61: modo <= 1'b1; // 'a': atencao
-                    7'h76: modo <= 1'b0; // 'v': voltar a localizacao
-                    default: modo <= modo;
-                endcase
-            end
-
-            // Guarda o modo no inicio da medida para nao pular a posicao ao voltar.
-            if (estado_atual == PreparaMedida)
-                ciclo_em_atencao <= modo;
-        end
     end
 
     always @* begin
         estado_proximo = estado_atual;
 
         if (!mensurar) begin
-            estado_proximo = Inicial;
+            estado_proximo = inicial;
         end else begin
             case (estado_atual)
-                Inicial:
-                    estado_proximo = PreparaMedida;
+                inicial:
+                    estado_proximo = modo_solicitado ? atencao_prepara : normal_prepara;
 
-                PreparaMedida:
-                    estado_proximo = AguardaMedida;
-
-                AguardaMedida: begin
+                normal_prepara:
+                    estado_proximo = normal_aguarda_medida;
+                normal_aguarda_medida: begin
                     if (pronto_medida)
-                        estado_proximo = TransmiteCaractere;
+                        estado_proximo = normal_inicia_tx;
                     else if (timeout_echo)
-                        estado_proximo = EsperaTemporizador;
+                        estado_proximo = normal_aguarda_2s;
                 end
+                normal_inicia_tx:
+                    estado_proximo = normal_espera_tx_baixo;
+                normal_espera_tx_baixo:
+                    estado_proximo = pronto_serial ? normal_espera_tx_baixo : normal_espera_tx_alto;
+                normal_espera_tx_alto:
+                    estado_proximo = pronto_serial ? normal_verifica_tx : normal_espera_tx_alto;
+                normal_verifica_tx:
+                    estado_proximo = fim_tx_8 ? normal_aguarda_2s : normal_inicia_tx;
+                normal_aguarda_2s:
+                    if (fim_2seg)
+                        estado_proximo = normal_decide_modo;
+                normal_decide_modo:
+                    estado_proximo = modo_solicitado ? atencao_prepara : normal_avanca_posicao;
+                normal_avanca_posicao:
+                    estado_proximo = modo_solicitado ? atencao_prepara : normal_prepara;
 
-                TransmiteCaractere:
-                    estado_proximo = EsperaPronto0;
-
-                EsperaPronto0:
-                    estado_proximo = pronto_serial ? EsperaPronto0 : EsperaPronto1;
-
-                EsperaPronto1:
-                    estado_proximo = pronto_serial ? VerificaFimTx : EsperaPronto1;
-
-                VerificaFimTx:
-                    estado_proximo = fim_tx_8 ? EsperaTemporizador : TransmiteCaractere;
-
-                EsperaTemporizador: begin
-                    if (fim_2seg) begin
-                        if (modo_atencao_efetivo || ciclo_em_atencao)
-                            estado_proximo = ModoAtencao;
-                        else
-                            estado_proximo = AvancaPosicao;
-                    end
+                atencao_prepara:
+                    estado_proximo = atencao_aguarda_medida;
+                atencao_aguarda_medida: begin
+                    if (pronto_medida)
+                        estado_proximo = atencao_inicia_tx;
+                    else if (timeout_echo)
+                        estado_proximo = atencao_aguarda_2s;
                 end
-
-                AvancaPosicao:
-                    estado_proximo = modo_atencao_efetivo ? ModoAtencao : PreparaMedida;
-
-                ModoAtencao:
-                    estado_proximo = PreparaMedida;
+                atencao_inicia_tx:
+                    estado_proximo = atencao_espera_tx_baixo;
+                atencao_espera_tx_baixo:
+                    estado_proximo = pronto_serial ? atencao_espera_tx_baixo : atencao_espera_tx_alto;
+                atencao_espera_tx_alto:
+                    estado_proximo = pronto_serial ? atencao_verifica_tx : atencao_espera_tx_alto;
+                atencao_verifica_tx:
+                    estado_proximo = fim_tx_8 ? atencao_aguarda_2s : atencao_inicia_tx;
+                atencao_aguarda_2s:
+                    if (fim_2seg)
+                        estado_proximo = atencao_decide_modo;
+                atencao_decide_modo:
+                    estado_proximo = modo_solicitado ? atencao_mantem_posicao : normal_prepara;
+                atencao_mantem_posicao:
+                    estado_proximo = atencao_prepara;
 
                 default:
-                    estado_proximo = Inicial;
+                    estado_proximo = inicial;
             endcase
         end
     end
@@ -124,49 +124,76 @@ module sonar_uc (
         zera_contador      = 1'b0;
         zera_transmissao   = 1'b0;
         pronto             = 1'b0;
-        transmite_serial  = 1'b0;
+        transmite_serial   = 1'b0;
         zera_timeout_echo  = 1'b0;
         conta_timeout_echo = 1'b0;
-        db_modo            = modo;
+        db_modo            = 1'b0;
 
         case (estado_atual)
-            Inicial: begin
-                zera_contador    = 1'b1;
-                zera_transmissao = 1'b1;
+            inicial: begin
+                zera_endereco     = 1'b1;
+                zera_contador     = 1'b1;
+                zera_transmissao  = 1'b1;
                 zera_timeout_echo = 1'b1;
             end
 
-            PreparaMedida: begin
+            normal_prepara: begin
                 medir              = 1'b1;
                 zera_contador      = 1'b1;
                 zera_transmissao   = 1'b1;
                 zera_timeout_echo  = 1'b1;
             end
-
-            AguardaMedida:
+            normal_aguarda_medida: begin
                 conta_timeout_echo = 1'b1;
-
-            TransmiteCaractere:
+            end
+            normal_inicia_tx:
                 transmite_serial = 1'b1;
-
-            EsperaTemporizador:
+            normal_aguarda_2s:
                 ;
-
-            AvancaPosicao: begin
-                contar_endereco = !modo_atencao_efetivo;
-                pronto          = !modo_atencao_efetivo;
+            normal_avanca_posicao: begin
+                contar_endereco = 1'b1;
+                pronto          = 1'b1;
                 zera_contador   = 1'b1;
+            end
+
+            atencao_prepara: begin
+                medir              = 1'b1;
+                zera_contador      = 1'b1;
+                zera_transmissao   = 1'b1;
+                zera_timeout_echo  = 1'b1;
+                db_modo            = 1'b1;
+            end
+            atencao_aguarda_medida: begin
+                conta_timeout_echo = 1'b1;
+                db_modo            = 1'b1;
+            end
+            atencao_inicia_tx: begin
+                transmite_serial = 1'b1;
+                db_modo          = 1'b1;
+            end
+            atencao_espera_tx_baixo,
+            atencao_espera_tx_alto,
+            atencao_verifica_tx,
+            atencao_aguarda_2s,
+            atencao_decide_modo,
+            atencao_mantem_posicao: begin
+                db_modo = 1'b1;
             end
 
             default:
                 ;
         endcase
 
-        medir             = medir && mensurar;
-        contar_endereco   = contar_endereco && mensurar;
-        pronto            = pronto && mensurar;
-        transmite_serial  = transmite_serial && mensurar;
-        db_estado         = estado_atual;
+        case (estado_atual)
+            normal_espera_tx_baixo,
+            normal_espera_tx_alto,
+            normal_verifica_tx:
+                db_modo = 1'b0;
+            default:
+                ;
+        endcase
+
+        db_estado = estado_atual;
     end
 
 endmodule

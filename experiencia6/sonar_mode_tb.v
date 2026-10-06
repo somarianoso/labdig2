@@ -57,24 +57,24 @@ module sonar_mode_tb;
         reset = 1'b0;
         #(BIT_PERIOD);
 
-        if (db_modo !== 1'b0)
+        if (dut.fd_sonar.modo_solicitado !== 1'b0)
             $fatal(1, "mode must start in localization");
 
         send_ascii(7'h61, 1'b0);
-        if (db_modo !== 1'b1)
-            $fatal(1, "lowercase 'a' must select attention mode");
+        if (dut.fd_sonar.modo_solicitado !== 1'b1)
+            $fatal(1, "lowercase 'a' must request attention mode");
 
         send_ascii(7'h41, 1'b0);
-        if (db_modo !== 1'b1)
-            $fatal(1, "uppercase 'A' must not select attention mode");
+        if (dut.fd_sonar.modo_solicitado !== 1'b1)
+            $fatal(1, "uppercase 'A' must not change the requested mode");
 
         send_ascii(7'h76, 1'b1);
-        if (db_modo !== 1'b1)
+        if (dut.fd_sonar.modo_solicitado !== 1'b1)
             $fatal(1, "a command with invalid parity must be ignored");
 
         send_ascii(7'h76, 1'b0);
-        if (db_modo !== 1'b0)
-            $fatal(1, "lowercase 'v' must return to localization mode");
+        if (dut.fd_sonar.modo_solicitado !== 1'b0)
+            $fatal(1, "lowercase 'v' must request localization mode");
 
         $display("PASS: serial mode commands and ignored character");
         $finish;

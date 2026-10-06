@@ -25,8 +25,7 @@ module sonar_fd #(
     output wire       pwm,
     output wire       timeout_echo,
     output wire       fim_tx_8,
-    output wire [6:0] dados_ascii_rx,
-    output wire       pronto_rx
+    output wire       modo_solicitado
 );
 
     wire [11:0] w_medida; 
@@ -39,6 +38,8 @@ module sonar_fd #(
     wire [2:0]  w_sel_letra;
     wire        w_pronto_rx;
     wire        w_paridade_par;
+    wire [6:0]  w_dados_ascii_rx;
+    reg         r_modo_solicitado;
 
     assign bitsConversao = 3'b011;
     assign reset_operacao = reset | ~habilitado;
@@ -53,7 +54,7 @@ module sonar_fd #(
         .reset       (reset),
         .RX          (entrada_serial),
         .pronto      (w_pronto_rx),
-        .dados_ascii (dados_ascii_rx),
+        .dados_ascii (w_dados_ascii_rx),
         .paridade    (),
         .paridade_par(w_paridade_par),
         .db_clock    (),
@@ -61,7 +62,19 @@ module sonar_fd #(
         .db_estado   ()
     );
 
-    assign pronto_rx = w_pronto_rx & w_paridade_par;
+    always @(posedge clock or posedge reset) begin
+        if (reset) begin
+            r_modo_solicitado <= 1'b0;
+        end else if (w_pronto_rx && w_paridade_par) begin
+            case (w_dados_ascii_rx)
+                7'h61: r_modo_solicitado <= 1'b1; // 'a': atencao
+                7'h76: r_modo_solicitado <= 1'b0; // 'v': localizacao
+                default: r_modo_solicitado <= r_modo_solicitado;
+            endcase
+        end
+    end
+
+    assign modo_solicitado = r_modo_solicitado;
 
     // Conta oito caracteres; o terminal e atingido depois do oitavo byte.
     contador_m #(
