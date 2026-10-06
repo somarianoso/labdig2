@@ -26,6 +26,11 @@ module sonar_fd #(
     output wire       timeout_echo,
     output wire       fim_tx_8,
     output wire       modo_solicitado
+    output wire [3:0] db_estado_rx,
+    output wire [3:0] db_estado_tx,
+    output wire [3:0] db_estado_hcsr04,
+    output wire [2:0] posicao_servo,
+    output wire [6:0] dado_rx_recebido
 );
 
     wire [11:0] w_medida; 
@@ -43,6 +48,7 @@ module sonar_fd #(
 
     assign bitsConversao = 3'b011;
     assign reset_operacao = reset | ~habilitado;
+    assign dado_rx_recebido = w_dados_ascii_rx;
 
     // Fatiamento dos 12 bits para as saídas BCD de 4 bits
     assign medida0 = w_medida[3:0];   // Unidade
@@ -59,7 +65,7 @@ module sonar_fd #(
         .paridade_par(w_paridade_par),
         .db_clock    (),
         .db_tick     (),
-        .db_estado   ()
+        .db_estado   (db_estado_rx)
     );
 
     always @(posedge clock or posedge reset) begin
@@ -118,7 +124,7 @@ module sonar_fd #(
         .pronto   (pronto_medida),
         .db_reset (),
         .db_medir (),
-        .db_estado ()
+        .db_estado (db_estado_hcsr04)
     );
 
     // U2: Módulo de Transmissão Serial
@@ -131,7 +137,7 @@ module sonar_fd #(
         .pronto         (pronto_serial),
         .db_partida     (),
         .db_saida_serial(),
-        .db_estado      ()
+        .db_estado      (db_estado_tx)
     );
 
     // U4: Temporizador (Gera pulso a cada 2 segundos)
@@ -169,7 +175,7 @@ module sonar_fd #(
         .posicao     (w_endereco), // Recebe a posição (3 bits)
         .controle    (pwm),
         .db_reset    (),
-        .db_posicao  (),
+        .db_posicao  (posicao_servo),
         .db_controle ()
     );
 
