@@ -1,0 +1,623 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/18.1
+vcircuito_pwm
+Z0 !s110 1791308867
+!i10b 1
+!s100 9B@dV]hWeR0]M5_1ZYo7j0
+Ibzn8A`k5l08H`@cSf8e@z1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/Sophia/Documents/labdig2/experiencia6
+Z3 w1791244086
+8C:/Users/Sophia/Documents/labdig2/experiencia6/circuito_pwm.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/circuito_pwm.v
+L0 20
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1791308867.000000
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/circuito_pwm.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/circuito_pwm.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vcontador_bcd_3digitos
+R0
+!i10b 1
+!s100 G1VaQQ4g5Y]o1KCR?D:K@3
+I@F=G8GVUOaGZ1b`WUVQXO3
+R1
+R2
+w1791244157
+8C:/Users/Sophia/Documents/labdig2/experiencia6/contador_bcd_3digitos.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/contador_bcd_3digitos.v
+Z8 L0 14
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/contador_bcd_3digitos.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/contador_bcd_3digitos.v|
+!i113 1
+R6
+R7
+vcontador_cm
+R0
+!i10b 1
+!s100 <fzVE@D;c:Mf7R@LSXAb03
+IV?G3`SD1`k]=jad8?mZWF3
+R1
+R2
+R3
+8C:/Users/Sophia/Documents/labdig2/experiencia6/contador_cm.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/contador_cm.v
+Z9 L0 15
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/contador_cm.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/contador_cm.v|
+!i113 1
+R6
+R7
+vcontador_cm_fd
+R0
+!i10b 1
+!s100 P@WddOPh]?NAif:h<;j_Y0
+IDK^b>4ETfn7NU[93UB:k]3
+R1
+R2
+R3
+8C:/Users/Sophia/Documents/labdig2/experiencia6/contador_cm_fd.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/contador_cm_fd.v
+R9
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/contador_cm_fd.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/contador_cm_fd.v|
+!i113 1
+R6
+R7
+vcontador_cm_uc
+R0
+!i10b 1
+!s100 CEl@iEI21OGG@II=o=9n_1
+IWQo_]FEDRFYR;NRUfPQ@>0
+R1
+R2
+R3
+8C:/Users/Sophia/Documents/labdig2/experiencia6/contador_cm_uc.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/contador_cm_uc.v
+L0 16
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/contador_cm_uc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/contador_cm_uc.v|
+!i113 1
+R6
+R7
+vcontador_endereco
+R0
+!i10b 1
+!s100 RU5eh2_j_c_47:1J73mWV0
+I>IP<80K[;Q[GaAfN:3QX`1
+R1
+R2
+R3
+8C:/Users/Sophia/Documents/labdig2/experiencia6/contador_endereco.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/contador_endereco.v
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/contador_endereco.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/contador_endereco.v|
+!i113 1
+R6
+R7
+vcontador_m
+R0
+!i10b 1
+!s100 Kk05NW4i;1];mDQO24BHS0
+IAI=;1@ghVi4BDN]O6fK0n0
+R1
+R2
+Z10 w1791139918
+8C:/Users/Sophia/Documents/labdig2/experiencia6/contador_m.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/contador_m.v
+Z11 L0 17
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/contador_m.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/contador_m.v|
+!i113 1
+R6
+R7
+vcontrole_servo_8
+Z12 !s110 1791308868
+!i10b 1
+!s100 2YcQVdC?l9OaGdYkic]7=2
+IG]1mgMd83<[[JQh3hNS]o0
+R1
+R2
+R3
+8C:/Users/Sophia/Documents/labdig2/experiencia6/controle_servo_8.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/controle_servo_8.v
+L0 4
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/controle_servo_8.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/controle_servo_8.v|
+!i113 1
+R6
+R7
+vdeslocador_n
+R12
+!i10b 1
+!s100 PSkkfN2z:nM><DOG_8?3F1
+IZEYkf@4F05VE^7Ea`3:0U1
+R1
+R2
+R10
+8C:/Users/Sophia/Documents/labdig2/experiencia6/deslocador_n.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/deslocador_n.v
+R9
+R4
+r1
+!s85 0
+31
+Z13 !s108 1791308868.000000
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/deslocador_n.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/deslocador_n.v|
+!i113 1
+R6
+R7
+vgerador_pulso
+R12
+!i10b 1
+!s100 9mC0mHMOKY3;D7OGUSWcK1
+IedkNOddofl`]CjAcDbkmh2
+R1
+R2
+R3
+8C:/Users/Sophia/Documents/labdig2/experiencia6/gerador_pulso.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/gerador_pulso.v
+R8
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/gerador_pulso.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/gerador_pulso.v|
+!i113 1
+R6
+R7
+vhexa7seg
+R12
+!i10b 1
+!s100 X`<lfba[ET4D2MI2IU;EQ0
+IhB;F@3PndABARQ^5kbeL>0
+R1
+R2
+R10
+8C:/Users/Sophia/Documents/labdig2/experiencia6/hexa7seg.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/hexa7seg.v
+L0 22
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/hexa7seg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/hexa7seg.v|
+!i113 1
+R6
+R7
+vinterface_hcsr04
+R12
+!i10b 1
+!s100 J[Oz_lOaHX?_j3IMhP50C1
+IJh5Zjm;YUibz@HNWC6d4A2
+R1
+R2
+R3
+8C:/Users/Sophia/Documents/labdig2/experiencia6/interface_hcsr04.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/interface_hcsr04.v
+R11
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/interface_hcsr04.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/interface_hcsr04.v|
+!i113 1
+R6
+R7
+vinterface_hcsr04_fd
+R12
+!i10b 1
+!s100 EBCUk@51di3cT5V]<EIgf3
+I9@89K_SWdTom<^kVo3Bk72
+R1
+R2
+R3
+8C:/Users/Sophia/Documents/labdig2/experiencia6/interface_hcsr04_fd.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/interface_hcsr04_fd.v
+R9
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/interface_hcsr04_fd.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/interface_hcsr04_fd.v|
+!i113 1
+R6
+R7
+vinterface_hcsr04_uc
+R12
+!i10b 1
+!s100 hIaMCcRe2FMe]XYL<]?[`0
+IcEM@40k8i@nD]<9D4e_]11
+R1
+R2
+R3
+8C:/Users/Sophia/Documents/labdig2/experiencia6/interface_hcsr04_uc.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/interface_hcsr04_uc.v
+R8
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/interface_hcsr04_uc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/interface_hcsr04_uc.v|
+!i113 1
+R6
+R7
+vregistrador_n
+R12
+!i10b 1
+!s100 YY`SjIEH@^VQhO>f98NFS0
+IA1V5VI<Ko7[A[hSnkMalI1
+R1
+R2
+R10
+8C:/Users/Sophia/Documents/labdig2/experiencia6/registrador_n.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/registrador_n.v
+R11
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/registrador_n.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/registrador_n.v|
+!i113 1
+R6
+R7
+vrom_angulos_8x24
+R12
+!i10b 1
+!s100 XDROIbNDP0Oz:imkA<Eoz0
+ImQb<RhniOUOZnnJ0cAaAS2
+R1
+R2
+R3
+8C:/Users/Sophia/Documents/labdig2/experiencia6/rom_angulos_8x24.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/rom_angulos_8x24.v
+L0 5
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/rom_angulos_8x24.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/rom_angulos_8x24.v|
+!i113 1
+R6
+R7
+vrx_serial_7E1
+R12
+!i10b 1
+!s100 B6TH5OBBA1PiAVL=Ncl840
+IDoAiPBO?mneKoJW=7Tg1L3
+R1
+R2
+R10
+8C:/Users/Sophia/Documents/labdig2/experiencia6/rx_serial_7E1.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/rx_serial_7E1.v
+Z14 L0 19
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/rx_serial_7E1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/rx_serial_7E1.v|
+!i113 1
+R6
+R7
+nrx_serial_7@e1
+vrx_serial_7E1_fd
+R12
+!i10b 1
+!s100 _Kck<SeGZmNodVNF4nGJ<1
+Ig6GZ3;^>LZeV4n^:RSOB70
+R1
+R2
+R10
+8C:/Users/Sophia/Documents/labdig2/experiencia6/rx_serial_7E1_fd.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/rx_serial_7E1_fd.v
+R11
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/rx_serial_7E1_fd.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/rx_serial_7E1_fd.v|
+!i113 1
+R6
+R7
+nrx_serial_7@e1_fd
+vrx_serial_tb
+R12
+!i10b 1
+!s100 _nUcB_hfboe?3>YM1V[8M2
+I5ce1_J1P=>Q>jVI?4:`El1
+R1
+R2
+w1791308730
+8C:/Users/Sophia/Documents/labdig2/experiencia6/rx_serial_tb.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/rx_serial_tb.v
+R14
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/rx_serial_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/rx_serial_tb.v|
+!i113 1
+R6
+R7
+vrx_serial_uc
+R12
+!i10b 1
+!s100 QGDjFU87XEXTVTfoA4KE?2
+I?Xh<Ye6Bnl4hzbK5RSfKd1
+R1
+R2
+R10
+8C:/Users/Sophia/Documents/labdig2/experiencia6/rx_serial_uc.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/rx_serial_uc.v
+R9
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/rx_serial_uc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/rx_serial_uc.v|
+!i113 1
+R6
+R7
+vsonar
+Z15 !s110 1791308869
+!i10b 1
+!s100 BMPFHmR9k3ZmdEHEAV[lN1
+IoeU^GYj2QS`K9h15hIFmi0
+R1
+R2
+w1791308490
+8C:/Users/Sophia/Documents/labdig2/experiencia6/sonar.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/sonar.v
+L0 1
+R4
+r1
+!s85 0
+31
+Z16 !s108 1791308869.000000
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/sonar.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/sonar.v|
+!i113 1
+R6
+R7
+vsonar_fd
+R15
+!i10b 1
+!s100 <ZI5P_<ne_fF8eK68VD:[0
+Im>CXhQ3]kG7a82]GgR[jM1
+R1
+R2
+w1791308474
+8C:/Users/Sophia/Documents/labdig2/experiencia6/sonar_fd.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/sonar_fd.v
+L0 1
+R4
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/sonar_fd.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/sonar_fd.v|
+!i113 1
+R6
+R7
+vsonar_mode_tb
+R15
+!i10b 1
+!s100 O^4;9n;Ko1Vz@>^A1SR`>1
+IllKh3SDbQRP1NFBRQQjzG0
+R1
+R2
+w1791245754
+8C:/Users/Sophia/Documents/labdig2/experiencia6/sonar_mode_tb.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/sonar_mode_tb.v
+L0 3
+R4
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/sonar_mode_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/sonar_mode_tb.v|
+!i113 1
+R6
+R7
+vsonar_tb
+R15
+!i10b 1
+!s100 TLDIz23RTC6:DNHYbZ6590
+I>CK9mImz]m<4Oi_0zMT4g3
+R1
+R2
+w1791246547
+8C:/Users/Sophia/Documents/labdig2/experiencia6/sonar_tb.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/sonar_tb.v
+L0 3
+R4
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/sonar_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/sonar_tb.v|
+!i113 1
+R6
+R7
+vsonar_uc
+R15
+!i10b 1
+!s100 >:WVzILG[fH[QzJzUGDn22
+I`59eXI5`c5@f^Hz191MzR2
+R1
+R2
+w1791246021
+8C:/Users/Sophia/Documents/labdig2/experiencia6/sonar_uc.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/sonar_uc.v
+L0 1
+R4
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/sonar_uc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/sonar_uc.v|
+!i113 1
+R6
+R7
+vsonar_uc_moore_tb
+R15
+!i10b 1
+!s100 ILT>1b8>0TLkl0kc0ZCSH0
+IH7N1n=A32J<QlZS;T8OYO2
+R1
+R2
+w1791308729
+8C:/Users/Sophia/Documents/labdig2/experiencia6/sonar_uc_moore_tb.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/sonar_uc_moore_tb.v
+L0 3
+R4
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/sonar_uc_moore_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/sonar_uc_moore_tb.v|
+!i113 1
+R6
+R7
+vtx_serial_7E1
+R15
+!i10b 1
+!s100 n:YYBJ_]L[[ofKAMzgQO^0
+Ik5@1WNb>7PUW>`MgT1`8I3
+R1
+R2
+R3
+8C:/Users/Sophia/Documents/labdig2/experiencia6/tx_serial_7E1.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/tx_serial_7E1.v
+L0 1
+R4
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/tx_serial_7E1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/tx_serial_7E1.v|
+!i113 1
+R6
+R7
+ntx_serial_7@e1
+vtx_serial_7E1_fd
+R15
+!i10b 1
+!s100 AOYDIFGl^a4R_[FnQXWik2
+IJI3_9Pk]W<h0L=;JRdjUm2
+R1
+R2
+R3
+8C:/Users/Sophia/Documents/labdig2/experiencia6/tx_serial_7E1_fd.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/tx_serial_7E1_fd.v
+R11
+R4
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/tx_serial_7E1_fd.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/tx_serial_7E1_fd.v|
+!i113 1
+R6
+R7
+ntx_serial_7@e1_fd
+vtx_serial_uc
+R0
+!i10b 1
+!s100 82L>5WV=BRd>Vc8O6dCUb0
+I_U@<a`nfDmbQEWEn_eITL2
+R1
+R2
+R3
+8C:/Users/Sophia/Documents/labdig2/experiencia6/tx_serial_uc.v
+FC:/Users/Sophia/Documents/labdig2/experiencia6/tx_serial_uc.v
+R11
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Sophia/Documents/labdig2/experiencia6/tx_serial_uc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Sophia/Documents/labdig2/experiencia6/tx_serial_uc.v|
+!i113 1
+R6
+R7
