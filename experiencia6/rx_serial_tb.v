@@ -1,16 +1,15 @@
 /* ---------------------------------------------------------------------------
  *  Arquivo   : rx_serial_tb.v
  * ---------------------------------------------------------------------------
- *  Descricao : testbench basico para o circuito de recepcao serial assincrona
- *              usa task UART_WRITE_BYTE para envio de bits seriais
- *              pode ser usado para verificar diversas configuracoes seriais
+ *  Descricao : testbench autochecking para o receptor serial assincrono 7E1
+ *              verifica dados, paridade par e pulso pronto
  *
- *  modulo rx_serial_8N1 de autoria de Augusto Vaccarelli
+ *  modulo rx_serial_7E1
  * ---------------------------------------------------------------------------
  *  Revisoes  :
  *      Data        Versao  Autor             Descricao
  *      28/10/2024  4.0     Edson Midorikawa  versao em Verilog
- *      27/09/2026  1.0     Edson Midorikawa  revisao para 7E1
+ *      07/10/2026  1.1     Testbench autochecking para 7E1
  * ---------------------------------------------------------------------------
  */
 
@@ -18,99 +17,100 @@
 
 module rx_serial_tb;
 
-    reg        clock_in         = 1'b0;
-    reg        reset_in         = 1'b0;
-    wire       pronto_out;
-    wire [6:0] dados_ascii_out;
-    wire       paridade_out;
-    wire       paridade_par_out;
+    localparam CLOCK_PERIOD = 20;
+    localparam BIT_PERIOD = 434 * CLOCK_PERIOD;
 
-    reg        Sinal_Serial;
-    reg [7:0]  serialData;
-    reg [7:0]  casos_teste_dado [0:7];
-    reg [7:0]  casos_teste_id   [0:7];
+    reg clock = 1'b0;
+    reg reset = 1'b1;
+    reg rx = 1'b1;
+    wire pronto;
+    wire [6:0] dados_ascii;
+    wire paridade;
+    wire paridade_par;
+    integer quantidade_pronto = 0;
 
-    localparam clockPeriod = 20;
-    localparam bitPeriod   = 434 * clockPeriod;
+    always #(CLOCK_PERIOD / 2) clock = ~clock;
 
-    always #(clockPeriod/2) clock_in = ~clock_in;
-
-    task UART_WRITE_BYTE;
-        input [7:0] Data_In;
-        integer ii;
-        begin
-            Sinal_Serial = 1'b0;
-            #bitPeriod;
-
-            for (ii = 0; ii < 8; ii = ii + 1) begin
-                Sinal_Serial = Data_In[ii];
-                #bitPeriod;
-            end
-
-            Sinal_Serial = 1'b1;
-            #(2 * bitPeriod);
-        end
-    endtask
-
-    integer caso;
-    integer ii;
-
-    rx_serial_7E1 DUT (
-        .clock        (clock_in),
-        .reset        (reset_in),
-        .RX           (Sinal_Serial),
-        .pronto       (pronto_out),
-        .dados_ascii  (dados_ascii_out),
-        .paridade     (paridade_out),
-        .paridade_par (paridade_par_out),
+    rx_serial_7E1 dut (
+        .clock        (clock),
+        .reset        (reset),
+        .RX           (rx),
+        .pronto       (pronto),
+        .dados_ascii  (dados_ascii),
+        .paridade     (paridade),
+        .paridade_par (paridade_par),
         .db_clock     (),
         .db_tick      (),
         .db_estado    ()
     );
 
-    initial begin
-        casos_teste_id[0] = 8'd1;
-        casos_teste_dado[0] = 8'b00110101;
-        casos_teste_id[1] = 8'd2;
-        casos_teste_dado[1] = 8'b11010101;
-        casos_teste_id[2] = 8'd3;
-        casos_teste_dado[2] = 8'b11111101;
-        casos_teste_id[3] = 8'd4;
-        casos_teste_dado[3] = 8'b10110101;
-        casos_teste_id[4] = 8'd5;
-        casos_teste_dado[4] = 8'b01000001;
-        casos_teste_id[5] = 8'd6;
-        casos_teste_dado[5] = 8'b11000001;
-        casos_teste_id[6] = 8'd7;
-        casos_teste_dado[6] = 8'b00000000;
-        casos_teste_id[7] = 8'd8;
-        casos_teste_dado[7] = 8'b10000000;
+    always @(posedge pronto)
+        quantidade_pronto = quantidade_pronto + 1;
 
-        $display("Inicio da simulacao");
-        Sinal_Serial = 1'b1;
-
-        reset_in = 1'b1;
-        #(5 * clockPeriod);
-        reset_in = 1'b0;
-        #bitPeriod;
-
-        for (ii = 0; ii < 8; ii = ii + 1) begin
-            caso = casos_teste_id[ii];
-            $display("Caso de teste %0d", casos_teste_id[ii]);
-            serialData = casos_teste_dado[ii];
-            #(2 * bitPeriod);
-            UART_WRITE_BYTE(serialData);
-            #bitPeriod;
-            #(2 * bitPeriod);
+    task envia_quadro(input [6:0] valor, input erro_paridade);
+        integer bit_indice;
+        reg bit_paridade;
+        begin
+            bit_paridade = (^valor) ^ erro_paridade;
+            rx = 1'b0;
+            #(BIT_PERIOD);
+            for (bit_indice = 0; bit_indice < 7; bit_indice = bit_indice + 1) begin
+                rx = valor[bit_indice];
+                #(BIT_PERIOD);
+            end
+            rx = bit_paridade;
+            #(BIT_PERIOD);
+            rx = 1'b1;
+            #(2 * BIT_PERIOD);
         end
+    endtask
 
-        caso = 99;
-        reset_in = 1'b0;
-        reset_in = #(5 * clockPeriod) 1'b1;
-        #bitPeriod;
+    task verifica_quadro(input integer numero, input [6:0] esperado, input erro_paridade);
+        integer contagem_anterior;
+        reg paridade_esperada;
+        begin
+            contagem_anterior = quantidade_pronto;
+            envia_quadro(esperado, erro_paridade);
+            wait (quantidade_pronto == contagem_anterior + 1);
+            #1;
 
-        $display("Fim da simulacao");
-        $stop;
+            paridade_esperada = (^esperado) ^ erro_paridade;
+            if (dados_ascii !== esperado)
+                $fatal(1, "quadro %0d: dados recebidos %h, esperado %h",
+                       numero, dados_ascii, esperado);
+            if (paridade !== paridade_esperada)
+                $fatal(1, "quadro %0d: bit de paridade recebido incorreto", numero);
+            if (paridade_par !== !erro_paridade)
+                $fatal(1, "quadro %0d: indicador de paridade par incorreto", numero);
+
+            @(posedge clock);
+            #1;
+            if (pronto !== 1'b0)
+                $fatal(1, "quadro %0d: pronto deveria ser um pulso de um ciclo", numero);
+        end
+    endtask
+
+    initial begin
+        repeat (5) @(posedge clock);
+        reset = 1'b0;
+        #(2 * BIT_PERIOD);
+
+        verifica_quadro(1, 7'h35, 1'b0);
+        verifica_quadro(2, 7'h61, 1'b0);
+        verifica_quadro(3, 7'h00, 1'b0);
+        verifica_quadro(4, 7'h7F, 1'b0);
+        verifica_quadro(5, 7'h76, 1'b1);
+
+        if (quantidade_pronto != 5)
+            $fatal(1, "foram recebidos %0d quadros; esperado 5", quantidade_pronto);
+
+        $display("PASS: RX 7E1 data, parity, ready pulse, and invalid parity reporting");
+        $finish;
+    end
+
+    initial begin
+        #2_000_000;
+        $fatal(1, "teste do receptor serial excedeu o tempo limite");
     end
 
 endmodule

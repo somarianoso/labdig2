@@ -10,11 +10,19 @@ module sonar_mode_tb;
     reg ligar = 1'b0;
     reg entrada_serial = 1'b1;
     reg echo = 1'b0;
+    reg [1:0] sel_mux = 2'b00;
     wire trigger;
     wire pwm;
     wire saida_serial;
     wire fim_posicao;
     wire db_modo;
+    wire [6:0] hex0;
+    wire [6:0] hex1;
+    wire [6:0] hex2;
+    wire [6:0] hex3;
+    wire [6:0] hex4;
+    wire [6:0] hex5;
+    wire [9:0] ledr;
 
     sonar #(
         .CONTAGEM_2SEG(100)
@@ -24,11 +32,19 @@ module sonar_mode_tb;
         .ligar         (ligar),
         .entrada_serial(entrada_serial),
         .echo          (echo),
+        .sel_mux       (sel_mux),
         .trigger       (trigger),
         .pwm           (pwm),
         .saida_serial  (saida_serial),
         .fim_posicao   (fim_posicao),
-        .db_modo       (db_modo)
+        .db_modo       (db_modo),
+        .hex0          (hex0),
+        .hex1          (hex1),
+        .hex2          (hex2),
+        .hex3          (hex3),
+        .hex4          (hex4),
+        .hex5          (hex5),
+        .LEDR          (ledr)
     );
 
     always #(CLOCK_PERIOD / 2) clock = ~clock;
