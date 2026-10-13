@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE 5CEBA4F23C7
 set_global_assignment -name TOP_LEVEL_ENTITY sonar
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:14:00  OCTOBER 06, 2026"
-set_global_assignment -name LAST_QUARTUS_VERSION "25.1std.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name VERILOG_FILE ../tx_serial_uc.v
 set_global_assignment -name VERILOG_FILE ../tx_serial_7E1_fd.v
 set_global_assignment -name VERILOG_FILE ../tx_serial_7E1.v

@@ -1,0 +1,107 @@
+Restore Archived Project report for exp6
+Tue Oct 13 12:57:56 2026
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Tue Oct 13 12:57:56 2026 ;
+; Revision Name                   ; exp6                                  ;
+; Top-level Entity Name           ; sonar                                 ;
+; Family                          ; Cyclone V                             ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'C:/Projetos/T6BA6_3Q2026/labdig2/treino-P1-gabriel/exp6_p1.qar' into the 'C:/Projetos/T6BA6_3Q2026/labdig2/treino-P1-gabriel/exp6_p1_restored/' directory
+Info: Generated report 'exp6.restore.rpt'
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/20.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4818 megabytes
+    Info: Processing ended: Tue Oct 13 12:57:56 2026
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++--------------------------------------+
+; Files Restored                       ;
++--------------------------------------+
+; File Name                            ;
++--------------------------------------+
+; qar_info.json                        ;
+; circuito_pwm.v                       ;
+; contador_bcd_3digitos.v              ;
+; contador_cm.v                        ;
+; contador_cm_fd.v                     ;
+; contador_cm_uc.v                     ;
+; contador_endereco.v                  ;
+; contador_m.v                         ;
+; controle_servo_8.v                   ;
+; deslocador_n.v                       ;
+; gerador_pulso.v                      ;
+; hexa7seg.v                           ;
+; interface_hcsr04.v                   ;
+; interface_hcsr04_fd.v                ;
+; interface_hcsr04_uc.v                ;
+; quartus/exp6.qpf                     ;
+; quartus/exp6.qsf                     ;
+; quartus/exp6_assignment_defaults.qdf ;
+; registrador_n.v                      ;
+; rom_angulos_8x24.v                   ;
+; rx_serial_7E1.v                      ;
+; rx_serial_7E1_fd.v                   ;
+; rx_serial_tb.v                       ;
+; rx_serial_uc.v                       ;
+; sonar.v                              ;
+; sonar_fd.v                           ;
+; sonar_mode_tb.v                      ;
+; sonar_tb.v                           ;
+; sonar_uc.v                           ;
+; sonar_uc_moore_tb.v                  ;
+; tx_serial_7E1.v                      ;
+; tx_serial_7E1_fd.v                   ;
+; tx_serial_uc.v                       ;
++--------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+

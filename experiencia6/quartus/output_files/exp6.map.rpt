@@ -1,6 +1,6 @@
 Analysis & Synthesis report for exp6
-Tue Oct  6 16:51:48 2026
-Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+Wed Oct 07 08:58:07 2026
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -72,44 +72,44 @@ Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2025  Altera Corporation. All rights reserved.
-Your use of Altera Corporation's design tools, logic functions 
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, the Altera Quartus Prime License Agreement,
-the Altera IP License Agreement, or other applicable license
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
 agreement, including, without limitation, that your use is for
 the sole purpose of programming logic devices manufactured by
-Altera and sold by Altera or its authorized distributors.  Please
-refer to the Altera Software License Subscription Agreements 
-on the Quartus Prime software download page.
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                      ;
-+---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct  6 16:51:48 2026           ;
-; Quartus Prime Version           ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
-; Revision Name                   ; exp6                                            ;
-; Top-level Entity Name           ; sonar                                           ;
-; Family                          ; Cyclone V                                       ;
-; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 274                                             ;
-; Total pins                      ; 64                                              ;
-; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 0                                               ;
-; Total DSP Blocks                ; 0                                               ;
-; Total HSSI RX PCSs              ; 0                                               ;
-; Total HSSI PMA RX Deserializers ; 0                                               ;
-; Total HSSI TX PCSs              ; 0                                               ;
-; Total HSSI PMA TX Serializers   ; 0                                               ;
-; Total PLLs                      ; 0                                               ;
-; Total DLLs                      ; 0                                               ;
-+---------------------------------+-------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Oct 07 08:58:07 2026       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; exp6                                        ;
+; Top-level Entity Name           ; sonar                                       ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 274                                         ;
+; Total pins                      ; 64                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -204,49 +204,49 @@ on the Quartus Prime software download page.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 2           ;
-; Maximum allowed            ; 2           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                  ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                    ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------+---------+
-; ../tx_serial_uc.v                ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/tx_serial_uc.v          ;         ;
-; ../tx_serial_7E1_fd.v            ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/tx_serial_7E1_fd.v      ;         ;
-; ../tx_serial_7E1.v               ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/tx_serial_7E1.v         ;         ;
-; ../sonar_uc.v                    ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/sonar_uc.v              ;         ;
-; ../sonar_fd.v                    ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/sonar_fd.v              ;         ;
-; ../sonar.v                       ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/sonar.v                 ;         ;
-; ../rx_serial_uc.v                ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/rx_serial_uc.v          ;         ;
-; ../rx_serial_7E1_fd.v            ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/rx_serial_7E1_fd.v      ;         ;
-; ../rx_serial_7E1.v               ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/rx_serial_7E1.v         ;         ;
-; ../rom_angulos_8x24.v            ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/rom_angulos_8x24.v      ;         ;
-; ../registrador_n.v               ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/registrador_n.v         ;         ;
-; ../interface_hcsr04_uc.v         ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/interface_hcsr04_uc.v   ;         ;
-; ../interface_hcsr04_fd.v         ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/interface_hcsr04_fd.v   ;         ;
-; ../interface_hcsr04.v            ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/interface_hcsr04.v      ;         ;
-; ../hexa7seg.v                    ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/hexa7seg.v              ;         ;
-; ../gerador_pulso.v               ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/gerador_pulso.v         ;         ;
-; ../deslocador_n.v                ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/deslocador_n.v          ;         ;
-; ../controle_servo_8.v            ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/controle_servo_8.v      ;         ;
-; ../contador_m.v                  ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/contador_m.v            ;         ;
-; ../contador_endereco.v           ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/contador_endereco.v     ;         ;
-; ../contador_cm_uc.v              ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/contador_cm_uc.v        ;         ;
-; ../contador_cm_fd.v              ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/contador_cm_fd.v        ;         ;
-; ../contador_cm.v                 ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/contador_cm.v           ;         ;
-; ../contador_bcd_3digitos.v       ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/contador_bcd_3digitos.v ;         ;
-; ../circuito_pwm.v                ; yes             ; User Verilog HDL File  ; C:/labdig2/experiencia6/circuito_pwm.v          ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                          ; Library ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
+; ../tx_serial_uc.v                ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/tx_serial_uc.v          ;         ;
+; ../tx_serial_7E1_fd.v            ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/tx_serial_7E1_fd.v      ;         ;
+; ../tx_serial_7E1.v               ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/tx_serial_7E1.v         ;         ;
+; ../sonar_uc.v                    ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar_uc.v              ;         ;
+; ../sonar_fd.v                    ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar_fd.v              ;         ;
+; ../sonar.v                       ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar.v                 ;         ;
+; ../rx_serial_uc.v                ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/rx_serial_uc.v          ;         ;
+; ../rx_serial_7E1_fd.v            ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/rx_serial_7E1_fd.v      ;         ;
+; ../rx_serial_7E1.v               ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/rx_serial_7E1.v         ;         ;
+; ../rom_angulos_8x24.v            ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/rom_angulos_8x24.v      ;         ;
+; ../registrador_n.v               ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/registrador_n.v         ;         ;
+; ../interface_hcsr04_uc.v         ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/interface_hcsr04_uc.v   ;         ;
+; ../interface_hcsr04_fd.v         ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/interface_hcsr04_fd.v   ;         ;
+; ../interface_hcsr04.v            ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/interface_hcsr04.v      ;         ;
+; ../hexa7seg.v                    ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/hexa7seg.v              ;         ;
+; ../gerador_pulso.v               ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/gerador_pulso.v         ;         ;
+; ../deslocador_n.v                ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/deslocador_n.v          ;         ;
+; ../controle_servo_8.v            ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/controle_servo_8.v      ;         ;
+; ../contador_m.v                  ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/contador_m.v            ;         ;
+; ../contador_endereco.v           ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/contador_endereco.v     ;         ;
+; ../contador_cm_uc.v              ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/contador_cm_uc.v        ;         ;
+; ../contador_cm_fd.v              ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/contador_cm_fd.v        ;         ;
+; ../contador_cm.v                 ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/contador_cm.v           ;         ;
+; ../contador_bcd_3digitos.v       ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/contador_bcd_3digitos.v ;         ;
+; ../circuito_pwm.v                ; yes             ; User Verilog HDL File  ; C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/circuito_pwm.v          ;         ;
++----------------------------------+-----------------+------------------------+-----------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -1008,7 +1008,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -1017,117 +1017,117 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Tue Oct  6 16:51:20 2026
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Wed Oct 07 08:57:53 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off exp6 -c exp6
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/tx_serial_uc.v
-    Info (12023): Found entity 1: tx_serial_uc File: C:/labdig2/experiencia6/tx_serial_uc.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/tx_serial_7e1_fd.v
-    Info (12023): Found entity 1: tx_serial_7E1_fd File: C:/labdig2/experiencia6/tx_serial_7E1_fd.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/tx_serial_7e1.v
-    Info (12023): Found entity 1: tx_serial_7E1 File: C:/labdig2/experiencia6/tx_serial_7E1.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/sonar_uc_moore_tb.v
-    Info (12023): Found entity 1: sonar_uc_moore_tb File: C:/labdig2/experiencia6/sonar_uc_moore_tb.v Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/sonar_uc.v
-    Info (12023): Found entity 1: sonar_uc File: C:/labdig2/experiencia6/sonar_uc.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/sonar_tb.v
-    Info (12023): Found entity 1: sonar_tb File: C:/labdig2/experiencia6/sonar_tb.v Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/sonar_mode_tb.v
-    Info (12023): Found entity 1: sonar_mode_tb File: C:/labdig2/experiencia6/sonar_mode_tb.v Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/sonar_fd.v
-    Info (12023): Found entity 1: sonar_fd File: C:/labdig2/experiencia6/sonar_fd.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/sonar.v
-    Info (12023): Found entity 1: sonar File: C:/labdig2/experiencia6/sonar.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/rx_serial_uc.v
-    Info (12023): Found entity 1: rx_serial_uc File: C:/labdig2/experiencia6/rx_serial_uc.v Line: 15
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/rx_serial_tb.v
-    Info (12023): Found entity 1: rx_serial_tb File: C:/labdig2/experiencia6/rx_serial_tb.v Line: 19
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/rx_serial_7e1_fd.v
-    Info (12023): Found entity 1: rx_serial_7E1_fd File: C:/labdig2/experiencia6/rx_serial_7E1_fd.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/rx_serial_7e1.v
-    Info (12023): Found entity 1: rx_serial_7E1 File: C:/labdig2/experiencia6/rx_serial_7E1.v Line: 19
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/rom_angulos_8x24.v
-    Info (12023): Found entity 1: rom_angulos_8x24 File: C:/labdig2/experiencia6/rom_angulos_8x24.v Line: 5
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/registrador_n.v
-    Info (12023): Found entity 1: registrador_n File: C:/labdig2/experiencia6/registrador_n.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/interface_hcsr04_uc.v
-    Info (12023): Found entity 1: interface_hcsr04_uc File: C:/labdig2/experiencia6/interface_hcsr04_uc.v Line: 14
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/interface_hcsr04_fd.v
-    Info (12023): Found entity 1: interface_hcsr04_fd File: C:/labdig2/experiencia6/interface_hcsr04_fd.v Line: 15
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/interface_hcsr04.v
-    Info (12023): Found entity 1: interface_hcsr04 File: C:/labdig2/experiencia6/interface_hcsr04.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/hexa7seg.v
-    Info (12023): Found entity 1: hexa7seg File: C:/labdig2/experiencia6/hexa7seg.v Line: 22
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/gerador_pulso.v
-    Info (12023): Found entity 1: gerador_pulso File: C:/labdig2/experiencia6/gerador_pulso.v Line: 14
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/deslocador_n.v
-    Info (12023): Found entity 1: deslocador_n File: C:/labdig2/experiencia6/deslocador_n.v Line: 15
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/controle_servo_8.v
-    Info (12023): Found entity 1: controle_servo_8 File: C:/labdig2/experiencia6/controle_servo_8.v Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/contador_m.v
-    Info (12023): Found entity 1: contador_m File: C:/labdig2/experiencia6/contador_m.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/contador_endereco.v
-    Info (12023): Found entity 1: contador_endereco File: C:/labdig2/experiencia6/contador_endereco.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/contador_cm_uc.v
-    Info (12023): Found entity 1: contador_cm_uc File: C:/labdig2/experiencia6/contador_cm_uc.v Line: 16
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/contador_cm_fd.v
-    Info (12023): Found entity 1: contador_cm_fd File: C:/labdig2/experiencia6/contador_cm_fd.v Line: 15
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/contador_cm.v
-    Info (12023): Found entity 1: contador_cm File: C:/labdig2/experiencia6/contador_cm.v Line: 15
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/contador_bcd_3digitos.v
-    Info (12023): Found entity 1: contador_bcd_3digitos File: C:/labdig2/experiencia6/contador_bcd_3digitos.v Line: 14
-Info (12021): Found 1 design units, including 1 entities, in source file /labdig2/experiencia6/circuito_pwm.v
-    Info (12023): Found entity 1: circuito_pwm File: C:/labdig2/experiencia6/circuito_pwm.v Line: 20
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/tx_serial_uc.v
+    Info (12023): Found entity 1: tx_serial_uc File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/tx_serial_uc.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/tx_serial_7e1_fd.v
+    Info (12023): Found entity 1: tx_serial_7E1_fd File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/tx_serial_7E1_fd.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/tx_serial_7e1.v
+    Info (12023): Found entity 1: tx_serial_7E1 File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/tx_serial_7E1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/sonar_uc_moore_tb.v
+    Info (12023): Found entity 1: sonar_uc_moore_tb File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar_uc_moore_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/sonar_uc.v
+    Info (12023): Found entity 1: sonar_uc File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar_uc.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/sonar_tb.v
+    Info (12023): Found entity 1: sonar_tb File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/sonar_mode_tb.v
+    Info (12023): Found entity 1: sonar_mode_tb File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar_mode_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/sonar_fd.v
+    Info (12023): Found entity 1: sonar_fd File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar_fd.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/sonar.v
+    Info (12023): Found entity 1: sonar File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/rx_serial_uc.v
+    Info (12023): Found entity 1: rx_serial_uc File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/rx_serial_uc.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/rx_serial_tb.v
+    Info (12023): Found entity 1: rx_serial_tb File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/rx_serial_tb.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/rx_serial_7e1_fd.v
+    Info (12023): Found entity 1: rx_serial_7E1_fd File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/rx_serial_7E1_fd.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/rx_serial_7e1.v
+    Info (12023): Found entity 1: rx_serial_7E1 File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/rx_serial_7E1.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/rom_angulos_8x24.v
+    Info (12023): Found entity 1: rom_angulos_8x24 File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/rom_angulos_8x24.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/registrador_n.v
+    Info (12023): Found entity 1: registrador_n File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/registrador_n.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/interface_hcsr04_uc.v
+    Info (12023): Found entity 1: interface_hcsr04_uc File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/interface_hcsr04_uc.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/interface_hcsr04_fd.v
+    Info (12023): Found entity 1: interface_hcsr04_fd File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/interface_hcsr04_fd.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/interface_hcsr04.v
+    Info (12023): Found entity 1: interface_hcsr04 File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/interface_hcsr04.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/hexa7seg.v
+    Info (12023): Found entity 1: hexa7seg File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/hexa7seg.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/gerador_pulso.v
+    Info (12023): Found entity 1: gerador_pulso File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/gerador_pulso.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/deslocador_n.v
+    Info (12023): Found entity 1: deslocador_n File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/deslocador_n.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/controle_servo_8.v
+    Info (12023): Found entity 1: controle_servo_8 File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/controle_servo_8.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/contador_m.v
+    Info (12023): Found entity 1: contador_m File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/contador_m.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/contador_endereco.v
+    Info (12023): Found entity 1: contador_endereco File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/contador_endereco.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/contador_cm_uc.v
+    Info (12023): Found entity 1: contador_cm_uc File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/contador_cm_uc.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/contador_cm_fd.v
+    Info (12023): Found entity 1: contador_cm_fd File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/contador_cm_fd.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/contador_cm.v
+    Info (12023): Found entity 1: contador_cm File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/contador_cm.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/contador_bcd_3digitos.v
+    Info (12023): Found entity 1: contador_bcd_3digitos File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/contador_bcd_3digitos.v Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file /projetos/t6ba6_3q2026/labdig2/experiencia6/circuito_pwm.v
+    Info (12023): Found entity 1: circuito_pwm File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/circuito_pwm.v Line: 20
 Info (12127): Elaborating entity "sonar" for the top level hierarchy
-Info (12128): Elaborating entity "sonar_uc" for hierarchy "sonar_uc:uc_sonar" File: C:/labdig2/experiencia6/sonar.v Line: 78
-Info (10264): Verilog HDL Case Statement information at sonar_uc.v(132): all case item expressions in this case statement are onehot File: C:/labdig2/experiencia6/sonar_uc.v Line: 132
-Info (10264): Verilog HDL Case Statement information at sonar_uc.v(187): all case item expressions in this case statement are onehot File: C:/labdig2/experiencia6/sonar_uc.v Line: 187
-Info (12128): Elaborating entity "sonar_fd" for hierarchy "sonar_fd:fd_sonar" File: C:/labdig2/experiencia6/sonar.v Line: 122
-Info (12128): Elaborating entity "rx_serial_7E1" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx" File: C:/labdig2/experiencia6/sonar_fd.v Line: 91
-Info (12128): Elaborating entity "rx_serial_7E1_fd" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD" File: C:/labdig2/experiencia6/rx_serial_7E1.v Line: 60
-Info (12128): Elaborating entity "deslocador_n" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL" File: C:/labdig2/experiencia6/rx_serial_7E1_fd.v Line: 46
-Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|contador_m:CONT" File: C:/labdig2/experiencia6/rx_serial_7E1_fd.v Line: 60
-Info (12128): Elaborating entity "registrador_n" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|registrador_n:REG" File: C:/labdig2/experiencia6/rx_serial_7E1_fd.v Line: 70
-Info (12128): Elaborating entity "rx_serial_uc" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_uc:U2_UC" File: C:/labdig2/experiencia6/rx_serial_7E1.v Line: 78
-Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|contador_m:U3_TICK" File: C:/labdig2/experiencia6/rx_serial_7E1.v Line: 96
-Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|contador_m:U3_tx" File: C:/labdig2/experiencia6/sonar_fd.v Line: 119
-Info (12128): Elaborating entity "interface_hcsr04" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1" File: C:/labdig2/experiencia6/sonar_fd.v Line: 150
-Info (12128): Elaborating entity "interface_hcsr04_uc" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1" File: C:/labdig2/experiencia6/interface_hcsr04.v Line: 53
-Info (12128): Elaborating entity "interface_hcsr04_fd" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2" File: C:/labdig2/experiencia6/interface_hcsr04.v Line: 66
-Info (12128): Elaborating entity "gerador_pulso" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1" File: C:/labdig2/experiencia6/interface_hcsr04_fd.v Line: 42
-Info (12128): Elaborating entity "contador_cm" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2" File: C:/labdig2/experiencia6/interface_hcsr04_fd.v Line: 57
-Info (12128): Elaborating entity "contador_cm_fd" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD" File: C:/labdig2/experiencia6/contador_cm.v Line: 52
-Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1" File: C:/labdig2/experiencia6/contador_cm_fd.v Line: 44
-Info (12128): Elaborating entity "contador_bcd_3digitos" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2" File: C:/labdig2/experiencia6/contador_cm_fd.v Line: 55
-Info (12128): Elaborating entity "contador_cm_uc" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC" File: C:/labdig2/experiencia6/contador_cm.v Line: 65
-Info (10264): Verilog HDL Case Statement information at contador_cm_uc.v(87): all case item expressions in this case statement are onehot File: C:/labdig2/experiencia6/contador_cm_uc.v Line: 87
-Info (12128): Elaborating entity "registrador_n" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3" File: C:/labdig2/experiencia6/interface_hcsr04_fd.v Line: 68
-Info (12128): Elaborating entity "tx_serial_7E1" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2" File: C:/labdig2/experiencia6/sonar_fd.v Line: 163
-Info (12128): Elaborating entity "tx_serial_7E1_fd" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD" File: C:/labdig2/experiencia6/tx_serial_7E1.v Line: 39
-Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2" File: C:/labdig2/experiencia6/tx_serial_7E1_fd.v Line: 68
-Info (12128): Elaborating entity "tx_serial_uc" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC" File: C:/labdig2/experiencia6/tx_serial_7E1.v Line: 55
-Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|contador_m:U4" File: C:/labdig2/experiencia6/sonar_fd.v Line: 177
-Info (12128): Elaborating entity "contador_endereco" for hierarchy "sonar_fd:fd_sonar|contador_endereco:U5" File: C:/labdig2/experiencia6/sonar_fd.v Line: 185
-Info (12128): Elaborating entity "rom_angulos_8x24" for hierarchy "sonar_fd:fd_sonar|rom_angulos_8x24:U6" File: C:/labdig2/experiencia6/sonar_fd.v Line: 191
-Warning (10030): Net "tabela_angulos.data_a" at rom_angulos_8x24.v(11) has no driver or initial value, using a default initial value '0' File: C:/labdig2/experiencia6/rom_angulos_8x24.v Line: 11
-Warning (10030): Net "tabela_angulos.waddr_a" at rom_angulos_8x24.v(11) has no driver or initial value, using a default initial value '0' File: C:/labdig2/experiencia6/rom_angulos_8x24.v Line: 11
-Warning (10030): Net "tabela_angulos.we_a" at rom_angulos_8x24.v(11) has no driver or initial value, using a default initial value '0' File: C:/labdig2/experiencia6/rom_angulos_8x24.v Line: 11
-Info (12128): Elaborating entity "controle_servo_8" for hierarchy "sonar_fd:fd_sonar|controle_servo_8:U7" File: C:/labdig2/experiencia6/sonar_fd.v Line: 202
-Info (12128): Elaborating entity "circuito_pwm" for hierarchy "sonar_fd:fd_sonar|controle_servo_8:U7|circuito_pwm:gera_pwm" File: C:/labdig2/experiencia6/controle_servo_8.v Line: 30
-Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|contador_m:U8" File: C:/labdig2/experiencia6/sonar_fd.v Line: 216
-Info (12128): Elaborating entity "hexa7seg" for hierarchy "hexa7seg:HEX0" File: C:/labdig2/experiencia6/sonar.v Line: 201
+Info (12128): Elaborating entity "sonar_uc" for hierarchy "sonar_uc:uc_sonar" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar.v Line: 78
+Info (10264): Verilog HDL Case Statement information at sonar_uc.v(132): all case item expressions in this case statement are onehot File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar_uc.v Line: 132
+Info (10264): Verilog HDL Case Statement information at sonar_uc.v(187): all case item expressions in this case statement are onehot File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar_uc.v Line: 187
+Info (12128): Elaborating entity "sonar_fd" for hierarchy "sonar_fd:fd_sonar" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar.v Line: 122
+Info (12128): Elaborating entity "rx_serial_7E1" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar_fd.v Line: 91
+Info (12128): Elaborating entity "rx_serial_7E1_fd" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/rx_serial_7E1.v Line: 60
+Info (12128): Elaborating entity "deslocador_n" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|deslocador_n:DESL" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/rx_serial_7E1_fd.v Line: 46
+Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|contador_m:CONT" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/rx_serial_7E1_fd.v Line: 60
+Info (12128): Elaborating entity "registrador_n" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_7E1_fd:U1_FD|registrador_n:REG" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/rx_serial_7E1_fd.v Line: 70
+Info (12128): Elaborating entity "rx_serial_uc" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|rx_serial_uc:U2_UC" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/rx_serial_7E1.v Line: 78
+Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|rx_serial_7E1:U0_rx|contador_m:U3_TICK" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/rx_serial_7E1.v Line: 96
+Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|contador_m:U3_tx" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar_fd.v Line: 119
+Info (12128): Elaborating entity "interface_hcsr04" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar_fd.v Line: 150
+Info (12128): Elaborating entity "interface_hcsr04_uc" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_uc:U1" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/interface_hcsr04.v Line: 53
+Info (12128): Elaborating entity "interface_hcsr04_fd" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/interface_hcsr04.v Line: 66
+Info (12128): Elaborating entity "gerador_pulso" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|gerador_pulso:U1" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/interface_hcsr04_fd.v Line: 42
+Info (12128): Elaborating entity "contador_cm" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/interface_hcsr04_fd.v Line: 57
+Info (12128): Elaborating entity "contador_cm_fd" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/contador_cm.v Line: 52
+Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_m:U1" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/contador_cm_fd.v Line: 44
+Info (12128): Elaborating entity "contador_bcd_3digitos" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_fd:FD|contador_bcd_3digitos:U2" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/contador_cm_fd.v Line: 55
+Info (12128): Elaborating entity "contador_cm_uc" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|contador_cm:U2|contador_cm_uc:UC" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/contador_cm.v Line: 65
+Info (10264): Verilog HDL Case Statement information at contador_cm_uc.v(87): all case item expressions in this case statement are onehot File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/contador_cm_uc.v Line: 87
+Info (12128): Elaborating entity "registrador_n" for hierarchy "sonar_fd:fd_sonar|interface_hcsr04:U1|interface_hcsr04_fd:U2|registrador_n:U3" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/interface_hcsr04_fd.v Line: 68
+Info (12128): Elaborating entity "tx_serial_7E1" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar_fd.v Line: 163
+Info (12128): Elaborating entity "tx_serial_7E1_fd" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/tx_serial_7E1.v Line: 39
+Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_7E1_fd:U1_FD|contador_m:U2" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/tx_serial_7E1_fd.v Line: 68
+Info (12128): Elaborating entity "tx_serial_uc" for hierarchy "sonar_fd:fd_sonar|tx_serial_7E1:U2|tx_serial_uc:U2_UC" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/tx_serial_7E1.v Line: 55
+Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|contador_m:U4" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar_fd.v Line: 177
+Info (12128): Elaborating entity "contador_endereco" for hierarchy "sonar_fd:fd_sonar|contador_endereco:U5" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar_fd.v Line: 185
+Info (12128): Elaborating entity "rom_angulos_8x24" for hierarchy "sonar_fd:fd_sonar|rom_angulos_8x24:U6" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar_fd.v Line: 191
+Warning (10030): Net "tabela_angulos.data_a" at rom_angulos_8x24.v(11) has no driver or initial value, using a default initial value '0' File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/rom_angulos_8x24.v Line: 11
+Warning (10030): Net "tabela_angulos.waddr_a" at rom_angulos_8x24.v(11) has no driver or initial value, using a default initial value '0' File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/rom_angulos_8x24.v Line: 11
+Warning (10030): Net "tabela_angulos.we_a" at rom_angulos_8x24.v(11) has no driver or initial value, using a default initial value '0' File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/rom_angulos_8x24.v Line: 11
+Info (12128): Elaborating entity "controle_servo_8" for hierarchy "sonar_fd:fd_sonar|controle_servo_8:U7" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar_fd.v Line: 202
+Info (12128): Elaborating entity "circuito_pwm" for hierarchy "sonar_fd:fd_sonar|controle_servo_8:U7|circuito_pwm:gera_pwm" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/controle_servo_8.v Line: 30
+Info (12128): Elaborating entity "contador_m" for hierarchy "sonar_fd:fd_sonar|contador_m:U8" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar_fd.v Line: 216
+Info (12128): Elaborating entity "hexa7seg" for hierarchy "hexa7seg:HEX0" File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar.v Line: 201
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "sonar_fd:fd_sonar|rom_angulos_8x24:U6|tabela_angulos" is uninferred due to inappropriate RAM size File: C:/labdig2/experiencia6/rom_angulos_8x24.v Line: 11
+    Info (276004): RAM logic "sonar_fd:fd_sonar|rom_angulos_8x24:U6|tabela_angulos" is uninferred due to inappropriate RAM size File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/rom_angulos_8x24.v Line: 11
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/labdig2/experiencia6/sonar.v Line: 22
-    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/labdig2/experiencia6/sonar.v Line: 22
-    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/labdig2/experiencia6/sonar.v Line: 22
-    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/labdig2/experiencia6/sonar.v Line: 22
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar.v Line: 22
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar.v Line: 22
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar.v Line: 22
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/sonar.v Line: 22
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 18 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/labdig2/experiencia6/quartus/output_files/exp6.map.smsg
+Info (144001): Generated suppressed messages file C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/quartus/output_files/exp6.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 548 device resources after synthesis - the final resource count might be different
@@ -1135,15 +1135,15 @@ Info (21057): Implemented 548 device resources after synthesis - the final resou
     Info (21059): Implemented 57 output pins
     Info (21061): Implemented 484 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4826 megabytes
-    Info: Processing ended: Tue Oct  6 16:51:48 2026
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Peak virtual memory: 4816 megabytes
+    Info: Processing ended: Wed Oct 07 08:58:07 2026
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:28
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/labdig2/experiencia6/quartus/output_files/exp6.map.smsg.
+The suppressed messages can be found in C:/Projetos/T6BA6_3Q2026/labdig2/experiencia6/quartus/output_files/exp6.map.smsg.
 
 

@@ -33,7 +33,7 @@ Serial myPort; // definicao do objeto serial
 
 //  ======= CONFIGURACAO SERIAL ==================
 
-    String   porta= "COM4";  // <== acertar valor ***
+    String   porta= "COM3";  // <== acertar valor ***
     int   baudrate= 115200;  // 115200 bauds
     char    parity= 'E';     // E=even/par, O=odd/impar
     int   databits= 7;       // 7 bits de dados
