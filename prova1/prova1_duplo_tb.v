@@ -45,7 +45,7 @@ module prova1_duplo_tb;
     wire conta_intervalo_duplo;
     wire db_modo;
     wire db_modo_duplo;
-    wire [2:0] endereco;
+    wire [4:0] endereco;
 
     always #10 clock = ~clock;
 
@@ -78,6 +78,7 @@ module prova1_duplo_tb;
     contador_endereco contador_endereco_teste (
         .clock    (clock),
         .conta    (contar_endereco),
+        .passo_fino(1'b0),
         .zera     (zera_endereco),
         .endereco (endereco)
     );
@@ -180,12 +181,12 @@ module prova1_duplo_tb;
             $fatal(1, "mode change did not wait for the second transmission");
         step;
         wait_state(DUPLO_AVANCA_POSICAO);
-        if (!contar_endereco || !pronto)
-            $fatal(1, "servo position was not advanced after the completed pair");
+        if (contar_endereco || !zera_endereco || !pronto)
+            $fatal(1, "localization return did not restart the servo position");
         step;
         wait_state(NORMAL_PREPARA);
-        if (endereco !== 3'b001 || db_modo_duplo)
-            $fatal(1, "x did not return to localization after one position advance");
+        if (endereco !== 5'd0 || db_modo_duplo)
+            $fatal(1, "x did not restart localization at the first position");
 
         $display("PASS: two measurements, a one-second interval, and deferred x transition");
         $finish;

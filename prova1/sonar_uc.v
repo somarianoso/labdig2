@@ -11,6 +11,7 @@ module sonar_uc (
     input  wire [1:0] modo_solicitado,
     output reg        medir,
     output reg        contar_endereco,
+    output reg        passo_fino,
     output reg        zera_endereco,
     output reg        zera_contador,
     output reg        zera_transmissao,
@@ -27,6 +28,7 @@ module sonar_uc (
     localparam MODO_LOCALIZACAO = 2'b00;
     localparam MODO_ATENCAO     = 2'b01;
     localparam MODO_DUPLO       = 2'b10;
+    localparam MODO_VARREDURA_FINA = 2'b11;
 
     localparam inicial                 = 6'd0;
     localparam normal_prepara         = 6'd1;
@@ -65,6 +67,16 @@ module sonar_uc (
     localparam duplo_decide_modo       = 6'd32;
     localparam duplo_avanca_posicao    = 6'd33;
 
+    localparam fina_prepara              = 6'd34;
+    localparam fina_aguarda_medida       = 6'd35;
+    localparam fina_inicia_tx            = 6'd36;
+    localparam fina_espera_tx_baixo      = 6'd37;
+    localparam fina_espera_tx_alto       = 6'd38;
+    localparam fina_verifica_tx          = 6'd39;
+    localparam fina_aguarda_2s           = 6'd40;
+    localparam fina_decide_modo          = 6'd41;
+    localparam fina_avanca_posicao       = 6'd42;
+
     reg [5:0] estado_atual;
     reg [5:0] estado_proximo;
 
@@ -86,6 +98,7 @@ module sonar_uc (
                     case (modo_solicitado)
                         MODO_ATENCAO: estado_proximo = atencao_prepara;
                         MODO_DUPLO:   estado_proximo = duplo_prepara_1;
+                        MODO_VARREDURA_FINA: estado_proximo = fina_prepara;
                         default:      estado_proximo = normal_prepara;
                     endcase
                 end
@@ -115,6 +128,7 @@ module sonar_uc (
                     case (modo_solicitado)
                         MODO_ATENCAO: estado_proximo = atencao_prepara;
                         MODO_DUPLO:   estado_proximo = duplo_prepara_1;
+                        MODO_VARREDURA_FINA: estado_proximo = fina_prepara;
                         default:      estado_proximo = normal_avanca_posicao;
                     endcase
                 end
@@ -122,6 +136,7 @@ module sonar_uc (
                     case (modo_solicitado)
                         MODO_ATENCAO: estado_proximo = atencao_prepara;
                         MODO_DUPLO:   estado_proximo = duplo_prepara_1;
+                        MODO_VARREDURA_FINA: estado_proximo = fina_prepara;
                         default:      estado_proximo = normal_prepara;
                     endcase
                 end
@@ -151,11 +166,18 @@ module sonar_uc (
                     case (modo_solicitado)
                         MODO_ATENCAO: estado_proximo = atencao_mantem_posicao;
                         MODO_DUPLO:   estado_proximo = duplo_prepara_1;
+                        MODO_VARREDURA_FINA: estado_proximo = fina_prepara;
                         default:      estado_proximo = normal_prepara;
                     endcase
                 end
-                atencao_mantem_posicao:
-                    estado_proximo = atencao_prepara;
+                atencao_mantem_posicao: begin
+                    case (modo_solicitado)
+                        MODO_ATENCAO: estado_proximo = atencao_prepara;
+                        MODO_DUPLO:   estado_proximo = duplo_prepara_1;
+                        MODO_VARREDURA_FINA: estado_proximo = fina_prepara;
+                        default:      estado_proximo = normal_prepara;
+                    endcase
+                end
 
                 duplo_prepara_1:
                     estado_proximo = duplo_aguarda_medida_1;
@@ -202,7 +224,54 @@ module sonar_uc (
                     case (modo_solicitado)
                         MODO_DUPLO:   estado_proximo = duplo_prepara_1;
                         MODO_ATENCAO: estado_proximo = atencao_prepara;
+                        MODO_VARREDURA_FINA: estado_proximo = fina_prepara;
                         default:      estado_proximo = normal_prepara;
+                    endcase
+                end
+
+                fina_prepara:
+                    estado_proximo = fina_aguarda_medida;
+                fina_aguarda_medida: begin
+                    if (pronto_medida)
+                        estado_proximo = fina_inicia_tx;
+                    else if (timeout_echo)
+                        estado_proximo = fina_aguarda_2s;
+                end
+                fina_inicia_tx:
+                    estado_proximo = fina_espera_tx_baixo;
+                fina_espera_tx_baixo:
+                    estado_proximo = pronto_serial ? fina_espera_tx_baixo :
+                                                     fina_espera_tx_alto;
+                fina_espera_tx_alto:
+                    estado_proximo = pronto_serial ? fina_verifica_tx :
+                                                     fina_espera_tx_alto;
+                fina_verifica_tx:
+                    estado_proximo = fim_tx_8 ? fina_aguarda_2s : fina_inicia_tx;
+                fina_aguarda_2s:
+                    if (fim_2seg)
+                        estado_proximo = fina_decide_modo;
+                fina_decide_modo: begin
+                    case (modo_solicitado)
+                        MODO_VARREDURA_FINA:
+                            estado_proximo = fina_avanca_posicao;
+                        MODO_ATENCAO:
+                            estado_proximo = atencao_prepara;
+                        MODO_DUPLO:
+                            estado_proximo = duplo_prepara_1;
+                        default:
+                            estado_proximo = normal_prepara;
+                    endcase
+                end
+                fina_avanca_posicao: begin
+                    case (modo_solicitado)
+                        MODO_VARREDURA_FINA:
+                            estado_proximo = fina_prepara;
+                        MODO_ATENCAO:
+                            estado_proximo = atencao_prepara;
+                        MODO_DUPLO:
+                            estado_proximo = duplo_prepara_1;
+                        default:
+                            estado_proximo = normal_prepara;
                     endcase
                 end
 
@@ -215,6 +284,7 @@ module sonar_uc (
     always @* begin
         medir                 = 1'b0;
         contar_endereco       = 1'b0;
+        passo_fino            = 1'b0;
         zera_endereco         = 1'b0;
         zera_contador         = 1'b0;
         zera_transmissao      = 1'b0;
@@ -244,8 +314,14 @@ module sonar_uc (
                 conta_timeout_echo = 1'b1;
             normal_inicia_tx:
                 transmite_serial = 1'b1;
+            normal_decide_modo:
+                if (modo_solicitado == MODO_VARREDURA_FINA)
+                    zera_endereco = 1'b1;
             normal_avanca_posicao: begin
-                contar_endereco = 1'b1;
+                if (modo_solicitado == MODO_VARREDURA_FINA)
+                    zera_endereco = 1'b1;
+                else
+                    contar_endereco = 1'b1;
                 pronto          = 1'b1;
                 zera_contador   = 1'b1;
             end
@@ -268,10 +344,15 @@ module sonar_uc (
             atencao_espera_tx_baixo,
             atencao_espera_tx_alto,
             atencao_verifica_tx,
-            atencao_aguarda_2s,
-            atencao_decide_modo,
-            atencao_mantem_posicao:
+            atencao_aguarda_2s:
                 db_modo = 1'b1;
+            atencao_decide_modo,
+            atencao_mantem_posicao: begin
+                db_modo = 1'b1;
+                if (modo_solicitado == MODO_LOCALIZACAO ||
+                    modo_solicitado == MODO_VARREDURA_FINA)
+                    zera_endereco = 1'b1;
+            end
 
             duplo_prepara_1,
             duplo_prepara_2: begin
@@ -296,7 +377,11 @@ module sonar_uc (
                 db_modo_duplo         = 1'b1;
             end
             duplo_avanca_posicao: begin
-                contar_endereco = 1'b1;
+                if (modo_solicitado == MODO_LOCALIZACAO ||
+                    modo_solicitado == MODO_VARREDURA_FINA)
+                    zera_endereco = 1'b1;
+                else
+                    contar_endereco = 1'b1;
                 pronto          = 1'b1;
                 zera_contador   = 1'b1;
                 db_modo_duplo   = 1'b1;
@@ -310,6 +395,42 @@ module sonar_uc (
             duplo_verifica_tx_2,
             duplo_decide_modo:
                 db_modo_duplo = 1'b1;
+
+            fina_prepara: begin
+                medir              = 1'b1;
+                zera_contador      = 1'b1;
+                zera_transmissao   = 1'b1;
+                zera_timeout_echo  = 1'b1;
+                passo_fino         = 1'b1;
+            end
+            fina_aguarda_medida: begin
+                conta_timeout_echo = 1'b1;
+                passo_fino         = 1'b1;
+            end
+            fina_inicia_tx: begin
+                transmite_serial = 1'b1;
+                passo_fino       = 1'b1;
+            end
+            fina_espera_tx_baixo,
+            fina_espera_tx_alto,
+            fina_verifica_tx,
+            fina_aguarda_2s: begin
+                passo_fino = 1'b1;
+            end
+            fina_decide_modo: begin
+                passo_fino = 1'b1;
+                if (modo_solicitado != MODO_VARREDURA_FINA)
+                    zera_endereco = 1'b1;
+            end
+            fina_avanca_posicao: begin
+                passo_fino = 1'b1;
+                if (modo_solicitado != MODO_VARREDURA_FINA)
+                    zera_endereco = 1'b1;
+                else
+                    contar_endereco = 1'b1;
+                pronto        = 1'b1;
+                zera_contador = 1'b1;
+            end
 
             default:
                 ;

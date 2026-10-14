@@ -24,6 +24,7 @@ module sonar #(
 
     wire        w_medir;
     wire        w_contar_endereco;
+    wire        w_passo_fino;
     wire        w_zera_endereco;
     wire        w_zera_contador;
     wire        w_zera_transmissao;
@@ -71,6 +72,7 @@ module sonar #(
         .modo_solicitado   (w_modo_solicitado),
         .medir             (w_medir),
         .contar_endereco   (w_contar_endereco),
+        .passo_fino        (w_passo_fino),
         .zera_endereco     (w_zera_endereco),
         .zera_contador     (w_zera_contador),
         .zera_transmissao  (w_zera_transmissao),
@@ -98,6 +100,7 @@ module sonar #(
         .zera_contador      (w_zera_contador),
         .zera_transmissao   (w_zera_transmissao),
         .contar_endereco    (w_contar_endereco),
+        .passo_fino         (w_passo_fino),
         .zera_endereco      (w_zera_endereco),
         .zera_timeout_echo  (w_zera_timeout_echo),
         .conta_timeout_echo (w_conta_timeout_echo),

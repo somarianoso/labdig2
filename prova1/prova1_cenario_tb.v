@@ -210,7 +210,7 @@ module prova1_cenario_tb;
 
         finish_attention_cycle;
         finish_attention_cycle;
-        if (dut.fd_sonar.w_endereco !== 3'b010)
+        if (dut.fd_sonar.w_endereco !== 5'd2)
             $fatal(1, "attention mode must hold the current servo position");
 
         send_ascii(7'h64, 1'b1);

@@ -23,6 +23,7 @@ module prova1_intervalo_duplo_tb;
         .zera_contador         (1'b0),
         .zera_transmissao      (1'b0),
         .contar_endereco       (1'b0),
+        .passo_fino            (1'b0),
         .zera_endereco         (1'b0),
         .zera_timeout_echo     (1'b0),
         .conta_timeout_echo    (1'b0),

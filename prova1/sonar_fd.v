@@ -12,6 +12,7 @@ module sonar_fd #(
     input  wire       zera_contador,
     input  wire       zera_transmissao,
     input  wire       contar_endereco,
+    input  wire       passo_fino,
     input  wire       zera_endereco,
     input  wire       zera_timeout_echo,
     input  wire       conta_timeout_echo,
@@ -48,8 +49,10 @@ module sonar_fd #(
     wire [11:0] w_medida;
     reg  [6:0]  dados_ascii;
     wire [2:0]  bitsConversao;
-    wire [2:0]  w_endereco;
+    wire [4:0]  w_endereco;
     wire [23:0] w_posicao;
+    wire [23:0] w_posicao_local;
+    wire [23:0] w_posicao_fina;
     wire        reset_operacao;
     wire [3:0]  w_q_tx;
     wire [2:0]  w_sel_letra;
@@ -106,6 +109,8 @@ module sonar_fd #(
                 7'h76: r_modo_solicitado <= MODO_LOCALIZACAO; // 'v'
                 7'h64: r_modo_solicitado <= MODO_DUPLO;       // 'd'
                 7'h78: r_modo_solicitado <= MODO_LOCALIZACAO; // 'x'
+                7'h66: r_modo_solicitado <= 2'b11;            // 'f'
+                7'h72: r_modo_solicitado <= MODO_LOCALIZACAO; // 'r'
                 default: r_modo_solicitado <= r_modo_solicitado;
             endcase
         end
@@ -185,29 +190,34 @@ module sonar_fd #(
         .meio    ()
     );
 
-    // U5: Contador de Endereço (0 a 7 posições - movimento "vai" 000→111→000)
+    // O modo de localização percorre os oito ângulos existentes; a varredura
+    // fina percorre os 32 endereços angulares.
     contador_endereco U5 (
         .clock    (clock),
         .conta    (contar_endereco),
+        .passo_fino(passo_fino),
         .zera     (zera_endereco | reset),
         .endereco (w_endereco)
     );
 
-    // U6: ROM de Ângulos (Recebe o endereço e entrega o ASCII de 24 bits)
-    rom_angulos_8x24 U6 (
-        .endereco (w_endereco),
-        .saida    (w_posicao)
+    rom_angulos_8x24 U6_local (
+        .endereco (w_endereco[2:0]),
+        .saida    (w_posicao_local)
     );
 
-    // U7: Controle do Servomotor (Gera o PWM baseado no contador de endereço)
-    controle_servo_8 U7 (
+    rom_angulos_32x24 U6_fina (
+        .endereco (w_endereco),
+        .saida    (w_posicao_fina)
+    );
+    assign w_posicao = passo_fino ? w_posicao_fina : w_posicao_local;
+
+    controle_servo_32 U7 (
         .clock      (clock),
         .reset      (reset),
         .posicao    (w_endereco),
+        .modo_fino  (passo_fino),
         .controle   (pwm),
-        .db_reset   (),
-        .db_posicao (posicao_servo),
-        .db_controle()
+        .db_posicao (posicao_servo)
     );
 
     // U8: Temporizador (timeout echo a cada 1 seg)
