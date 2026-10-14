@@ -404,3 +404,266 @@ Os testes atuais verificam a implementação presente (modos de localização e 
 - [Testbench do receptor serial 7E1](../experiencia6/rx_serial_tb.v)
 - [Testbench dos comandos seriais](../experiencia6/sonar_mode_tb.v)
 - [Testbench de integração do sonar](../experiencia6/sonar_tb.v)
+
+## 12. Sinal a sinal: Unidade de Controle do sonar (`sonar_uc`)
+
+Esta tabela descreve a interface real de [`sonar_uc.v`](../experiencia6/sonar_uc.v).
+“Origem/destino” identifica o módulo que produz o sinal ou o bloco que o
+consome. `sonar_uc` não instancia o sensor nem a UART: recebe condições do FD,
+atualiza sua máquina e devolve comandos ao FD.
+
+### 12.1 Entradas da UC
+
+| Sinal | Origem | Papel na UC |
+|---|---|---|
+| `clock` | Entrada externa, distribuída pelo topo | Atualiza o registrador de estado na borda de subida. |
+| `reset` | Entrada externa, distribuída pelo topo | Reset assíncrono ativo em nível alto; força `estado_atual` para `inicial`. |
+| `mensurar` | Entrada do topo (`ligar`) | Habilita a operação. Quando está em zero, a lógica de próximo estado retorna a `inicial` na próxima borda de clock. |
+| `pronto_serial` | FD, vindo do transmissor `tx_serial_7E1` | Indica que o transmissor não está ocupado. A UC observa sua mudança para coordenar a espera pela transmissão de cada caractere. |
+| `pronto_medida` | FD, vindo da interface HC-SR04 | Indica que uma distância foi medida e registrada; a UC então inicia o envio da mensagem. |
+| `fim_2seg` | FD, saída do temporizador parametrizado por `CONTAGEM_2SEG` | Condição de fim do intervalo entre ciclos de localização/atenção. A 50 MHz, o padrão de 100 milhões de contagens corresponde a 2 s. |
+| `timeout_echo` | FD, saída do temporizador de timeout do eco | Indica que a espera por uma resposta do sensor expirou. A UC segue o caminho de timeout, em vez de esperar indefinidamente por `pronto_medida`. |
+| `fim_tx_8` | FD, contador associado aos caracteres da mensagem do sonar | Indica que a sequência de oito caracteres foi concluída; a UC pode sair do ciclo de transmissão e seguir para a espera/decisão de modo. |
+| `modo_solicitado` | FD, registrador atualizado pelo receptor serial | Modo pedido pelo comando serial: `0` para localização e `1` para atenção. A UC consulta esse valor nos estados de decisão, não interrompendo arbitrariamente um ciclo em andamento. |
+
+### 12.2 Saídas da UC
+
+Estas são as saídas de controle da UC para o FD, exceto os sinais de estado e
+depuração identificados como tal.
+
+| Sinal | Destino | Papel |
+|---|---|---|
+| `medir` | FD → interface HC-SR04 | Inicia a sequência de medição do sensor. É ativado nos estados `normal_prepara` e `atencao_prepara`. |
+| `transmite_serial` | FD → transmissor UART | Solicita o envio do caractere atualmente selecionado para a mensagem do sonar. |
+| `contar_endereco` | FD → contador de endereço | Incrementa a posição do servo na varredura de localização; é ativado no estado `normal_avanca_posicao`. |
+| `zera_endereco` | FD → contador de endereço | Zera a posição/endereço, principalmente no estado inicial. |
+| `zera_contador` | FD → temporizador do ciclo de 2 s | Zera/reinicia o contador usado para o intervalo entre ciclos. |
+| `zera_transmissao` | FD → contador de caracteres do sonar | Reinicia o índice dos caracteres para começar uma nova mensagem. |
+| `zera_timeout_echo` | FD → temporizador de timeout do eco | Zera o temporizador de timeout, por exemplo ao preparar uma nova medição. |
+| `conta_timeout_echo` | FD → temporizador de timeout do eco | Habilita a contagem enquanto a UC espera a resposta/medida do sensor. |
+| `pronto` | Topo (`sonar.v`) | Sinal de fim de ciclo/posição exposto como `fim_posicao`; não é o `pronto_medida` do sensor nem o `pronto_serial` da UART. |
+| `db_estado[4:0]` | Topo e depuração | Mostra o estado atual codificado da UC. É uma saída de observabilidade, não uma condição de controle do FD. |
+| `db_modo` | Topo e depuração | Indica que a UC está executando os estados de atenção. É um indicador de modo atual, distinto do modo solicitado pelo receptor. |
+
+**Distinção importante:** `pronto_medida` e `pronto_serial` são entradas da UC
+produzidas pelo FD; `pronto` é uma saída da UC. Numa explicação oral, diga qual
+bloco produz cada sinal e evite chamar os três apenas de “pronto”.
+
+## 13. Sinal a sinal: Fluxo de Dados do sonar (`sonar_fd`)
+
+O FD recebe comandos da UC e sinais físicos/externos, executa as operações e
+devolve condições e dados. A interface completa está em
+[`sonar_fd.v`](../experiencia6/sonar_fd.v).
+
+### 13.1 Entradas do FD
+
+| Sinal | Origem | Papel no FD |
+|---|---|---|
+| `clock` | Entrada externa, distribuída pelo topo | Clock comum dos contadores, registradores, sensor e interfaces seriais. |
+| `reset` | Entrada externa, distribuída pelo topo | Reset do receptor e parte do reset das operações. |
+| `habilitado` | Entrada do topo (`ligar`) | Habilita a operação e participa do reset operacional; desabilitar impede os temporizadores de continuarem a operação. |
+| `entrada_serial` | Pino/entrada serial externa | Linha recebida pelo módulo `rx_serial_7E1`; comandos são interpretados apenas quando há dado pronto e paridade válida. |
+| `echo` | Entrada física do sensor HC-SR04 | Pulso de retorno do sensor, medido pela interface para calcular a distância. |
+| `medir` | UC | Comando de medição encaminhado à interface HC-SR04. |
+| `transmite_serial` | UC | Comando de início encaminhado ao transmissor. |
+| `zera_contador` | UC | Clear síncrono do temporizador do ciclo de 2 s. |
+| `zera_transmissao` | UC | Clear do contador que seleciona os caracteres da mensagem. |
+| `contar_endereco` | UC | Habilita o contador de endereço/posição angular. |
+| `zera_endereco` | UC | Zera o contador de endereço/posição. |
+| `zera_timeout_echo` | UC | Limpa o temporizador que vigia a espera por resposta do sensor. |
+| `conta_timeout_echo` | UC | Habilita o temporizador de timeout apenas nos estados de espera por medição. |
+
+### 13.2 Saídas funcionais do FD
+
+| Sinal | Destino/consumidor | Papel |
+|---|---|---|
+| `pronto_medida` | UC | Indica medida concluída pela interface HC-SR04. |
+| `pronto_serial` | UC e contador de mensagem | Estado de prontidão do transmissor; o FD também usa sua conclusão para avançar o índice da mensagem. |
+| `mensurar_automatico` | UC (`fim_2seg`) | Flag de fim do temporizador parametrizado `CONTAGEM_2SEG`. |
+| `timeout_echo` | UC | Flag do temporizador de timeout do eco, habilitado por `conta_timeout_echo`. |
+| `fim_tx_8` | UC | Flag do contador que marca o término da mensagem de oito caracteres. |
+| `modo_solicitado` | UC | Registrador do comando de modo válido recebido. O receptor atual reconhece `a` (atenção) e `v` (localização). |
+| `trigger` | Sensor HC-SR04 externo | Pulso de disparo gerado pela interface do sensor. |
+| `medida0`, `medida1`, `medida2` | MUX da mensagem e displays | Dígitos BCD da distância, separados a partir do barramento de 12 bits. |
+| `saida_serial` | Pino de transmissão externo | Linha serial transmitida pelo módulo UART. |
+| `pwm` | Saída para servo | PWM gerado pelo controle do servo a partir do endereço/posição atual. |
+
+### 13.3 Saídas de depuração do FD
+
+Estas portas permitem observar a implementação interna sem confundi-las com
+os sinais de handshake:
+
+| Sinal | O que revela |
+|---|---|
+| `db_estado_rx[3:0]` | Estado da máquina interna do receptor serial. |
+| `db_estado_tx[3:0]` | Estado da máquina interna do transmissor serial. |
+| `db_estado_hcsr04[3:0]` | Estado da interface HC-SR04. |
+| `posicao_servo[2:0]` | Endereço/posição corrente usado pelo servo. |
+| `dado_rx_recebido[6:0]` | Byte de 7 bits recebido, apresentado em ASCII/código numérico. |
+| `dado_tx_transmitido[6:0]` | Caractere selecionado para transmissão naquele momento. |
+| `estado_tx_sonar[3:0]` | Contagem/estado do envio da mensagem do sonar. |
+| `contagem_selmux[2:0]` | Índice que seleciona o caractere da mensagem `ANG,DIS#`. |
+| `angulo2`, `angulo1`, `angulo0` | Dígitos do ângulo ASCII da ROM, apresentados como nibbles para depuração. |
+| `paridade_par` | Resultado da verificação da paridade do quadro recebido; a UC do modo só aceita comando se for válido. |
+| `pronto_rx` | Indica que o receptor concluiu a recepção de um caractere. |
+
+## 14. Caminho dos sinais entre topo, UC e FD
+
+Uma forma clara de responder “de onde vem esse sinal?” é seguir três etapas:
+
+```text
+sensor/UART/temporizador no FD
+    → condição de entrada da UC (pronto_medida, pronto_serial, timeout_echo...)
+    → transição da máquina na borda de clock
+    → comando de saída da UC (medir, transmite_serial, contar_endereco...)
+    → componente correspondente no FD
+```
+
+Exemplos:
+
+1. O sensor conclui a medida e o FD eleva `pronto_medida`. A UC observa a
+   condição, passa do estado de espera para o estado de início de transmissão
+   e ativa `transmite_serial`.
+2. O transmissor do FD altera `pronto_serial` conforme transmite os caracteres.
+   A UC acompanha o handshake e consulta `fim_tx_8` para saber se deve enviar
+   outro caractere ou encerrar a mensagem.
+3. O temporizador do FD eleva `mensurar_automatico` (`fim_2seg`). A UC que está
+   em `normal_aguarda_2s` ou `atencao_aguarda_2s` avança para decidir o modo.
+4. A UC ativa `contar_endereco` em `normal_avanca_posicao`; o contador do FD
+   incrementa o endereço e a ROM entrega o novo ângulo ao servo e à mensagem.
+
+O prefixo `w_` usado em [`sonar.v`](../experiencia6/sonar.v) marca em geral fios
+internos de conexão. Por exemplo, `w_pronto_medida` liga a saída
+`pronto_medida` do FD à entrada homônima da UC; o prefixo não indica uma nova
+função lógica.
+
+## 15. Informações úteis para explicar a Experiência 6 na prova
+
+### 15.1 Sequência da UC principal
+
+Os códigos abaixo são os `localparam` atuais da UC e são expostos em
+`db_estado`. Em localização, o caminho principal é:
+
+| Estado | Código | Ação/saída relevante | Transição típica |
+|---|---:|---|---|
+| `inicial` | 0 | Zera posição e contadores | Escolhe a sequência conforme `modo_solicitado`. |
+| `normal_prepara` | 1 | `medir`, `zera_contador`, `zera_transmissao`, `zera_timeout_echo` | Vai aguardar a medida. |
+| `normal_aguarda_medida` | 2 | `conta_timeout_echo` | `pronto_medida` inicia TX; `timeout_echo` segue o caminho de timeout. |
+| `normal_inicia_tx` | 3 | `transmite_serial` | Inicia a transferência do caractere atual. |
+| `normal_espera_tx_baixo` | 4 | Aguarda o transmissor sair do estado pronto | Permanece enquanto `pronto_serial` ainda está alto. |
+| `normal_espera_tx_alto` | 5 | Aguarda o transmissor terminar o caractere | Quando volta a pronto, verifica a mensagem. |
+| `normal_verifica_tx` | 6 | Consulta `fim_tx_8` | Se a mensagem acabou, espera; caso contrário, inicia outro caractere. |
+| `normal_aguarda_2s` | 7 | Espera pelo temporizador | `fim_2seg` leva à decisão de modo. |
+| `normal_decide_modo` | 8 | Decide o caminho seguinte | Atenção solicitada entra no modo atenção; localização segue para avanço. |
+| `normal_avanca_posicao` | 9 | `contar_endereco` e `pronto` | Avança a posição e retorna à preparação normal. |
+
+Na sequência de atenção, os estados de preparação, espera da medida,
+transmissão, espera temporizada e decisão usam códigos `10` a `18`. O caminho
+`atencao_mantem_posicao` retorna a `atencao_prepara` sem ativar
+`contar_endereco`. Essa é a diferença observável central: atenção continua
+medindo/transmitindo, mas mantém o ângulo do servo.
+
+### 15.2 Temporização: números para ter em mente
+
+O clock da placa é 50 MHz, portanto:
+
+- um ciclo dura 20 ns;
+- 50 milhões de ciclos correspondem a 1 s;
+- 100 milhões de ciclos correspondem a 2 s;
+- para UART a 115200 baud, o período de bit é aproximadamente 434 ciclos de
+  clock (cerca de 8,68 μs).
+
+No FD atual, `CONTAGEM_2SEG` controla o intervalo de 2 s. O timeout do eco usa
+separadamente um contador de 50 milhões de ciclos e só conta quando
+`conta_timeout_echo` está ativo. Não confunda esses dois fins de contagem:
+`fim_2seg` regula o intervalo do ciclo; `timeout_echo` evita esperar para
+sempre por uma resposta do sensor.
+
+Na simulação, parâmetros de contagem podem ser reduzidos para acelerar os
+testes, desde que se preserve a função de cada temporizador. Uma redução para
+simulação não significa que o intervalo da FPGA também mudou.
+
+### 15.3 UART 7E1 e comandos de modo
+
+O receptor e o transmissor trabalham com quadros 7E1:
+
+1. linha em repouso no nível alto;
+2. start bit em nível baixo;
+3. sete bits de dado, enviados/recebidos primeiro pelo bit menos significativo;
+4. um bit de paridade par;
+5. um stop bit em nível alto.
+
+O dado ASCII do comando chega a `dado_rx_recebido`. O receptor gera `pronto_rx`
+e a verificação `paridade_par`; o FD só altera `modo_solicitado` na condição
+`pronto_rx && paridade_par`. No projeto atual, `a` solicita atenção e `v`
+solicita localização. Um caractere desconhecido ou uma paridade inválida não
+deve alterar o modo armazenado.
+
+O transmissor recebe cada caractere selecionado e emite a mensagem
+`ANG,DIS#`: três caracteres de ângulo, vírgula, três caracteres de distância e
+`#`. Em `sonar_fd.v`, o MUX usa `contagem_selmux` para escolher cada caractere.
+Durante a depuração, associe o dado atual (`dado_tx_transmitido`) ao estado da
+UART e à saída física `saida_serial`.
+
+### 15.4 Sensor, distância e posição do servo
+
+A interface HC-SR04 tem uma máquina própria, independente da UC principal:
+
+| Estado do sensor | Função |
+|---|---|
+| `inicial` | Aguarda `medir`. |
+| `preparacao` | Limpa a lógica de medição. |
+| `envia_trigger` | Gera o pulso `trigger`. |
+| `espera_echo` | Aguarda a borda/nível de resposta `echo`. |
+| `medida` | Conta a duração do pulso de eco e espera o fim da medida. |
+| `armazenamento` | Registra o valor calculado. |
+| `final_medida` | Ativa `pronto` por um ciclo e retorna ao estado inicial. |
+
+O fluxo de dados converte a duração do eco em distância e registra os dígitos
+BCD que alimentam a mensagem e os displays. Em paralelo, o contador de
+endereço percorre oito posições (0 a 7); a ROM associa cada endereço a um
+ângulo entre 20° e 160°. `contar_endereco` muda a posição lógica; o bloco de
+servo converte essa posição em PWM. A UC decide quando avançar, enquanto o FD
+implementa contador, ROM e gerador PWM.
+
+### 15.5 Depuração no topo `sonar.v`
+
+O seletor `sel_mux` escolhe qual grupo aparece nos HEX e nos LEDs. Os índices
+dos displays abaixo seguem a concatenação usada pelo topo; HEX0 é o nibble
+menos significativo.
+
+| `sel_mux` | HEX5 → HEX0 | LEDs relevantes |
+|---|---|---|
+| `00` | Posição do servo, estado HC-SR04, nibble reservado e três dígitos de distância | `LEDR[5:0]`: timeout, medida pronta, comando medir, PWM, echo, trigger. |
+| `01` | Estado TX, caractere TX, estado RX, caractere RX | `LEDR[5:0]`: paridade, pronto RX, entrada serial, pedido TX, pronto TX, saída serial. |
+| `10` | Estado/índice TX do sonar, caractere atual; nibbles inferiores reservados | `LEDR[3:0]`: zerar transmissão, fim da mensagem, pronto TX, pedido de transmissão. |
+| `11` | Estado da UC e ângulo da ROM; nibble intermediário reservado | `LEDR[3:0]`: modo atual (`db_modo`), fim de 2 s, `pronto` da UC/fim de ciclo, modo solicitado. |
+
+Na tabela de LEDs, os nomes estão listados do bit mais significativo relevante
+para o menos significativo. `sel_mux` serve à instrumentação/depuração; não é
+um comando de modo nem deve alterar a sequência funcional.
+
+### 15.6 Perguntas orais prováveis e estrutura de resposta
+
+- **“Como sabe que a medida terminou?”** — A interface HC-SR04 conclui e
+  sinaliza `pronto_medida` ao FD/UC; então a UC entra na sequência de TX.
+- **“O que acontece se não houver echo?”** — O temporizador habilitado durante
+  a espera gera `timeout_echo`, e a UC usa o caminho de timeout em vez de ficar
+  presa aguardando indefinidamente.
+- **“Quando o servo muda de ângulo?”** — Quando a UC entra em
+  `normal_avanca_posicao` e ativa `contar_endereco`; o contador do FD incrementa
+  e a ROM/PWM refletem o novo endereço.
+- **“Por que o comando serial não muda imediatamente as saídas da UC?”** — O
+  receptor atualiza o modo solicitado, mas a máquina Moore só muda suas saídas
+  quando muda de estado na borda de clock; a solicitação é aplicada no ponto
+  de decisão da sequência.
+- **“Qual a diferença entre estado, modo solicitado e modo atual?”** —
+  `db_estado` identifica a etapa da máquina; `modo_solicitado` guarda o último
+  comando válido; `db_modo` indica a sequência de atenção atualmente executada.
+- **“Como prova que o ciclo de transmissão terminou?”** — Relaciono o handshake
+  `pronto_serial`, o contador/índice de caracteres e `fim_tx_8`; não uso apenas
+  a aparência do caractere no display.
+
+Ao responder, siga sempre a cadeia **condição observada → transição na UC →
+comando gerado → efeito no FD**. Isso demonstra entendimento da arquitetura,
+em vez de apenas recitar nomes de sinais.
