@@ -667,3 +667,21 @@ um comando de modo nem deve alterar a sequência funcional.
 Ao responder, siga sempre a cadeia **condição observada → transição na UC →
 comando gerado → efeito no FD**. Isso demonstra entendimento da arquitetura,
 em vez de apenas recitar nomes de sinais.
+
+## Conversão do `echo` em distância
+
+O circuito não arredonda a leitura para o centímetro mais próximo. O contador
+`contador_cm` usa `R=2941`; a cada 2941 ciclos de clock enquanto `echo` está
+ativo, gera um `tick` que incrementa o contador BCD em um centímetro. Com clock
+de 50 MHz, esse intervalo corresponde a `2941 × 20 ns = 58,82 μs`,
+aproximadamente o tempo de ida e volta do som para um centímetro.
+
+Quando `echo` termina, a UC para a contagem e sinaliza `pronto`. Os dígitos
+representam, portanto, o número de intervalos completos contados; a parte
+fracionária é descartada. Por exemplo, uma duração equivalente a cerca de
+10,49 cm tende a resultar em 10, não em 11. Como a contagem é amostrada pelo
+clock, uma medida próxima ao limite entre dois intervalos pode variar em um
+centímetro.
+
+O caminho é: `echo` → `contador_cm` → `tick` a cada intervalo → incremento do
+contador BCD → captura dos dígitos pela interface HC-SR04.
